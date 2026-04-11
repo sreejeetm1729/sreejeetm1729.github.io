@@ -4,29 +4,13 @@ title: Who am I 🍂🍁?
 icon: fas fa-info-circle
 order: 1
 ---
-<style>
-.about-wrap img {
-  float: left !important;
-  width: 150px !important;
-  max-width: 150px !important;
-  margin: 0 14px 8px 0 !important;
-  border-radius: 10px !important;
-}
-.about-wrap::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-</style>
-
-<div class="about-wrap">
-  <img src="/assets/img/about/profile.jpg" alt="Sreejeet Maity">
-
-  <p>
-    Hello! 🍁 I'm Sreejeet Maity, a third-year Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University. My research interests span Control Theory, Large-Scale Machine Learning, Statistical Learning Theory, and Adversarial Reinforcement Learning. I have a strong background in Probability Theory, Linear Algebra, Stochastic Optimization, Randomized Algorithms, and Robust Statistics. I completed my M.Tech. in Robotics and Autonomous Systems from the Indian Institute of Science (IISc), Bangalore, in 2023, and my B.E. in Electrical Engineering from Jadavpur University, Kolkata, in 2021. During my master’s at IISc, I focused on perturbative networked systems and perceptive algorithms for swarms.
-  </p>
-
-  <p>
-    Beyond my passion for mathematics, I also enjoy cooking, reading, writing poetry, and reflecting deeply while watching the night sky. I also love cats and elephants. A lot.  🐘❤️😸
-  </p>
-</div>
+<table>
+  <tr>
+    <td style="width:110px; vertical-align:top; padding-right:14px;">
+      <img src="/assets/img/about/profile.jpg" alt="Sreejeet Maity" style="width:95px; border-radius:10px;">
+    </td>
+    <td style="vertical-align:top;">
+      Hello! 🍁 I'm Sreejeet Maity, a third-year Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University. My research interests span Control Theory, Large-Scale Machine Learning, Statistical Learning Theory, and Adversarial Reinforcement Learning. I have a strong background in Probability Theory, Linear Algebra, Stochastic Optimization, Randomized Algorithms, and Robust Statistics. I completed my M.Tech. in Robotics and Autonomous Systems from the Indian Institute of Science (IISc), Bangalore, in 2023, and my B.E. in Electrical Engineering from Jadavpur University, Kolkata, in 2021. During my master’s at IISc, I focused on perturbative networked systems and perceptive algorithms for swarms. Beyond my passion for mathematics, I also enjoy cooking, reading, writing poetry, and reflecting deeply while watching the night sky. I also love cats and elephants. A lot. 🐘❤️😸
+    </td>
+  </tr>
+</table>

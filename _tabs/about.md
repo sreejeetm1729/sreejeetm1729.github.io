@@ -6,8 +6,8 @@ order: 1
 ---
 
 
-<div style="display:flex; align-items:flex-start; gap:16px;">
-  <img src="/assets/img/about/profile.jpg" alt="Sreejeet Maity" style="width:100px; border-radius:10px; flex-shrink:0;">
+<div style="display:flex; align-items:flex-start; gap:20px;">
+  <img src="/assets/img/about/profile.jpg" alt="Sreejeet Maity" style="width:250px; border-radius:10px; flex-shrink:0;">
 
   <div>
     <p>

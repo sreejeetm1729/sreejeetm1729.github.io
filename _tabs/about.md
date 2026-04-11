@@ -7,8 +7,8 @@ order: 1
 <style>
 .about-wrap img {
   float: left !important;
-  width: 110px !important;
-  max-width: 110px !important;
+  width: 150px !important;
+  max-width: 150px !important;
   margin: 0 14px 8px 0 !important;
   border-radius: 10px !important;
 }

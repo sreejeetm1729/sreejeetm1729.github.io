@@ -1,9 +1,6 @@
 ---
-title: Research 💡
-icon: fas fa-robot
+title: Current Research 💡
+icon: fas fa-brain
 order: 6
 ---
-
-# RL Blogs
-
-This page will contain my blog posts and notes on reinforcement learning.
+Update Research

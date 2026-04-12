@@ -1,6 +1,6 @@
 ---
 title: Research 
 icon: fas fa-brain
-order: 6
+order: 4
 ---
 Update Research 💡

@@ -42,8 +42,8 @@ social:
     - https://twitter.com/username # change to your Twitter homepage
     - https://github.com/username # change to your GitHub homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://scholar.google.com/citations?hl=en&user=tpNoQ3AAAAAJ
+    - https://www.linkedin.com/in/sreejeet-maity-a3729b158/
 
 # Site Verification Settings
 webmaster_verifications:

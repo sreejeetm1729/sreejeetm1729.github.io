@@ -4,7 +4,7 @@ icon: fas fa-scroll
 order: 5
 ---
 
-#Selected First-Authored Publications
+
 
 1. **Corruption-Tolerant Optimal Asynchronous Q-Learning**  
    **Sreejeet Maity**<sup>†</sup>, Aritra Mitra.  

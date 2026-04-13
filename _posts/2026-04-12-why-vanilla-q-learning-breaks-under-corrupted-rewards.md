@@ -21,33 +21,33 @@ The punchline is simple: **vanilla Q-learning breaks under corrupted rewards bec
 
 Let us begin with the standard setup.
 
-We consider a discounted Markov decision process with finite state space \(\mathcal S\), finite action space \(\mathcal A\), discount factor \(\gamma \in (0,1)\), reward function \(r(s,a)\), and transition kernel \(P(\cdot \mid s,a)\).
+We consider a discounted Markov decision process with finite state space $$\mathcal S$$, finite action space $$\mathcal A$$, discount factor $$\gamma \in (0,1)$$, reward function $$r(s,a)$$, and transition kernel $$P(\cdot \mid s,a)$$.
 
-The object of interest is the optimal action-value function \(Q^\star\), which satisfies the **Bellman optimality equation**
+The object of interest is the optimal action-value function $$Q^\star$$, which satisfies the **Bellman optimality equation**
 
-\[
+$$
 Q^\star(s,a)
 =
 r(s,a)
 +
 \gamma \sum_{s'} P(s' \mid s,a)\max_{a'} Q^\star(s',a').
-\]
+$$
 
-If the model is known, one can in principle compute \(Q^\star\) by repeatedly applying the Bellman optimality operator
+If the model is known, one can in principle compute $$Q^\star$$ by repeatedly applying the Bellman optimality operator
 
-\[
+$$
 (\mathcal T Q)(s,a)
 =
 r(s,a)
 +
 \gamma \sum_{s'} P(s' \mid s,a)\max_{a'} Q(s',a').
-\]
+$$
 
-The reason this works is that \(\mathcal T\) is a \(\gamma\)-contraction in the sup norm. So repeated application drives us toward its unique fixed point \(Q^\star\).
+The reason this works is that $$\mathcal T$$ is a $$\gamma$$-contraction in the sup norm. So repeated application drives us toward its unique fixed point $$Q^\star$$.
 
-Q-learning is a stochastic approximation version of this idea. When the agent visits \((s_t,a_t)\), observes reward \(R_t\), and transitions to \(s_{t+1}\), the update is
+Q-learning is a stochastic approximation version of this idea. When the agent visits $$(s_t,a_t)$$, observes reward $$R_t$$, and transitions to $$s_{t+1}$$, the update is
 
-\[
+$$
 Q_{t+1}(s_t,a_t)
 =
 (1-\alpha_t)Q_t(s_t,a_t)
@@ -56,43 +56,43 @@ Q_{t+1}(s_t,a_t)
 \Bigl(
 R_t + \gamma \max_{a'} Q_t(s_{t+1},a')
 \Bigr).
-\]
+$$
 
 Everything else remains unchanged.
 
 At a high level, the term
 
-\[
+$$
 R_t + \gamma \max_{a'} Q_t(s_{t+1},a')
-\]
+$$
 
-is an empirical proxy for \((\mathcal T Q_t)(s_t,a_t)\). If the samples are generated properly and the reward observations are honest, then Q-learning tracks the Bellman operator and converges to \(Q^\star\).
+is an empirical proxy for $$(\mathcal T Q_t)(s_t,a_t)$$. If the samples are generated properly and the reward observations are honest, then Q-learning tracks the Bellman operator and converges to $$Q^\star$$.
 
 That is the clean story.
 
 ## 2. Where the clean story begins to fail
 
-The update above uses the observed reward \(R_t\) directly. This is the first point of vulnerability.
+The update above uses the observed reward $$R_t$$ directly. This is the first point of vulnerability.
 
 In the standard theory, the reward is modeled as something like
 
-\[
+$$
 R_t = r(s_t,a_t) + \xi_t,
-\]
+$$
 
-where \(\xi_t\) is a mean-zero noise term. The noise can slow learning, but as long as it is sufficiently well-behaved, repeated averaging eventually helps. The randomness washes out.
+where $$\xi_t$$ is a mean-zero noise term. The noise can slow learning, but as long as it is sufficiently well-behaved, repeated averaging eventually helps. The randomness washes out.
 
 Now suppose the learner instead observes
 
-\[
+$$
 R_t = r(s_t,a_t) + \xi_t + c_t,
-\]
+$$
 
-where \(c_t\) is a corruption term.
+where $$c_t$$ is a corruption term.
 
 This corruption is not required to be small. It is not required to be mean-zero. It is not required to be random. It could be chosen adversarially. It could depend on the time index, the current state-action pair, or even the current values of the learner. In short, it can be actively hostile.
 
-Vanilla Q-learning does not know any of this. It simply inserts the observed \(R_t\) into the update as if it were reliable.
+Vanilla Q-learning does not know any of this. It simply inserts the observed $$R_t$$ into the update as if it were reliable.
 
 That is the entire problem.
 
@@ -112,21 +112,21 @@ So the issue is not that the estimates become more variable. The issue is that t
 
 This is the most important conceptual point.
 
-In the clean setting, Q-learning tracks the Bellman optimality operator \(\mathcal T\), whose fixed point is the true optimal action-value function \(Q^\star\).
+In the clean setting, Q-learning tracks the Bellman optimality operator $$\mathcal T$$, whose fixed point is the true optimal action-value function $$Q^\star$$.
 
-Under corrupted rewards, the learner effectively sees a modified reward function. Call it \(\widetilde r(s,a)\). Then the implicit operator being tracked becomes
+Under corrupted rewards, the learner effectively sees a modified reward function. Call it $$\widetilde r(s,a)$$. Then the implicit operator being tracked becomes
 
-\[
+$$
 (\widetilde{\mathcal T}Q)(s,a)
 =
 \widetilde r(s,a)
 +
 \gamma \sum_{s'} P(s' \mid s,a)\max_{a'} Q(s',a').
-\]
+$$
 
 This is still a contraction. So the algorithm may still converge.
 
-But it converges to the fixed point of \(\widetilde{\mathcal T}\), not the fixed point of \(\mathcal T\).
+But it converges to the fixed point of $$\widetilde{\mathcal T}$$, not the fixed point of $$\mathcal T$$.
 
 That distinction is fatal.
 
@@ -140,17 +140,17 @@ That is one reason the problem is subtle. The failure is not always dramatic ins
 
 Let us make this more concrete.
 
-Imagine a state \(s\) with two actions: Left and Right. In the true environment, Left is slightly better than Right. So under the true value function,
+Imagine a state $$s$$ with two actions: Left and Right. In the true environment, Left is slightly better than Right. So under the true value function,
 
-\[
+$$
 Q^\star(s,\text{Left}) > Q^\star(s,\text{Right}).
-\]
+$$
 
-Now suppose the reward observations for Right are repeatedly corrupted upward. Perhaps not on every round, but frequently enough. Vanilla Q-learning takes those inflated rewards seriously. Over time, the estimate \(Q_t(s,\text{Right})\) begins to drift upward.
+Now suppose the reward observations for Right are repeatedly corrupted upward. Perhaps not on every round, but frequently enough. Vanilla Q-learning takes those inflated rewards seriously. Over time, the estimate $$Q_t(s,\text{Right})$$ begins to drift upward.
 
 Eventually it may cross the estimate for Left. Once that happens, the learner believes the wrong action is optimal.
 
-At that point, the damage does not remain local. Since Q-learning is bootstrapped, future targets involve \(\max_{a'}Q_t(s',a')\), which means the incorrect estimate propagates forward into future updates. The error starts to reinforce itself.
+At that point, the damage does not remain local. Since Q-learning is bootstrapped, future targets involve $$\max_{a'}Q_t(s',a')$$, which means the incorrect estimate propagates forward into future updates. The error starts to reinforce itself.
 
 So a corruption at the reward level can alter the learned action-value function enough to **change the induced policy**. The learner does not merely estimate the wrong numbers; it starts making the wrong decisions.
 
@@ -160,9 +160,9 @@ That is the core danger in control settings.
 
 Q-learning is not a simple averaging procedure. It is a recursive, bootstrapped method. The update target contains the term
 
-\[
+$$
 \gamma \max_{a'} Q_t(s_{t+1},a').
-\]
+$$
 
 That means today’s estimate depends partly on yesterday’s estimate. This is what makes Q-learning powerful. It can propagate information backward through time without solving the full model.
 

@@ -4,6 +4,7 @@ date: 2026-04-12 19:15:00 -0400
 categories: [rl-blogs]
 tags: [reinforcement-learning, robust-rl, q-learning, corruption, theory]
 series: Adversarially Robust RL Series
+math: true
 ---
 
 Reinforcement learning is often advertised as a framework for learning to act optimally from interaction alone. Among all RL algorithms, **Q-learning** occupies a special place. It is simple, model-free, elegant, and backed by decades of theory. Under appropriate assumptions, it converges to the optimal action-value function even when the environment is unknown.

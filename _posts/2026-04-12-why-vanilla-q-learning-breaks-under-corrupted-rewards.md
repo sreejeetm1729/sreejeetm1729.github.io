@@ -287,6 +287,33 @@ There is no looseness here. The reward corruption is literally accumulated over 
 
 Now let us see how corruption can change the policy, not just the values.
 
+\begin{figure}[t]
+\begin{center}
+\begin{tikzpicture}[->, >=stealth', auto, thick, node distance=2.8cm]
+	\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=0.8]
+	\node[state]    (A)                     {$2$};
+	\node[state]    (B)[right of=A]   {$1$};
+	\node[state]    (C)[right of=B]   {$3$};
+	\node[state]    (D)[above of=C]   {$4$};
+    \node[state]    (E)[above of=A]   {$5$};
+	\path
+	(A) edge[loop left] node{$p$} (A)
+    (B) edge[bend left,below] node{$p, \texttt{\textcolor{red}{L}}$} (A)
+        edge[bend right,below] node{$p, \texttt{\textcolor{red}{R}}$} (C)
+        edge[bend right,left] node{$1-p,\texttt{\textcolor{red}{L}}$} (E)
+        edge [bend left, right] node{$1-p,\texttt{\textcolor{red}{R}}$} (D) % New edge from state 1 to state 4
+    (C) edge[bend right,right] node{$1-p$} (D)
+        edge[loop right] node{$p$} (C)
+    (D) edge[loop right] node{$1$} (D)
+    (E) edge[loop left] node{$1$} (D)
+    (A) edge[bend left,left] node{$1-p$} (E); % New edge from state 1 to state 5
+	%\node[above=0.5cm] (A){Patch G};
+	%\draw[red] ($(D)+(-1.5,0)$) ellipse (2cm and 3.5cm)node[yshift=3cm]{Patch H};
+	\end{tikzpicture}
+\caption{The above MDP is constructed with state space $\mathcal{S} =\{1, 2, 3, 4, 5\}$ and action space $\mathcal{A} = \{\texttt{L}, \texttt{R}\}$. When in state $s=1$, taking action $a = L$ leads to a transition to state 2 with probability $p$, and a transition to state 5 with probability $1-p$. Taking action $a = R$ in state $s=1$ leads to symmetric outcomes. In states 2 and 3, regardless of the chosen action, the system remains in states 2 and 3 with probability $p$, and transits to states 4 and 5 with probability $1-p$. States 4 and 5 are absorbing states, indicating that once reached, the system remains in these states indefinitely.} \label{fig:MDP}
+\end{center}
+\end{figure}
+
 Consider an MDP with one state $$s$$ and two actions, $$L$$ and $$R$$. Suppose both actions deterministically return to the same state. Let the clean rewards be
 
 $$

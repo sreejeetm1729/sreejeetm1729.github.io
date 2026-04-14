@@ -553,4 +553,4 @@ That is why robust reinforcement learning is not a cosmetic modification of clas
 
 ## What comes next
 
-The next natural question is not whether vanilla Q-learning is fragile; that is now clear. The next question is: what must be changed in the update rule so that corrupted rewards do not control the asymptotic limit? That is where robust reward estimation and thresholded Bellman updates enter.
+The next natural question is not whether vanilla Q-learning is fragile; that is now clear. The next question is: what must be changed in the update rule so that corrupted rewards do not control the asymptotic limit? That is where robust reward estimation and thresholded Bellman updates.

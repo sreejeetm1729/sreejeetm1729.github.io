@@ -6,13 +6,11 @@ order: 6
 
 # RL Blogs
 
-## Adversarially Robust RL Series
+{% assign rl_posts = site.posts | where_exp: "post", "post.categories contains 'rl-blogs'" | sort: "date" | reverse %}
 
-{% assign series_posts = site.posts | where: "series", "Adversarially Robust RL Series" | sort: "date" | reverse %}
-
-{% if series_posts.size > 0 %}
+{% if rl_posts.size > 0 %}
 <ul>
-  {% for post in series_posts %}
+  {% for post in rl_posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <small> — {{ post.date | date: "%B %d, %Y" }}</small>
@@ -20,6 +18,5 @@ order: 6
   {% endfor %}
 </ul>
 {% else %}
-<p>No posts in this series yet.</p>
-{% endif %}
-
+<p>No RL blog posts yet.</p>
+ {% endif %}

@@ -12,7 +12,7 @@ order: 6
 
 {% if series_posts.size > 0 %}
 <ul>
-   {% for post in series_posts %}
+  {% for post in series_posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <small> — {{ post.date | date: "%B %d, %Y" }}</small>
@@ -21,22 +21,5 @@ order: 6
 </ul>
 {% else %}
 <p>No posts in this series yet.</p>
-{% endif %}
-
-## All RL Blogs
-
-{% assign rl_posts = site.categories["rl-blogs"] | sort: "date" | reverse %}
-
-{% if rl_posts.size > 0 %}
-<ul>
-  {% for post in rl_posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small> — {{ post.date | date: "%B %d, %Y" }}</small>
-    </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>No RL blog posts yet.</p>
 {% endif %}
 

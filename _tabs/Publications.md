@@ -1,5 +1,5 @@
 ---
-layout: Publications
-icon: fas fa-tags
-order: 2
+title: Publications
+icon: fas fa-file-alt
+order: 3
 ---

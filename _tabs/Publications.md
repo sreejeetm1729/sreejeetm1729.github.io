@@ -37,12 +37,11 @@ order: 3
 .pub-links a {
   text-decoration: none;
   font-weight: 700;
-  margin-right: 8px;
-  font-size: 13px;
-  padding: 2px 7px;
-  border-radius: 7px;
-  display: inline-block;
-  margin-top: 4px;
+  margin-right: 12px;
+  font-size: 14px;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
 }
 
 /* smooth matte dark-mode palette */

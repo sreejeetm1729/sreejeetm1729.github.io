@@ -234,4 +234,15 @@ order: 3
 
 <div class="pub-section">
 
-<h2>Invited Talks</h2>
+<h2>Invited Talks / Seminars</h2>
+
+<ol class="workshop-list">
+
+  <li class="workshop-entry">
+    <strong>Towards Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
+    <span style="color:#e6c98f; font-style:italic;">CORAL Seminar, North Carolina State University</span>.
+  </li>
+
+</ol>
+
+</div>

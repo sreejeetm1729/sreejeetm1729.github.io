@@ -34,47 +34,67 @@ order: 3
   color: #555;
 }
 
-.pub-links {
-  margin-top: 0.35rem;
-}
-
 .pub-links a {
   text-decoration: none;
   font-weight: 700;
   margin-right: 8px;
-  font-size: 14px;
+  font-size: 13px;
+  padding: 2px 7px;
+  border-radius: 7px;
+  display: inline-block;
+  margin-top: 4px;
 }
 
-.pub-links a:hover {
-  text-decoration: underline;
-}
+/* smooth matte dark-mode palette */
 
 .link-summary {
-  color: #fde68a;
+  color: #f5e6b8;
+  background-color: rgba(245, 230, 184, 0.13);
 }
 
 .link-paper {
-  color: #bfdbfe;
+  color: #b7d3f2;
+  background-color: rgba(183, 211, 242, 0.13);
 }
 
 .link-proceedings {
-  color: #ddd6fe;
+  color: #cbbff0;
+  background-color: rgba(203, 191, 240, 0.13);
 }
 
 .link-poster {
-  color: #fbcfe8;
+  color: #e8bfd2;
+  background-color: rgba(232, 191, 210, 0.13);
 }
 
 .link-slides {
-  color: #bbf7d0;
+  color: #bfe3cf;
+  background-color: rgba(191, 227, 207, 0.13);
 }
 
 .link-code {
-  color: #a5f3fc;
+  color: #b8e3e8;
+  background-color: rgba(184, 227, 232, 0.13);
 }
 
 .link-project {
-  color: #fecaca;
+  color: #e8c4bd;
+  background-color: rgba(232, 196, 189, 0.13);
+}
+
+.link-workshop {
+  color: #d8cfee;
+  background-color: rgba(216, 207, 238, 0.13);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 7px;
+}
+
+.pub-links a:hover,
+.link-workshop:hover {
+  filter: brightness(1.15);
+  text-decoration: none;
 }
 
 .workshop-entry {

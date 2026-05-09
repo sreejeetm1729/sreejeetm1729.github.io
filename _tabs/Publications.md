@@ -159,33 +159,45 @@ order: 3
 
 <h2>Accepted Workshop Presentations</h2>
 
-<div class="workshop-entry">
-  <strong>Multi-Agent Robust FRL with Sparse Communication</strong>, NCSU Robotics Symposium 2026.
-</div>
+<ol class="workshop-list">
 
-<div class="workshop-entry">
-  <strong>Corruption-Tolerant Agnostic Q-Learning</strong>, NeurIPS 2025 Reliable ML Workshop.
-</div>
+  <li class="workshop-entry">
+    <strong>Multi-Agent Robust FRL with Sparse Communication</strong>,
+    <a class="link-workshop" href="https://engr.ncsu.edu/robotics/#symposium">NCSU Robotics Symposium 2026</a>.
+  </li>
 
-<div class="workshop-entry">
-  <strong>Robust Federated RL with Byzantine Agents</strong>, Applied AI Symposium 2025.
-</div>
+  <li class="workshop-entry">
+    <strong>Corruption-Tolerant Agnostic Q-Learning</strong>,
+    <a class="link-workshop" href="https://neurips.cc/virtual/2025/workshop/109580">NeurIPS 2025 Reliable ML Workshop</a>.
+  </li>
 
-<div class="workshop-entry">
-  <strong>Theoretical Limits of Robust TD Learning</strong>, New York RL Workshop, NYRL 2025, Amazon.
-</div>
+  <li class="workshop-entry">
+    <strong>Robust Federated RL with Byzantine Agents</strong>,
+    <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2025</a>,
+    <a class="link-workshop" href="https://nescw.org/">NESCW 2026</a>.
+  </li>
 
-<div class="workshop-entry">
-  <strong>Towards Finite-Time Theory for Adversarially-Robust RL: Mathematical Guarantees and Fundamental Limits</strong>, Northeast Systems and Control Symposium, NESCW 2025.
-</div>
+  <li class="workshop-entry">
+    <strong>Theoretical Limits of Robust TD Learning</strong>,
+    <a class="link-workshop" href="https://ny-rl.com/">New York RL Workshop, NYRL 2025, Amazon</a>.
+  </li>
 
-<div class="workshop-entry">
-  <strong>Adversarially-Robust Deep Q-Network for Algorithmic Trading</strong>, MLSS 2025, NCSU.
-</div>
+  <li class="workshop-entry">
+    <strong>Towards Finite-Time Theory for Adversarially-Robust RL: Mathematical Guarantees and Fundamental Limits</strong>,
+    <a class="link-workshop" href="https://nescw.org/">Northeast Systems and Control Symposium, NESCW 2025</a>.
+  </li>
 
-<div class="workshop-entry">
-  <strong>Robust Algorithms for Adversarial Reinforcement Learning</strong>, Applied AI Symposium 2024.
-</div>
+  <li class="workshop-entry">
+    <strong>Adversarially-Robust Deep Q-Network for Algorithmic Trading</strong>,
+    <a class="link-workshop" href="https://sites.google.com/ncsu.edu/mlss2025">MLSS 2025, NCSU</a>.
+  </li>
+
+  <li class="workshop-entry">
+    <strong>Robust Algorithms for Adversarial Reinforcement Learning</strong>,
+    <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2024</a>.
+  </li>
+
+</ol>
 
 </div>
 

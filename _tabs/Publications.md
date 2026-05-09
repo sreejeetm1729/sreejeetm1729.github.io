@@ -54,7 +54,7 @@ order: 3
 
 .link-summary {
   color: #f5e6b8;
-  background-color: rgba(245, 230, 184, 0.13);
+  background-color: rgba(240, 204, 96, 0.96);
 }
 
 .link-paper {

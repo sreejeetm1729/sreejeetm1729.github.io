@@ -54,12 +54,12 @@ order: 3
 
 .link-summary {
   color: #f5e6b8;
-  background-color: rgba(240, 204, 96, 0.96);
+  background-color: rgba(5, 92, 9, 0.96);
 }
 
 .link-paper {
   color: #b7d3f2;
-  background-color: rgba(8, 199, 49, 0.13);
+  background-color: rgba(100, 125, 236, 0.13);
 }
 
 .link-proceedings {
@@ -69,17 +69,17 @@ order: 3
 
 .link-poster {
   color: #e8bfd2;
-  background-color: rgba(232, 191, 210, 0.13);
+  background-color: rgba(192, 158, 174, 0.13);
 }
 
 .link-slides {
   color: #bfe3cf;
-  background-color: rgba(191, 227, 207, 0.13);
+  background-color: rgba(230, 92, 12, 0.13);
 }
 
 .link-code {
   color: #b8e3e8;
-  background-color: rgba(184, 227, 232, 0.13);
+  background-color: rgba(19, 199, 219, 0.13);
 }
 
 .link-project {
@@ -136,7 +136,7 @@ order: 3
   <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
   <div class="pub-links">
     <a class="link-summary" href="#">Summary</a>
-    <a class="link-paper" href="#">Proceedings</a>
+    <a class="link-paper" href="#">Paper</a>
     <a class="link-poster" href="#">Poster</a>
     <a class="link-slides" href="#">Slides</a>
     <a class="link-code" href="#">Code</a>
@@ -150,7 +150,7 @@ order: 3
   <div class="pub-links">
     <a class="link-summary" href="#">Summary</a>
     <a class="link-paper" href="#">Paper</a>
-    <a class="link-poster" href="#">Proceedings</a>
+    <a class="link-poster" href="#">Poster</a>
     <a class="link-slides" href="#">Slides</a>
     <a class="link-code" href="#">Code</a>
   </div>

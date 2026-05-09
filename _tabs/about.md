@@ -15,7 +15,7 @@ order: 1
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
 
 <p>
-Hello! 🍁 I'm <strong>Sreejeet Maity</strong>, a third-year Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University. My research interests span <strong>Control Theory</strong>, <strong>Large Scale Machine Learning</strong>, <strong>Statistical Learning Theory</strong>, and <strong>Adversarial Reinforcement Learning</strong>. I have a strong background in <strong>Probability Theory</strong>, <strong>Linear Algebra</strong>, <strong>Stochastic Optimization</strong>, <strong>Randomized Algorithms</strong>, and <strong>Robust Statistics</strong>.
+Hello! 🍁 I'm <strong>Sreejeet Maity</strong>, a third-year Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University, working with <a href="https://amitra2.wordpress.ncsu.edu/" style="color:#0891b2;"><strong>Dr. Aritra Mitra</strong></a>. My research interests span <strong>Control Theory</strong>, <strong>Large Scale Machine Learning</strong>, <strong>Statistical Learning Theory</strong>, and <strong>Adversarial Reinforcement Learning</strong>. I have a strong background in <strong>Probability Theory</strong>, <strong>Linear Algebra</strong>, <strong>Stochastic Optimization</strong>, <strong>Randomized Algorithms</strong>, and <strong>Robust Statistics</strong>.
 </p>
 
 <p>

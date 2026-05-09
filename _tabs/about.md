@@ -8,5 +8,8 @@ order: 1
      alt="Sreejeet Maity"
      style="float:left; width:230px; max-width:45%; margin:0 25px 15px 0; border-radius:12px;" />
 
-I am a Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University, where I am advised by [Dr. Aritra Mitra](https://amitra2.wordpress.ncsu.edu/). My research lies at the intersection of reinforcement learning, statistical learning, robust statistics, and control theory.
+Hello! 🍁 I'm **Sreejeet Maity**, a third-year Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University. My research interests span **Control Theory**, **Large Scale Machine Learning**, **Statistical Learning Theory**, and **Adversarial Reinforcement Learning**. I have a strong background in **Probability Theory**, **Linear Algebra**, **Stochastic Optimization**, **Randomized Algorithms**, and **Robust Statistics**.
 
+I completed my M.Tech. in Robotics and Autonomous Systems from the Indian Institute of Science (IISc), Bangalore, in 2023, and my B.E. in Electrical Engineering from Jadavpur University, Kolkata, in 2021. During my master's at IISc, I focused on perturbative networked systems and perceptive algorithms for swarms.
+
+Beyond my passion for mathematics, I also enjoy cooking, reading, writing poetry, and reflecting deeply while watching the night sky. Also, I love cats and elephants. A lot. 🐘❤️😸

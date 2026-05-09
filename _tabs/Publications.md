@@ -212,8 +212,8 @@ order: 3
   </li>
 
   <li class="workshop-entry">
-    <strong>Towards Finite-Time Theory for Adversarially-Robust RL: Mathematical Guarantees and Fundamental Limits</strong>,
-    <a class="link-workshop" href="https://nescw.org/">Northeast Systems and Control Symposium, NESCW 2025</a>.
+    <strong>Towards Finite-Time Theory for Adversarially-Robust RL</strong>,
+    <a class="link-workshop" href="https://nescw.org/"> NESCW 2025</a>.
   </li>
 
   <li class="workshop-entry">

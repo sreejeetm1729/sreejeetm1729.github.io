@@ -58,7 +58,7 @@ order: 3
 
 <div class="pub-section">
 
-
+<h2>Selected Publications</h2>
 
 <div class="pub-entry">
   <div class="pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
@@ -129,7 +129,7 @@ order: 3
 
 <div class="pub-section">
 
-## Accepted Workshop Presentations
+<h2>Accepted Workshop Presentations</h2>
 
 <div class="workshop-entry">
   <strong>Multi-Agent Robust FRL with Sparse Communication</strong>, NCSU Robotics Symposium 2026.

@@ -59,7 +59,7 @@ order: 3
 
 .link-paper {
   color: #b7d3f2;
-  background-color: rgba(183, 211, 242, 0.13);
+  background-color: rgba(8, 199, 49, 0.13);
 }
 
 .link-proceedings {

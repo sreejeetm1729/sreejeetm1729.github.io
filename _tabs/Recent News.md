@@ -9,7 +9,7 @@ order: 4
     <em><strong>April 2026</strong></em>: Our work titled
     "<strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>"
     was accepted at the
-    <a href="https://icml.cc/" style="color:#1612e4;">
+    <a href="https://icml.cc/" style="color:#0891b2;">
       43rd International Conference on Machine Learning (ICML 2026)
     </a>.
   </li>
@@ -26,7 +26,7 @@ order: 4
     and
     "<strong>Variance-Reduced Q-Learning for Static and Time-Varying Networks</strong>"
     were accepted for oral presentation and publication at the
-    <a href="https://acc2026.a2c2.org/" style="color:#1612e4;">
+    <a href="https://acc2026.a2c2.org/" style="color:#0891b2;">
       2026 American Control Conference
     </a>.
   </li>
@@ -41,7 +41,7 @@ order: 4
     <em><strong>September 2025</strong></em>: Our recent work titled
     "<strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>"
     was accepted at the
-    <a href="https://neurips.cc/" style="color:#1612e4;">
+    <a href="https://neurips.cc/" style="color:#0891b2;">
       39th Annual Conference on Neural Information Processing Systems (NeurIPS 2025), Reliable ML Workshop
     </a>.
   </li>
@@ -50,7 +50,7 @@ order: 4
     <em><strong>September 2025</strong></em>: Our recent work titled
     "<strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>"
     was released on
-    <a href="https://arxiv.org/abs/2509.08933" style="color:#1612e4;">arXiv</a>.
+    <a href="https://arxiv.org/abs/2509.08933" style="color:#0891b2;">arXiv</a>.
     The work provides the first provably robust variants of asynchronous Q-Learning that tolerate adversarially corrupted rewards. The algorithm is distribution-agnostic and achieves near-optimal finite-time guarantees up to a provably unavoidable corruption term.
   </li>
 
@@ -58,20 +58,20 @@ order: 4
     <em><strong>September 2025</strong></em>: Poster
     "<strong>Adversarially-Robust TD Learning with Markovian Data</strong>"
     accepted at the
-    <a href="https://ny-rl.com/" style="color:#1612e4;">
+    <a href="https://ny-rl.com/" style="color:#0891b2;">
       New York Reinforcement Learning Workshop 2025, Amazon
     </a>.
   </li>
 
   <li style="font-size:15px">
     <em><strong>April 2025</strong></em>: Passed my Ph.D. Oral Qualifying Examination! The committee members were my advisor
-    <a href="https://amitra2.wordpress.ncsu.edu/" style="color:#1612e4;">Dr. Aritra Mitra</a>
+    <a href="https://amitra2.wordpress.ncsu.edu/" style="color:#0891b2;">Dr. Aritra Mitra</a>
     (Assistant Professor, Department of ECE),
-    <a href="https://www4.stat.ncsu.edu/~wlu4/" style="color:#1612e4;">Dr. Wenbin Lu</a>
+    <a href="https://www4.stat.ncsu.edu/~wlu4/" style="color:#0891b2;">Dr. Wenbin Lu</a>
     (Professor, Director of Graduate Programs, Department of Statistics),
-    <a href="https://achakra2.wordpress.ncsu.edu/" style="color:#1612e4;">Dr. Aranya Chakrabortty</a>
+    <a href="https://achakra2.wordpress.ncsu.edu/" style="color:#0891b2;">Dr. Aranya Chakrabortty</a>
     (IEEE Fellow, Professor, Associate Department Head for Research, Department of ECE), and
-    <a href="https://research.ece.ncsu.edu/aros/" style="color:#1612e4;">Dr. Edgar Lobaton</a>
+    <a href="https://research.ece.ncsu.edu/aros/" style="color:#0891b2;">Dr. Edgar Lobaton</a>
     (Professor, Department of ECE).
   </li>
 
@@ -79,7 +79,7 @@ order: 4
     <em><strong>April 2025</strong></em>: Poster
     "<strong>Towards Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>"
     accepted at the
-    <a href="https://nescw.org/" style="color:#1612e4;">
+    <a href="https://nescw.org/" style="color:#0891b2;">
       Northeast Systems and Control Workshop 2025, Columbia University
     </a>.
   </li>
@@ -88,7 +88,7 @@ order: 4
     <em><strong>February 2025</strong></em>: Our extended preprint titled
     "<strong>Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</strong>"
     was released on
-    <a href="https://arxiv.org/" style="color:#1612e4;">arXiv</a>.
+    <a href="https://arxiv.org/" style="color:#0891b2;">arXiv</a>.
     To appear in the 28th International Conference on Artificial Intelligence and Statistics (AISTATS) 2025.
   </li>
 
@@ -96,7 +96,7 @@ order: 4
     <em><strong>January 2025</strong></em>: Our paper titled
     "<strong>Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</strong>"
     was accepted at the
-    <a href="https://aistats.org/" style="color:#1612e4;">
+    <a href="https://aistats.org/" style="color:#0891b2;">
       28th International Conference on Artificial Intelligence and Statistics (AISTATS 2025)
     </a>.
   </li>
@@ -105,7 +105,7 @@ order: 4
     <em><strong>December 2024</strong></em>: Presented our paper
     "<strong>Robust Q-Learning under Corrupted Rewards</strong>"
     at the
-    <a href="https://cdc2024.ieeecss.org/" style="color:#1612e4;">
+    <a href="https://cdc2024.ieeecss.org/" style="color:#0891b2;">
       63rd IEEE Conference on Decision and Control 2024
     </a>
     in Milan, Italy.
@@ -121,7 +121,7 @@ order: 4
     <em><strong>September 2024</strong></em>: Our extended preprint titled
     "<strong>Robust Q-Learning under Corrupted Rewards</strong>"
     was released on
-    <a href="https://arxiv.org/" style="color:#1612e4;">arXiv</a>.
+    <a href="https://arxiv.org/" style="color:#0891b2;">arXiv</a>.
     To appear in the 63rd IEEE Conference on Decision and Control 2024.
   </li>
 
@@ -134,14 +134,14 @@ order: 4
     <em><strong>July 2024</strong></em>: Our paper titled
     "<strong>Robust Q-Learning under Corrupted Rewards</strong>"
     was accepted at the flagship
-    <a href="https://cdc2024.ieeecss.org/" style="color:#1612e4;">
+    <a href="https://cdc2024.ieeecss.org/" style="color:#0891b2;">
       63rd IEEE Conference on Decision and Control 2024
     </a>.
   </li>
 
   <li style="font-size:15px">
     <em><strong>August 2023</strong></em>: Joined North Carolina State University, Raleigh, as a Ph.D. student under
-    <a href="https://amitra2.wordpress.ncsu.edu/" style="color:#1612e4;">Dr. Aritra Mitra</a>.
+    <a href="https://amitra2.wordpress.ncsu.edu/" style="color:#0891b2;">Dr. Aritra Mitra</a>.
   </li>
 
   <li style="font-size:15px">

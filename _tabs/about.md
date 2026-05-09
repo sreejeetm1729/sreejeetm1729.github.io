@@ -5,43 +5,47 @@ order: 1
 ---
 
 <style>
-.bio-wrap {
-  text-align: justify;
-  line-height: 1.75;
+.about-newspaper {
   font-size: 16px;
+  line-height: 1.75;
+  text-align: justify;
 }
 
-.bio-photo {
+.about-newspaper img.profile-photo {
   float: left !important;
-  width: 260px;
-  max-width: 42%;
-  height: auto;
-  margin: 6px 28px 14px 0;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  display: inline-block !important;
+  width: 260px !important;
+  max-width: 40% !important;
+  height: auto !important;
+  margin: 4px 28px 14px 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
 }
 
-.bio-wrap p {
-  margin-bottom: 1.05rem;
+.about-newspaper p {
+  margin-bottom: 1rem;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @media screen and (max-width: 768px) {
-  .bio-photo {
+  .about-newspaper img.profile-photo {
     float: none !important;
-    display: block;
-    max-width: 90%;
-    width: 90%;
-    margin: 0 auto 20px auto;
+    display: block !important;
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 0 auto 20px auto !important;
   }
 }
 </style>
 
-<div class="bio-wrap">
+<div class="about-newspaper clearfix">
 
-<img class="bio-photo"
-     src="{{ '/assets/lib/img/IMG_5557.JPG' | relative_url }}"
-     alt="Sreejeet Maity">
+<img class="profile-photo" src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Sreejeet Maity">
 
 <p>
 Hello! 🍁 I'm <strong>Sreejeet Maity</strong>, a third-year Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University. My research interests span <strong>Control Theory</strong>, <strong>Large Scale Machine Learning</strong>, <strong>Statistical Learning Theory</strong>, and <strong>Adversarial Reinforcement Learning</strong>. I have a strong background in <strong>Probability Theory</strong>, <strong>Linear Algebra</strong>, <strong>Stochastic Optimization</strong>, <strong>Randomized Algorithms</strong>, and <strong>Robust Statistics</strong>.
@@ -56,5 +60,3 @@ Beyond my passion for mathematics, I also enjoy cooking, reading, writing poetry
 </p>
 
 </div>
-
-<div style="clear: both;"></div>

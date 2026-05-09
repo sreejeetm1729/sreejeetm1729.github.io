@@ -31,7 +31,13 @@ order: 3
 
 .pub-venue {
   margin-top: 0.2rem;
-  color: #555;
+  color: #d8a7a7;
+  font-style: italic;
+}
+
+.pub-venue strong {
+  color: inherit;
+  font-weight: 700;
 }
 
 .pub-links a {

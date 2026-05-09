@@ -50,31 +50,31 @@ order: 3
 }
 
 .link-summary {
-  color: #b45309;
+  color: #d97706;   /* soft amber */
 }
 
 .link-paper {
-  color: #2563eb;
+  color: #60a5fa;   /* light blue */
 }
 
 .link-proceedings {
-  color: #7c3aed;
+  color: #a78bfa;   /* light purple */
 }
 
 .link-poster {
-  color: #db2777;
+  color: #f472b6;   /* light pink */
 }
 
 .link-slides {
-  color: #16a34a;
+  color: #34d399;   /* light green */
 }
 
 .link-code {
-  color: #0891b2;
+  color: #22d3ee;   /* light cyan */
 }
 
 .link-project {
-  color: #dc2626;
+  color: #f87171;   /* light red */
 }
 
 .workshop-entry {
@@ -93,21 +93,21 @@ order: 3
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Machine Learning, <strong>ICML 2026</strong>.</div>
   <div class="pub-links">
-    <a class="link-summary" href="https://arxiv.org/abs/2509.08933">Summary</a>
+    <a class="link-summary" href="#">Summary</a>
     <a class="link-paper" href="https://arxiv.org/pdf/2509.08933">Paper</a>
+    <a class="link-poster" href="#">Poster</a>
     <a class="link-code" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-with-Markovian-Data">Code</a>
     <a class="link-slides" href="https://drive.google.com/file/d/1NCp2UcYIeqiKm-mnK6LpOkxPgWrAGqI7/view?usp=drive_link">Slides</a>
   </div>
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title">Adversarially-R="pubobust TD Learning with Markovian Data</div>
+  <div class="pub-title">Adversarially-Robust TD Learning with Markovian Data</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
   <div class="pub-links">
     <a class="link-summary" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data/blob/main/Summary_AISTATS.pdf">Summary</a>
-    <a class="link-paper" href="https://raw.githubusercontent.com/mlresearch/v258/main/assets/maity25a/maity25a.pdf">Paper</a>
-    <a class="link-proceedings" href="https://proceedings.mlr.press/v258/maity25a.html">Proceedings</a>
+    <a class="link-paper" href="https://proceedings.mlr.press/v258/maity25a.html">Proceedings</a>
     <a class="link-poster" href="https://virtual.aistats.org/virtual/2025/poster/9390">Poster</a>
     <a class="link-slides" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data/blob/main/AISTATS%20Slides.pdf">Slides</a>
     <a class="link-code" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data">Code</a>
@@ -132,7 +132,7 @@ order: 3
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
-    <a class="link-project" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication">Project</a>
+    <a class="link-summary" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication">Project</a>
     <a class="link-code" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication">Code</a>
   </div>
 </div>
@@ -142,7 +142,7 @@ order: 3
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
-    <a class="link-project" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks">Project</a>
+    <a class="link-summary" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks">Project</a>
     <a class="link-code" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks">Code</a>
   </div>
 </div>

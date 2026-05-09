@@ -16,11 +16,13 @@ order: 3
 
 .pub-entry {
   margin-bottom: 1.6rem;
+  overflow-x: auto;
 }
 
 .pub-title {
   font-weight: 700;
-  font-size: 17px;
+  font-size: 16px;
+  white-space: nowrap;
 }
 
 .pub-authors {
@@ -56,7 +58,7 @@ order: 3
 
 <div class="pub-section">
 
-## Selected First-Authored Publications
+
 
 <div class="pub-entry">
   <div class="pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>

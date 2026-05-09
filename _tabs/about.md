@@ -15,7 +15,7 @@ order: 1
   float: left !important;
   display: inline-block !important;
   width: 260px !important;
-  max-width: 40% !important;
+  max-width: 80% !important;
   height: auto !important;
   margin: 4px 28px 14px 0 !important;
   border-radius: 12px !important;

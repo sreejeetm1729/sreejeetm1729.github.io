@@ -40,16 +40,31 @@ order: 3
   font-weight: 700;
 }
 
+.pub-links {
+  margin-top: 0.45rem;
+}
+
 .pub-links a {
   text-decoration: none;
   font-weight: 700;
-  margin-right: 12px;
-  font-size: 14px;
-  background-color: transparent !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
+  margin-right: 8px;
+  font-size: 13px;
+
+  padding: 3px 8px;
+  border-radius: 8px;
+
+  background-color: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  display: inline-block;
+  margin-top: 5px;
 }
 
+.pub-links a:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.22);
+  text-decoration: none;
+}
 /* smooth matte dark-mode palette */
 
 .link-summary {

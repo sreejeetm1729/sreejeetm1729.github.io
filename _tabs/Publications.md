@@ -83,12 +83,17 @@ order: 3
 }
 
 .link-workshop {
-  color: #d8cfee;
-  background-color: rgba(216, 207, 238, 0.13);
+  color: #a5f3fc;
   text-decoration: none;
   font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 7px;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.link-workshop:hover {
+  text-decoration: underline;
+  filter: none;
 }
 
 .pub-links a:hover,

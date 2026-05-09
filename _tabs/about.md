@@ -45,7 +45,7 @@ order: 1
 
 <div class="about-newspaper clearfix">
 
-<img class="profile-photo" src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Sreejeet Maity">
+<img class="profile-photo" src="{{ '/assets/lib/img/IMG_5557.JPG' | relative_url }}" alt="Sreejeet Maity">
 
 <p>
 Hello! 🍁 I'm <strong>Sreejeet Maity</strong>, a third-year Ph.D. student in the Department of Electrical and Computer Engineering at North Carolina State University. My research interests span <strong>Control Theory</strong>, <strong>Large Scale Machine Learning</strong>, <strong>Statistical Learning Theory</strong>, and <strong>Adversarial Reinforcement Learning</strong>. I have a strong background in <strong>Probability Theory</strong>, <strong>Linear Algebra</strong>, <strong>Stochastic Optimization</strong>, <strong>Randomized Algorithms</strong>, and <strong>Robust Statistics</strong>.

@@ -50,31 +50,31 @@ order: 3
 }
 
 .link-summary {
-  color: #d97706;   /* soft amber */
+  color: #fde68a;
 }
 
 .link-paper {
-  color: #60a5fa;   /* light blue */
+  color: #bfdbfe;
 }
 
 .link-proceedings {
-  color: #a78bfa;   /* light purple */
+  color: #ddd6fe;
 }
 
 .link-poster {
-  color: #f472b6;   /* light pink */
+  color: #fbcfe8;
 }
 
 .link-slides {
-  color: #34d399;   /* light green */
+  color: #bbf7d0;
 }
 
 .link-code {
-  color: #22d3ee;   /* light cyan */
+  color: #a5f3fc;
 }
 
 .link-project {
-  color: #f87171;   /* light red */
+  color: #fecaca;
 }
 
 .workshop-entry {

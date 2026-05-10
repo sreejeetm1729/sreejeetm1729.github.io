@@ -122,7 +122,6 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
 <h2>[<strong style="color:#58ebfc;">Theme 2</strong>] Robust Policy Evaluation and Temporal-Difference (TD) Learning</h2>
   The second direction of my research focuses on robust policy evaluation with <strong>Markovian data</strong> and <strong>function approximation</strong>. In contrast to idealized i.i.d. sampling models, reinforcement learning data are often collected from a single trajectory, making consecutive observations strongly dependent. This temporal dependence makes robust estimation substantially more delicate, since the learner must distinguish genuine statistical fluctuations from adversarial perturbations while tracking the value function. In this line of work, which appeared at <strong style="color:#d8a7a7;">AISTATS 2025</strong>, we develop finite-time guarantees for robust temporal-difference learning under adversarial corruption and Markovian sampling, and clarify both what robust TD algorithms can achieve and what limitations are unavoidable under time-correlated corrupted data.
-</p>
 
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
 
@@ -139,6 +138,11 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   </p>
 </div>
   </div>
+<p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
+ Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We then develop a novel algorithm called 𝚁𝚘𝚋𝚞𝚜𝚝-𝚃𝙳 and prove that its finite-time guarantees match that of 𝚅𝚊𝚗𝚒𝚕𝚕𝚊-𝚃𝙳 with linear function approximation up to a small O(ϵ) term that captures the effect of corruption. We complement this result with a minimax lower bound, revealing that such an additive corruption-induced term is unavoidable. To our knowledge, these results are the first of their kind in the context of adversarial robustness of stochastic approximation schemes driven by Markov noise.
+</p>
+
+<hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 
 <h2>Federated and Multi-Agent Reinforcement Learning</h2>

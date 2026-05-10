@@ -51,7 +51,21 @@ A central goal of my work is to develop <span class="research-tag">provably robu
 Can reinforcement learning still discover an optimal policy when the feedback it receives is both statistically dependent and adversarially corrupted? This line of work answers this question by developing a finite-time theory for robust optimal policy learning from unreliable trajectories, where rewards, transitions, observations, or Bellman targets may be strategically distorted. We show that standard algorithms such as vanilla Q-Learning can be fundamentally brittle under even small corruptions, and then design robust Bellman-update schemes that recover near-clean statistical performance up to an explicit and unavoidable corruption penalty. Together, this series of work, appearing across major venues including <strong>ICML 2026</strong>, <strong>IEEE CDC 2024</strong>, and the <strong>NeurIPS 2025 Reliable ML Workshop</strong>, establishes some of the first fundamental guarantees for learning optimal policies from strongly correlated and corrupted observations, combining robust statistics, stochastic approximation, and Bellman fixed-point theory to identify both what is algorithmically achievable and what is information-theoretically impossible.
 </p>
 
+<div class="research-split-block">
 
+  <div class="research-split-image-box">
+    <img class="research-split-image"
+         src="{{ '/workspaces/sreejeetm1729.github.io/assets/research/robust_policy.png' | relative_url }}"
+         alt="Robust Q-Learning under corrupted rewards">
+  </div>
+
+  <div class="research-split-text">
+    <p>
+    Recently, there has been a surge of interest in understanding the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of these algorithms in non-ideal environments, particularly under corrupted rewards, remains poorly understood. Motivated by this gap, we study the robustness of the celebrated Q-Learning algorithm under a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We first show that such attacks can cause vanilla Q-Learning to incur arbitrarily large errors. We then develop robust Q-Learning algorithms that use historical reward data to construct a robust empirical Bellman operator at each time step, without requiring knowledge of the true reward statistics. Finally, we establish finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable error term that scales with the adversarial corruption fraction. We further prove an information-theoretic lower bound showing that this dependence on the corruption fraction is unavoidable.
+    </p>
+  </div>
+
+</div>
 
 </div>
 

@@ -190,7 +190,7 @@ The third direction of my research focuses on robust federated reinforcement lea
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
 
   <p>
-      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated Q-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics.
+      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated \(Q\)-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics.
    </p>
   </div>
   </div>

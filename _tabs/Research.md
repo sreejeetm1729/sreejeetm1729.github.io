@@ -126,7 +126,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
 
   <div style="flex:0 0 280px;">
-    <img src="{{ '/assets/research/robust_policy.png' | relative_url }}"
+    <img src="{{ '/assets/research/robust_td.png' | relative_url }}"
          alt="Robust optimal policy learning"
          style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
   </div>
@@ -134,7 +134,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
  
   <p>
-  Recently, there has been a surge of interest in understanding the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of these algorithms in non-ideal environments, particularly under corrupted rewards, remains poorly understood. Motivated by this gap, we study the robustness of the celebrated Q-Learning algorithm under a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We first show that such attacks can cause vanilla Q-Learning to incur arbitrarily large errors.
+  One of the fundamental challenges in reinforcement learning (RL) is policy evaluation, which involves estimating the value function—the long-term return—associated with a fixed policy. The well-known Temporal Difference (TD) learning algorithm addresses this problem, and recent research has provided finite-time convergence guarantees for TD and its variants. However, these guarantees typically rely on the assumption that reward observations are generated from a well-behaved (e.g., sub-Gaussian) true reward distribution.
   </p>
 </div>
   </div>

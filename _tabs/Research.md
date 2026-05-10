@@ -91,6 +91,43 @@ Can reinforcement learning still discover an optimal policy when the feedback it
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
+
+<div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
+
+  <h3 style="margin-bottom:0.7rem; color:#d8a7a7;">Representative Publications</h3>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">■</span>
+    <strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>
+    <span style="color:#d8a7a7;">
+      [Accepted at the 43rd International Conference on Machine Learning, ICML 2026]
+    </span>
+  </p>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">■</span>
+    <strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>
+    <span style="color:#d8a7a7;">
+      [Accepted at the 39th Annual Conference on Neural Information Processing Systems, NeurIPS 2025 Reliable ML Workshop]
+    </span>
+    <a href="https://arxiv.org/pdf/2509.08933" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper ♾️]</a>
+    <a href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-with-Markovian-Data" style="color:#a5f3fc; text-decoration:none; font-weight:700;">[Code 🖳]</a>
+    <a href="https://drive.google.com/file/d/1NCp2UcYIeqiKm-mnK6LpOkxPgWrAGqI7/view?usp=drive_link" style="color:#bbf7d0; text-decoration:none; font-weight:700;">[Slides 📈]</a>
+  </p>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">■</span>
+    <strong>Robust Q-Learning under Corrupted Rewards</strong>
+    <span style="color:#d8a7a7;">
+      [Accepted at the 63rd IEEE Conference on Decision and Control, CDC 2024]
+    </span>
+    <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper ♾️]</a>
+    <a href="https://ieeexplore.ieee.org/document/10885945" style="color:#ddd6fe; text-decoration:none; font-weight:700;">[Proceedings 📜]</a>
+    <a href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards" style="color:#a5f3fc; text-decoration:none; font-weight:700;">[Code 🖳]</a>
+    <a href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/CDC_Presentation_Slides.pdf" style="color:#bbf7d0; text-decoration:none; font-weight:700;">[Slides 📈]</a>
+  </p>
+
+</div>
 <div class="research-card">
 
 <h2>Robust Policy Evaluation and TD Learning</h2>

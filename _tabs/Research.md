@@ -121,12 +121,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 <div class="research-card">
 
 <h2>[<strong style="color:#58ebfc;">Theme 2</strong>] Robust Policy Evaluation and Temporal-Difference (TD) Learning</h2>
-
-I also study robust policy evaluation under Markovian data and function approximation. In many practical settings, samples are collected from a single trajectory and hence are temporally correlated. This makes robust estimation substantially more challenging than in the i.i.d. setting.
-
-My work develops finite-time guarantees for robust temporal-difference learning under adversarial influences and Markovian sampling. A key goal is to understand both algorithmic robustness and the fundamental limitations of policy evaluation when the data-generating process is time-correlated.
-
-
+  The second direction of my research focuses on robust policy evaluation with <strong>Markovian data</strong> and <strong>function approximation</strong>. Unlike idealized i.i.d. sampling models, reinforcement learning data in practice are often collected from a single trajectory, making consecutive samples strongly dependent. This temporal dependence creates a substantially more delicate robust-estimation problem, since the learner must separate genuine statistical fluctuations from adversarial perturbations while tracking the value function through correlated observations. My work develops finite-time guarantees for robust temporal-difference learning under adversarial corruption and Markovian sampling, and shows how robust algorithmic design can preserve stable policy evaluation even when standard TD methods become unreliable. A central goal of this line of work is to clarify both sides of the theory: what robust TD algorithms can achieve, and what limitations are unavoidable when policy evaluation is performed from time-correlated and corrupted data.
 </div>
 
 <div class="research-card">

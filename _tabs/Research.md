@@ -63,14 +63,6 @@ I also study robust policy evaluation under Markovian data and function approxim
 
 My work develops finite-time guarantees for robust temporal-difference learning under adversarial influences and Markovian sampling. A key goal is to understand both algorithmic robustness and the fundamental limitations of policy evaluation when the data-generating process is time-correlated.
 
-<span class="research-highlight">Representative themes:</span>
-
-<ul class="research-list">
-  <li>Finite-time theory for robust TD learning with Markovian data.</li>
-  <li>Divergence mechanisms of vanilla TD under adaptive corruption.</li>
-  <li>Robust TD algorithms with clean-case rates up to a small additive bias.</li>
-  <li>Lower bounds certifying the inevitability of corruption-induced error.</li>
-</ul>
 
 </div>
 

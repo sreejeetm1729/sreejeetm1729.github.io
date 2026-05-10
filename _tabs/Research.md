@@ -95,7 +95,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
-  <h3 style="margin-bottom:0.7rem; color:#d8a7a7;">Representative Publications</h3>
+  <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(C_1\)]</span>

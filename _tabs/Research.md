@@ -206,13 +206,13 @@ We prove that, with high probability, our proposed algorithm converges exactly t
 </p>
 <p style="font-size:16px; line-height:1.75; text-align:justify;">
   More precisely, our finite-time bound takes the simplified form
-  \[
+  \begin{equation}
   \|Q_K-Q^\star\|_\infty
   \;\le\;
   \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{\textcolor{#34d399}{M}T}}\right)
   \;+\;
   \widetilde{\mathcal O}\!\left(\frac{\sqrt{\color{#fca5a5}{\varepsilon}}}{\sqrt{T}}\right).
-  \]
+  \end{equation}
   Here, <span style="color:#34d399;"><strong>\(M\)</strong></span> denotes the number of agents and drives the collaborative speedup, improving the clean statistical error from the single-agent rate \(1/\sqrt{\color{}{T}}\) to \(1/\sqrt{\textcolor{#34d399}{M} T}\). The term involving <span style="color:#fca5a5;"><strong>\(\varepsilon\)</strong></span> captures the price of adversarial corruption; importantly, for any fixed corruption level, this term still decays with the number of samples <span style="color:;"><strong>\(T\)</strong></span>, showing a vanishing corruption effect as learning progresses. Apart from that, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
 </p>
 </div>

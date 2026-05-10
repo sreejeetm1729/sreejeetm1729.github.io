@@ -51,7 +51,7 @@ A central goal of my work is to develop <span class="research-tag">provably robu
 Can reinforcement learning still discover an optimal policy when the feedback it receives is both statistically dependent and adversarially corrupted? This line of work answers this question by developing a finite-time theory for robust optimal policy learning from unreliable trajectories, where rewards, transitions, observations, or Bellman targets may be strategically distorted. We show that standard algorithms such as vanilla Q-Learning can be fundamentally brittle under even small corruptions, and then design robust Bellman-update schemes that recover near-clean statistical performance up to an explicit and unavoidable corruption penalty. Together, this series of work, appearing across major venues including <span class="research-tag">ICML 2026</span>, <span class="research-tag">IEEE CDC 24</span>, and the <span class="research-tag">NeuRIPS 2025-Reliable ML Workshop</span>, establishes some of the first fundamental guarantees for learning optimal policies from strongly correlated and corrupted observations, combining robust statistics, stochastic approximation, and Bellman fixed-point theory to identify both what is algorithmically achievable and what is information-theoretically impossible.
 </p>
 
-<div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:2rem;">
+<div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.3 rem;">
 
   <div style="flex:0 0 280px;">
     <img src="{{ '/assets/research/robust_policy.png' | relative_url }}"

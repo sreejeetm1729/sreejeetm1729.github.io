@@ -74,15 +74,6 @@ Another direction of my research focuses on federated and multi-agent reinforcem
 
 I am interested in understanding when collaboration improves sample complexity, how little communication is sufficient, and how robust learning remains possible when some agents are Byzantine or unreliable.
 
-<span class="research-highlight">Representative themes:</span>
-
-<ul class="research-list">
-  <li>Robust federated \(Q\)-Learning with almost no communication.</li>
-  <li>Byzantine-resilient reinforcement learning in federated multi-agent systems.</li>
-  <li>Communication-efficient algorithms with finite-time guarantees.</li>
-  <li>Collaborative speedups under corrupted or heterogeneous data collection.</li>
-</ul>
-
 </div>
 
 <div class="research-card">

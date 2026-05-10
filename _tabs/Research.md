@@ -209,7 +209,7 @@ We prove that, with high probability, our proposed algorithm converges exactly t
   \[
   \|Q_K-Q^\star\|_\infty
   \;\le\;
-  \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{\color{#34d399}{M}T}}\right)
+  \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{\textcolor{#34d399}{M}T}}\right)
   \;+\;
   \widetilde{\mathcal O}\!\left(\frac{\sqrt{\color{#fca5a5}{\varepsilon}}}{\sqrt{T}}\right).
   \]

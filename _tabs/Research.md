@@ -202,7 +202,20 @@ The third direction of my research focuses on robust federated reinforcement lea
   </div>
   </div>
   <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
-We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. Perhaps surprisingly, these guarantees require only a constant number of communication rounds, making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
+We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. More precisely, our finite-time bound takes the simplified form
+</p>
+<p style="font-size:16px; line-height:1.75; text-align:justify;">
+  \[
+  \|Q_K-Q^\star\|_\infty
+  \;\le\;
+  \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{MT}}\right)
+  \;+\;
+  \widetilde{\mathcal O}\!\left(\frac{\sqrt{\varepsilon}}{\sqrt{T}}\right),
+  \]
+  where the first term captures the collaborative speedup from \(M\) agents, while the second term captures the adversarial effect and vanishes as the number of samples grows.
+</p>
+<p>
+Perhaps surprisingly, these guarantees require only a constant number of communication rounds, making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
 </p>
 </div>
 

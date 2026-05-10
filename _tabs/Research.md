@@ -117,7 +117,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
 </div>
 
-<hr style="border:0; height:4px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
+<hr style="border:0; height:3px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 
 <h2>Robust Policy Evaluation and TD Learning</h2>

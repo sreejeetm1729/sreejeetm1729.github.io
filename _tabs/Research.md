@@ -212,7 +212,7 @@ We prove that, with high probability, our proposed algorithm converges exactly t
   \;+\;
   \widetilde{\mathcal O}\!\left(\frac{\sqrt{\varepsilon}}{\sqrt{T}}\right),
   \]
-  where the first term captures the collaborative speedup from \(M\) agents, while the second term captures the adversarial effect and vanishes as the number of samples grows. Perhaps surprisingly, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
+  where the first term exhibits the collaborative speedup obtained by aggregating data from \(M\) agents, improving the clean statistical error from the single-agent rate \(1/\sqrt{T}\) to \(1/\sqrt{MT}\). The second term captures the price of adversarial corruption; importantly, for any fixed corruption level \(\varepsilon\), this term still decays with the number of samples per agent, showing a vanishing corruption effect as learning progresses. Apart from that, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
 </p>
 </div>
 

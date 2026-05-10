@@ -168,26 +168,14 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(C_1\)]</span>
-    <strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>
+    <strong>Adversarially-Robust TD-Learning with Markovian Data</strong>
     <span style="color:#d8a7a7;">
-      (ICML 2026)
+      (AISTATS 2025)
     </span>
     <a href="https://arxiv.org/pdf/2509.08933" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
-  <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_2\)]</span>
-    <strong>Robust Q-Learning under Corrupted Rewards</strong>
-    <span style="color:#d8a7a7;">
-      (CDC 2024)
-    </span>
-    <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
-  </p>
-
-</div>
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
-<div class="research-card">
-
 <h2>Federated and Multi-Agent Reinforcement Learning</h2>
 
 Another direction of my research focuses on federated and multi-agent reinforcement learning, where several agents interact with a common environment and communicate information to a central learner or to one another. These settings are natural for large-scale learning systems, but they introduce new challenges due to communication constraints, heterogeneous data, asynchronous sampling, and adversarial agents.

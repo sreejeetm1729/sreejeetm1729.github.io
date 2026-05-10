@@ -106,7 +106,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   </p>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">■</span>
+    <span style="color:#a5f3fc;">[\(C_2\)]</span>
     <strong>Robust Q-Learning under Corrupted Rewards</strong>
     <span style="color:#d8a7a7;">
       (CDC 2024)

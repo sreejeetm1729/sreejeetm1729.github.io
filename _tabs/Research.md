@@ -55,7 +55,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
   <div class="research-split-image-box">
     <img class="research-split-image"
-         src="{{ '/workspaces/sreejeetm1729.github.io/assets/research/robust_policy.png' | relative_url }}"
+         src="{{ '/assets/research/robust_policy.png' | relative_url }}"
          alt="Robust Q-Learning under corrupted rewards">
   </div>
 

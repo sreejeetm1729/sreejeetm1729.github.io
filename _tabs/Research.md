@@ -62,11 +62,12 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
  
     <p>
-      Recently, there has been a surge of interest in understanding the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of these algorithms in non-ideal environments, particularly under corrupted rewards, remains poorly understood. Motivated by this gap, we study the robustness of the celebrated Q-Learning algorithm under a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We first show that such attacks can cause vanilla Q-Learning to incur arbitrarily large errors. We then develop robust Q-Learning algorithms that use historical reward data to construct a robust empirical Bellman operator at each time step, without requiring knowledge of the true reward statistics. Finally, we establish finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable error term that scales with the adversarial corruption fraction. We further prove an information-theoretic lower bound showing that this dependence on the corruption fraction is unavoidable.
+      Recently, there has been a surge of interest in understanding the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of these algorithms in non-ideal environments, particularly under corrupted rewards, remains poorly understood. Motivated by this gap, we study the robustness of the celebrated Q-Learning algorithm under a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We first show that such attacks can cause vanilla Q-Learning to incur arbitrarily large errors.
     </p>
 
   </div>
-
+<p>  We then develop robust Q-Learning algorithms that use historical reward data to construct a robust empirical Bellman operator at each time step, without requiring knowledge of the true reward statistics. Finally, we establish finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable error term that scales with the adversarial corruption fraction. We further prove an information-theoretic lower bound showing that this dependence on the corruption fraction is unavoidable.
+</p>
 </div>
 
 </div>

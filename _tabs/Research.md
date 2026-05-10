@@ -144,19 +144,19 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 </div>
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
-  <img src="{{ '/assets/research/van_1.png' | relative_url }}"
+  <img src="{{ '/assets/research/td_1.png' | relative_url }}"
        alt="Plot 1"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/rob_1.png' | relative_url }}"
+  <img src="{{ '/assets/research/td_2.png' | relative_url }}"
        alt="Plot 2"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/rob_2.png' | relative_url }}"
+  <img src="{{ '/assets/research/td_3.png' | relative_url }}"
        alt="Plot 3"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/rob_3.png' | relative_url }}"
+  <img src="{{ '/assets/research/td_4.png' | relative_url }}"
        alt="Plot 4"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 

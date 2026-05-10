@@ -189,12 +189,12 @@ The third direction of my research focuses on robust federated reinforcement lea
 
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
 
-    <p>
-      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose <strong style="color:#e6c98f;">Robust Fed-Q</strong>, a federated Q-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics. We prove that, with high probability, Robust Fed-Q converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. Perhaps surprisingly, these guarantees require only a constant number of communication rounds, making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
-    </p>
-
-  </div>
-
+  <p>
+      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose <strong style="color:#e6c98f;">Robust Fed-Q</strong>, a federated Q-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics.
+   </p>
+  <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
+We prove that, with high probability, Robust Fed-Q converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. Perhaps surprisingly, these guarantees require only a constant number of communication rounds, making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
+</p>
 </div>
 </div>
 

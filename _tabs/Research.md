@@ -110,37 +110,4 @@ I am also interested in decentralized reinforcement learning over static and tim
 
 </div>
 
-<div class="research-card">
-
-<h2>Learning for Safety-Critical and Personalized Systems</h2>
-
-More recently, I have been exploring reinforcement learning problems motivated by safety-critical and personalized decision-making systems. In collaboration with the Neuromuscular Rehabilitation Engineering Laboratory at the University of North Carolina at Chapel Hill, I am working on personalized reinforcement learning methods for powered knee prosthesis tuning.
-
-The broader goal is to design learning algorithms that adapt to subject-specific dynamics while respecting safety, comfort, and data-efficiency constraints.
-
-<span class="research-highlight">Representative themes:</span>
-
-<ul class="research-list">
-  <li>Personalized reinforcement learning for powered knee prosthesis tuning.</li>
-  <li>Subject-specific MDP and CMDP formulations.</li>
-  <li>Offline-to-online adaptation from population priors.</li>
-  <li>Safe and data-efficient personalization under user-specific dynamics.</li>
-</ul>
-
-</div>
-
-<div class="research-card">
-
-<h2>Broader Vision</h2>
-
-My long-term research goal is to build reinforcement learning and control algorithms that are not only statistically efficient, but also reliable in imperfect real-world environments. I am especially interested in settings where learning systems must operate with corrupted feedback, delayed observations, unreliable agents, distributional uncertainty, or safety constraints.
-
-At a high level, my work asks the following question:
-
-<p style="color:#e6c98f; font-style:italic; font-weight:600;">
-How can we make sequential decision-making algorithms provably reliable when the data used for learning cannot be fully trusted?
-</p>
-
-</div>
-
 </div>

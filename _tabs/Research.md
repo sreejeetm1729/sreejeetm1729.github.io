@@ -23,7 +23,7 @@ math: true
 }
 
 .research-tag {
-  color: #a5f3fc;
+  color: #811b0d;
   font-weight: 700;
 }
 

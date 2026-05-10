@@ -146,7 +146,27 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 </div>
   </div>
 <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
- Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We then develop a novel algorithm called 𝚁𝚘𝚋𝚞𝚜𝚝-𝚃𝙳 and prove that its finite-time guarantees match that of 𝚅𝚊𝚗𝚒𝚕𝚕𝚊-𝚃𝙳 with linear function approximation up to a small O(ϵ) term that captures the effect of corruption. We complement this result with a minimax lower bound, revealing that such an additive corruption-induced term is unavoidable. To our knowledge, these results are the first of their kind in the context of adversarial robustness of stochastic approximation schemes driven by Markov noise.
+ Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We then develop a novel algorithm called 𝚁𝚘𝚋𝚞𝚜𝚝-𝚃𝙳 and prove that its finite-time guarantees match that of 𝚅𝚊𝚗𝚒𝚕𝚕𝚊-𝚃𝙳 with linear function approximation up to a small \(O(\varepsilon)\) term that captures the effect of corruption. 
+ <p style="font-size:16px; line-height:1.75; text-align:justify;">
+ \begin{equation}
+\mathbb{E}[\Vert \theta_t - \theta^* \Vert^2_2]
+\;\leq\;
+\widetilde{\mathcal O}\!\left(
+\frac{\bar{\tau}_{\mathrm{mix}}\sigma^2}{T}
+\right)
++
+\mathcal O\!\left(
+\varepsilon \sigma_1^2
+\right).
+\end{equation}
+ </p>
+  The first term captures the clean statistical error under Markovian sampling: it decays as \(1/T\), with the mixing time \(\bar{\tau}_{\mathrm{mix}}\), noise level \(\sigma^2\). The second term is the corruption-induced bias, scaling linearly with the adversarial contamination level \(\epsilon\). We complement this result with a minimax lower bound, revealing that such an additive corruption-induced term is unavoidable, establishing that Robust-TD achieves the optimal robustness profile up to problem-dependent constants and logarithmic factors.
+  <p style="font-size:16px; line-height:1.75; text-align:justify;">
+ \begin{equation}
+\inf_{\hat{V}_T} \sup_{V \in \mathcal{M}(\epsilon, \rho, \mathcal{Q})} \mathbb{P}\left( \Vert \hat{V}_T - V \Vert_2 \geq \frac{\tilde{c} \rho \sqrt{\varepsilon}}{(1-\gamma)}\right) \geq \frac{1}{2}.
+\end{equation}
+ </p>
+ To our knowledge, these results are the first of their kind in the context of adversarial robustness of stochastic approximation schemes driven by Markov noise.
 </p>
 </div>
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">

@@ -82,15 +82,6 @@ I am interested in understanding when collaboration improves sample complexity, 
 
 I am also interested in decentralized reinforcement learning over static and time-varying networks. In these problems, agents exchange information locally over a graph rather than communicating with a central server. This raises questions about how network structure, consensus, mixing, and local sampling affect statistical efficiency.
 
-<span class="research-highlight">Representative themes:</span>
-
-<ul class="research-list">
-  <li>Variance-reduced \(Q\)-Learning over static and time-varying networks.</li>
-  <li>Decentralized learning with random communication graphs.</li>
-  <li>Finite-time rates for networked reinforcement learning algorithms.</li>
-  <li>Interplay between consensus error, Bellman error, and statistical error.</li>
-</ul>
-
 </div>
 
 </div>

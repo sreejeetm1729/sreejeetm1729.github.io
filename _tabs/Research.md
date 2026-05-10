@@ -115,6 +115,13 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(W_1\)]</span>
+    <strong>Agnostic Q-Learning under Corrupted Feedback</strong>
+    <span style="color:#d8a7a7;">
+      (NeuRIPS 2025-Reliable ML Workshop)
+    </span>
+  </p>
 </div>
 
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">

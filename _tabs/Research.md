@@ -122,8 +122,22 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
 <h2>[<strong style="color:#58ebfc;">Theme 2</strong>] Robust Policy Evaluation and Temporal-Difference (TD) Learning</h2>
   The second direction of my research focuses on robust policy evaluation with <strong>Markovian data</strong> and <strong>function approximation</strong>. Unlike idealized i.i.d. sampling models, reinforcement learning data in practice are often collected from a single trajectory, making consecutive samples strongly dependent. This temporal dependence creates a substantially more delicate robust-estimation problem, since the learner must separate genuine statistical fluctuations from adversarial perturbations while tracking the value function through correlated observations. My work develops finite-time guarantees for robust temporal-difference learning under adversarial corruption and Markovian sampling, and shows how robust algorithmic design can preserve stable policy evaluation even when standard TD methods become unreliable. A central goal of this line of work is to clarify both sides of the theory: what robust TD algorithms can achieve, and what limitations are unavoidable when policy evaluation is performed from time-correlated and corrupted data.
-</div>
 
+<div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
+
+  <div style="flex:0 0 280px;">
+    <img src="{{ '/assets/research/robust_policy.png' | relative_url }}"
+         alt="Robust optimal policy learning"
+         style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+  </div>
+
+  <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
+ 
+  <p>
+  Recently, there has been a surge of interest in understanding the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of these algorithms in non-ideal environments, particularly under corrupted rewards, remains poorly understood. Motivated by this gap, we study the robustness of the celebrated Q-Learning algorithm under a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We first show that such attacks can cause vanilla Q-Learning to incur arbitrarily large errors.
+  </p>
+</div>
+  </div>
 <div class="research-card">
 
 <h2>Federated and Multi-Agent Reinforcement Learning</h2>

@@ -205,14 +205,15 @@ The third direction of my research focuses on robust federated reinforcement lea
 We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. More precisely, our finite-time bound takes the simplified form
 </p>
 <p style="font-size:16px; line-height:1.75; text-align:justify;">
+  More precisely, our finite-time bound takes the simplified form
   \[
   \|Q_K-Q^\star\|_\infty
   \;\le\;
-  \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{MT}}\right)
+  \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{\color{#bbf7d0}{M}\color{#bfdbfe}{T}}}\right)
   \;+\;
-  \widetilde{\mathcal O}\!\left(\frac{\sqrt{\varepsilon}}{\sqrt{T}}\right),
+  \widetilde{\mathcal O}\!\left(\frac{\sqrt{\color{#fca5a5}{\varepsilon}}}{\sqrt{\color{#bfdbfe}{T}}}\right).
   \]
-  where the first term exhibits the collaborative speedup obtained by aggregating data from \(M\) agents, improving the clean statistical error from the single-agent rate \(1/\sqrt{T}\) to \(1/\sqrt{MT}\). The second term captures the price of adversarial corruption; importantly, for any fixed corruption level \(\varepsilon\), this term still decays with the number of samples per agent, showing a vanishing corruption effect as learning progresses. Apart from that, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
+  Here, <span style="color:#bbf7d0;"><strong>\(M\)</strong></span> denotes the number of agents and drives the collaborative speedup, improving the clean statistical error from the single-agent rate \(1/\sqrt{T}\) to \(1/\sqrt{MT}\). The term involving <span style="color:#fca5a5;"><strong>\(\varepsilon\)</strong></span> captures the price of adversarial corruption; importantly, for any fixed corruption level, this term still decays with the number of samples <span style="color:#bfdbfe;"><strong>\(T\)</strong></span>, showing a vanishing corruption effect as learning progresses. Apart from that, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
 </p>
 </div>
 

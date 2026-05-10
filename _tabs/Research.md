@@ -206,6 +206,29 @@ We prove that, with high probability, our proposed algorithm converges exactly t
 </p>
 </div>
 
+
+<div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
+
+  <img src="{{ '/assets/research/fed_1.png' | relative_url }}"
+       alt="Plot 1"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/fed_2.png' | relative_url }}"
+       alt="Plot 2"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/fed_3.png' | relative_url }}"
+       alt="Plot 3"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/fed_4.png' | relative_url }}"
+       alt="Plot 4"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+</div>
+
+<div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
+
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">

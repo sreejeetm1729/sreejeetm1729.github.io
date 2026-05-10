@@ -45,11 +45,11 @@ A central goal of my work is to develop <span class="research-tag">provably robu
 
 <div class="research-card">
 
-<h2>Robust Reinforcement Learning under Corrupted Feedback</h2>
+<h2>Learning Robust Optimal Policy from Strongly Correlated and Corrupted Observations</h2>
 
-A major part of my research studies reinforcement learning when rewards, transitions, observations, or Bellman targets are corrupted by an adversary. Standard reinforcement learning algorithms such as vanilla \(Q\)-Learning and TD learning can become fragile in such settings, even when the corruption level is small.
-
-My work develops robust variants of these algorithms by combining ideas from reinforcement learning, robust statistics, and stochastic approximation. The objective is to obtain algorithms that preserve clean-case statistical rates up to an unavoidable corruption-dependent term.
+<p>
+A major part of my research develops a finite-time theory for reinforcement learning under adversarially corrupted feedback, where rewards, transitions, observations, or Bellman targets may be unreliable and standard algorithms such as vanilla Q-Learning and temporal-difference learning can become provably fragile even under small levels of corruption. My work addresses this challenge by designing robust reinforcement learning algorithms that combine ideas from robust statistics, stochastic approximation, and Bellman fixed-point theory, with the goal of retaining clean-case statistical rates up to an explicit and unavoidable corruption-dependent term while also establishing matching lower bounds that characterize the fundamental limits of robust learning. This trilogy of work, disseminated across <strong>ICML 2026</strong>, the <strong>NeurIPS 2025 Reliable ML Workshop</strong>, and <strong>IEEE CDC 2024</strong>, provides some of the first fundamental guarantees for corruption-tolerant optimal reinforcement learning under corrupted and strongly correlated observations.
+</p>
 
 
 

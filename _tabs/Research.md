@@ -206,6 +206,17 @@ We prove that, with high probability, our proposed algorithm converges exactly t
 </p>
 </div>
 
+<h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_1\)]</span>
+    <strong>Robust Federated Q-Learning with Almost No Communication</strong>
+    <span style="color:#d8a7a7;">
+      (ACC 2026)
+    </span>
+    <a href="" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+  </p> 
+
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 

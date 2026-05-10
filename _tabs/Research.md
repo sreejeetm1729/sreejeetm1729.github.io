@@ -97,7 +97,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   <h3 style="margin-bottom:0.7rem; color:#d8a7a7;">Representative Publications</h3>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">■</span>
+    <span style="color:#a5f3fc;">[\(C_1\)]</span>
     <strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>
     <span style="color:#d8a7a7;">
       (ICML 2026)

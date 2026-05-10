@@ -227,7 +227,7 @@ We prove that, with high probability, our proposed algorithm converges exactly t
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#bfdbfe; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#d8a7a7;">Figure</strong>: Robust learning under adversarial influence, with vanishing corruption effects and collaborative gains from more agents.
+  <strong style="color:#a5f3fc;">Figure</strong>: Robust learning under adversarial influence, with vanishing corruption effects and collaborative gains from more agents.
 </div>
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 

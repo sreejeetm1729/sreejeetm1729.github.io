@@ -2,6 +2,7 @@
 title: Research
 icon: fas fa-flask
 order: 2
+math: true
 ---
 
 <style>
@@ -50,14 +51,7 @@ A major part of my research studies reinforcement learning when rewards, transit
 
 My work develops robust variants of these algorithms by combining ideas from reinforcement learning, robust statistics, and stochastic approximation. The objective is to obtain algorithms that preserve clean-case statistical rates up to an unavoidable corruption-dependent term.
 
-<span class="research-highlight">Representative themes:</span>
 
-<ul class="research-list">
-  <li>Robust \(Q\)-Learning under adversarial reward corruption.</li>
-  <li>Corruption-tolerant asynchronous \(Q\)-Learning with near-optimal finite-time rates.</li>
-  <li>Robust Bellman target estimation using trimmed means and other robust estimators.</li>
-  <li>Minimax lower bounds showing when corruption-dependent degradation is unavoidable.</li>
-</ul>
 
 </div>
 

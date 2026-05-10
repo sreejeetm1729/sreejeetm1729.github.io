@@ -100,27 +100,16 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     <span style="color:#a5f3fc;">■</span>
     <strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>
     <span style="color:#d8a7a7;">
-      [Accepted at the 43rd International Conference on Machine Learning, ICML 2026]
+      (ICML 2026)
     </span>
     <a href="https://arxiv.org/pdf/2509.08933" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">■</span>
-    <strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>
-    <span style="color:#d8a7a7;">
-      [Accepted at the 39th Annual Conference on Neural Information Processing Systems, NeurIPS 2025 Reliable ML Workshop]
-    </span>
-    <a href="https://arxiv.org/pdf/2509.08933" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper ♾️]</a>
-    <a href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-with-Markovian-Data" style="color:#a5f3fc; text-decoration:none; font-weight:700;">[Code 🖳]</a>
-    <a href="https://drive.google.com/file/d/1NCp2UcYIeqiKm-mnK6LpOkxPgWrAGqI7/view?usp=drive_link" style="color:#bbf7d0; text-decoration:none; font-weight:700;">[Slides 📈]</a>
-  </p>
-
-  <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">■</span>
     <strong>Robust Q-Learning under Corrupted Rewards</strong>
     <span style="color:#d8a7a7;">
-      [Accepted at the 63rd IEEE Conference on Decision and Control, CDC 2024]
+      (CDC 2024)
     </span>
     <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>

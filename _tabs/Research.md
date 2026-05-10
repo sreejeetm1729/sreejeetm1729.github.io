@@ -226,8 +226,8 @@ We prove that, with high probability, our proposed algorithm converges exactly t
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
-<div style="font-size:13px; line-height:1.5; color:#d8a7a7; text-align:center; font-style:italic; margin-top:0.3rem; margin-bottom:1.5rem;">
-  Empirical results illustrating robustness to adversarial influence, vanishing corruption effects with increasing samples, and clear collaborative gains as the number of agents increases.
+<div style="font-size:15px; line-height:1.5; color:#d8a7a7; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
+  Robust learning under adversarial influence, with vanishing corruption effects and collaborative gains from more agents.
 </div>
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 

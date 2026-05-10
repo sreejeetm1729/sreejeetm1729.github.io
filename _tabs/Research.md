@@ -102,6 +102,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     <span style="color:#d8a7a7;">
       [Accepted at the 43rd International Conference on Machine Learning, ICML 2026]
     </span>
+    <a href="https://arxiv.org/pdf/2509.08933" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
   <p style="margin-bottom:0.65rem;">
@@ -121,10 +122,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     <span style="color:#d8a7a7;">
       [Accepted at the 63rd IEEE Conference on Decision and Control, CDC 2024]
     </span>
-    <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper ♾️]</a>
-    <a href="https://ieeexplore.ieee.org/document/10885945" style="color:#ddd6fe; text-decoration:none; font-weight:700;">[Proceedings 📜]</a>
-    <a href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards" style="color:#a5f3fc; text-decoration:none; font-weight:700;">[Code 🖳]</a>
-    <a href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/CDC_Presentation_Slides.pdf" style="color:#bbf7d0; text-decoration:none; font-weight:700;">[Slides 📈]</a>
+    <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
 </div>

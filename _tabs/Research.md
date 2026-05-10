@@ -117,10 +117,10 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
 </div>
 
-<hr style="border:0; height:3px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
+<hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 
-<h2>Robust Policy Evaluation and TD Learning</h2>
+<h2>[<strong style="color:#58ebfc;">Theme 2</strong>] Robust Policy Evaluation and Temporal-Difference (TD) Learning</h2>
 
 I also study robust policy evaluation under Markovian data and function approximation. In many practical settings, samples are collected from a single trajectory and hence are temporally correlated. This makes robust estimation substantially more challenging than in the i.i.d. setting.
 

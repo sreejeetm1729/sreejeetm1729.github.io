@@ -141,7 +141,50 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
  Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We then develop a novel algorithm called 𝚁𝚘𝚋𝚞𝚜𝚝-𝚃𝙳 and prove that its finite-time guarantees match that of 𝚅𝚊𝚗𝚒𝚕𝚕𝚊-𝚃𝙳 with linear function approximation up to a small O(ϵ) term that captures the effect of corruption. We complement this result with a minimax lower bound, revealing that such an additive corruption-induced term is unavoidable. To our knowledge, these results are the first of their kind in the context of adversarial robustness of stochastic approximation schemes driven by Markov noise.
 </p>
+</div>
+<div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
+  <img src="{{ '/assets/research/van_1.png' | relative_url }}"
+       alt="Plot 1"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/rob_1.png' | relative_url }}"
+       alt="Plot 2"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/rob_2.png' | relative_url }}"
+       alt="Plot 3"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/rob_3.png' | relative_url }}"
+       alt="Plot 4"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+</div>
+
+<div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
+
+  <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_1\)]</span>
+    <strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>
+    <span style="color:#d8a7a7;">
+      (ICML 2026)
+    </span>
+    <a href="https://arxiv.org/pdf/2509.08933" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+  </p>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_2\)]</span>
+    <strong>Robust Q-Learning under Corrupted Rewards</strong>
+    <span style="color:#d8a7a7;">
+      (CDC 2024)
+    </span>
+    <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+  </p>
+
+</div>
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 

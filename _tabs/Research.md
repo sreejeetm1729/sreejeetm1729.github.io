@@ -212,10 +212,7 @@ We prove that, with high probability, our proposed algorithm converges exactly t
   \;+\;
   \widetilde{\mathcal O}\!\left(\frac{\sqrt{\varepsilon}}{\sqrt{T}}\right),
   \]
-  where the first term captures the collaborative speedup from \(M\) agents, while the second term captures the adversarial effect and vanishes as the number of samples grows.
-</p>
-<p>
-Perhaps surprisingly, these guarantees require only a constant number of communication rounds, making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
+  where the first term captures the collaborative speedup from \(M\) agents, while the second term captures the adversarial effect and vanishes as the number of samples grows. Perhaps surprisingly, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
 </p>
 </div>
 

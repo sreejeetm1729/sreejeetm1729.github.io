@@ -72,7 +72,25 @@ Can reinforcement learning still discover an optimal policy when the feedback it
    We then develop robust Q-Learning algorithms that use historical reward data to construct a robust empirical Bellman operator at each time step, without requiring knowledge of the true reward statistics. Finally, we establish finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable error term that scales with the adversarial corruption fraction. We further prove an information-theoretic lower bound showing that this dependence on the corruption fraction is unavoidable. The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026 </span> work completes this line by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption.
 </p>
 </div>
+<div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
+  <img src="{{ '/assets/research/van_1.png' | relative_url }}"
+       alt="Plot 1"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/rob_1.png' | relative_url }}"
+       alt="Plot 2"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/rob_2.png' | relative_url }}"
+       alt="Plot 3"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/rob_3.png' | relative_url }}"
+       alt="Plot 4"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+</div>
 <div class="research-card">
 
 <h2>Robust Policy Evaluation and TD Learning</h2>

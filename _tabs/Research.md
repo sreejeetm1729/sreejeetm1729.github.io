@@ -195,7 +195,7 @@ The third direction of my research focuses on robust federated reinforcement lea
   </div>
   </div>
   <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
-We prove that, with high probability, Robust Fed-Q converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. Perhaps surprisingly, these guarantees require only a constant number of communication rounds, making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
+We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. Perhaps surprisingly, these guarantees require only a constant number of communication rounds, making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
 </p>
 </div>
 

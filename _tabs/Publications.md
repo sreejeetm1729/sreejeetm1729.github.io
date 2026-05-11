@@ -240,7 +240,7 @@ order: 3
 
   <li class="workshop-entry">
     <strong>Towards Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
-    <span style="color:#e6c98f; font-style:italic;">CORAL Seminar, North Carolina State University</span>.
+    <span style="color:#e6c98f; font-style:bold;">CORAL Seminar, North Carolina State University</span>.
   </li>
 
 </ol>

@@ -2,6 +2,7 @@
 title: RL Blogs
 icon: fas fa-robot
 order: 6
+math: true
 ---
 
 # RL Blogs

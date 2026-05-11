@@ -174,7 +174,7 @@ order: 7
 <div class="cv-name">Sreejeet Maity</div>
 
 <div class="cv-title">
-  Ph.D. Student in Electrical Engineering · North Carolina State University · Raleigh, NC, United States of America
+  Ph.D. Student in Electrical Engineering · North Carolina State University · Raleigh, NC, U.S.A
 </div>
 
 <div class="cv-short">
@@ -207,7 +207,22 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <span class="cv-chip">Federated RL</span>
   <span class="cv-chip">Robust Statistics</span>
 </div>
+<div style="margin-top:2rem; padding:1rem 1.2rem; border:1px solid rgba(216,167,167,0.35); border-radius:14px; background:rgba(216,167,167,0.04); font-size:16px; line-height:1.7; text-align:justify;">
 
+  <strong style="color:#d8a7a7;">Collaboration Note.</strong>
+  I am always happy to connect with researchers and students working on broad areas of reinforcement learning, control theory, federated learning, and trustworthy machine learning. If you are interested in discussing possible collaborations or exchanging research ideas, please reach out to me via
+ <a href="https://www.linkedin.com/in/sreejeet-maity-a3729b158/"
+   target="_blank"
+   title="LinkedIn"
+   style="color:#a5f3fc; font-size:1.25rem; text-decoration:none; margin-left:4px;">
+  <i class="fab fa-linkedin"></i>
+</a>.
+</div>
+<div style="margin-top:0.8rem; padding:1rem 1.2rem; border:1px solid rgba(165,243,252,0.28); border-radius:14px; background:rgba(165,243,252,0.04); font-size:16px; line-height:1.7; text-align:justify;">
+
+  <strong style="color:#a5f3fc;">Prospective Opportunities.</strong>
+  I will be entering the academic and industry research job market next year (2027), and I would be grateful to hear about opportunities aligned with my interests in <strong style="color:#e6c98f;">reliable decision-making and control</strong>. I am also open to postdoctoral opportunities beginning in <strong style="color:#e6c98f;">Fall 2027</strong>, as well as opportunities in subsequent academic cycles. Prospective recruiters, search committees, and researchers are warmly welcome to reach out.
+</div>
 </div>
 
 <div class="cv-section">
@@ -419,7 +434,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <div class="cv-card">
   <div class="cv-entry-title">Mathematics</div>
-  <div class="cv-entry-desc">Linear Algebra, Probability, Robust Statistics, Stochastic Optimization.</div>
+  <div class="cv-entry-desc">Linear Algebra, Probability Theory, Robust Statistics, Stochastic Optimization.</div>
 </div>
 
 <div class="cv-card">

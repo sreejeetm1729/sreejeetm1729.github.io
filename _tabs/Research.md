@@ -69,7 +69,36 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 
 </div>
 <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
-   We then develop robust Q-Learning algorithms that use historical reward data to construct a robust empirical Bellman operator at each time step, without requiring knowledge of the true reward statistics. Finally, we establish finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable error term that scales with the adversarial corruption fraction. We further prove an information-theoretic lower bound showing that this dependence on the corruption fraction is unavoidable. The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026 </span> work completes this line by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption.
+   We then develop robust \(Q\)-Learning algorithms that use historical reward data to construct robust empirical Bellman operators. Our first variant is reward-statistics aware and leverages distributional information, such as reward scale, to obtain sharp finite-time guarantees. We then develop a reward-statistics agnostic version that does not require prior knowledge of the true reward distribution, using an agnostic tuning parameter \(\color{#fca5a5}{p}>1\) to control the robustness–concentration tradeoff. For both i.i.d. (\(\bar{\tau}_{\mathrm{mix}}=1\)) and Markovian data, both approaches achieve finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable corruption-dependent term, which scales with the adversarial corruption fraction.
+   <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
+    \begin{equation}
+    \Vert Q_t - Q^* \Vert_{\infty}
+    \;\leq\;
+    \widetilde{\mathcal O}\!\left(\bar{\sigma}
+    \sqrt{\frac{\bar{\tau}_{\mathrm{mix}}}{T}}
+    \right)
+    +
+    \mathcal O\!\left(
+    \varepsilon \bar{\sigma}
+    \right), \quad \Vert Q_t - Q^* \Vert_{\infty}
+    \;\leq\;
+    \widetilde{\mathcal O}\!\left(\bar{\sigma}^{1+1/\color{#fca5a5}{p}}
+    \sqrt{\frac{\bar{\tau}_{\mathrm{mix}}}{T}}
+    \right)
+    +
+    \mathcal O\!\left(
+    \varepsilon \bar{\sigma}
+    \right).
+    \end{equation}
+  </div>
+   We further prove an information-theoretic lower bound showing that the dependence on the corruption fraction is unavoidable. To state this formally, let \(\mathcal{H}(\varepsilon,\bar{\sigma},\mathcal{Q})\) denote the class of all finite-state, finite-action MDPs and observation models in which the true reward distributions have bounded mean rewards, variance at most \(\bar{\sigma}^2\), and are subject to an \(\varepsilon\)-fraction strong-contamination model.
+   <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
+    \begin{equation}
+     \inf_{\hat{Q}_T} \sup_{Q^* \in \mathcal{H}(\varepsilon, \bar{\sigma}, \mathcal{Q})} \mathbb{P}\left( \Vert \hat{Q}_T - Q^* \Vert_{\infty} \geq \frac{\tilde{c} \bar{\sigma} \sqrt{\varepsilon}}{(1-\gamma)}\right) \geq \hat{\delta}, \quad \hat{\delta} > 0.
+    \end{equation}
+  </div>
+   
+   The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026 </span> work completes this line by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption.
 </p>
 
 </div>
@@ -146,28 +175,39 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 </div>
   </div>
 <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
- Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We then develop a novel algorithm called 𝚁𝚘𝚋𝚞𝚜𝚝-𝚃𝙳 and prove that its finite-time guarantees match that of 𝚅𝚊𝚗𝚒𝚕𝚕𝚊-𝚃𝙳 with linear function approximation up to a small \(O(\varepsilon)\) term that captures the effect of corruption. 
- <p style="font-size:16px; line-height:1.75; text-align:justify;">
- \begin{equation}
-\mathbb{E}[\Vert \theta_t - \theta^* \Vert^2_2]
-\;\leq\;
-\widetilde{\mathcal O}\!\left(
-\frac{\bar{\tau}_{\mathrm{mix}}\sigma^2}{T}
-\right)
-+
-\mathcal O\!\left(
-\varepsilon \sigma_1^2
-\right).
-\end{equation}
- </p>
-  The first term captures the clean statistical error under Markovian sampling: it decays as \(1/T\), with the mixing time \(\bar{\tau}_{\mathrm{mix}}\), noise level \(\sigma^2\). The second term is the corruption-induced bias, scaling linearly with the adversarial contamination level \(\epsilon\). We complement this result with a minimax lower bound, revealing that such an additive corruption-induced term is unavoidable, establishing that Robust-TD achieves the optimal robustness profile up to problem-dependent constants and logarithmic factors.
+ Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We develop a robust temporal-difference learning method and prove that, with linear function approximation, its finite-time guarantees match those of Vanilla-TD up to a small \(O(\varepsilon)\) term that precisely captures the effect of adversarial corruption.
+ <div style="display:flex; align-items:center; gap:12px; margin-top:1.2rem; margin-bottom:1.2rem;">
+
+  <div style="flex:0 0 420px; text-align:center;">
+    <img src="{{ '/assets/research/lfa.png' | relative_url }}"
+         alt="Robust TD illustration"
+         style="width:420px; max-width:100%; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);"  />
+  </div>
+
+  <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
+    \begin{equation}
+    \mathbb{E}[\Vert \theta_t - \theta^* \Vert_2^2]
+    \;\leq\;
+    \widetilde{\mathcal O}\!\left(
+    \frac{\bar{\tau}_{\mathrm{mix}}\sigma^2}{T}
+    \right)
+    +
+    \mathcal O\!\left(
+    \varepsilon \sigma_1^2
+    \right).
+    \end{equation}
+  </div>
+
+</div>
+  Here, \(\theta_t\) denotes the parameter vector generated by the temporal-difference learning recursion at time \(t\), and \(d_T\) measures the error of the learned parameter after \(T\) samples relative to the target TD solution. The first term captures the clean statistical error under Markovian sampling: it decays as \(1/T\), with the mixing time \(\bar{\tau}_{\mathrm{mix}}\) and noise level \(\sigma^2\) governing the effective difficulty of estimation. The second term is the corruption-induced bias, scaling linearly with the adversarial contamination level \(\varepsilon\). We complement this upper bound with a minimax lower bound showing that such an additive corruption-induced term is unavoidable, thereby establishing that robust TD learning achieves the optimal robustness profile up to problem-dependent constants and logarithmic factors.
+</p>
   <p style="font-size:16px; line-height:1.75; text-align:justify;">
  \begin{equation}
 \inf_{\hat{V}_T} \sup_{V \in \mathcal{M}(\epsilon, \rho, \mathcal{Q})} \mathbb{P}\left( \Vert \hat{V}_T - V \Vert_2 \geq \frac{\tilde{c} \rho \sqrt{\varepsilon}}{(1-\gamma)}\right) \geq \frac{1}{2}.
 \end{equation}
  </p>
- To our knowledge, these results are the first of their kind in the context of adversarial robustness of stochastic approximation schemes driven by Markov noise.
-</p>
+ Our lower bound shows that no algorithm can completely remove the effect of adversarial corruption: even the best possible method must incur an additive error proportional to the corruption level. Thus, the corruption-dependent term in our upper bound is not a proof artifact, but a fundamental statistical barrier. To our knowledge, these results are the first of their kind in the context of adversarial robustness of stochastic approximation schemes driven by Markov noise.
+
 </div>
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
@@ -188,7 +228,9 @@ Can reinforcement learning still discover an optimal policy when the feedback it
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
-
+<div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust policy evaluation remains reliable under adversarial corruption with Markovian data and function approximation.
+</div> 
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
   <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
@@ -229,11 +271,11 @@ We prove that, with high probability, our proposed algorithm converges exactly t
   \begin{equation}
   \|Q_K-Q^\star\|_\infty
   \;\le\;
-  \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{\textcolor{#34d399}{M}T}}\right)
+  \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt{MT}}\right)
   \;+\;
   \widetilde{\mathcal O}\!\left(\frac{\sqrt{\color{#fca5a5}{\varepsilon}}}{\sqrt{T}}\right).
   \end{equation}
-  Here, <span style="color:#34d399;"><strong>\(M\)</strong></span> denotes the number of agents and drives the collaborative speedup, improving the clean statistical error from the single-agent rate \(1/\sqrt{\color{}{T}}\) to \(1/\sqrt{\textcolor{#34d399}{M} T}\). The term involving <span style="color:#fca5a5;"><strong>\(\varepsilon\)</strong></span> captures the price of adversarial corruption; importantly, for any fixed corruption level, this term still decays with the number of samples <span style="color:;"><strong>\(T\)</strong></span>, showing a vanishing corruption effect as learning progresses. Apart from that, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
+  Here, <span style="color:;"><strong>\(M\)</strong></span> denotes the number of agents and drives the collaborative speedup, improving the clean statistical error from the single-agent rate \(1/\sqrt{\color{}{T}}\) to \(1/\sqrt{MT}\). The term involving <span style="color:#fca5a5;"><strong>\(\varepsilon\)</strong></span> captures the price of adversarial corruption; importantly, for any fixed corruption level, this term still decays with the number of samples <span style="color:;"><strong>\(T\)</strong></span>, showing a vanishing corruption effect as learning progresses. Apart from that, these guarantees require only a constant number of communication rounds \(\widetilde{O}(1)\), making the method particularly appealing in federated learning settings where communication is often the dominant bottleneck.
 </p>
 </div>
 

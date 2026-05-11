@@ -45,7 +45,7 @@ A central goal of my work is to develop <span class="research-highlight">provabl
 
 <div class="research-card">
 
-<h2>[<strong style="color:#58ebfc;">Theme 1</strong>] Learning Robust Optimal Policy from Strongly Correlated and Corrupted Observations</h2>
+<h2>[<strong style="color:#208894;">Theme 1</strong>] Learning Robust Optimal Policy from Strongly Correlated and Corrupted Observations</h2>
 
 <p>
 Can reinforcement learning still discover an optimal policy when the feedback it receives is both statistically dependent and adversarially corrupted? This line of work answers this question by developing a finite-time theory for robust optimal policy learning from unreliable trajectories, where rewards, transitions, observations, or Bellman targets may be strategically distorted. We show that standard algorithms such as vanilla Q-Learning can be fundamentally brittle under even small corruptions, and then design robust Bellman-update schemes that recover near-clean statistical performance up to an explicit and unavoidable corruption penalty. Together, this series of work, appearing across major venues including <span class="research-tag">ICML 2026</span>, <span class="research-tag">IEEE CDC 24</span>, and the <span class="research-tag">NeuRIPS 2025-Reliable ML Workshop</span>, establishes some of the first fundamental guarantees for learning optimal policies from strongly correlated and corrupted observations, combining robust statistics, stochastic approximation, and Bellman fixed-point theory to identify both what is algorithmically achievable and what is information-theoretically impossible.
@@ -158,7 +158,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 
-<h2>[<strong style="color:#58ebfc;">Theme 2</strong>] Robust Policy Evaluation and Temporal-Difference (TD) Learning</h2>
+<h2>[<strong style="color:#208894;">Theme 2</strong>] Robust Policy Evaluation and Temporal-Difference (TD) Learning</h2>
   The second direction of my research focuses on robust policy evaluation with <strong>Markovian data</strong> and <strong>function approximation</strong>. In contrast to idealized i.i.d. sampling models, reinforcement learning data are often collected from a single trajectory, making consecutive observations strongly dependent. This temporal dependence makes robust estimation substantially more delicate, since the learner must distinguish genuine statistical fluctuations from adversarial perturbations while tracking the value function. In this line of work, which appeared at <span class="research-tag">AISTATS 2025</span>, we develop finite-time guarantees for robust temporal-difference learning under adversarial corruption and Markovian sampling, and clarify both what robust TD algorithms can achieve and what limitations are unavoidable under time-correlated corrupted data.
 
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
@@ -248,7 +248,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   </p>
 
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
-<h2>[<strong style="color:#58ebfc;">Theme 3</strong>] Robust Federated Multi-Agent Reinforcement Learning</h2>
+<h2>[<strong style="color:#208894;">Theme 3</strong>] Robust Federated Multi-Agent Reinforcement Learning</h2>
 
 The third direction of my research focuses on robust federated reinforcement learning with Byzantine agents and minimal communication. In this setting, multiple agents interact with a common environment and send information to a central learner, but a fraction of the agents may be adversarial and can transmit arbitrary, corrupted messages. This creates a challenging tension between <strong>collaboration</strong>, <strong>robustness</strong>, and <strong>communication efficiency</strong>: the learner should benefit from distributed data collection while remaining resilient to malicious agents and avoiding excessive communication. In this line of work, which appeared at <span class="research-tag">ACC 2026</span>, we develop robust federated Q-Learning algorithms that achieve near-optimal finite-time guarantees with Byzantine tolerance and almost no communication, showing that collaborative speedups are still possible even when some agents are unreliable.
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
@@ -321,7 +321,7 @@ We prove that, with high probability, our proposed algorithm converges exactly t
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 
-<h2>[<strong style="color:#58ebfc;">Theme 4</strong>] Decentralized and Networked Reinforcement Learning</h2>
+<h2>[<strong style="color:#208894;">Theme 4</strong>] Decentralized and Networked Reinforcement Learning</h2>
 
 I am also interested in decentralized reinforcement learning over static and time-varying networks. In these problems, agents exchange information locally over a graph rather than communicating with a central server. This raises questions about how network structure, consensus, mixing, and local sampling affect statistical efficiency.
 

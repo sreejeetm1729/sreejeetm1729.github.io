@@ -258,17 +258,17 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <ul class="cv-list">
     <li>
       <span class="cv-highlight">Robust optimal policy learning from corrupted and correlated observations.</span>
-      Showed that vanilla Q-Learning is provably fragile under reward corruption, designed robust Bellman-update methods, and established finite-time convergence with matching minimax lower bounds.
+      Showed that vanilla Q-Learning is provably fragile under reward corruption, designed robust Bellman-update methods, and established finite-time convergence with matching minimax lower bounds.  Results disseminated across <strong>ICML 2026</strong>, <strong>NeurIPS 2025</strong>, and <strong>IEEE CDC 2024</strong>.
     </li>
 
     <li>
       <span class="cv-highlight">Robust policy evaluation under adversarial influences and Markovian data.</span>
-      Developed finite-time theory for robust temporal-difference learning with Markovian noise and function approximation, including upper bounds and near-tight lower bounds.
+      Developed finite-time theory for robust temporal-difference learning with Markovian noise and function approximation, including upper bounds and near-tight lower bounds.  This research is published in <strong>AISTATS 2025</strong>.
     </li>
 
     <li>
       <span class="cv-highlight">Robust federated and multi-agent reinforcement learning.</span>
-      Developed adversarially robust and communication-efficient reinforcement learning algorithms for federated multi-agent settings, including Byzantine-resilient methods with collaborative speedups.
+      Developed adversarially robust and communication-efficient reinforcement learning algorithms for federated multi-agent settings, including Byzantine-resilient methods with collaborative speedups.  Two papers published at <strong>ACC 2026</strong>.
     </li>
   </ul>
 </div>

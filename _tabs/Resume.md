@@ -210,7 +210,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <div style="margin-top:2rem; padding:1rem 1.2rem; border:1px solid rgba(216,167,167,0.35); border-radius:14px; background:rgba(216,167,167,0.04); font-size:16px; line-height:1.7; text-align:justify;">
 
   <strong style="color:#d8a7a7;">Collaboration Note.</strong>
-  I am always happy to connect with researchers and students working on broad areas of reinforcement learning, control theory, federated learning, and trustworthy machine learning. If you are interested in discussing possible collaborations or exchanging research ideas, please reach out to me via
+  I am always happy to engage with researchers and students working on broad areas of reinforcement learning, control theory, federated learning, and trustworthy machine learning. If you are interested in discussing possible collaborations or exchanging research ideas, please reach out to me via
  <a href="https://www.linkedin.com/in/sreejeet-maity-a3729b158/"
    target="_blank"
    title="LinkedIn"

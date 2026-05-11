@@ -196,7 +196,7 @@ order: 3
   </li>
 
   <li class="workshop-entry">
-    <strong>Corruption-Tolerant Agnostic Q-Learning</strong>,
+    <strong>Agnostic Q-Learning under corrupted Feedback</strong>,
     <a class="link-workshop" href="https://neurips.cc/virtual/2025/workshop/109580">NeurIPS 2025 Reliable ML Workshop</a>.
   </li>
 

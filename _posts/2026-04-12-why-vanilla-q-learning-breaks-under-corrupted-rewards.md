@@ -95,11 +95,6 @@ $$
 
 So the clean update is a stochastic approximation to the fixed-point equation $$Q=\mathcal T^\star Q$$ with a conditionally mean-zero fluctuation term. That is the mathematically precise reason vanilla Q-learning works in the uncorrupted setting.
 
-### Intuition
-
-A mathematician would say: the recursion tracks a contraction map with conditionally centered error.
-
-A layperson might say: every update is trying, on average, to move toward the truth. The randomness may wobble the path, but it does not systematically bend it away.
 
 ## 2. Why corruption is not just extra noise
 
@@ -135,11 +130,7 @@ $$
 
 This quantity is the real villain. It is not a fluctuation around zero. It is a structural shift in the Bellman target.
 
-### Intuition
 
-A mathematician would say: the conditional mean of the update target is no longer the true Bellman image $$\mathcal T^\star Q_t$$.
-
-A layperson might say: the learner is being fed systematically misleading scores. No amount of averaging can recover the truth if the channel itself is biased.
 
 ## 3. The corrupted recursion tracks the wrong Bellman operator
 
@@ -189,11 +180,6 @@ It does **not** even mean that convergence fails.
 
 Rather, it means that convergence occurs toward the wrong fixed point.
 
-### Intuition
-
-A mathematician would say: the stochastic approximation is asymptotically centered around $$\widetilde{\mathcal T}_c^\star$$ instead of $$\mathcal T^\star$$.
-
-A layperson might say: the algorithm is still solving a Bellman equation, but it is solving the Bellman equation of the wrong world.
 
 ## 4. The error decomposition: contraction plus bias
 
@@ -304,11 +290,6 @@ $$
 
 This inequality already contains the core mechanism. A bias in one-step rewards gets propagated through the Bellman recursion and amplified by the geometric factor $$1/(1-\gamma)$$.
 
-### Intuition
-
-A mathematician would say: Bellman contractions transform a reward perturbation into a value perturbation with resolvent factor $$1/(1-\gamma)$$.
-
-A layperson might say: if you keep making a small mistake in a process that compounds future consequences, the long-run effect is much larger than the one-step mistake.
 
 ## 6. A finite MDP where the asymptotic gap is arbitrarily large
 
@@ -389,11 +370,7 @@ $$
 
 So $$\texttt{L}$$ is the unique optimal action at state $$1$$.
 
-### Intuition
 
-A mathematician would say: the continuation value from states $$2$$ and $$3$$ is explicitly solvable because the post-state dynamics reduce to a geometric persistence process.
-
-A layperson might say: once you enter states $$2$$ or $$3$$, you keep collecting reward $$1$$ for a random amount of time, so those states have positive long-term value.
 
 ## 8. Designing the Huber attack
 
@@ -495,11 +472,6 @@ Since $$\kappa$$ is arbitrary, this gap can be made arbitrarily large.
 
 This is the sharp mathematical statement of vulnerability. Even if the attack probability $$\varepsilon$$ is small, the adversary can compensate by taking the corruption magnitude $$C$$ large. The asymptotic bias in vanilla Q-learning is then unbounded.
 
-### Intuition
-
-A mathematician would say: there is no uniform asymptotic robustness bound in terms of $$\varepsilon$$ alone when the contamination magnitude is unconstrained.
-
-A layperson might say: even a rare lie is enough if the lie is big enough.
 
 ## 10. The optimal action flips
 

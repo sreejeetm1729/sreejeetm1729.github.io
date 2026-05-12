@@ -43,14 +43,20 @@ That is the beauty of gradient descent: a global optimization problem is attacke
       <div>
         <h3>Gradient Descent on a 3D Loss Landscape</h3>
         <p>
-          Rotate the surface and move the point. For visualization, we consider a simple
-  two-parameter problem, where the loss is a function \(f:\mathbb{R}^2 \to \mathbb{R}\).
-  This lets us draw the graph of the loss as a three-dimensional surface
-  \(z=f(x,y)\). The red point lives on this loss surface, the white arrow points
-  uphill in the direction of \(\nabla f(x,y)\), and the black arrow points downhill
-  in the gradient descent direction \(-\nabla f(x,y)\).
+          Rotate the surface and move the point. For visualization, we take the
+          optimization variable to be two-dimensional, \((x,y)\in\mathbb{R}^2\),
+          and the loss to be a function \(f:\mathbb{R}^2\to\mathbb{R}\).
+          This allows us to visualize the graph of the loss as a three-dimensional
+          surface \(z=f(x,y)\). The red point lives on this loss surface, the white
+          arrow points uphill in the direction of \(\nabla f(x,y)\), and the black
+          arrow points downhill in the gradient descent direction \(-\nabla f(x,y)\).
         </p>
       </div>
+    </div>
+
+    <div class="gd3d-actions">
+      <button id="gd-randomize" type="button">Generate new landscape</button>
+      <button id="gd-reset-point" type="button">Reset point</button>
     </div>
 
     <div id="gd-3d-plot"></div>
@@ -75,13 +81,12 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     </div>
 
     <p class="gd3d-caption">
-      The gradient \(\nabla f(x,y)\) gives the direction of steepest increase on the surface.
-      Gradient descent moves in the opposite direction, i.e \(-\nabla f(x,y)\).
+      Each time you generate a new landscape, the loss function changes, and so does
+      the gradient field. The point remains movable, and the arrows update according
+      to the new local geometry.
     </p>
   </div>
 </div>
-
-<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 
 <style>
   #gd-3d-widget {
@@ -104,16 +109,38 @@ That is the beauty of gradient descent: a global optimization problem is attacke
 
   #gd-3d-widget .gd3d-header p {
     margin: 0.35rem 0 1rem;
-    opacity: 0.82;
+    opacity: 0.86;
     font-size: 0.95rem;
+  }
+
+  #gd-3d-widget .gd3d-actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin: 0.6rem 0 1rem;
+  }
+
+  #gd-3d-widget .gd3d-actions button {
+    border: 1px solid rgba(150,150,150,0.35);
+    border-radius: 999px;
+    padding: 0.52rem 0.95rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  #gd-3d-widget .gd3d-actions button:hover {
+    background: rgba(150,150,150,0.14);
   }
 
   #gd-3d-plot {
     width: 100%;
-    height: 520px;
+    height: 540px;
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid rgba(150,150,150,0.25);
+    background: #111111;
   }
 
   #gd-3d-widget .gd3d-controls {
@@ -153,7 +180,7 @@ That is the beauty of gradient descent: a global optimization problem is attacke
 
   #gd-3d-widget .gd3d-caption {
     margin: 1rem 0 0;
-    opacity: 0.85;
+    opacity: 0.86;
     font-size: 0.95rem;
   }
 
@@ -164,76 +191,166 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     }
 
     #gd-3d-plot {
-      height: 430px;
+      height: 440px;
     }
   }
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const plotDiv = document.getElementById("gd-3d-plot");
+function loadPlotlyForGradientWidget(callback) {
+  if (window.Plotly) {
+    callback();
+    return;
+  }
 
-  const xSlider = document.getElementById("gd-x-slider");
-  const ySlider = document.getElementById("gd-y-slider");
+  var script = document.createElement("script");
+  script.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
 
-  const xValue = document.getElementById("gd-x-value");
-  const yValue = document.getElementById("gd-y-value");
-  const lossValue = document.getElementById("gd-loss-value");
-  const gradValue = document.getElementById("gd-grad-value");
+  script.onload = function () {
+    callback();
+  };
+
+  script.onerror = function () {
+    var plotDiv = document.getElementById("gd-3d-plot");
+    if (plotDiv) {
+      plotDiv.innerHTML =
+        "<p style='padding:1rem;color:#ff6b6b;font-weight:700;'>Plotly could not be loaded. Please check your internet connection or CDN access.</p>";
+    }
+  };
+
+  document.head.appendChild(script);
+}
+
+function initGradientLandscapeWidget() {
+  var plotDiv = document.getElementById("gd-3d-plot");
+
+  if (!plotDiv) {
+    return;
+  }
+
+  var xSlider = document.getElementById("gd-x-slider");
+  var ySlider = document.getElementById("gd-y-slider");
+
+  var xValue = document.getElementById("gd-x-value");
+  var yValue = document.getElementById("gd-y-value");
+  var lossValue = document.getElementById("gd-loss-value");
+  var gradValue = document.getElementById("gd-grad-value");
+
+  var randomizeButton = document.getElementById("gd-randomize");
+  var resetPointButton = document.getElementById("gd-reset-point");
+
+  function rand(min, max) {
+    return min + Math.random() * (max - min);
+  }
+
+  function randomLandscapeParams() {
+    return {
+      quadX: rand(0.12, 0.45),
+      quadY: rand(0.12, 0.45),
+
+      amp1: rand(0.45, 1.10),
+      freqX1: rand(1.0, 2.6),
+      freqY1: rand(1.0, 2.6),
+      phaseX1: rand(0, 2 * Math.PI),
+      phaseY1: rand(0, 2 * Math.PI),
+
+      amp2: rand(0.15, 0.65),
+      mixFreq: rand(0.7, 1.8),
+      mixPhase: rand(0, 2 * Math.PI)
+    };
+  }
+
+  var landscapeParams = randomLandscapeParams();
 
   function f(x, y) {
-    return 0.35 * (x * x + 0.75 * y * y) + Math.sin(2 * x) * Math.cos(1.5 * y);
+    var p = landscapeParams;
+
+    return (
+      p.quadX * x * x +
+      p.quadY * y * y +
+      p.amp1 *
+        Math.sin(p.freqX1 * x + p.phaseX1) *
+        Math.cos(p.freqY1 * y + p.phaseY1) +
+      p.amp2 * Math.sin(p.mixFreq * (x + y) + p.mixPhase)
+    );
   }
 
   function grad(x, y) {
+    var p = landscapeParams;
+
     return {
-      x: 0.7 * x + 2 * Math.cos(2 * x) * Math.cos(1.5 * y),
-      y: 0.525 * y - 1.5 * Math.sin(2 * x) * Math.sin(1.5 * y)
+      x:
+        2 * p.quadX * x +
+        p.amp1 *
+          p.freqX1 *
+          Math.cos(p.freqX1 * x + p.phaseX1) *
+          Math.cos(p.freqY1 * y + p.phaseY1) +
+        p.amp2 *
+          p.mixFreq *
+          Math.cos(p.mixFreq * (x + y) + p.mixPhase),
+
+      y:
+        2 * p.quadY * y -
+        p.amp1 *
+          p.freqY1 *
+          Math.sin(p.freqX1 * x + p.phaseX1) *
+          Math.sin(p.freqY1 * y + p.phaseY1) +
+        p.amp2 *
+          p.mixFreq *
+          Math.cos(p.mixFreq * (x + y) + p.mixPhase)
     };
   }
 
   function linspace(a, b, n) {
-    const arr = [];
-    const step = (b - a) / (n - 1);
-    for (let i = 0; i < n; i++) {
+    var arr = [];
+    var step = (b - a) / (n - 1);
+
+    for (var i = 0; i < n; i++) {
       arr.push(a + i * step);
     }
+
     return arr;
   }
 
-  const xs = linspace(-3, 3, 65);
-  const ys = linspace(-3, 3, 65);
+  var xs = linspace(-3, 3, 65);
+  var ys = linspace(-3, 3, 65);
 
-  const zSurface = ys.map(function (y) {
-    return xs.map(function (x) {
-      return f(x, y);
+  function buildSurfaceZ() {
+    return ys.map(function (y) {
+      return xs.map(function (x) {
+        return f(x, y);
+      });
     });
-  });
+  }
 
-  const surfaceTrace = {
-    type: "surface",
-    x: xs,
-    y: ys,
-    z: zSurface,
-    colorscale: "Viridis",
-    opacity: 0.88,
-    showscale: false,
-    contours: {
-      z: {
-        show: true,
-        usecolormap: true,
-        highlightcolor: "#ffffff",
-        project: { z: true }
-      }
-    },
-    hovertemplate:
-      "x: %{x:.2f}<br>" +
-      "y: %{y:.2f}<br>" +
-      "f(x,y): %{z:.3f}<extra></extra>"
-  };
+  function makeSurfaceTrace() {
+    return {
+      type: "surface",
+      x: xs,
+      y: ys,
+      z: buildSurfaceZ(),
+      colorscale: "Viridis",
+      opacity: 0.88,
+      showscale: false,
+      name: "surface",
+      showlegend: false,
+      contours: {
+        z: {
+          show: true,
+          usecolormap: true,
+          highlightcolor: "#ffffff",
+          project: { z: true }
+        }
+      },
+      hovertemplate:
+        "x: %{x:.2f}<br>" +
+        "y: %{y:.2f}<br>" +
+        "f(x,y): %{z:.3f}<extra></extra>"
+    };
+  }
 
   function makePointTrace(x, y) {
-    const z = f(x, y);
+    var z = f(x, y);
 
     return {
       type: "scatter3d",
@@ -249,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
           width: 2
         }
       },
-      name: "Current point",
+      name: "<b>Point</b>",
       hovertemplate:
         "Current point<br>" +
         "x: %{x:.2f}<br>" +
@@ -259,24 +376,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function makeArrowTrace(x, y, directionSign, color, name) {
-    const z = f(x, y);
-    const g = grad(x, y);
-    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+    var z = f(x, y);
+    var g = grad(x, y);
+    var norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
 
-    const scale = 0.65;
-    const dx = directionSign * scale * g.x / norm;
-    const dy = directionSign * scale * g.y / norm;
+    var scale = 0.65;
+    var dx = directionSign * scale * g.x / norm;
+    var dy = directionSign * scale * g.y / norm;
 
-    const xEnd = x + dx;
-    const yEnd = y + dy;
+    var xEnd = x + dx;
+    var yEnd = y + dy;
 
-    /*
-      The arrow is drawn as a tangent direction on the surface.
-
-      If u = grad / ||grad||, then the height change in the uphill
-      direction is approximately grad dot u = ||grad||.
-    */
-    const zEnd = z + directionSign * scale * norm;
+    var zEnd = z + directionSign * scale * norm;
 
     return {
       type: "scatter3d",
@@ -286,7 +397,7 @@ document.addEventListener("DOMContentLoaded", function () {
       z: [z, zEnd],
       line: {
         color: color,
-        width: 8
+        width: 9
       },
       marker: {
         size: [1, 5],
@@ -298,14 +409,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function makeProjectedDescentTrace(x, y) {
-    const z = f(x, y);
-    const g = grad(x, y);
-    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+    var z = f(x, y);
+    var g = grad(x, y);
+    var norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
 
-    const scale = 0.65;
-    const xEnd = x - scale * g.x / norm;
-    const yEnd = y - scale * g.y / norm;
-    const zEnd = f(xEnd, yEnd);
+    var scale = 0.65;
+    var xEnd = x - scale * g.x / norm;
+    var yEnd = y - scale * g.y / norm;
+    var zEnd = f(xEnd, yEnd);
 
     return {
       type: "scatter3d",
@@ -315,10 +426,10 @@ document.addEventListener("DOMContentLoaded", function () {
       z: [z, zEnd],
       line: {
         color: "#ff3b30",
-        width: 4,
+        width: 5,
         dash: "dot"
       },
-      name: "Next small descent step",
+      name: "<b>Next step</b>",
       hoverinfo: "skip"
     };
   }
@@ -332,28 +443,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateReadout(x, y) {
-    const g = grad(x, y);
+    var g = grad(x, y);
 
     xValue.textContent = x.toFixed(2);
     yValue.textContent = y.toFixed(2);
     lossValue.textContent = f(x, y).toFixed(4);
-    gradValue.textContent = "(" + g.x.toFixed(3) + ", " + g.y.toFixed(3) + ")";
+    gradValue.textContent =
+      "(" + g.x.toFixed(3) + ", " + g.y.toFixed(3) + ")";
   }
 
   function makeData(x, y) {
     return [
-      surfaceTrace,
+      makeSurfaceTrace(),
       makePointTrace(x, y),
-      makeArrowTrace(x, y, 1, "#ffffff", "Uphill direction ∇f"),
-      makeArrowTrace(x, y, -1, "#111111", "Descent direction -∇f"),
+      makeArrowTrace(x, y, 1, "#ffffff", "<b>Uphill ∇f</b>"),
+      makeArrowTrace(x, y, -1, "#111111", "<b>Descent -∇f</b>"),
       makeProjectedDescentTrace(x, y)
     ];
   }
 
-  const layout = {
-    margin: { l: 0, r: 0, b: 0, t: 0 },
+  var layout = {
+    margin: { l: 0, r: 0, b: 58, t: 0 },
     paper_bgcolor: "rgba(0,0,0,0)",
     plot_bgcolor: "rgba(0,0,0,0)",
+    uirevision: "keep-camera-fixed",
+
     scene: {
       xaxis: {
         title: "x",
@@ -382,55 +496,77 @@ document.addEventListener("DOMContentLoaded", function () {
         z: 0.65
       }
     },
+
     showlegend: true,
-legend: {
-  orientation: "h",
-  x: 0.5,
-  y: -0.08,
-  xanchor: "center",
-  yanchor: "top",
-  bgcolor: "rgba(255,255,255,0)",
-  bordercolor: "rgba(150,150,150,0)",
-  font: {
-    size: 12,
-    color: "#ffffff",
-  }
-}
+    legend: {
+      orientation: "h",
+      x: 0.5,
+      y: -0.08,
+      xanchor: "center",
+      yanchor: "top",
+      bgcolor: "rgba(0,0,0,0.35)",
+      bordercolor: "rgba(255,255,255,0.15)",
+      borderwidth: 1,
+      font: {
+        size: 12,
+        color: "#ffffff",
+      }
+    }
   };
 
-  const config = {
+  var config = {
     responsive: true,
     displaylogo: false,
     scrollZoom: true
   };
 
   function render() {
-    const x = currentX();
-    const y = currentY();
+    var x = currentX();
+    var y = currentY();
 
     updateReadout(x, y);
-
     Plotly.react(plotDiv, makeData(x, y), layout, config);
   }
 
-  Plotly.newPlot(plotDiv, makeData(currentX(), currentY()), layout, config);
-  updateReadout(currentX(), currentY());
+  Plotly.newPlot(plotDiv, makeData(currentX(), currentY()), layout, config)
+    .then(function () {
+      updateReadout(currentX(), currentY());
 
-  xSlider.addEventListener("input", render);
-  ySlider.addEventListener("input", render);
+      xSlider.addEventListener("input", render);
+      ySlider.addEventListener("input", render);
 
-  plotDiv.on("plotly_click", function (data) {
-    if (!data.points || data.points.length === 0) return;
+      randomizeButton.addEventListener("click", function () {
+        landscapeParams = randomLandscapeParams();
+        render();
+      });
 
-    const p = data.points[0];
+      resetPointButton.addEventListener("click", function () {
+        xSlider.value = 1.2;
+        ySlider.value = 1.0;
+        render();
+      });
 
-    if (typeof p.x === "number" && typeof p.y === "number") {
-      xSlider.value = Math.max(-3, Math.min(3, p.x));
-      ySlider.value = Math.max(-3, Math.min(3, p.y));
-      render();
-    }
+      plotDiv.on("plotly_click", function (data) {
+        if (!data.points || data.points.length === 0) return;
+
+        var p = data.points[0];
+
+        if (typeof p.x === "number" && typeof p.y === "number") {
+          xSlider.value = Math.max(-3, Math.min(3, p.x));
+          ySlider.value = Math.max(-3, Math.min(3, p.y));
+          render();
+        }
+      });
+    });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", function () {
+    loadPlotlyForGradientWidget(initGradientLandscapeWidget);
   });
-});
+} else {
+  loadPlotlyForGradientWidget(initGradientLandscapeWidget);
+}
 </script>
 
 To make gradient descent more tangible, try dragging the point. The landscape represents a loss function $$f(x,y)$$. At every location, the gradient $$\nabla f(x,y)$$ tells us which direction is uphill, while gradient descent moves in the opposite direction, i.e $$-\nabla f(x,y)$$.

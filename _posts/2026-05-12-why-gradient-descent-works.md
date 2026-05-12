@@ -432,6 +432,8 @@ legend: {
   });
 });
 </script>
+
+
 <div id="gd-3d-widget">
   <div class="gd3d-card">
     <div class="gd3d-header">
@@ -450,8 +452,8 @@ legend: {
     </div>
 
     <div class="gd3d-actions">
-      <button id="gd-randomize">Generate new landscape</button>
-      <button id="gd-reset-point">Reset point</button>
+      <button id="gd-randomize" type="button">Generate new landscape</button>
+      <button id="gd-reset-point" type="button">Reset point</button>
     </div>
 
     <div id="gd-3d-plot"></div>
@@ -482,8 +484,6 @@ legend: {
     </p>
   </div>
 </div>
-
-<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 
 <style>
   #gd-3d-widget {
@@ -537,6 +537,7 @@ legend: {
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid rgba(150,150,150,0.25);
+    background: #111111;
   }
 
   #gd-3d-widget .gd3d-controls {
@@ -593,19 +594,47 @@ legend: {
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const plotDiv = document.getElementById("gd-3d-plot");
+function loadPlotlyForGradientWidget(callback) {
+  if (window.Plotly) {
+    callback();
+    return;
+  }
 
-  const xSlider = document.getElementById("gd-x-slider");
-  const ySlider = document.getElementById("gd-y-slider");
+  var script = document.createElement("script");
+  script.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
 
-  const xValue = document.getElementById("gd-x-value");
-  const yValue = document.getElementById("gd-y-value");
-  const lossValue = document.getElementById("gd-loss-value");
-  const gradValue = document.getElementById("gd-grad-value");
+  script.onload = function () {
+    callback();
+  };
 
-  const randomizeButton = document.getElementById("gd-randomize");
-  const resetPointButton = document.getElementById("gd-reset-point");
+  script.onerror = function () {
+    var plotDiv = document.getElementById("gd-3d-plot");
+    if (plotDiv) {
+      plotDiv.innerHTML =
+        "<p style='padding:1rem;color:#ff6b6b;font-weight:700;'>Plotly could not be loaded. Please check your internet connection or CDN access.</p>";
+    }
+  };
+
+  document.head.appendChild(script);
+}
+
+function initGradientLandscapeWidget() {
+  var plotDiv = document.getElementById("gd-3d-plot");
+
+  if (!plotDiv) {
+    return;
+  }
+
+  var xSlider = document.getElementById("gd-x-slider");
+  var ySlider = document.getElementById("gd-y-slider");
+
+  var xValue = document.getElementById("gd-x-value");
+  var yValue = document.getElementById("gd-y-value");
+  var lossValue = document.getElementById("gd-loss-value");
+  var gradValue = document.getElementById("gd-grad-value");
+
+  var randomizeButton = document.getElementById("gd-randomize");
+  var resetPointButton = document.getElementById("gd-reset-point");
 
   function rand(min, max) {
     return min + Math.random() * (max - min);
@@ -628,10 +657,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  let landscapeParams = randomLandscapeParams();
+  var landscapeParams = randomLandscapeParams();
 
   function f(x, y) {
-    const p = landscapeParams;
+    var p = landscapeParams;
 
     return (
       p.quadX * x * x +
@@ -644,7 +673,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function grad(x, y) {
-    const p = landscapeParams;
+    var p = landscapeParams;
 
     return {
       x:
@@ -670,18 +699,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function linspace(a, b, n) {
-    const arr = [];
-    const step = (b - a) / (n - 1);
+    var arr = [];
+    var step = (b - a) / (n - 1);
 
-    for (let i = 0; i < n; i++) {
+    for (var i = 0; i < n; i++) {
       arr.push(a + i * step);
     }
 
     return arr;
   }
 
-  const xs = linspace(-3, 3, 65);
-  const ys = linspace(-3, 3, 65);
+  var xs = linspace(-3, 3, 65);
+  var ys = linspace(-3, 3, 65);
 
   function buildSurfaceZ() {
     return ys.map(function (y) {
@@ -718,7 +747,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function makePointTrace(x, y) {
-    const z = f(x, y);
+    var z = f(x, y);
 
     return {
       type: "scatter3d",
@@ -744,22 +773,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function makeArrowTrace(x, y, directionSign, color, name) {
-    const z = f(x, y);
-    const g = grad(x, y);
-    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+    var z = f(x, y);
+    var g = grad(x, y);
+    var norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
 
-    const scale = 0.65;
-    const dx = directionSign * scale * g.x / norm;
-    const dy = directionSign * scale * g.y / norm;
+    var scale = 0.65;
+    var dx = directionSign * scale * g.x / norm;
+    var dy = directionSign * scale * g.y / norm;
 
-    const xEnd = x + dx;
-    const yEnd = y + dy;
+    var xEnd = x + dx;
+    var yEnd = y + dy;
 
-    /*
-      This draws a visual tangent-like direction on the surface.
-      The white arrow is uphill, and the black arrow is downhill.
-    */
-    const zEnd = z + directionSign * scale * norm;
+    var zEnd = z + directionSign * scale * norm;
 
     return {
       type: "scatter3d",
@@ -781,14 +806,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function makeProjectedDescentTrace(x, y) {
-    const z = f(x, y);
-    const g = grad(x, y);
-    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+    var z = f(x, y);
+    var g = grad(x, y);
+    var norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
 
-    const scale = 0.65;
-    const xEnd = x - scale * g.x / norm;
-    const yEnd = y - scale * g.y / norm;
-    const zEnd = f(xEnd, yEnd);
+    var scale = 0.65;
+    var xEnd = x - scale * g.x / norm;
+    var yEnd = y - scale * g.y / norm;
+    var zEnd = f(xEnd, yEnd);
 
     return {
       type: "scatter3d",
@@ -815,12 +840,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateReadout(x, y) {
-    const g = grad(x, y);
+    var g = grad(x, y);
 
     xValue.textContent = x.toFixed(2);
     yValue.textContent = y.toFixed(2);
     lossValue.textContent = f(x, y).toFixed(4);
-    gradValue.textContent = "(" + g.x.toFixed(3) + ", " + g.y.toFixed(3) + ")";
+    gradValue.textContent =
+      "(" + g.x.toFixed(3) + ", " + g.y.toFixed(3) + ")";
   }
 
   function makeData(x, y) {
@@ -833,8 +859,8 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
   }
 
-  const layout = {
-    margin: { l: 0, r: 0, b: 55, t: 0 },
+  var layout = {
+    margin: { l: 0, r: 0, b: 58, t: 0 },
     paper_bgcolor: "rgba(0,0,0,0)",
     plot_bgcolor: "rgba(0,0,0,0)",
     uirevision: "keep-camera-fixed",
@@ -886,49 +912,59 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  const config = {
+  var config = {
     responsive: true,
     displaylogo: false,
     scrollZoom: true
   };
 
   function render() {
-    const x = currentX();
-    const y = currentY();
+    var x = currentX();
+    var y = currentY();
 
     updateReadout(x, y);
     Plotly.react(plotDiv, makeData(x, y), layout, config);
   }
 
-  Plotly.newPlot(plotDiv, makeData(currentX(), currentY()), layout, config);
-  updateReadout(currentX(), currentY());
+  Plotly.newPlot(plotDiv, makeData(currentX(), currentY()), layout, config)
+    .then(function () {
+      updateReadout(currentX(), currentY());
 
-  xSlider.addEventListener("input", render);
-  ySlider.addEventListener("input", render);
+      xSlider.addEventListener("input", render);
+      ySlider.addEventListener("input", render);
 
-  randomizeButton.addEventListener("click", function () {
-    landscapeParams = randomLandscapeParams();
-    render();
+      randomizeButton.addEventListener("click", function () {
+        landscapeParams = randomLandscapeParams();
+        render();
+      });
+
+      resetPointButton.addEventListener("click", function () {
+        xSlider.value = 1.2;
+        ySlider.value = 1.0;
+        render();
+      });
+
+      plotDiv.on("plotly_click", function (data) {
+        if (!data.points || data.points.length === 0) return;
+
+        var p = data.points[0];
+
+        if (typeof p.x === "number" && typeof p.y === "number") {
+          xSlider.value = Math.max(-3, Math.min(3, p.x));
+          ySlider.value = Math.max(-3, Math.min(3, p.y));
+          render();
+        }
+      });
+    });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", function () {
+    loadPlotlyForGradientWidget(initGradientLandscapeWidget);
   });
-
-  resetPointButton.addEventListener("click", function () {
-    xSlider.value = 1.2;
-    ySlider.value = 1.0;
-    render();
-  });
-
-  plotDiv.on("plotly_click", function (data) {
-    if (!data.points || data.points.length === 0) return;
-
-    const p = data.points[0];
-
-    if (typeof p.x === "number" && typeof p.y === "number") {
-      xSlider.value = Math.max(-3, Math.min(3, p.x));
-      ySlider.value = Math.max(-3, Math.min(3, p.y));
-      render();
-    }
-  });
-});
+} else {
+  loadPlotlyForGradientWidget(initGradientLandscapeWidget);
+}
 </script>
 
 To make this intuition more tangible, try dragging the point below. The landscape represents a loss function $$f(x,y)$$. At every location, the gradient $$\nabla f(x,y)$$ tells us which direction is uphill, while gradient descent moves in the opposite direction, $$-\nabla f(x,y)$$.

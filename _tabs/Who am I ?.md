@@ -7,7 +7,7 @@ order: 1
 <div style="display:flex; align-items:flex-start; gap:28px;">
 
   <div style="flex:0 0 230px;">
-    <img src="{{ '/assets/lib/img/IMG_5557.JPG' | relative_url }}"
+    <img src="{{ '/assets/img/profile/IMG_5557.JPG' | relative_url }}"
          alt="Sreejeet Maity"
          style="width:230px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
   </div>

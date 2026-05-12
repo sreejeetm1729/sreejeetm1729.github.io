@@ -23,7 +23,19 @@ $$
 
 where $\eta>0$ is called the step-size or learning rate.
 
-The entire algorithm is contained in this single line. Yet, under suitable assumptions, this simple update can be shown to converge to a minimizer, and the proof reveals why gradient descent is so fundamental.
+The entire algorithm is contained in this single line. At first glance, this update looks almost too simple to matter. We begin at a point \(x_t\), compute the gradient \(\nabla f(x_t)\), and then take a small step in the opposite direction. The number \(\eta>0\) is called the **learning rate** or **step size**, and it controls how far we move at each iteration.
+
+The intuition is wonderfully geometric. The gradient points in the direction where the function increases the fastest. So, if our goal is to make the function smaller, the most natural thing to do is to walk in the opposite direction. Gradient descent is simply the act of repeatedly asking:
+
+> Where is downhill from here?
+
+and then taking a small step that way.
+
+This is what makes the method so elegant. Gradient descent does not require us to understand the entire landscape of the function. It only uses local information: the slope at the current point. Yet, by repeating this local rule again and again, the iterates can move toward a minimizer.
+
+Of course, the size of the step matters. If \(\eta\) is too large, we may overshoot the minimum and oscillate. If \(\eta\) is too small, we may move in the right direction but painfully slowly. But under suitable assumptions, such as smoothness and convexity, this one-line update can be proved to converge.
+
+That is the beauty of gradient descent: a global optimization problem is attacked through a purely local rule. The convergence proof makes this intuition precise, and reveals why this deceptively simple algorithm sits at the heart of modern machine learning.
 
 ---
 

@@ -378,12 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
         z: 0.65
       }
     },
-    showlegend: true,
-    legend: {
-      x: 0.02,
-      y: 0.98,
-      bgcolor: "rgba(255,255,255,0.55)"
-    }
+    showlegend: false,
   };
 
   const config = {

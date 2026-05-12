@@ -37,55 +37,41 @@ Of course, the size of the step matters. If $$\eta$$ is too large, we may oversh
 
 That is the beauty of gradient descent: a global optimization problem is attacked through a purely local rule. The convergence proof makes this intuition precise, and reveals why this deceptively simple algorithm sits at the heart of modern machine learning.
 
-<div id="gd-3d-widget">
-  <div class="gd3d-card">
-    <div class="gd3d-header">
-      <div>
-        <h3>Gradient Descent on a 3D Loss Landscape</h3>
-        <p>
-          Rotate the surface and move the point. The red point lives on the loss surface,
-          the white arrow points uphill, and the black arrow points downhill.
-        </p>
-      </div>
+<div id="gd-three-widget">
+  <div class="gd-three-card">
+    <h3>Drag the Point on the Loss Landscape</h3>
+    <p>
+      Rotate the surface to understand the geometry. Then switch to move-point mode
+      and drag the red point across the landscape.
+    </p>
+
+    <div class="gd-three-buttons">
+      <button id="gd-rotate-mode">Rotate mode</button>
+      <button id="gd-move-mode">Move point mode</button>
     </div>
 
-    <div id="gd-3d-plot"></div>
+    <div id="gd-three-scene"></div>
 
-    <div class="gd3d-controls">
-      <label>
-        x:
-        <input id="gd-x-slider" type="range" min="-3" max="3" step="0.05" value="1.2">
-        <span id="gd-x-value"></span>
-      </label>
-
-      <label>
-        y:
-        <input id="gd-y-slider" type="range" min="-3" max="3" step="0.05" value="1.0">
-        <span id="gd-y-value"></span>
-      </label>
+    <div class="gd-three-readout">
+      <span><strong>Point:</strong> <span id="gd-three-point"></span></span>
+      <span><strong>Loss:</strong> <span id="gd-three-loss"></span></span>
+      <span><strong>Gradient:</strong> <span id="gd-three-grad"></span></span>
     </div>
 
-    <div class="gd3d-readout">
-      <span><strong>Loss:</strong> <span id="gd-loss-value"></span></span>
-      <span><strong>Gradient:</strong> <span id="gd-grad-value"></span></span>
-    </div>
-
-    <p class="gd3d-caption">
-      The gradient \(\nabla f(x,y)\) gives the direction of steepest increase on the surface.
-      Gradient descent moves in the opposite direction, \(-\nabla f(x,y)\).
+    <p class="gd-three-caption">
+      The white arrow points uphill in the direction of \(\nabla f(x,y)\).
+      The black arrow points downhill in the gradient descent direction \(-\nabla f(x,y)\).
     </p>
   </div>
 </div>
 
-<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-
 <style>
-  #gd-3d-widget {
+  #gd-three-widget {
     margin: 2rem 0;
     font-family: inherit;
   }
 
-  #gd-3d-widget .gd3d-card {
+  #gd-three-widget .gd-three-card {
     border: 1px solid rgba(150, 150, 150, 0.25);
     border-radius: 18px;
     padding: 1.2rem;
@@ -93,89 +79,91 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   }
 
-  #gd-3d-widget .gd3d-header h3 {
+  #gd-three-widget h3 {
     margin: 0;
     font-size: 1.35rem;
   }
 
-  #gd-3d-widget .gd3d-header p {
-    margin: 0.35rem 0 1rem;
-    opacity: 0.82;
-    font-size: 0.95rem;
+  #gd-three-widget p {
+    margin: 0.4rem 0 1rem;
+    opacity: 0.84;
   }
 
-  #gd-3d-plot {
+  #gd-three-scene {
     width: 100%;
     height: 520px;
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid rgba(150,150,150,0.25);
+    background: #111;
   }
 
-  #gd-3d-widget .gd3d-controls {
+  #gd-three-widget .gd-three-buttons {
+    display: flex;
+    gap: 0.7rem;
+    margin: 1rem 0;
+  }
+
+  #gd-three-widget button {
+    border: 1px solid rgba(150,150,150,0.35);
+    border-radius: 999px;
+    padding: 0.5rem 0.9rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  #gd-three-widget button.active {
+    background: rgba(150,150,150,0.22);
+  }
+
+  #gd-three-widget .gd-three-readout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  #gd-3d-widget .gd3d-controls label {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 0.6rem;
-    align-items: center;
-    padding: 0.7rem 0.85rem;
-    border-radius: 12px;
-    background: rgba(150,150,150,0.10);
-  }
-
-  #gd-3d-widget input[type="range"] {
-    width: 100%;
-  }
-
-  #gd-3d-widget .gd3d-readout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
     margin-top: 1rem;
     font-size: 0.92rem;
   }
 
-  #gd-3d-widget .gd3d-readout span {
+  #gd-three-widget .gd-three-readout span {
     padding: 0.65rem 0.8rem;
     border-radius: 12px;
     background: rgba(150,150,150,0.10);
   }
 
-  #gd-3d-widget .gd3d-caption {
-    margin: 1rem 0 0;
-    opacity: 0.85;
+  #gd-three-widget .gd-three-caption {
+    margin-top: 1rem;
     font-size: 0.95rem;
   }
 
   @media (max-width: 700px) {
-    #gd-3d-widget .gd3d-controls,
-    #gd-3d-widget .gd3d-readout {
-      grid-template-columns: 1fr;
+    #gd-three-scene {
+      height: 420px;
     }
 
-    #gd-3d-plot {
-      height: 430px;
+    #gd-three-widget .gd-three-readout {
+      grid-template-columns: 1fr;
     }
   }
 </style>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const plotDiv = document.getElementById("gd-3d-plot");
+<script type="module">
+  import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+  import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js";
 
-  const xSlider = document.getElementById("gd-x-slider");
-  const ySlider = document.getElementById("gd-y-slider");
+  const container = document.getElementById("gd-three-scene");
 
-  const xValue = document.getElementById("gd-x-value");
-  const yValue = document.getElementById("gd-y-value");
-  const lossValue = document.getElementById("gd-loss-value");
-  const gradValue = document.getElementById("gd-grad-value");
+  const pointText = document.getElementById("gd-three-point");
+  const lossText = document.getElementById("gd-three-loss");
+  const gradText = document.getElementById("gd-three-grad");
+
+  const rotateButton = document.getElementById("gd-rotate-mode");
+  const moveButton = document.getElementById("gd-move-mode");
+
+  let moveMode = false;
+  let draggingPoint = false;
+
+  rotateButton.classList.add("active");
 
   function f(x, y) {
     return 0.35 * (x * x + 0.75 * y * y) + Math.sin(2 * x) * Math.cos(1.5 * y);
@@ -188,237 +176,294 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  function linspace(a, b, n) {
-    const arr = [];
-    const step = (b - a) / (n - 1);
-    for (let i = 0; i < n; i++) {
-      arr.push(a + i * step);
+  const zScale = 0.65;
+  const xMin = -3;
+  const xMax = 3;
+  const yMin = -3;
+  const yMax = 3;
+
+  let currentPoint = { x: 1.2, y: 1.0 };
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x111111);
+
+  const camera = new THREE.PerspectiveCamera(
+    45,
+    container.clientWidth / container.clientHeight,
+    0.1,
+    100
+  );
+
+  camera.position.set(5.5, -6.5, 4.5);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  container.appendChild(renderer.domElement);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
+  scene.add(ambientLight);
+
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0);
+  directionalLight.position.set(5, -4, 8);
+  scene.add(directionalLight);
+
+  const grid = new THREE.GridHelper(7, 14, 0x666666, 0x333333);
+  grid.rotation.x = Math.PI / 2;
+  grid.position.z = -1.1;
+  scene.add(grid);
+
+  const axes = new THREE.AxesHelper(3.5);
+  scene.add(axes);
+
+  function createSurface() {
+    const n = 95;
+    const geometry = new THREE.BufferGeometry();
+
+    const vertices = [];
+    const colors = [];
+    const indices = [];
+
+    let zMin = Infinity;
+    let zMax = -Infinity;
+
+    const values = [];
+
+    for (let j = 0; j < n; j++) {
+      for (let i = 0; i < n; i++) {
+        const x = xMin + (i / (n - 1)) * (xMax - xMin);
+        const y = yMin + (j / (n - 1)) * (yMax - yMin);
+        const z = zScale * f(x, y);
+
+        values.push(z);
+        zMin = Math.min(zMin, z);
+        zMax = Math.max(zMax, z);
+
+        vertices.push(x, y, z);
+      }
     }
-    return arr;
-  }
 
-  const xs = linspace(-3, 3, 65);
-  const ys = linspace(-3, 3, 65);
+    for (let k = 0; k < values.length; k++) {
+      const t = (values[k] - zMin) / (zMax - zMin);
 
-  const zSurface = ys.map(function (y) {
-    return xs.map(function (x) {
-      return f(x, y);
+      const color = new THREE.Color();
+      color.setHSL(0.67 - 0.55 * t, 0.85, 0.55);
+
+      colors.push(color.r, color.g, color.b);
+    }
+
+    for (let j = 0; j < n - 1; j++) {
+      for (let i = 0; i < n - 1; i++) {
+        const a = j * n + i;
+        const b = j * n + i + 1;
+        const c = (j + 1) * n + i;
+        const d = (j + 1) * n + i + 1;
+
+        indices.push(a, b, c);
+        indices.push(b, d, c);
+      }
+    }
+
+    geometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(vertices, 3)
+    );
+
+    geometry.setAttribute(
+      "color",
+      new THREE.Float32BufferAttribute(colors, 3)
+    );
+
+    geometry.setIndex(indices);
+    geometry.computeVertexNormals();
+
+    const material = new THREE.MeshStandardMaterial({
+      vertexColors: true,
+      side: THREE.DoubleSide,
+      roughness: 0.65,
+      metalness: 0.05,
+      transparent: true,
+      opacity: 0.95
     });
-  });
 
-  const surfaceTrace = {
-    type: "surface",
-    x: xs,
-    y: ys,
-    z: zSurface,
-    colorscale: "Viridis",
-    opacity: 0.88,
-    showscale: false,
-    contours: {
-      z: {
-        show: true,
-        usecolormap: true,
-        highlightcolor: "#ffffff",
-        project: { z: true }
-      }
-    },
-    hovertemplate:
-      "x: %{x:.2f}<br>" +
-      "y: %{y:.2f}<br>" +
-      "f(x,y): %{z:.3f}<extra></extra>"
-  };
-
-  function makePointTrace(x, y) {
-    const z = f(x, y);
-
-    return {
-      type: "scatter3d",
-      mode: "markers",
-      x: [x],
-      y: [y],
-      z: [z],
-      marker: {
-        size: 7,
-        color: "#ff3b30",
-        line: {
-          color: "#ffffff",
-          width: 2
-        }
-      },
-      name: "Current point",
-      hovertemplate:
-        "Current point<br>" +
-        "x: %{x:.2f}<br>" +
-        "y: %{y:.2f}<br>" +
-        "f(x,y): %{z:.3f}<extra></extra>"
-    };
+    const mesh = new THREE.Mesh(geometry, material);
+    return mesh;
   }
 
-  function makeArrowTrace(x, y, directionSign, color, name) {
-    const z = f(x, y);
+  const surface = createSurface();
+  scene.add(surface);
+
+  const wireframe = new THREE.WireframeGeometry(surface.geometry);
+  const wireMaterial = new THREE.LineBasicMaterial({
+    color: 0xffffff,
+    transparent: true,
+    opacity: 0.15
+  });
+  const wire = new THREE.LineSegments(wireframe, wireMaterial);
+  scene.add(wire);
+
+  const pointGeometry = new THREE.SphereGeometry(0.11, 32, 32);
+  const pointMaterial = new THREE.MeshStandardMaterial({
+    color: 0xff3b30,
+    emissive: 0x551000,
+    roughness: 0.35
+  });
+
+  const redPoint = new THREE.Mesh(pointGeometry, pointMaterial);
+  scene.add(redPoint);
+
+  let uphillArrow = null;
+  let downhillArrow = null;
+
+  function removeOldArrows() {
+    if (uphillArrow) scene.remove(uphillArrow);
+    if (downhillArrow) scene.remove(downhillArrow);
+  }
+
+  function updatePointAndArrows() {
+    const x = currentPoint.x;
+    const y = currentPoint.y;
+    const z = zScale * f(x, y);
+
+    redPoint.position.set(x, y, z + 0.08);
+
     const g = grad(x, y);
     const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
 
-    const scale = 0.65;
-    const dx = directionSign * scale * g.x / norm;
-    const dy = directionSign * scale * g.y / norm;
+    removeOldArrows();
 
-    const xEnd = x + dx;
-    const yEnd = y + dy;
+    const origin = new THREE.Vector3(x, y, z + 0.16);
 
-    /*
-      The arrow is drawn as a tangent direction on the surface.
+    const uphillDirection = new THREE.Vector3(
+      g.x / norm,
+      g.y / norm,
+      zScale * norm
+    ).normalize();
 
-      If u = grad / ||grad||, then the height change in the uphill
-      direction is approximately grad dot u = ||grad||.
-    */
-    const zEnd = z + directionSign * scale * norm;
+    const downhillDirection = new THREE.Vector3(
+      -g.x / norm,
+      -g.y / norm,
+      -zScale * norm
+    ).normalize();
 
-    return {
-      type: "scatter3d",
-      mode: "lines+markers",
-      x: [x, xEnd],
-      y: [y, yEnd],
-      z: [z, zEnd],
-      line: {
-        color: color,
-        width: 8
-      },
-      marker: {
-        size: [1, 5],
-        color: color
-      },
-      name: name,
-      hoverinfo: "skip"
-    };
+    uphillArrow = new THREE.ArrowHelper(
+      uphillDirection,
+      origin,
+      0.9,
+      0xffffff,
+      0.18,
+      0.1
+    );
+
+    downhillArrow = new THREE.ArrowHelper(
+      downhillDirection,
+      origin,
+      0.9,
+      0x000000,
+      0.18,
+      0.1
+    );
+
+    scene.add(uphillArrow);
+    scene.add(downhillArrow);
+
+    pointText.textContent = `(${x.toFixed(2)}, ${y.toFixed(2)})`;
+    lossText.textContent = f(x, y).toFixed(4);
+    gradText.textContent = `(${g.x.toFixed(3)}, ${g.y.toFixed(3)})`;
   }
 
-  function makeProjectedDescentTrace(x, y) {
-    const z = f(x, y);
-    const g = grad(x, y);
-    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+  updatePointAndArrows();
 
-    const scale = 0.65;
-    const xEnd = x - scale * g.x / norm;
-    const yEnd = y - scale * g.y / norm;
-    const zEnd = f(xEnd, yEnd);
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
 
-    return {
-      type: "scatter3d",
-      mode: "lines",
-      x: [x, xEnd],
-      y: [y, yEnd],
-      z: [z, zEnd],
-      line: {
-        color: "#ff3b30",
-        width: 4,
-        dash: "dot"
-      },
-      name: "Next small descent step",
-      hoverinfo: "skip"
-    };
+  function setMouseFromEvent(event) {
+    const rect = renderer.domElement.getBoundingClientRect();
+
+    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   }
 
-  function currentX() {
-    return parseFloat(xSlider.value);
-  }
+  function movePointFromEvent(event) {
+    setMouseFromEvent(event);
 
-  function currentY() {
-    return parseFloat(ySlider.value);
-  }
+    raycaster.setFromCamera(mouse, camera);
 
-  function updateReadout(x, y) {
-    const g = grad(x, y);
+    const hits = raycaster.intersectObject(surface);
 
-    xValue.textContent = x.toFixed(2);
-    yValue.textContent = y.toFixed(2);
-    lossValue.textContent = f(x, y).toFixed(4);
-    gradValue.textContent = "(" + g.x.toFixed(3) + ", " + g.y.toFixed(3) + ")";
-  }
+    if (hits.length > 0) {
+      const p = hits[0].point;
 
-  function makeData(x, y) {
-    return [
-      surfaceTrace,
-      makePointTrace(x, y),
-      makeArrowTrace(x, y, 1, "#ffffff", "Uphill direction ∇f"),
-      makeArrowTrace(x, y, -1, "#111111", "Descent direction -∇f"),
-      makeProjectedDescentTrace(x, y)
-    ];
-  }
+      currentPoint.x = Math.max(xMin, Math.min(xMax, p.x));
+      currentPoint.y = Math.max(yMin, Math.min(yMax, p.y));
 
-  const layout = {
-    margin: { l: 0, r: 0, b: 0, t: 0 },
-    paper_bgcolor: "rgba(0,0,0,0)",
-    plot_bgcolor: "rgba(0,0,0,0)",
-    scene: {
-      xaxis: {
-        title: "x",
-        backgroundcolor: "rgba(0,0,0,0)",
-        gridcolor: "rgba(150,150,150,0.25)",
-        zerolinecolor: "rgba(150,150,150,0.4)"
-      },
-      yaxis: {
-        title: "y",
-        backgroundcolor: "rgba(0,0,0,0)",
-        gridcolor: "rgba(150,150,150,0.25)",
-        zerolinecolor: "rgba(150,150,150,0.4)"
-      },
-      zaxis: {
-        title: "f(x,y)",
-        backgroundcolor: "rgba(0,0,0,0)",
-        gridcolor: "rgba(150,150,150,0.25)",
-        zerolinecolor: "rgba(150,150,150,0.4)"
-      },
-      camera: {
-        eye: { x: 1.55, y: 1.55, z: 1.05 }
-      },
-      aspectratio: {
-        x: 1,
-        y: 1,
-        z: 0.65
-      }
-    },
-    showlegend: true,
-    legend: {
-      x: 0.02,
-      y: 0.98,
-      bgcolor: "rgba(255,255,255,0.55)"
+      updatePointAndArrows();
     }
-  };
-
-  const config = {
-    responsive: true,
-    displaylogo: false,
-    scrollZoom: true
-  };
-
-  function render() {
-    const x = currentX();
-    const y = currentY();
-
-    updateReadout(x, y);
-
-    Plotly.react(plotDiv, makeData(x, y), layout, config);
   }
 
-  Plotly.newPlot(plotDiv, makeData(currentX(), currentY()), layout, config);
-  updateReadout(currentX(), currentY());
+  renderer.domElement.addEventListener("pointerdown", function (event) {
+    if (!moveMode) return;
 
-  xSlider.addEventListener("input", render);
-  ySlider.addEventListener("input", render);
+    draggingPoint = true;
+    controls.enabled = false;
+    movePointFromEvent(event);
+  });
 
-  plotDiv.on("plotly_click", function (data) {
-    if (!data.points || data.points.length === 0) return;
+  renderer.domElement.addEventListener("pointermove", function (event) {
+    if (!moveMode || !draggingPoint) return;
 
-    const p = data.points[0];
+    movePointFromEvent(event);
+  });
 
-    if (typeof p.x === "number" && typeof p.y === "number") {
-      xSlider.value = Math.max(-3, Math.min(3, p.x));
-      ySlider.value = Math.max(-3, Math.min(3, p.y));
-      render();
+  renderer.domElement.addEventListener("pointerup", function () {
+    draggingPoint = false;
+
+    if (!moveMode) {
+      controls.enabled = true;
     }
   });
-});
+
+  renderer.domElement.addEventListener("pointerleave", function () {
+    draggingPoint = false;
+  });
+
+  rotateButton.addEventListener("click", function () {
+    moveMode = false;
+    controls.enabled = true;
+
+    rotateButton.classList.add("active");
+    moveButton.classList.remove("active");
+  });
+
+  moveButton.addEventListener("click", function () {
+    moveMode = true;
+    controls.enabled = false;
+
+    moveButton.classList.add("active");
+    rotateButton.classList.remove("active");
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  window.addEventListener("resize", function () {
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(width, height);
+  });
 </script>
 
 To make this intuition more tangible, try dragging the point below. The landscape represents a loss function $$f(x,y)$$. At every location, the gradient $$\nabla f(x,y)$$ tells us which direction is uphill, while gradient descent moves in the opposite direction, $$-\nabla f(x,y)$$.

@@ -28,7 +28,7 @@ order: 7
 .cv-title {
   color: #d8a7a7;
   font-size: 1.05rem;
-  font-style: italic;
+  font-style: bold;
   margin-bottom: 0.8rem;
 }
 

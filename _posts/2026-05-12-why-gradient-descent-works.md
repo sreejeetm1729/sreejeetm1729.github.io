@@ -23,7 +23,7 @@ $$
 
 where $\eta>0$ is called the step-size or learning rate.
 
-The entire algorithm is contained in this single line. At first glance, this update looks almost too simple to matter. We begin at a point $$x_t$$, compute the gradient $$\nabla f(x_t)$$, and then take a small step in the opposite direction. The number $$\eta>0\$$ is called the **learning rate** or **step size**, and it controls how far we move at each iteration.
+The entire algorithm is contained in this single line. At first glance, this update looks almost too simple to matter. We begin at a point $$x_t$$, compute the gradient $$\nabla f(x_t)$$, and then take a small step in the opposite direction. The number $$\eta>0$$ is called the **learning rate** or **step size**, and it controls how far we move at each iteration.
 
 The intuition is wonderfully geometric. The gradient points in the direction where the function increases the fastest. So, if our goal is to make the function smaller, the most natural thing to do is to walk in the opposite direction. Gradient descent is simply the act of repeatedly asking:
 
@@ -418,6 +418,504 @@ legend: {
 
   xSlider.addEventListener("input", render);
   ySlider.addEventListener("input", render);
+
+  plotDiv.on("plotly_click", function (data) {
+    if (!data.points || data.points.length === 0) return;
+
+    const p = data.points[0];
+
+    if (typeof p.x === "number" && typeof p.y === "number") {
+      xSlider.value = Math.max(-3, Math.min(3, p.x));
+      ySlider.value = Math.max(-3, Math.min(3, p.y));
+      render();
+    }
+  });
+});
+</script>
+<div id="gd-3d-widget">
+  <div class="gd3d-card">
+    <div class="gd3d-header">
+      <div>
+        <h3>Gradient Descent on a 3D Loss Landscape</h3>
+        <p>
+          Rotate the surface and move the point. For visualization, we take the
+          optimization variable to be two-dimensional, \((x,y)\in\mathbb{R}^2\),
+          and the loss to be a function \(f:\mathbb{R}^2\to\mathbb{R}\).
+          This allows us to visualize the graph of the loss as a three-dimensional
+          surface \(z=f(x,y)\). The red point lives on this loss surface, the white
+          arrow points uphill in the direction of \(\nabla f(x,y)\), and the black
+          arrow points downhill in the gradient descent direction \(-\nabla f(x,y)\).
+        </p>
+      </div>
+    </div>
+
+    <div class="gd3d-actions">
+      <button id="gd-randomize">Generate new landscape</button>
+      <button id="gd-reset-point">Reset point</button>
+    </div>
+
+    <div id="gd-3d-plot"></div>
+
+    <div class="gd3d-controls">
+      <label>
+        x:
+        <input id="gd-x-slider" type="range" min="-3" max="3" step="0.05" value="1.2">
+        <span id="gd-x-value"></span>
+      </label>
+
+      <label>
+        y:
+        <input id="gd-y-slider" type="range" min="-3" max="3" step="0.05" value="1.0">
+        <span id="gd-y-value"></span>
+      </label>
+    </div>
+
+    <div class="gd3d-readout">
+      <span><strong>Loss:</strong> <span id="gd-loss-value"></span></span>
+      <span><strong>Gradient:</strong> <span id="gd-grad-value"></span></span>
+    </div>
+
+    <p class="gd3d-caption">
+      Each time you generate a new landscape, the loss function changes, and so does
+      the gradient field. The point remains movable, and the arrows update according
+      to the new local geometry.
+    </p>
+  </div>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+<style>
+  #gd-3d-widget {
+    margin: 2rem 0;
+    font-family: inherit;
+  }
+
+  #gd-3d-widget .gd3d-card {
+    border: 1px solid rgba(150, 150, 150, 0.25);
+    border-radius: 18px;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+
+  #gd-3d-widget .gd3d-header h3 {
+    margin: 0;
+    font-size: 1.35rem;
+  }
+
+  #gd-3d-widget .gd3d-header p {
+    margin: 0.35rem 0 1rem;
+    opacity: 0.86;
+    font-size: 0.95rem;
+  }
+
+  #gd-3d-widget .gd3d-actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin: 0.6rem 0 1rem;
+  }
+
+  #gd-3d-widget .gd3d-actions button {
+    border: 1px solid rgba(150,150,150,0.35);
+    border-radius: 999px;
+    padding: 0.52rem 0.95rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  #gd-3d-widget .gd3d-actions button:hover {
+    background: rgba(150,150,150,0.14);
+  }
+
+  #gd-3d-plot {
+    width: 100%;
+    height: 540px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(150,150,150,0.25);
+  }
+
+  #gd-3d-widget .gd3d-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  #gd-3d-widget .gd3d-controls label {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.7rem 0.85rem;
+    border-radius: 12px;
+    background: rgba(150,150,150,0.10);
+  }
+
+  #gd-3d-widget input[type="range"] {
+    width: 100%;
+  }
+
+  #gd-3d-widget .gd3d-readout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    font-size: 0.92rem;
+  }
+
+  #gd-3d-widget .gd3d-readout span {
+    padding: 0.65rem 0.8rem;
+    border-radius: 12px;
+    background: rgba(150,150,150,0.10);
+  }
+
+  #gd-3d-widget .gd3d-caption {
+    margin: 1rem 0 0;
+    opacity: 0.86;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 700px) {
+    #gd-3d-widget .gd3d-controls,
+    #gd-3d-widget .gd3d-readout {
+      grid-template-columns: 1fr;
+    }
+
+    #gd-3d-plot {
+      height: 440px;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const plotDiv = document.getElementById("gd-3d-plot");
+
+  const xSlider = document.getElementById("gd-x-slider");
+  const ySlider = document.getElementById("gd-y-slider");
+
+  const xValue = document.getElementById("gd-x-value");
+  const yValue = document.getElementById("gd-y-value");
+  const lossValue = document.getElementById("gd-loss-value");
+  const gradValue = document.getElementById("gd-grad-value");
+
+  const randomizeButton = document.getElementById("gd-randomize");
+  const resetPointButton = document.getElementById("gd-reset-point");
+
+  function rand(min, max) {
+    return min + Math.random() * (max - min);
+  }
+
+  function randomLandscapeParams() {
+    return {
+      quadX: rand(0.12, 0.45),
+      quadY: rand(0.12, 0.45),
+
+      amp1: rand(0.45, 1.10),
+      freqX1: rand(1.0, 2.6),
+      freqY1: rand(1.0, 2.6),
+      phaseX1: rand(0, 2 * Math.PI),
+      phaseY1: rand(0, 2 * Math.PI),
+
+      amp2: rand(0.15, 0.65),
+      mixFreq: rand(0.7, 1.8),
+      mixPhase: rand(0, 2 * Math.PI)
+    };
+  }
+
+  let landscapeParams = randomLandscapeParams();
+
+  function f(x, y) {
+    const p = landscapeParams;
+
+    return (
+      p.quadX * x * x +
+      p.quadY * y * y +
+      p.amp1 *
+        Math.sin(p.freqX1 * x + p.phaseX1) *
+        Math.cos(p.freqY1 * y + p.phaseY1) +
+      p.amp2 * Math.sin(p.mixFreq * (x + y) + p.mixPhase)
+    );
+  }
+
+  function grad(x, y) {
+    const p = landscapeParams;
+
+    return {
+      x:
+        2 * p.quadX * x +
+        p.amp1 *
+          p.freqX1 *
+          Math.cos(p.freqX1 * x + p.phaseX1) *
+          Math.cos(p.freqY1 * y + p.phaseY1) +
+        p.amp2 *
+          p.mixFreq *
+          Math.cos(p.mixFreq * (x + y) + p.mixPhase),
+
+      y:
+        2 * p.quadY * y -
+        p.amp1 *
+          p.freqY1 *
+          Math.sin(p.freqX1 * x + p.phaseX1) *
+          Math.sin(p.freqY1 * y + p.phaseY1) +
+        p.amp2 *
+          p.mixFreq *
+          Math.cos(p.mixFreq * (x + y) + p.mixPhase)
+    };
+  }
+
+  function linspace(a, b, n) {
+    const arr = [];
+    const step = (b - a) / (n - 1);
+
+    for (let i = 0; i < n; i++) {
+      arr.push(a + i * step);
+    }
+
+    return arr;
+  }
+
+  const xs = linspace(-3, 3, 65);
+  const ys = linspace(-3, 3, 65);
+
+  function buildSurfaceZ() {
+    return ys.map(function (y) {
+      return xs.map(function (x) {
+        return f(x, y);
+      });
+    });
+  }
+
+  function makeSurfaceTrace() {
+    return {
+      type: "surface",
+      x: xs,
+      y: ys,
+      z: buildSurfaceZ(),
+      colorscale: "Viridis",
+      opacity: 0.88,
+      showscale: false,
+      name: "surface",
+      showlegend: false,
+      contours: {
+        z: {
+          show: true,
+          usecolormap: true,
+          highlightcolor: "#ffffff",
+          project: { z: true }
+        }
+      },
+      hovertemplate:
+        "x: %{x:.2f}<br>" +
+        "y: %{y:.2f}<br>" +
+        "f(x,y): %{z:.3f}<extra></extra>"
+    };
+  }
+
+  function makePointTrace(x, y) {
+    const z = f(x, y);
+
+    return {
+      type: "scatter3d",
+      mode: "markers",
+      x: [x],
+      y: [y],
+      z: [z],
+      marker: {
+        size: 7,
+        color: "#ff3b30",
+        line: {
+          color: "#ffffff",
+          width: 2
+        }
+      },
+      name: "<b>Point</b>",
+      hovertemplate:
+        "Current point<br>" +
+        "x: %{x:.2f}<br>" +
+        "y: %{y:.2f}<br>" +
+        "f(x,y): %{z:.3f}<extra></extra>"
+    };
+  }
+
+  function makeArrowTrace(x, y, directionSign, color, name) {
+    const z = f(x, y);
+    const g = grad(x, y);
+    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+
+    const scale = 0.65;
+    const dx = directionSign * scale * g.x / norm;
+    const dy = directionSign * scale * g.y / norm;
+
+    const xEnd = x + dx;
+    const yEnd = y + dy;
+
+    /*
+      This draws a visual tangent-like direction on the surface.
+      The white arrow is uphill, and the black arrow is downhill.
+    */
+    const zEnd = z + directionSign * scale * norm;
+
+    return {
+      type: "scatter3d",
+      mode: "lines+markers",
+      x: [x, xEnd],
+      y: [y, yEnd],
+      z: [z, zEnd],
+      line: {
+        color: color,
+        width: 9
+      },
+      marker: {
+        size: [1, 5],
+        color: color
+      },
+      name: name,
+      hoverinfo: "skip"
+    };
+  }
+
+  function makeProjectedDescentTrace(x, y) {
+    const z = f(x, y);
+    const g = grad(x, y);
+    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+
+    const scale = 0.65;
+    const xEnd = x - scale * g.x / norm;
+    const yEnd = y - scale * g.y / norm;
+    const zEnd = f(xEnd, yEnd);
+
+    return {
+      type: "scatter3d",
+      mode: "lines",
+      x: [x, xEnd],
+      y: [y, yEnd],
+      z: [z, zEnd],
+      line: {
+        color: "#ff3b30",
+        width: 5,
+        dash: "dot"
+      },
+      name: "<b>Next step</b>",
+      hoverinfo: "skip"
+    };
+  }
+
+  function currentX() {
+    return parseFloat(xSlider.value);
+  }
+
+  function currentY() {
+    return parseFloat(ySlider.value);
+  }
+
+  function updateReadout(x, y) {
+    const g = grad(x, y);
+
+    xValue.textContent = x.toFixed(2);
+    yValue.textContent = y.toFixed(2);
+    lossValue.textContent = f(x, y).toFixed(4);
+    gradValue.textContent = "(" + g.x.toFixed(3) + ", " + g.y.toFixed(3) + ")";
+  }
+
+  function makeData(x, y) {
+    return [
+      makeSurfaceTrace(),
+      makePointTrace(x, y),
+      makeArrowTrace(x, y, 1, "#ffffff", "<b>Uphill ∇f</b>"),
+      makeArrowTrace(x, y, -1, "#111111", "<b>Descent -∇f</b>"),
+      makeProjectedDescentTrace(x, y)
+    ];
+  }
+
+  const layout = {
+    margin: { l: 0, r: 0, b: 55, t: 0 },
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "rgba(0,0,0,0)",
+    uirevision: "keep-camera-fixed",
+
+    scene: {
+      xaxis: {
+        title: "x",
+        backgroundcolor: "rgba(0,0,0,0)",
+        gridcolor: "rgba(150,150,150,0.25)",
+        zerolinecolor: "rgba(150,150,150,0.4)"
+      },
+      yaxis: {
+        title: "y",
+        backgroundcolor: "rgba(0,0,0,0)",
+        gridcolor: "rgba(150,150,150,0.25)",
+        zerolinecolor: "rgba(150,150,150,0.4)"
+      },
+      zaxis: {
+        title: "f(x,y)",
+        backgroundcolor: "rgba(0,0,0,0)",
+        gridcolor: "rgba(150,150,150,0.25)",
+        zerolinecolor: "rgba(150,150,150,0.4)"
+      },
+      camera: {
+        eye: { x: 1.55, y: 1.55, z: 1.05 }
+      },
+      aspectratio: {
+        x: 1,
+        y: 1,
+        z: 0.65
+      }
+    },
+
+    showlegend: true,
+    legend: {
+      orientation: "h",
+      x: 0.5,
+      y: -0.08,
+      xanchor: "center",
+      yanchor: "top",
+      bgcolor: "rgba(0,0,0,0.35)",
+      bordercolor: "rgba(255,255,255,0.15)",
+      borderwidth: 1,
+      font: {
+        size: 13,
+        color: "#ffffff",
+        family: "Arial Black, system-ui, sans-serif"
+      }
+    }
+  };
+
+  const config = {
+    responsive: true,
+    displaylogo: false,
+    scrollZoom: true
+  };
+
+  function render() {
+    const x = currentX();
+    const y = currentY();
+
+    updateReadout(x, y);
+    Plotly.react(plotDiv, makeData(x, y), layout, config);
+  }
+
+  Plotly.newPlot(plotDiv, makeData(currentX(), currentY()), layout, config);
+  updateReadout(currentX(), currentY());
+
+  xSlider.addEventListener("input", render);
+  ySlider.addEventListener("input", render);
+
+  randomizeButton.addEventListener("click", function () {
+    landscapeParams = randomLandscapeParams();
+    render();
+  });
+
+  resetPointButton.addEventListener("click", function () {
+    xSlider.value = 1.2;
+    ySlider.value = 1.0;
+    render();
+  });
 
   plotDiv.on("plotly_click", function (data) {
     if (!data.points || data.points.length === 0) return;

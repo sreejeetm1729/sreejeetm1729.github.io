@@ -315,7 +315,7 @@ We prove that, with high probability, our proposed algorithm converges exactly t
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">

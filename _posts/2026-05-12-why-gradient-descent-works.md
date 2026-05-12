@@ -664,7 +664,7 @@ Thus, in the convex smooth setting, gradient descent converges in function value
 $$
 f(x_T)-f(x^\star)
 =
-O\left(\frac1T\right).
+\mathcal{O}\left(\frac1T\right).
 $$
 
 ---
@@ -710,7 +710,7 @@ Thus, gradient descent converges geometrically:
 $$
 \|x_t-x^\star\|
 =
-O\left(
+\mathcal{O}\left(
 \left(1-\frac{\mu}{L}\right)^t
 \right).
 $$
@@ -823,7 +823,7 @@ $$
 From this one inequality, we get:
 
 - for nonconvex smooth functions, convergence to stationary points;
-- for convex smooth functions, $O(1/T)$ convergence in function value;
+- for convex smooth functions, $\mathcal{O}(1/T)$ convergence in function value;
 - for strongly convex smooth functions, linear convergence;
 - for quadratic functions, convergence determined exactly by eigenvalues.
 

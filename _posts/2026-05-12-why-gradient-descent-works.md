@@ -37,37 +37,37 @@ Of course, the size of the step matters. If $$\eta$$ is too large, we may oversh
 
 That is the beauty of gradient descent: a global optimization problem is attacked through a purely local rule. The convergence proof makes this intuition precise, and reveals why this deceptively simple algorithm sits at the heart of modern machine learning.
 
-<div class="gd-widget">
+<div id="gd-gradient-widget">
   <div class="gd-card">
     <div class="gd-header">
       <div>
         <h3>Explore the Gradient</h3>
-        <p>Drag the red point on the landscape. The arrow shows the local gradient direction.</p>
+        <p>Drag the red point. The arrows show the local gradient and descent directions.</p>
       </div>
-      <button class="gd-reset">Reset</button>
+      <button id="gd-reset">Reset</button>
     </div>
 
-    <canvas class="gd-canvas"></canvas>
+    <canvas id="gd-canvas"></canvas>
 
     <div class="gd-readout">
-      <span><strong>Point:</strong> <span class="gd-point"></span></span>
-      <span><strong>Loss:</strong> <span class="gd-loss"></span></span>
-      <span><strong>Gradient:</strong> <span class="gd-gradient"></span></span>
+      <span><strong>Point:</strong> <span id="gd-point"></span></span>
+      <span><strong>Loss:</strong> <span id="gd-loss"></span></span>
+      <span><strong>Gradient:</strong> <span id="gd-gradient"></span></span>
     </div>
 
     <p class="gd-caption">
-      The gradient points in the direction of steepest increase. Gradient descent moves in the opposite direction.
+      The white arrow points uphill in the direction of \(\nabla f(x,y)\). Gradient descent moves in the opposite direction, \(-\nabla f(x,y)\).
     </p>
   </div>
 </div>
 
 <style>
-  .gd-widget {
+  #gd-gradient-widget {
     margin: 2rem 0;
     font-family: inherit;
   }
 
-  .gd-card {
+  #gd-gradient-widget .gd-card {
     border: 1px solid rgba(150, 150, 150, 0.25);
     border-radius: 18px;
     padding: 1.2rem;
@@ -75,7 +75,7 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   }
 
-  .gd-header {
+  #gd-gradient-widget .gd-header {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -83,32 +83,26 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     margin-bottom: 1rem;
   }
 
-  .gd-header h3 {
+  #gd-gradient-widget h3 {
     margin: 0;
     font-size: 1.35rem;
   }
 
-  .gd-header p {
+  #gd-gradient-widget p {
     margin: 0.35rem 0 0;
-    opacity: 0.78;
-    font-size: 0.95rem;
+    opacity: 0.82;
   }
 
-  .gd-reset {
+  #gd-reset {
     border: 1px solid rgba(150,150,150,0.35);
     border-radius: 999px;
     padding: 0.45rem 0.8rem;
     background: transparent;
     color: inherit;
     cursor: pointer;
-    font-size: 0.9rem;
   }
 
-  .gd-reset:hover {
-    background: rgba(150,150,150,0.12);
-  }
-
-  .gd-canvas {
+  #gd-canvas {
     width: 100%;
     height: 420px;
     display: block;
@@ -116,53 +110,52 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     border: 1px solid rgba(150,150,150,0.25);
     cursor: grab;
     touch-action: none;
+    background: #111;
   }
 
-  .gd-canvas:active {
+  #gd-canvas:active {
     cursor: grabbing;
   }
 
-  .gd-readout {
+  #gd-gradient-widget .gd-readout {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
     margin-top: 1rem;
     font-size: 0.92rem;
   }
 
-  .gd-readout span {
+  #gd-gradient-widget .gd-readout span {
     padding: 0.6rem 0.75rem;
     border-radius: 12px;
     background: rgba(150,150,150,0.10);
   }
 
-  .gd-caption {
-    margin: 1rem 0 0;
+  #gd-gradient-widget .gd-caption {
+    margin-top: 1rem;
     font-size: 0.95rem;
-    opacity: 0.82;
   }
 
   @media (max-width: 700px) {
-    .gd-readout {
+    #gd-gradient-widget .gd-readout {
       grid-template-columns: 1fr;
     }
 
-    .gd-canvas {
+    #gd-canvas {
       height: 340px;
     }
   }
 </style>
 
 <script>
-(function () {
-  const root = document.currentScript.closest(".gd-widget");
-  const canvas = root.querySelector(".gd-canvas");
+document.addEventListener("DOMContentLoaded", function () {
+  const canvas = document.getElementById("gd-canvas");
   const ctx = canvas.getContext("2d");
 
-  const pointText = root.querySelector(".gd-point");
-  const lossText = root.querySelector(".gd-loss");
-  const gradientText = root.querySelector(".gd-gradient");
-  const resetButton = root.querySelector(".gd-reset");
+  const pointText = document.getElementById("gd-point");
+  const lossText = document.getElementById("gd-loss");
+  const gradientText = document.getElementById("gd-gradient");
+  const resetButton = document.getElementById("gd-reset");
 
   const xMin = -3;
   const xMax = 3;
@@ -171,7 +164,6 @@ That is the beauty of gradient descent: a global optimization problem is attacke
 
   let width = 0;
   let height = 0;
-  let dpr = window.devicePixelRatio || 1;
   let dragging = false;
 
   let point = { x: 1.25, y: 1.0 };
@@ -201,25 +193,14 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     };
   }
 
-  function clamp(value, low, high) {
-    return Math.max(low, Math.min(high, value));
-  }
-
-  function colorMap(t) {
-    t = clamp(t, 0, 1);
-
-    const r = Math.round(35 + 190 * t);
-    const g = Math.round(70 + 110 * (1 - Math.abs(t - 0.5) * 2));
-    const b = Math.round(150 + 80 * (1 - t));
-
-    return `rgb(${r}, ${g}, ${b})`;
+  function clamp(v, a, b) {
+    return Math.max(a, Math.min(b, v));
   }
 
   function drawArrow(start, end, color, label) {
-    const headLength = 11;
     const angle = Math.atan2(end.y - start.y, end.x - start.x);
+    const head = 12;
 
-    ctx.save();
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
     ctx.lineWidth = 3;
@@ -231,31 +212,22 @@ That is the beauty of gradient descent: a global optimization problem is attacke
 
     ctx.beginPath();
     ctx.moveTo(end.x, end.y);
-    ctx.lineTo(
-      end.x - headLength * Math.cos(angle - Math.PI / 6),
-      end.y - headLength * Math.sin(angle - Math.PI / 6)
-    );
-    ctx.lineTo(
-      end.x - headLength * Math.cos(angle + Math.PI / 6),
-      end.y - headLength * Math.sin(angle + Math.PI / 6)
-    );
+    ctx.lineTo(end.x - head * Math.cos(angle - Math.PI / 6), end.y - head * Math.sin(angle - Math.PI / 6));
+    ctx.lineTo(end.x - head * Math.cos(angle + Math.PI / 6), end.y - head * Math.sin(angle + Math.PI / 6));
     ctx.closePath();
     ctx.fill();
 
-    ctx.font = "13px system-ui, sans-serif";
+    ctx.font = "14px system-ui, sans-serif";
     ctx.fillText(label, end.x + 8, end.y - 8);
-
-    ctx.restore();
   }
 
   function drawLandscape() {
+    const step = 5;
     let minVal = Infinity;
     let maxVal = -Infinity;
 
-    const sampleStep = 6;
-
-    for (let py = 0; py < height; py += sampleStep) {
-      for (let px = 0; px < width; px += sampleStep) {
+    for (let py = 0; py < height; py += step) {
+      for (let px = 0; px < width; px += step) {
         const w = toWorld(px, py);
         const z = f(w.x, w.y);
         minVal = Math.min(minVal, z);
@@ -263,142 +235,30 @@ That is the beauty of gradient descent: a global optimization problem is attacke
       }
     }
 
-    for (let py = 0; py < height; py += sampleStep) {
-      for (let px = 0; px < width; px += sampleStep) {
+    for (let py = 0; py < height; py += step) {
+      for (let px = 0; px < width; px += step) {
         const w = toWorld(px, py);
         const z = f(w.x, w.y);
         const t = (z - minVal) / (maxVal - minVal);
-        ctx.fillStyle = colorMap(t);
-        ctx.fillRect(px, py, sampleStep + 1, sampleStep + 1);
+
+        const r = Math.floor(30 + 210 * t);
+        const g = Math.floor(80 + 80 * (1 - Math.abs(t - 0.5)));
+        const b = Math.floor(180 - 100 * t);
+
+        ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+        ctx.fillRect(px, py, step + 1, step + 1);
       }
     }
-
-    drawContourLines(minVal, maxVal);
-  }
-
-  function drawContourLines(minVal, maxVal) {
-    const nx = 70;
-    const ny = 48;
-    const values = [];
-
-    for (let j = 0; j <= ny; j++) {
-      values[j] = [];
-      for (let i = 0; i <= nx; i++) {
-        const x = xMin + (i / nx) * (xMax - xMin);
-        const y = yMin + (j / ny) * (yMax - yMin);
-        values[j][i] = f(x, y);
-      }
-    }
-
-    ctx.save();
-    ctx.strokeStyle = "rgba(255,255,255,0.35)";
-    ctx.lineWidth = 1;
-
-    const levels = 13;
-
-    for (let levelIndex = 1; levelIndex < levels; levelIndex++) {
-      const level = minVal + (levelIndex / levels) * (maxVal - minVal);
-
-      for (let j = 0; j < ny; j++) {
-        for (let i = 0; i < nx; i++) {
-          const x0 = xMin + (i / nx) * (xMax - xMin);
-          const x1 = xMin + ((i + 1) / nx) * (xMax - xMin);
-          const y0 = yMin + (j / ny) * (yMax - yMin);
-          const y1 = yMin + ((j + 1) / ny) * (yMax - yMin);
-
-          const v00 = values[j][i];
-          const v10 = values[j][i + 1];
-          const v01 = values[j + 1][i];
-          const v11 = values[j + 1][i + 1];
-
-          const points = [];
-
-          function cross(a, b) {
-            return (a - level) * (b - level) <= 0 && a !== b;
-          }
-
-          function interp(a, b) {
-            return (level - a) / (b - a);
-          }
-
-          if (cross(v00, v10)) {
-            const t = interp(v00, v10);
-            points.push(toScreen(x0 + t * (x1 - x0), y0));
-          }
-
-          if (cross(v10, v11)) {
-            const t = interp(v10, v11);
-            points.push(toScreen(x1, y0 + t * (y1 - y0)));
-          }
-
-          if (cross(v01, v11)) {
-            const t = interp(v01, v11);
-            points.push(toScreen(x0 + t * (x1 - x0), y1));
-          }
-
-          if (cross(v00, v01)) {
-            const t = interp(v00, v01);
-            points.push(toScreen(x0, y0 + t * (y1 - y0)));
-          }
-
-          if (points.length >= 2) {
-            ctx.beginPath();
-            ctx.moveTo(points[0].x, points[0].y);
-            ctx.lineTo(points[1].x, points[1].y);
-            ctx.stroke();
-          }
-        }
-      }
-    }
-
-    ctx.restore();
-  }
-
-  function drawPointAndGradient() {
-    const p = toScreen(point.x, point.y);
-    const g = grad(point.x, point.y);
-    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
-
-    const arrowScale = 0.55;
-
-    const gradEnd = toScreen(
-      point.x + arrowScale * g.x / norm,
-      point.y + arrowScale * g.y / norm
-    );
-
-    const descentEnd = toScreen(
-      point.x - arrowScale * g.x / norm,
-      point.y - arrowScale * g.y / norm
-    );
-
-    drawArrow(p, gradEnd, "rgba(255,255,255,0.95)", "∇f");
-    drawArrow(p, descentEnd, "rgba(20,20,20,0.85)", "-∇f");
-
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 8, 0, 2 * Math.PI);
-    ctx.fillStyle = "#ff3b30";
-    ctx.fill();
-
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = "white";
-    ctx.stroke();
-    ctx.restore();
-
-    pointText.textContent = `(${point.x.toFixed(2)}, ${point.y.toFixed(2)})`;
-    lossText.textContent = f(point.x, point.y).toFixed(3);
-    gradientText.textContent = `(${g.x.toFixed(3)}, ${g.y.toFixed(3)})`;
   }
 
   function drawAxes() {
-    ctx.save();
-    ctx.strokeStyle = "rgba(255,255,255,0.35)";
-    ctx.lineWidth = 1;
-
     const xAxisLeft = toScreen(xMin, 0);
     const xAxisRight = toScreen(xMax, 0);
     const yAxisBottom = toScreen(0, yMin);
     const yAxisTop = toScreen(0, yMax);
+
+    ctx.strokeStyle = "rgba(255,255,255,0.35)";
+    ctx.lineWidth = 1;
 
     ctx.beginPath();
     ctx.moveTo(xAxisLeft.x, xAxisLeft.y);
@@ -409,8 +269,39 @@ That is the beauty of gradient descent: a global optimization problem is attacke
     ctx.moveTo(yAxisBottom.x, yAxisBottom.y);
     ctx.lineTo(yAxisTop.x, yAxisTop.y);
     ctx.stroke();
+  }
 
-    ctx.restore();
+  function drawPointAndGradient() {
+    const p = toScreen(point.x, point.y);
+    const g = grad(point.x, point.y);
+    const norm = Math.sqrt(g.x * g.x + g.y * g.y) || 1;
+
+    const scale = 0.65;
+
+    const gradEnd = toScreen(
+      point.x + scale * g.x / norm,
+      point.y + scale * g.y / norm
+    );
+
+    const descentEnd = toScreen(
+      point.x - scale * g.x / norm,
+      point.y - scale * g.y / norm
+    );
+
+    drawArrow(p, gradEnd, "white", "∇f");
+    drawArrow(p, descentEnd, "black", "-∇f");
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 8, 0, 2 * Math.PI);
+    ctx.fillStyle = "#ff3b30";
+    ctx.fill();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+
+    pointText.textContent = `(${point.x.toFixed(2)}, ${point.y.toFixed(2)})`;
+    lossText.textContent = f(point.x, point.y).toFixed(3);
+    gradientText.textContent = `(${g.x.toFixed(3)}, ${g.y.toFixed(3)})`;
   }
 
   function draw() {
@@ -422,19 +313,19 @@ That is the beauty of gradient descent: a global optimization problem is attacke
 
   function resize() {
     const rect = canvas.getBoundingClientRect();
-    width = Math.floor(rect.width);
-    height = Math.floor(rect.height);
-    dpr = window.devicePixelRatio || 1;
+    const dpr = window.devicePixelRatio || 1;
 
-    canvas.width = Math.floor(width * dpr);
-    canvas.height = Math.floor(height * dpr);
+    width = rect.width;
+    height = rect.height;
+
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
 
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
     draw();
   }
 
-  function updatePointFromEvent(event) {
+  function updatePoint(event) {
     const rect = canvas.getBoundingClientRect();
     const px = event.clientX - rect.left;
     const py = event.clientY - rect.top;
@@ -449,13 +340,11 @@ That is the beauty of gradient descent: a global optimization problem is attacke
   canvas.addEventListener("pointerdown", function (event) {
     dragging = true;
     canvas.setPointerCapture(event.pointerId);
-    updatePointFromEvent(event);
+    updatePoint(event);
   });
 
   canvas.addEventListener("pointermove", function (event) {
-    if (dragging) {
-      updatePointFromEvent(event);
-    }
+    if (dragging) updatePoint(event);
   });
 
   canvas.addEventListener("pointerup", function () {
@@ -472,9 +361,8 @@ That is the beauty of gradient descent: a global optimization problem is attacke
   });
 
   window.addEventListener("resize", resize);
-
   resize();
-})();
+});
 </script>
 
 To make this intuition more tangible, try dragging the point below. The landscape represents a loss function $$f(x,y)$$. At every location, the gradient $$\nabla f(x,y)$$ tells us which direction is uphill, while gradient descent moves in the opposite direction, $$-\nabla f(x,y)$$.

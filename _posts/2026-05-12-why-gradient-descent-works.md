@@ -76,7 +76,7 @@ That is the beauty of gradient descent: a global optimization problem is attacke
 
     <p class="gd3d-caption">
       The gradient \(\nabla f(x,y)\) gives the direction of steepest increase on the surface.
-      Gradient descent moves in the opposite direction, \(-\nabla f(x,y)\).
+      Gradient descent moves in the opposite direction, i.e \(-\nabla f(x,y)\).
     </p>
   </div>
 </div>
@@ -433,7 +433,7 @@ legend: {
 });
 </script>
 
-To make this intuition more tangible, try dragging the point below. The landscape represents a loss function $$f(x,y)$$. At every location, the gradient $$\nabla f(x,y)$$ tells us which direction is uphill, while gradient descent moves in the opposite direction, $$-\nabla f(x,y)$$.
+To make gradient descent more tangible, try dragging the point. The landscape represents a loss function $$f(x,y)$$. At every location, the gradient $$\nabla f(x,y)$$ tells us which direction is uphill, while gradient descent moves in the opposite direction, i.e $$-\nabla f(x,y)$$.
 
 ---
 

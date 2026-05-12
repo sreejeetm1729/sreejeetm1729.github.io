@@ -366,7 +366,7 @@ function initGradientLandscapeWidget() {
           width: 2
         }
       },
-      name: "<b>Point</b>",
+      name: "Point",
       hovertemplate:
         "Current point<br>" +
         "x: %{x:.2f}<br>" +
@@ -429,7 +429,7 @@ function initGradientLandscapeWidget() {
         width: 5,
         dash: "dot"
       },
-      name: "<b>Next step</b>",
+      name: "Next step",
       hoverinfo: "skip"
     };
   }
@@ -456,8 +456,8 @@ function initGradientLandscapeWidget() {
     return [
       makeSurfaceTrace(),
       makePointTrace(x, y),
-      makeArrowTrace(x, y, 1, "#ffffff", "<b>Uphill ∇f</b>"),
-      makeArrowTrace(x, y, -1, "#111111", "<b>Descent -∇f</b>"),
+      makeArrowTrace(x, y, 1, "#ffffff", "Uphill ∇f"),
+      makeArrowTrace(x, y, -1, "#111111", "Descent -∇f"),
       makeProjectedDescentTrace(x, y)
     ];
   }

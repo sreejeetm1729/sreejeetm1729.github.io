@@ -43,8 +43,12 @@ That is the beauty of gradient descent: a global optimization problem is attacke
       <div>
         <h3>Gradient Descent on a 3D Loss Landscape</h3>
         <p>
-          Rotate the surface and move the point. The red point lives on the loss surface,
-          the white arrow points uphill, and the black arrow points downhill.
+          Rotate the surface and move the point. For visualization, we consider a simple
+  two-parameter problem, where the loss is a function \(f:\mathbb{R}^2 \to \mathbb{R}\).
+  This lets us draw the graph of the loss as a three-dimensional surface
+  \(z=f(x,y)\). The red point lives on this loss surface, the white arrow points
+  uphill in the direction of \(\nabla f(x,y)\), and the black arrow points downhill
+  in the gradient descent direction \(-\nabla f(x,y)\).
         </p>
       </div>
     </div>

@@ -392,9 +392,8 @@ legend: {
   bgcolor: "rgba(255,255,255,0)",
   bordercolor: "rgba(150,150,150,0)",
   font: {
-    size: 14,
+    size: 12,
     color: "#ffffff",
-    family: "Arial Black, system-ui, sans-serif"
   }
 }
   };

@@ -3,6 +3,7 @@ title: "Why Gradient Descent Works: A Small Mathematical Story"
 date: 2026-05-12 00:00:00 -0400
 categories: [rl-blogs]
 tags: [optimization, gradient-descent, machine-learning, theory]
+series: Fundamentals of Reinforcement Learning
 math: true
 ---
 

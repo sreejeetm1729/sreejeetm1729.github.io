@@ -5,9 +5,8 @@ order: 6
 math: true
 ---
 
-# RL Blogs
 
-Here are my writings on reinforcement learning:
+A collection of short, mathematical notes on reinforcement learning, optimization, and the ideas behind learning algorithms.
 
 <ul>
 {% assign rl_posts = site.categories["rl-blogs"] %}

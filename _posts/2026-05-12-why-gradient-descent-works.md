@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
           width: 2
         }
       },
-      name: "<b>Current point</b>",
+      name: "Current point",
       hovertemplate:
         "Current point<br>" +
         "x: %{x:.2f}<br>" +
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         size: [1, 5],
         color: color
       },
-      name: <b>name</b>,
+      name: name,
       hoverinfo: "skip"
     };
   }
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 4,
         dash: "dot"
       },
-      name: "<b>Next small descent step</b>",
+      name: "Next small descent step",
       hoverinfo: "skip"
     };
   }

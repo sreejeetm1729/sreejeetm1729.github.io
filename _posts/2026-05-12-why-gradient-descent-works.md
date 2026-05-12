@@ -33,7 +33,7 @@ and then taking a small step that way.
 
 This is what makes the method so elegant. Gradient descent does not require us to understand the entire landscape of the function. It only uses local information: the slope at the current point. Yet, by repeating this local rule again and again, the iterates can move toward a minimizer.
 
-Of course, the size of the step matters. If \(\eta\) is too large, we may overshoot the minimum and oscillate. If \(\eta\) is too small, we may move in the right direction but painfully slowly. But under suitable assumptions, such as smoothness and convexity, this one-line update can be proved to converge.
+Of course, the size of the step matters. If $$\eta$$ is too large, we may overshoot the minimum and oscillate. If $$\eta$$ is too small, we may move in the right direction but painfully slowly. But under suitable assumptions, such as smoothness and convexity, this one-line update can be proved to converge.
 
 That is the beauty of gradient descent: a global optimization problem is attacked through a purely local rule. The convergence proof makes this intuition precise, and reveals why this deceptively simple algorithm sits at the heart of modern machine learning.
 
@@ -477,7 +477,7 @@ That is the beauty of gradient descent: a global optimization problem is attacke
 })();
 </script>
 
-To make this intuition more tangible, try dragging the point below. The landscape represents a loss function \(f(x,y)\). At every location, the gradient \(\nabla f(x,y)\) tells us which direction is uphill, while gradient descent moves in the opposite direction, \(-\nabla f(x,y)\).
+To make this intuition more tangible, try dragging the point below. The landscape represents a loss function $$f(x,y)$$. At every location, the gradient $$\nabla f(x,y)$$ tells us which direction is uphill, while gradient descent moves in the opposite direction, $$-\nabla f(x,y)$$.
 
 ---
 

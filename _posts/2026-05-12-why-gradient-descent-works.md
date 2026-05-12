@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
           width: 2
         }
       },
-      name: "Current point",
+      name: "<b>Current point</b>",
       hovertemplate:
         "Current point<br>" +
         "x: %{x:.2f}<br>" +
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         size: [1, 5],
         color: color
       },
-      name: name,
+      name: <b>name</b>,
       hoverinfo: "skip"
     };
   }
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 4,
         dash: "dot"
       },
-      name: "Next small descent step",
+      name: "<b>Next small descent step</b>",
       hoverinfo: "skip"
     };
   }
@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     showlegend: true,
-    legend: {
+legend: {
   orientation: "h",
   x: 0.5,
   y: -0.08,
@@ -392,7 +392,9 @@ document.addEventListener("DOMContentLoaded", function () {
   bgcolor: "rgba(255,255,255,0)",
   bordercolor: "rgba(150,150,150,0)",
   font: {
-    size: 12
+    size: 14,
+    color: "#ffffff",
+    family: "Arial Black, system-ui, sans-serif"
   }
 }
   };

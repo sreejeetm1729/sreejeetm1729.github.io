@@ -23,7 +23,7 @@ $$
 
 where $\eta>0$ is called the step-size or learning rate.
 
-The entire algorithm is contained in this single line. At first glance, this update looks almost too simple to matter. We begin at a point \(x_t\), compute the gradient \(\nabla f(x_t)\), and then take a small step in the opposite direction. The number \(\eta>0\) is called the **learning rate** or **step size**, and it controls how far we move at each iteration.
+The entire algorithm is contained in this single line. At first glance, this update looks almost too simple to matter. We begin at a point $$x_t$$, compute the gradient $$\nabla f(x_t)$$, and then take a small step in the opposite direction. The number $$\eta>0\$$ is called the **learning rate** or **step size**, and it controls how far we move at each iteration.
 
 The intuition is wonderfully geometric. The gradient points in the direction where the function increases the fastest. So, if our goal is to make the function smaller, the most natural thing to do is to walk in the opposite direction. Gradient descent is simply the act of repeatedly asking:
 

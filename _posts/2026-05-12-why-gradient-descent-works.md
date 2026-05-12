@@ -382,7 +382,19 @@ document.addEventListener("DOMContentLoaded", function () {
         z: 0.65
       }
     },
-    showlegend: false,
+    showlegend: true,
+    legend: {
+  orientation: "h",
+  x: 0.5,
+  y: -0.08,
+  xanchor: "center",
+  yanchor: "top",
+  bgcolor: "rgba(255,255,255,0)",
+  bordercolor: "rgba(150,150,150,0)",
+  font: {
+    size: 12
+  }
+}
   };
 
   const config = {

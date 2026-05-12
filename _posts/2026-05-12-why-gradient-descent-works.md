@@ -578,7 +578,7 @@ $$
 \min_{0\le t\le T-1}
 \|\nabla f(x_t)\|^2
 =
-O\left(\frac1T\right).
+\mathcal{O}\left(\frac1T\right).
 $$
 
 Equivalently,
@@ -587,7 +587,7 @@ $$
 \min_{0\le t\le T-1}
 \|\nabla f(x_t)\|
 =
-O\left(\frac1{\sqrt{T}}\right).
+\mathcal{O}\left(\frac1{\sqrt{T}}\right).
 $$
 
 This is the standard nonconvex gradient descent guarantee.

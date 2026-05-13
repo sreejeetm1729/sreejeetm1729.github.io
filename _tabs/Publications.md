@@ -116,6 +116,7 @@ order: 3
 
 <div class="pub-section">
 
+<h2>Selected First-Authored Publications</h2>
 
 <div class="pub-entry">
   <div class="pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>

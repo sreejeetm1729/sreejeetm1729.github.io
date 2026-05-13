@@ -189,7 +189,7 @@ order: 3
 
 <div class="pub-section">
 
-<h2><span style="font-size: 1rem;">♠️</span>Accepted Workshop Presentations</h2>
+<h2><span style="font-size: 1rem;">♠️</span> Accepted Workshop Presentations</h2>
 
 <ol class="workshop-list">
 

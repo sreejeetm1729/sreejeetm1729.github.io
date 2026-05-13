@@ -575,7 +575,7 @@ To make gradient descent more tangible, try dragging the point. The landscape re
 
 ## The Basic Geometric Idea
 
-The gradient $$\nabla f(x)$$ points in the direction of steepest local increase of \(f\). Therefore, the direction
+The gradient $$\nabla f(x)$$ points in the direction of steepest local increase of $$f$$. Therefore, the direction
 
 $$
 -\nabla f(x)
@@ -587,7 +587,7 @@ However, there is an important subtlety. The gradient only describes the functio
 
 This is why we need a smoothness assumption.
 
-Smoothness ensures that the gradient does not change too abruptly as we move from one point to another. In geometric terms, it rules out landscapes with sudden cliffs, sharp corners, or wildly changing slopes. If the function is smooth, then the gradient at \(x\) remains a reliable guide in a small neighborhood around \(x\). 
+Smoothness ensures that the gradient does not change too abruptly as we move from one point to another. In geometric terms, it rules out landscapes with sudden cliffs, sharp corners, or wildly changing slopes. If the function is smooth, then the gradient at $$x$$ remains a reliable guide in a small neighborhood around $$x$$. 
 
 So smoothness is the condition that turns the intuitive statement
 

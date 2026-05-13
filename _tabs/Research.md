@@ -318,10 +318,9 @@ We prove that, with high probability, our proposed algorithm converges exactly t
     <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 
-<hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 
-<h2>[<strong style="color:#208894;">Theme 4</strong>] Decentralized and Networked Reinforcement Learning</h2>
+<h2>[<strong style="color:#208894;">Theme 3-a</strong>] Decentralized and Networked Reinforcement Learning</h2>
 
 I am also interested in decentralized reinforcement learning over static and time-varying networks. In these problems, agents exchange information locally over a graph rather than communicating with a central server. This raises questions about how network structure, consensus, mixing, and local sampling affect statistical efficiency.
 

@@ -583,7 +583,7 @@ $$
 
 is the direction of steepest local decrease. This is the basic geometric idea behind gradient descent: if we want to reduce the value of the function, we should move against the gradient.
 
-However, there is an important subtlety. The gradient only describes the function **locally**, near the current point \(x\). It tells us which direction is downhill at \(x\), but it does not automatically guarantee that a finite step in that direction will decrease the function. If the function bends too sharply, then a step that initially points downhill may overshoot, curve into a bad region, or even increase the objective value.
+However, there is an important subtlety. The gradient only describes the function **locally**, near the current point $$x$$. It tells us which direction is downhill at $$x$$s, but it does not automatically guarantee that a finite step in that direction will decrease the function. If the function bends too sharply, then a step that initially points downhill may overshoot, curve into a bad region, or even increase the objective value.
 
 This is why we need a smoothness assumption.
 

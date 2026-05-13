@@ -575,7 +575,7 @@ To make gradient descent more tangible, try dragging the point. The landscape re
 
 ## The Basic Geometric Idea
 
-The gradient \(\nabla f(x)\) points in the direction of steepest local increase of \(f\). Therefore, the direction
+The gradient $$\nabla f(x)$$ points in the direction of steepest local increase of \(f\). Therefore, the direction
 
 $$
 -\nabla f(x)

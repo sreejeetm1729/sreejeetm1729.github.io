@@ -262,12 +262,12 @@ The third direction of my research focuses on robust federated reinforcement lea
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
 
   <p>
-      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated \(Q\)-Learning algorithm that blends
+      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated \(Q\)-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics.
    </p>
   </div>
   </div>
   <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
- model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics. We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. More precisely, our finite-time bound takes the simplified form
+  We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. More precisely, our finite-time bound takes the simplified form
 </p>
 <p style="font-size:16px; line-height:1.75; text-align:justify;">
   More precisely, our finite-time bound takes the simplified form

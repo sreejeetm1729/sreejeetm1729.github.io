@@ -116,7 +116,7 @@ order: 3
 
 <div class="pub-section">
 
-<h2>(<span style="font-size: 1rem;">♦️</span>) Selected First-Authored Publications</h2>
+<h2><span style="font-size: 1rem;">♦️</span> Selected First-Authored Publications</h2>
 
 <div class="pub-entry">
   <div class="pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
@@ -184,10 +184,12 @@ order: 3
 </div>
 
 </div>
+<div class="pub-section">
+<h2><span style="font-size: 1rem;">♥️</span> Under Preparation/Review</h2>
 
 <div class="pub-section">
 
-<h2>Accepted Workshop Presentations</h2>
+<h2><span style="font-size: 1rem;">♠️</span>Accepted Workshop Presentations</h2>
 
 <ol class="workshop-list">
 
@@ -235,7 +237,7 @@ order: 3
 
 <div class="pub-section">
 
-<h2>Invited Talks / Seminars</h2>
+<h2><span style="font-size: 1rem;">♣️</span> Invited Talks / Seminars</h2>
 
 <ol class="workshop-list">
 

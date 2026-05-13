@@ -506,7 +506,7 @@ function initGradientLandscapeWidget() {
       yanchor: "top",
       bgcolor: "rgba(0,0,0,0.35)",
       bordercolor: "rgba(255,255,255,0.15)",
-      borderwidth: 1,
+      borderwidth: 0,
       font: {
         size: 12,
         color: "#ffffff",

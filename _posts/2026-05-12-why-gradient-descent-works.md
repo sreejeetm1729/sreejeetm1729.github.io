@@ -583,6 +583,639 @@ $$
 
 is the direction of steepest local decrease. This is the basic geometric idea behind gradient descent: if we want to reduce the value of the function, we should move against the gradient.
 
+<div id="gd-dual-widget">
+  <div class="gdd-card">
+    <h3>Gradient Descent: 2D and 3D views</h3>
+
+    <p>
+      The left panel shows the contour map of the objective, while the right panel
+      shows the same objective as a three-dimensional surface. In both views, the
+      thin white curve is the trajectory of gradient descent, and the red ball marks
+      the current iterate. You can generate different landscapes and watch the same
+      algorithm unfold on each one.
+    </p>
+
+    <div class="gdd-actions">
+      <button id="gdd-playpause" type="button">Pause</button>
+      <button id="gdd-reset" type="button">Reset</button>
+      <button id="gdd-randomize" type="button">Generate new landscape</button>
+    </div>
+
+    <div class="gdd-grid">
+      <div class="gdd-panel">
+        <div class="gdd-panel-title">2D contour view</div>
+        <div id="gdd-plot-2d"></div>
+      </div>
+
+      <div class="gdd-panel">
+        <div class="gdd-panel-title">3D surface view</div>
+        <div id="gdd-plot-3d"></div>
+      </div>
+    </div>
+
+    <div class="gdd-readout">
+      <span><strong>Iteration:</strong> <span id="gdd-iter"></span></span>
+      <span><strong>Point:</strong> <span id="gdd-point"></span></span>
+      <span><strong>Loss:</strong> <span id="gdd-loss"></span></span>
+      <span><strong>Gradient norm:</strong> <span id="gdd-gradnorm"></span></span>
+    </div>
+  </div>
+</div>
+
+<style>
+  #gd-dual-widget {
+    margin: 2rem 0;
+    font-family: inherit;
+  }
+
+  #gd-dual-widget .gdd-card {
+    border: 1px solid rgba(150, 150, 150, 0.25);
+    border-radius: 18px;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+
+  #gd-dual-widget h3 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  #gd-dual-widget p {
+    margin: 0.45rem 0 1rem;
+    opacity: 0.86;
+    font-size: 0.95rem;
+  }
+
+  #gd-dual-widget .gdd-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #gd-dual-widget .gdd-actions button {
+    border: 1px solid rgba(150,150,150,0.35);
+    border-radius: 999px;
+    padding: 0.5rem 0.95rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  #gd-dual-widget .gdd-actions button:hover {
+    background: rgba(150,150,150,0.12);
+  }
+
+  #gd-dual-widget .gdd-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  #gd-dual-widget .gdd-panel {
+    min-width: 0;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  #gd-dual-widget .gdd-panel-title {
+    font-weight: 700;
+    margin: 0 0 0.55rem 0.2rem;
+    opacity: 0.92;
+  }
+
+  #gdd-plot-2d,
+  #gdd-plot-3d {
+    width: 100%;
+    height: 400px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(150,150,150,0.25);
+    background: #111111;
+  }
+
+  #gd-dual-widget .gdd-readout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    font-size: 0.92rem;
+  }
+
+  #gd-dual-widget .gdd-readout span {
+    padding: 0.65rem 0.8rem;
+    border-radius: 12px;
+    background: rgba(150,150,150,0.10);
+  }
+
+  @media (max-width: 700px) {
+    #gd-dual-widget .gdd-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #gdd-plot-2d,
+    #gdd-plot-3d {
+      height: 380px;
+    }
+
+    #gd-dual-widget .gdd-readout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+function loadPlotlyForGDDual(callback) {
+  if (window.Plotly) {
+    callback();
+    return;
+  }
+
+  var script = document.createElement("script");
+  script.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+
+  script.onload = function () {
+    callback();
+  };
+
+  script.onerror = function () {
+    var plot2d = document.getElementById("gdd-plot-2d");
+    var plot3d = document.getElementById("gdd-plot-3d");
+    var msg =
+      "<p style='padding:1rem;color:#ff6b6b;font-weight:700;'>Plotly could not be loaded.</p>";
+
+    if (plot2d) plot2d.innerHTML = msg;
+    if (plot3d) plot3d.innerHTML = msg;
+  };
+
+  document.head.appendChild(script);
+}
+
+function initGDDualWidget() {
+  var plot2d = document.getElementById("gdd-plot-2d");
+  var plot3d = document.getElementById("gdd-plot-3d");
+
+  if (!plot2d || !plot3d) return;
+
+  var playPauseButton = document.getElementById("gdd-playpause");
+  var resetButton = document.getElementById("gdd-reset");
+  var randomizeButton = document.getElementById("gdd-randomize");
+
+  var iterText = document.getElementById("gdd-iter");
+  var pointText = document.getElementById("gdd-point");
+  var lossText = document.getElementById("gdd-loss");
+  var gradNormText = document.getElementById("gdd-gradnorm");
+
+  function rand(min, max) {
+    return min + Math.random() * (max - min);
+  }
+
+  function clamp(value, low, high) {
+    return Math.max(low, Math.min(high, value));
+  }
+
+  function randomLandscapeParams() {
+    return {
+      quadX: rand(0.18, 0.55),
+      quadY: rand(0.15, 0.50),
+      cross: rand(-0.16, 0.16),
+
+      amp1: rand(0.15, 0.50),
+      freqX1: rand(0.8, 1.7),
+      freqY1: rand(0.8, 1.7),
+      phase1: rand(0, 2 * Math.PI),
+
+      amp2: rand(0.08, 0.30),
+      freqX2: rand(1.0, 2.0),
+      freqY2: rand(1.0, 2.0),
+      phase2: rand(0, 2 * Math.PI)
+    };
+  }
+
+  var landscape = randomLandscapeParams();
+
+  function f(x, y) {
+    var p = landscape;
+
+    return (
+      p.quadX * x * x +
+      p.quadY * y * y +
+      p.cross * x * y +
+      p.amp1 *
+        Math.sin(p.freqX1 * x + p.phase1) *
+        Math.cos(p.freqY1 * y) +
+      p.amp2 *
+        Math.cos(p.freqX2 * x - p.freqY2 * y + p.phase2)
+    );
+  }
+
+  function grad(x, y) {
+    var p = landscape;
+
+    return {
+      x:
+        2 * p.quadX * x +
+        p.cross * y +
+        p.amp1 *
+          p.freqX1 *
+          Math.cos(p.freqX1 * x + p.phase1) *
+          Math.cos(p.freqY1 * y) -
+        p.amp2 *
+          p.freqX2 *
+          Math.sin(p.freqX2 * x - p.freqY2 * y + p.phase2),
+
+      y:
+        2 * p.quadY * y +
+        p.cross * x -
+        p.amp1 *
+          p.freqY1 *
+          Math.sin(p.freqX1 * x + p.phase1) *
+          Math.sin(p.freqY1 * y) +
+        p.amp2 *
+          p.freqY2 *
+          Math.sin(p.freqX2 * x - p.freqY2 * y + p.phase2)
+    };
+  }
+
+  function linspace(a, b, n) {
+    var arr = [];
+    var step = (b - a) / (n - 1);
+
+    for (var i = 0; i < n; i++) {
+      arr.push(a + i * step);
+    }
+
+    return arr;
+  }
+
+  var xs = linspace(-3, 3, 75);
+  var ys = linspace(-3, 3, 75);
+
+  function buildSurfaceZ() {
+    return ys.map(function (y) {
+      return xs.map(function (x) {
+        return f(x, y);
+      });
+    });
+  }
+
+  var surfaceZ = buildSurfaceZ();
+
+  var eta = 0.10;
+  var maxIter = 160;
+  var intervalMs = 230;
+
+  var initialState = {
+    x: 2.15,
+    y: 1.65,
+    iter: 0
+  };
+
+  var state = {
+    x: initialState.x,
+    y: initialState.y,
+    iter: initialState.iter
+  };
+
+  var trajectoryX = [state.x];
+  var trajectoryY = [state.y];
+
+  var running = true;
+  var timer = null;
+
+  function updateReadout() {
+    var g = grad(state.x, state.y);
+    var gnorm = Math.sqrt(g.x * g.x + g.y * g.y);
+
+    iterText.textContent = state.iter.toString();
+    pointText.textContent =
+      "(" + state.x.toFixed(3) + ", " + state.y.toFixed(3) + ")";
+    lossText.textContent = f(state.x, state.y).toFixed(5);
+    gradNormText.textContent = gnorm.toFixed(5);
+  }
+
+  function make2DData() {
+    return [
+      {
+        type: "contour",
+        x: xs,
+        y: ys,
+        z: surfaceZ,
+        colorscale: "RdYlBu",
+        reversescale: true,
+        contours: {
+          coloring: "heatmap",
+          showlines: true
+        },
+        line: {
+          width: 0.9
+        },
+        showscale: true,
+        colorbar: {
+          title: {
+            text: "f(x)",
+            side: "top"
+          },
+          thickness: 12,
+          outlinewidth: 0
+        },
+        hovertemplate:
+          "x: %{x:.2f}<br>" +
+          "y: %{y:.2f}<br>" +
+          "f(x,y): %{z:.3f}<extra></extra>",
+        showlegend: false
+      },
+      {
+        type: "scatter",
+        mode: "lines",
+        x: trajectoryX,
+        y: trajectoryY,
+        line: {
+          color: "rgba(255,255,255,0.92)",
+          width: 2
+        },
+        hoverinfo: "skip",
+        showlegend: false
+      },
+      {
+        type: "scatter",
+        mode: "markers",
+        x: [state.x],
+        y: [state.y],
+        marker: {
+          size: 11,
+          color: "#ff3b30",
+          line: {
+            color: "#ffffff",
+            width: 2
+          }
+        },
+        hovertemplate:
+          "current point<br>" +
+          "x: %{x:.2f}<br>" +
+          "y: %{y:.2f}<extra></extra>",
+        showlegend: false
+      }
+    ];
+  }
+
+  function make3DData() {
+    var trajZ = trajectoryX.map(function (x, i) {
+      return f(x, trajectoryY[i]);
+    });
+
+    return [
+      {
+        type: "surface",
+        x: xs,
+        y: ys,
+        z: surfaceZ,
+        colorscale: "Viridis",
+        opacity: 0.90,
+        showscale: false,
+        showlegend: false,
+        contours: {
+          z: {
+            show: true,
+            usecolormap: true,
+            highlightcolor: "#ffffff",
+            project: { z: true }
+          }
+        },
+        hovertemplate:
+          "x: %{x:.2f}<br>" +
+          "y: %{y:.2f}<br>" +
+          "f(x,y): %{z:.3f}<extra></extra>"
+      },
+      {
+        type: "scatter3d",
+        mode: "lines",
+        x: trajectoryX,
+        y: trajectoryY,
+        z: trajZ,
+        line: {
+          color: "#ffffff",
+          width: 3
+        },
+        hoverinfo: "skip",
+        showlegend: false
+      },
+      {
+        type: "scatter3d",
+        mode: "markers",
+        x: [state.x],
+        y: [state.y],
+        z: [f(state.x, state.y)],
+        marker: {
+          size: 6,
+          color: "#ff3b30",
+          line: {
+            color: "#ffffff",
+            width: 2
+          }
+        },
+        hovertemplate:
+          "current point<br>" +
+          "x: %{x:.2f}<br>" +
+          "y: %{y:.2f}<br>" +
+          "f(x,y): %{z:.3f}<extra></extra>",
+        showlegend: false
+      }
+    ];
+  }
+
+  function make2DLayout() {
+    return {
+      margin: { l: 48, r: 20, b: 40, t: 8 },
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(0,0,0,0)",
+      xaxis: {
+        title: "x",
+        range: [-3, 3],
+        zeroline: false,
+        scaleanchor: "y",
+        scaleratio: 1,
+        gridcolor: "rgba(255,255,255,0.10)"
+      },
+      yaxis: {
+        title: "y",
+        range: [-3, 3],
+        zeroline: false,
+        gridcolor: "rgba(255,255,255,0.10)"
+      },
+      showlegend: false,
+      uirevision: "gdd-2d"
+    };
+  }
+
+  function make3DLayout() {
+    return {
+      margin: { l: 0, r: 0, b: 0, t: 8 },
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(0,0,0,0)",
+      showlegend: false,
+      uirevision: "gdd-3d",
+      scene: {
+        xaxis: {
+          title: "x",
+          backgroundcolor: "rgba(0,0,0,0)",
+          gridcolor: "rgba(150,150,150,0.25)",
+          zerolinecolor: "rgba(150,150,150,0.4)"
+        },
+        yaxis: {
+          title: "y",
+          backgroundcolor: "rgba(0,0,0,0)",
+          gridcolor: "rgba(150,150,150,0.25)",
+          zerolinecolor: "rgba(150,150,150,0.4)"
+        },
+        zaxis: {
+          title: "f(x,y)",
+          backgroundcolor: "rgba(0,0,0,0)",
+          gridcolor: "rgba(150,150,150,0.25)",
+          zerolinecolor: "rgba(150,150,150,0.4)"
+        },
+        camera: {
+          eye: { x: 1.5, y: 1.45, z: 1.0 }
+        },
+        aspectratio: {
+          x: 1,
+          y: 1,
+          z: 0.72
+        }
+      }
+    };
+  }
+
+  var config2D = {
+    responsive: true,
+    displaylogo: false,
+    scrollZoom: true
+  };
+
+  var config3D = {
+    responsive: true,
+    displaylogo: false,
+    scrollZoom: true
+  };
+
+  function renderBoth() {
+    updateReadout();
+
+    Plotly.react(plot2d, make2DData(), make2DLayout(), config2D);
+    Plotly.react(plot3d, make3DData(), make3DLayout(), config3D);
+  }
+
+  function stepGD() {
+    if (state.iter >= maxIter) {
+      stopAnimation();
+      return;
+    }
+
+    var g = grad(state.x, state.y);
+    var gnorm = Math.sqrt(g.x * g.x + g.y * g.y);
+
+    if (gnorm < 1e-4) {
+      stopAnimation();
+      return;
+    }
+
+    state.x = state.x - eta * g.x;
+    state.y = state.y - eta * g.y;
+
+    state.x = clamp(state.x, -2.95, 2.95);
+    state.y = clamp(state.y, -2.95, 2.95);
+
+    state.iter += 1;
+
+    trajectoryX.push(state.x);
+    trajectoryY.push(state.y);
+
+    renderBoth();
+  }
+
+  function startAnimation() {
+    if (timer) return;
+
+    running = true;
+    playPauseButton.textContent = "Pause";
+    timer = setInterval(stepGD, intervalMs);
+  }
+
+  function stopAnimation() {
+    running = false;
+    playPauseButton.textContent = "Play";
+
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function resetState() {
+    state.x = initialState.x;
+    state.y = initialState.y;
+    state.iter = initialState.iter;
+
+    trajectoryX = [state.x];
+    trajectoryY = [state.y];
+  }
+
+  function resetAnimation() {
+    stopAnimation();
+    resetState();
+    renderBoth();
+    startAnimation();
+  }
+
+  function randomizeLandscape() {
+    stopAnimation();
+
+    landscape = randomLandscapeParams();
+    surfaceZ = buildSurfaceZ();
+
+    resetState();
+    renderBoth();
+    startAnimation();
+  }
+
+  Promise.all([
+    Plotly.newPlot(plot2d, make2DData(), make2DLayout(), config2D),
+    Plotly.newPlot(plot3d, make3DData(), make3DLayout(), config3D)
+  ]).then(function () {
+    updateReadout();
+
+    playPauseButton.addEventListener("click", function () {
+      if (running) {
+        stopAnimation();
+      } else {
+        startAnimation();
+      }
+    });
+
+    resetButton.addEventListener("click", function () {
+      resetAnimation();
+    });
+
+    randomizeButton.addEventListener("click", function () {
+      randomizeLandscape();
+    });
+
+    startAnimation();
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", function () {
+    loadPlotlyForGDDual(initGDDualWidget);
+  });
+} else {
+  loadPlotlyForGDDual(initGDDualWidget);
+}
+</script>
+
 However, there is an important subtlety. The gradient only describes the function **locally**, near the current point $$x$$. It tells us which direction is downhill at $$x$$s, but it does not automatically guarantee that a finite step in that direction will decrease the function. If the function bends too sharply, then a step that initially points downhill may overshoot, curve into a bad region, or even increase the objective value.
 
 This is why we need a smoothness assumption.

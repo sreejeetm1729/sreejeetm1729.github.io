@@ -575,15 +575,27 @@ To make gradient descent more tangible, try dragging the point. The landscape re
 
 ## The Basic Geometric Idea
 
-The gradient $\nabla f(x)$ points in the direction of steepest local increase of $f$. Therefore, the direction
+The gradient \(\nabla f(x)\) points in the direction of steepest local increase of \(f\). Therefore, the direction
 
 $$
 -\nabla f(x)
 $$
 
-is the direction of steepest local decrease. If we take a small step in this direction, we should expect the objective value to go down.
+is the direction of steepest local decrease. This is the basic geometric idea behind gradient descent: if we want to reduce the value of the function, we should move against the gradient.
 
-To make this intuition precise, we need a smoothness assumption.
+However, there is an important subtlety. The gradient only describes the function **locally**, near the current point \(x\). It tells us which direction is downhill at \(x\), but it does not automatically guarantee that a finite step in that direction will decrease the function. If the function bends too sharply, then a step that initially points downhill may overshoot, curve into a bad region, or even increase the objective value.
+
+This is why we need a smoothness assumption.
+
+Smoothness ensures that the gradient does not change too abruptly as we move from one point to another. In geometric terms, it rules out landscapes with sudden cliffs, sharp corners, or wildly changing slopes. If the function is smooth, then the gradient at \(x\) remains a reliable guide in a small neighborhood around \(x\). 
+
+So smoothness is the condition that turns the intuitive statement
+
+$$
+-\nabla f(x) \text{ points downhill}
+$$
+
+into a rigorous statement that a sufficiently small step in that direction actually decreases the function value.
 
 ---
 

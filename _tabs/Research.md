@@ -324,7 +324,14 @@ I am also interested in decentralized reinforcement learning over static and tim
     </span>
     <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
-
+<p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_2\)]</span>
+    <strong>Variance-Reduced Q-Learning under Static and Time-Varying Networks</strong>
+    <span style="color:#d8a7a7;">
+      (ACC 2026)
+    </span>
+    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+  </p> 
 </div>
 
 </div>

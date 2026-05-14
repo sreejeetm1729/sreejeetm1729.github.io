@@ -358,5 +358,26 @@ statistical benefits of collaboration with substantially reduced communication.
     <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 </div>
+<div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
+  <img src="{{ '/assets/research/dis_1.png' | relative_url }}"
+       alt="Plot 1"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/dis_2.png' | relative_url }}"
+       alt="Plot 2"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/dis_4.png' | relative_url }}"
+       alt="Plot 3"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/dis_3.png' | relative_url }}"
+       alt="Plot 4"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+</div>
+<div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
+  <strong style="color:#bfdbfe;">Figure</strong>: Distributed learning under clean, adversarial, and robust settings.
+</div>
 </div>

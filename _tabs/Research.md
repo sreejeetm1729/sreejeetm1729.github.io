@@ -313,7 +313,21 @@ The third direction of my research focuses on robust federated reinforcement lea
 <h2>[<strong style="color:#208894;">Theme 3-a</strong>] Decentralized and Networked Reinforcement Learning</h2>
 
 I am also interested in decentralized reinforcement learning over static and time-varying networks. In these problems, agents exchange information locally over a graph rather than communicating with a central server. This raises questions about how network structure, consensus, mixing, and local sampling affect statistical efficiency.
+<div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
 
+  <div style="flex:0 0 280px;">
+    <img src="{{ '/assets/research/dis_Q.png' | relative_url }}"
+         alt="Robust Federated Q-Learning"
+         style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+  </div>
+
+  <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
+
+  <p>
+      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated \(Q\)-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics.
+   </p>
+  </div>
+  </div>
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">

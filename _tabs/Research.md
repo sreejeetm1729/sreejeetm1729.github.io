@@ -339,25 +339,7 @@ agents can achieve collaborative sample-complexity gains while incurring only li
 diffusion. This design blends model-based variance reduction with model-free \(Q\)-function updates, enabling agents to attain the
 statistical benefits of collaboration with substantially reduced communication.
 </p>
-<h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
-  <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_1\)]</span>
-    <strong>Robust Federated Q-Learning with Almost No Communication</strong>
-    <span style="color:#d8a7a7;">
-      (ACC 2026)
-    </span>
-    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
-  </p> 
-<p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_2\)]</span>
-    <strong>Variance-Reduced Q-Learning under Static and Time-Varying Networks</strong>
-    <span style="color:#d8a7a7;">
-      (ACC 2026)
-    </span>
-    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
-  </p> 
-</div>
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
   <img src="{{ '/assets/research/dis_1.png' | relative_url }}"
@@ -379,5 +361,24 @@ statistical benefits of collaboration with substantially reduced communication.
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
   <strong style="color:#bfdbfe;">Figure</strong>: Distributed learning under clean, adversarial, and robust settings.
+</div>
+<h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_1\)]</span>
+    <strong>Robust Federated Q-Learning with Almost No Communication</strong>
+    <span style="color:#d8a7a7;">
+      (ACC 2026)
+    </span>
+    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+  </p> 
+<p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_2\)]</span>
+    <strong>Variance-Reduced Q-Learning under Static and Time-Varying Networks</strong>
+    <span style="color:#d8a7a7;">
+      (ACC 2026)
+    </span>
+    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+  </p> 
 </div>
 </div>

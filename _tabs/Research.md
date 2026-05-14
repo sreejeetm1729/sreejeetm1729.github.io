@@ -312,7 +312,11 @@ The third direction of my research focuses on robust federated reinforcement lea
 
 <h2>[<strong style="color:#208894;">Theme 3-a</strong>] Decentralized and Networked Reinforcement Learning</h2>
 
-I am also interested in decentralized reinforcement learning over static and time-varying networks. In these problems, agents exchange information locally over a graph rather than communicating with a central server. This raises questions about how network structure, consensus, mixing, and local sampling affect statistical efficiency.
+A second direction of my research focuses on decentralized reinforcement learning over general communication networks. Unlike centralized or
+server-based federated learning, here agents collaborate only through local message passing over an underlying graph. This setting raises a
+rich set of questions at the interface of reinforcement learning, distributed optimization, and networked systems: how does the network
+topology affect learning speed? How many rounds of consensus are needed to realize collaborative gains? How do local sampling noise and
+network-induced mixing errors interact? My goal is to develop algorithms and finite-time analyses that make these tradeoffs explicit.
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
 
   <div style="flex:0 0 280px;">
@@ -324,7 +328,12 @@ I am also interested in decentralized reinforcement learning over static and tim
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
 
   <p>
-      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated \(Q\)-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics.
+      We consider a networked reinforcement learning setting in which multiple agents interact with a common Markov Decision Process and exchange
+information over a communication graph to collaboratively learn the optimal state-action value function. The central question is whether
+agents can achieve collaborative sample-complexity gains while incurring only limited communication overhead. To address this question, we propose
+a novel epoch-based distributed \(Q\)-Learning algorithm that combines local Bellman operator estimation with consensus-based information
+diffusion. This design blends model-based variance reduction with model-free \(Q\)-function updates, enabling agents to attain the
+statistical benefits of collaboration with substantially reduced communication.
    </p>
   </div>
   </div>

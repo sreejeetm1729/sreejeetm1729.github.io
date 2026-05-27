@@ -150,6 +150,809 @@ $$
 
 where $$i_t$$ is sampled randomly, often uniformly from $$\{1,\dots,n\}$$.
 
+<div id="sgd-dual-widget">
+  <div class="sgdd-card">
+    <h3>Stochastic Gradient Descent: 2D and 3D views</h3>
+
+    <p>
+      The left panel shows the contour map of the objective, while the right panel
+      shows the same objective as a three-dimensional surface. Unlike full gradient
+      descent, the trajectory now contains random fluctuations: each step uses a noisy
+      stochastic gradient rather than the exact full gradient.
+    </p>
+
+    <div class="sgdd-actions">
+      <button id="sgdd-playpause" type="button">Pause</button>
+      <button id="sgdd-reset" type="button">Reset</button>
+      <button id="sgdd-randomize" type="button">Generate new landscape</button>
+    </div>
+
+    <div class="sgdd-sliders">
+      <label>
+        Learning rate:
+        <input id="sgdd-eta" type="range" min="0.03" max="0.22" step="0.01" value="0.09">
+        <span id="sgdd-eta-value"></span>
+      </label>
+
+      <label>
+        Noise level:
+        <input id="sgdd-noise" type="range" min="0" max="1.6" step="0.05" value="0.75">
+        <span id="sgdd-noise-value"></span>
+      </label>
+    </div>
+
+    <div class="sgdd-grid">
+      <div class="sgdd-panel">
+        <div class="sgdd-panel-title">2D contour view</div>
+        <div id="sgdd-plot-2d"></div>
+      </div>
+
+      <div class="sgdd-panel">
+        <div class="sgdd-panel-title">3D surface view</div>
+        <div id="sgdd-plot-3d"></div>
+      </div>
+    </div>
+
+    <div class="sgdd-readout">
+      <span><strong>Iteration:</strong> <span id="sgdd-iter"></span></span>
+      <span><strong>Point:</strong> <span id="sgdd-point"></span></span>
+      <span><strong>Loss:</strong> <span id="sgdd-loss"></span></span>
+      <span><strong>True gradient norm:</strong> <span id="sgdd-gradnorm"></span></span>
+      <span><strong>Stochastic gradient norm:</strong> <span id="sgdd-stochgradnorm"></span></span>
+      <span><strong>Message:</strong> <span id="sgdd-message"></span></span>
+    </div>
+  </div>
+</div>
+
+<style>
+  #sgd-dual-widget {
+    margin: 2rem 0;
+    font-family: inherit;
+  }
+
+  #sgd-dual-widget .sgdd-card {
+    border: 1px solid rgba(150, 150, 150, 0.25);
+    border-radius: 18px;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+
+  #sgd-dual-widget h3 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  #sgd-dual-widget p {
+    margin: 0.45rem 0 1rem;
+    opacity: 0.86;
+    font-size: 0.95rem;
+  }
+
+  #sgd-dual-widget .sgdd-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #sgd-dual-widget .sgdd-actions button {
+    border: 1px solid rgba(150,150,150,0.35);
+    border-radius: 999px;
+    padding: 0.5rem 0.95rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  #sgd-dual-widget .sgdd-actions button:hover {
+    background: rgba(150,150,150,0.12);
+  }
+
+  #sgd-dual-widget .sgdd-sliders {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  #sgd-dual-widget .sgdd-sliders label {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.65rem 0.8rem;
+    border-radius: 12px;
+    background: rgba(150,150,150,0.10);
+    font-size: 0.92rem;
+  }
+
+  #sgd-dual-widget input[type="range"] {
+    width: 100%;
+  }
+
+  #sgd-dual-widget .sgdd-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  #sgd-dual-widget .sgdd-panel {
+    min-width: 0;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  #sgd-dual-widget .sgdd-panel-title {
+    font-weight: 700;
+    margin: 0 0 0.55rem 0.2rem;
+    opacity: 0.92;
+  }
+
+  #sgdd-plot-2d,
+  #sgdd-plot-3d {
+    width: 100%;
+    height: 400px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(150,150,150,0.25);
+    background: #111111;
+  }
+
+  #sgd-dual-widget .sgdd-readout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    font-size: 0.92rem;
+  }
+
+  #sgd-dual-widget .sgdd-readout span {
+    padding: 0.65rem 0.8rem;
+    border-radius: 12px;
+    background: rgba(150,150,150,0.10);
+  }
+
+  @media (max-width: 700px) {
+    #sgd-dual-widget .sgdd-grid,
+    #sgd-dual-widget .sgdd-sliders,
+    #sgd-dual-widget .sgdd-readout {
+      grid-template-columns: 1fr;
+    }
+
+    #sgdd-plot-2d,
+    #sgdd-plot-3d {
+      height: 380px;
+    }
+  }
+</style>
+
+<script>
+  function loadPlotlyForSGDDual(callback) {
+    if (window.Plotly) {
+      callback();
+      return;
+    }
+
+    var script = document.createElement("script");
+    script.src = "https://cdn.plot.ly/plotly-2.35.2.min.js";
+    script.onload = function () {
+      callback();
+    };
+    script.onerror = function () {
+      var plot2d = document.getElementById("sgdd-plot-2d");
+      var plot3d = document.getElementById("sgdd-plot-3d");
+      var msg = "<p style='padding:1rem;'>Plotly could not be loaded.</p>";
+      if (plot2d) plot2d.innerHTML = msg;
+      if (plot3d) plot3d.innerHTML = msg;
+    };
+    document.head.appendChild(script);
+  }
+
+  function initSGDDualWidget() {
+    var plot2d = document.getElementById("sgdd-plot-2d");
+    var plot3d = document.getElementById("sgdd-plot-3d");
+
+    if (!plot2d || !plot3d) return;
+
+    var playPauseButton = document.getElementById("sgdd-playpause");
+    var resetButton = document.getElementById("sgdd-reset");
+    var randomizeButton = document.getElementById("sgdd-randomize");
+
+    var etaSlider = document.getElementById("sgdd-eta");
+    var noiseSlider = document.getElementById("sgdd-noise");
+    var etaValue = document.getElementById("sgdd-eta-value");
+    var noiseValue = document.getElementById("sgdd-noise-value");
+
+    var iterText = document.getElementById("sgdd-iter");
+    var pointText = document.getElementById("sgdd-point");
+    var lossText = document.getElementById("sgdd-loss");
+    var gradNormText = document.getElementById("sgdd-gradnorm");
+    var stochGradNormText = document.getElementById("sgdd-stochgradnorm");
+    var messageText = document.getElementById("sgdd-message");
+
+    function rand(min, max) {
+      return min + Math.random() * (max - min);
+    }
+
+    function randn() {
+      var u = 0;
+      var v = 0;
+      while (u === 0) u = Math.random();
+      while (v === 0) v = Math.random();
+      return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+    }
+
+    function clamp(value, low, high) {
+      return Math.max(low, Math.min(high, value));
+    }
+
+    function randomLandscapeParams() {
+      return {
+        quadX: rand(0.18, 0.55),
+        quadY: rand(0.15, 0.50),
+        cross: rand(-0.14, 0.14),
+
+        amp1: rand(0.12, 0.42),
+        freqX1: rand(0.8, 1.7),
+        freqY1: rand(0.8, 1.7),
+        phase1: rand(0, 2 * Math.PI),
+
+        amp2: rand(0.06, 0.25),
+        freqX2: rand(1.0, 2.0),
+        freqY2: rand(1.0, 2.0),
+        phase2: rand(0, 2 * Math.PI)
+      };
+    }
+
+    var landscape = randomLandscapeParams();
+
+    function f(x, y) {
+      var p = landscape;
+
+      return (
+        p.quadX * x * x +
+        p.quadY * y * y +
+        p.cross * x * y +
+        p.amp1 * Math.sin(p.freqX1 * x + p.phase1) * Math.cos(p.freqY1 * y) +
+        p.amp2 * Math.cos(p.freqX2 * x - p.freqY2 * y + p.phase2)
+      );
+    }
+
+    function grad(x, y) {
+      var p = landscape;
+
+      return {
+        x:
+          2 * p.quadX * x +
+          p.cross * y +
+          p.amp1 * p.freqX1 * Math.cos(p.freqX1 * x + p.phase1) * Math.cos(p.freqY1 * y) -
+          p.amp2 * p.freqX2 * Math.sin(p.freqX2 * x - p.freqY2 * y + p.phase2),
+
+        y:
+          2 * p.quadY * y +
+          p.cross * x -
+          p.amp1 * p.freqY1 * Math.sin(p.freqX1 * x + p.phase1) * Math.sin(p.freqY1 * y) +
+          p.amp2 * p.freqY2 * Math.sin(p.freqX2 * x - p.freqY2 * y + p.phase2)
+      };
+    }
+
+    function stochasticGrad(x, y) {
+      var g = grad(x, y);
+      var sigma = parseFloat(noiseSlider.value);
+
+      return {
+        x: g.x + sigma * randn(),
+        y: g.y + sigma * randn()
+      };
+    }
+
+    function linspace(a, b, n) {
+      var arr = [];
+      var step = (b - a) / (n - 1);
+      for (var i = 0; i < n; i++) {
+        arr.push(a + i * step);
+      }
+      return arr;
+    }
+
+    var xs = linspace(-3, 3, 65);
+    var ys = linspace(-3, 3, 65);
+
+    function buildSurfaceZ() {
+      return ys.map(function (y) {
+        return xs.map(function (x) {
+          return f(x, y);
+        });
+      });
+    }
+
+    var surfaceZ = buildSurfaceZ();
+
+    var maxIter = 220;
+    var intervalMs = 230;
+
+    var initialState = {
+      x: 2.15,
+      y: 1.65,
+      iter: 0
+    };
+
+    var state = {
+      x: initialState.x,
+      y: initialState.y,
+      iter: initialState.iter
+    };
+
+    var trajectoryX = [state.x];
+    var trajectoryY = [state.y];
+
+    var lastStochGrad = { x: 0, y: 0 };
+
+    var running = true;
+    var timer = null;
+
+    function currentEta() {
+      return parseFloat(etaSlider.value);
+    }
+
+    function updateSliderLabels() {
+      etaValue.textContent = currentEta().toFixed(2);
+      noiseValue.textContent = parseFloat(noiseSlider.value).toFixed(2);
+    }
+
+    function updateReadout() {
+      var g = grad(state.x, state.y);
+      var trueNorm = Math.sqrt(g.x * g.x + g.y * g.y);
+      var stochNorm = Math.sqrt(
+        lastStochGrad.x * lastStochGrad.x +
+        lastStochGrad.y * lastStochGrad.y
+      );
+
+      iterText.textContent = state.iter.toString();
+      pointText.textContent =
+        "(" + state.x.toFixed(3) + ", " + state.y.toFixed(3) + ")";
+      lossText.textContent = f(state.x, state.y).toFixed(5);
+      gradNormText.textContent = trueNorm.toFixed(5);
+      stochGradNormText.textContent = stochNorm.toFixed(5);
+
+      if (parseFloat(noiseSlider.value) < 0.05) {
+        messageText.textContent = "Almost full gradient descent.";
+      } else {
+        messageText.textContent = "Noisy steps, but downhill on average.";
+      }
+
+      updateSliderLabels();
+    }
+
+    function make2DArrowTrace() {
+      var eta = currentEta();
+      var dx = -eta * lastStochGrad.x;
+      var dy = -eta * lastStochGrad.y;
+
+      var norm = Math.sqrt(dx * dx + dy * dy) || 1;
+      var scale = 0.45;
+
+      var x0 = state.x;
+      var y0 = state.y;
+      var x1 = clamp(x0 + scale * dx / norm, -3, 3);
+      var y1 = clamp(y0 + scale * dy / norm, -3, 3);
+
+      return {
+        type: "scatter",
+        mode: "lines+markers",
+        x: [x0, x1],
+        y: [y0, y1],
+        line: {
+          color: "#ffcc00",
+          width: 3
+        },
+        marker: {
+          size: [1, 7],
+          color: "#ffcc00"
+        },
+        hoverinfo: "skip",
+        showlegend: false
+      };
+    }
+
+    function make2DData() {
+      return [
+        {
+          type: "contour",
+          x: xs,
+          y: ys,
+          z: surfaceZ,
+          colorscale: "RdYlBu",
+          reversescale: true,
+          contours: {
+            coloring: "heatmap",
+            showlines: true
+          },
+          line: {
+            width: 0.9
+          },
+          showscale: true,
+          colorbar: {
+            title: {
+              text: "F(θ)",
+              side: "top"
+            },
+            thickness: 12,
+            outlinewidth: 0
+          },
+          hovertemplate:
+            "θ₁: %{x:.2f}<br>" +
+            "θ₂: %{y:.2f}<br>" +
+            "F(θ): %{z:.3f}",
+          showlegend: false
+        },
+        {
+          type: "scatter",
+          mode: "lines",
+          x: trajectoryX,
+          y: trajectoryY,
+          line: {
+            color: "rgba(255,255,255,0.92)",
+            width: 2
+          },
+          hoverinfo: "skip",
+          showlegend: false
+        },
+        {
+          type: "scatter",
+          mode: "markers",
+          x: trajectoryX,
+          y: trajectoryY,
+          marker: {
+            size: 4,
+            color: "rgba(255,255,255,0.75)"
+          },
+          hoverinfo: "skip",
+          showlegend: false
+        },
+        make2DArrowTrace(),
+        {
+          type: "scatter",
+          mode: "markers",
+          x: [state.x],
+          y: [state.y],
+          marker: {
+            size: 12,
+            color: "#ff3b30",
+            line: {
+              color: "#ffffff",
+              width: 2
+            }
+          },
+          hovertemplate:
+            "current point<br>" +
+            "θ₁: %{x:.2f}<br>" +
+            "θ₂: %{y:.2f}",
+          showlegend: false
+        }
+      ];
+    }
+
+    function make3DData() {
+      var trajZ = trajectoryX.map(function (x, i) {
+        return f(x, trajectoryY[i]);
+      });
+
+      var eta = currentEta();
+      var dx = -eta * lastStochGrad.x;
+      var dy = -eta * lastStochGrad.y;
+      var norm = Math.sqrt(dx * dx + dy * dy) || 1;
+
+      var arrowScale = 0.50;
+      var arrowX = clamp(state.x + arrowScale * dx / norm, -3, 3);
+      var arrowY = clamp(state.y + arrowScale * dy / norm, -3, 3);
+
+      return [
+        {
+          type: "surface",
+          x: xs,
+          y: ys,
+          z: surfaceZ,
+          colorscale: "Viridis",
+          opacity: 0.90,
+          showscale: false,
+          showlegend: false,
+          contours: {
+            z: {
+              show: true,
+              usecolormap: true,
+              highlightcolor: "#ffffff",
+              project: {
+                z: true
+              }
+            }
+          },
+          hovertemplate:
+            "θ₁: %{x:.2f}<br>" +
+            "θ₂: %{y:.2f}<br>" +
+            "F(θ): %{z:.3f}"
+        },
+        {
+          type: "scatter3d",
+          mode: "lines",
+          x: trajectoryX,
+          y: trajectoryY,
+          z: trajZ,
+          line: {
+            color: "#ffffff",
+            width: 3
+          },
+          hoverinfo: "skip",
+          showlegend: false
+        },
+        {
+          type: "scatter3d",
+          mode: "markers",
+          x: trajectoryX,
+          y: trajectoryY,
+          z: trajZ,
+          marker: {
+            size: 2.5,
+            color: "rgba(255,255,255,0.65)"
+          },
+          hoverinfo: "skip",
+          showlegend: false
+        },
+        {
+          type: "scatter3d",
+          mode: "lines+markers",
+          x: [state.x, arrowX],
+          y: [state.y, arrowY],
+          z: [f(state.x, state.y), f(arrowX, arrowY)],
+          line: {
+            color: "#ffcc00",
+            width: 6
+          },
+          marker: {
+            size: [1, 5],
+            color: "#ffcc00"
+          },
+          hoverinfo: "skip",
+          showlegend: false
+        },
+        {
+          type: "scatter3d",
+          mode: "markers",
+          x: [state.x],
+          y: [state.y],
+          z: [f(state.x, state.y)],
+          marker: {
+            size: 6,
+            color: "#ff3b30",
+            line: {
+              color: "#ffffff",
+              width: 2
+            }
+          },
+          hovertemplate:
+            "current point<br>" +
+            "θ₁: %{x:.2f}<br>" +
+            "θ₂: %{y:.2f}<br>" +
+            "F(θ): %{z:.3f}",
+          showlegend: false
+        }
+      ];
+    }
+
+    function make2DLayout() {
+      return {
+        margin: {
+          l: 48,
+          r: 20,
+          b: 40,
+          t: 8
+        },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        xaxis: {
+          title: "θ₁",
+          range: [-3, 3],
+          zeroline: false,
+          scaleanchor: "y",
+          scaleratio: 1,
+          gridcolor: "rgba(255,255,255,0.10)"
+        },
+        yaxis: {
+          title: "θ₂",
+          range: [-3, 3],
+          zeroline: false,
+          gridcolor: "rgba(255,255,255,0.10)"
+        },
+        showlegend: false,
+        uirevision: "sgdd-2d"
+      };
+    }
+
+    function make3DLayout() {
+      return {
+        margin: {
+          l: 0,
+          r: 0,
+          b: 0,
+          t: 8
+        },
+        paper_bgcolor: "rgba(0,0,0,0)",
+        plot_bgcolor: "rgba(0,0,0,0)",
+        showlegend: false,
+        uirevision: "sgdd-3d",
+        scene: {
+          xaxis: {
+            title: "θ₁",
+            backgroundcolor: "rgba(0,0,0,0)",
+            gridcolor: "rgba(150,150,150,0.25)",
+            zerolinecolor: "rgba(150,150,150,0.4)"
+          },
+          yaxis: {
+            title: "θ₂",
+            backgroundcolor: "rgba(0,0,0,0)",
+            gridcolor: "rgba(150,150,150,0.25)",
+            zerolinecolor: "rgba(150,150,150,0.4)"
+          },
+          zaxis: {
+            title: "F(θ)",
+            backgroundcolor: "rgba(0,0,0,0)",
+            gridcolor: "rgba(150,150,150,0.25)",
+            zerolinecolor: "rgba(150,150,150,0.4)"
+          },
+          camera: {
+            eye: {
+              x: 1.5,
+              y: 1.45,
+              z: 1.0
+            }
+          },
+          aspectratio: {
+            x: 1,
+            y: 1,
+            z: 0.72
+          }
+        }
+      };
+    }
+
+    var config2D = {
+      responsive: true,
+      displaylogo: false,
+      scrollZoom: true
+    };
+
+    var config3D = {
+      responsive: true,
+      displaylogo: false,
+      scrollZoom: true
+    };
+
+    function renderBoth() {
+      updateReadout();
+      Plotly.react(plot2d, make2DData(), make2DLayout(), config2D);
+      Plotly.react(plot3d, make3DData(), make3DLayout(), config3D);
+    }
+
+    function stepSGD() {
+      if (state.iter >= maxIter) {
+        stopAnimation();
+        return;
+      }
+
+      var eta = currentEta();
+      var ghat = stochasticGrad(state.x, state.y);
+
+      lastStochGrad = {
+        x: ghat.x,
+        y: ghat.y
+      };
+
+      state.x = state.x - eta * ghat.x;
+      state.y = state.y - eta * ghat.y;
+
+      state.x = clamp(state.x, -2.95, 2.95);
+      state.y = clamp(state.y, -2.95, 2.95);
+
+      state.iter += 1;
+
+      trajectoryX.push(state.x);
+      trajectoryY.push(state.y);
+
+      renderBoth();
+    }
+
+    function startAnimation() {
+      if (timer) return;
+
+      running = true;
+      playPauseButton.textContent = "Pause";
+      timer = setInterval(stepSGD, intervalMs);
+    }
+
+    function stopAnimation() {
+      running = false;
+      playPauseButton.textContent = "Play";
+
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function resetState() {
+      state.x = initialState.x;
+      state.y = initialState.y;
+      state.iter = initialState.iter;
+
+      trajectoryX = [state.x];
+      trajectoryY = [state.y];
+
+      lastStochGrad = grad(state.x, state.y);
+    }
+
+    function resetAnimation() {
+      stopAnimation();
+      resetState();
+      renderBoth();
+      startAnimation();
+    }
+
+    function randomizeLandscape() {
+      stopAnimation();
+      landscape = randomLandscapeParams();
+      surfaceZ = buildSurfaceZ();
+      resetState();
+      renderBoth();
+      startAnimation();
+    }
+
+    Promise.all([
+      Plotly.newPlot(plot2d, make2DData(), make2DLayout(), config2D),
+      Plotly.newPlot(plot3d, make3DData(), make3DLayout(), config3D)
+    ]).then(function () {
+      resetState();
+      updateReadout();
+
+      playPauseButton.addEventListener("click", function () {
+        if (running) {
+          stopAnimation();
+        } else {
+          startAnimation();
+        }
+      });
+
+      resetButton.addEventListener("click", function () {
+        resetAnimation();
+      });
+
+      randomizeButton.addEventListener("click", function () {
+        randomizeLandscape();
+      });
+
+      etaSlider.addEventListener("input", function () {
+        updateSliderLabels();
+      });
+
+      noiseSlider.addEventListener("input", function () {
+        updateSliderLabels();
+      });
+
+      startAnimation();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      loadPlotlyForSGDDual(initSGDDualWidget);
+    });
+  } else {
+    loadPlotlyForSGDDual(initSGDDualWidget);
+  }
+</script>
+
 At first glance, this looks reckless. Instead of using the true gradient $$\nabla F(w_t)$$, we use only one randomly chosen component gradient. But the key observation is that this stochastic gradient is unbiased:
 
 $$

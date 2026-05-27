@@ -30,7 +30,7 @@ $$
 F(w),
 $$
 
-where \(w \in \mathbb{R}^d\) denotes the parameter vector of a model. In supervised learning, for example, \(w\) could be the weights of a neural network, and \(F(w)\) measures how badly the model performs on the data.
+where $$w \in \mathbb{R}^d$$ denotes the parameter vector of a model. In supervised learning, for example, $$w$$ could be the weights of a neural network, and $$F(w)$$ measures how badly the model performs on the data.
 
 A standard finite-sum learning objective has the form
 
@@ -41,9 +41,9 @@ F(w)
 \sum_{i=1}^n f_i(w),
 $$
 
-where \(f_i(w)\) is the loss on the \(i\)-th data point.
+where $$f_i(w)$$ is the loss on the $$i$$-th data point.
 
-For example, if we have training samples \((x_i,y_i)\), then one may define
+For example, if we have training samples $$(x_i,y_i)$$, then one may define
 
 $$
 f_i(w)
@@ -51,7 +51,7 @@ f_i(w)
 \ell(h_w(x_i),y_i),
 $$
 
-where \(h_w\) is the model and \(\ell\) is a loss function.
+where $$h_w$$ is the model and $$\ell$$ is a loss function.
 
 The optimization goal is
 
@@ -63,13 +63,13 @@ $$
 
 So the question is simple:
 
-> How do we find a parameter vector \(w\) that makes \(F(w)\) small?
+> How do we find a parameter vector $$w$$ that makes $$F(w)$$ small?
 
 ---
 
 ## 2. Vanilla Gradient Descent
 
-Gradient descent uses the local geometry of \(F\). If \(F\) is differentiable, then its gradient
+Gradient descent uses the local geometry of $$F$$. If $$F$$ is differentiable, then its gradient
 
 $$
 \nabla F(w)
@@ -93,7 +93,7 @@ w_t
 \eta \nabla F(w_t),
 $$
 
-where \(\eta>0\) is the step size, also called the learning rate.
+where $$\eta>0$$ is the step size, also called the learning rate.
 
 For the finite-sum objective,
 
@@ -115,7 +115,7 @@ $$
 
 Thus each gradient descent step requires computing gradients over the entire dataset.
 
-This is perfectly reasonable when \(n\) is small. But when \(n\) is very large, computing
+This is perfectly reasonable when $$n$$ is small. But when $$n$$ is very large, computing
 
 $$
 \frac{1}{n}
@@ -130,7 +130,7 @@ This is where stochastic gradient descent enters the story.
 
 ## 3. The Main Idea of SGD
 
-Instead of computing the full gradient over all \(n\) samples, SGD randomly picks one data point \(i_t\) and uses
+Instead of computing the full gradient over all $$n$$ samples, SGD randomly picks one data point $$i_t$$ and uses
 
 $$
 \nabla f_{i_t}(w_t)
@@ -148,9 +148,9 @@ w_t
 \eta_t \nabla f_{i_t}(w_t),
 $$
 
-where \(i_t\) is sampled randomly, often uniformly from \(\{1,\dots,n\}\).
+where $$i_t$$ is sampled randomly, often uniformly from $$\{1,\dots,n\}$$.
 
-At first glance, this looks reckless. Instead of using the true gradient \(\nabla F(w_t)\), we use only one randomly chosen component gradient. But the key observation is that this stochastic gradient is unbiased:
+At first glance, this looks reckless. Instead of using the true gradient $$\nabla F(w_t)$$, we use only one randomly chosen component gradient. But the key observation is that this stochastic gradient is unbiased:
 
 $$
 \mathbb{E}_{i_t}
@@ -215,7 +215,7 @@ Imagine walking down a hill in fog. Vanilla gradient descent has a perfect compa
 
 So even though the SGD trajectory is more jagged, it still tends to move toward regions of lower loss.
 
-Mathematically, suppose \(F\) is smooth, meaning there exists \(L>0\) such that
+Mathematically, suppose $$F$$ is smooth, meaning there exists $$L>0$$ such that
 
 $$
 F(y)
@@ -227,7 +227,7 @@ F(x)
 \frac{L}{2}\|y-x\|^2
 $$
 
-for all \(x,y\).
+for all $$x,y$$.
 
 Using the SGD update
 
@@ -257,7 +257,7 @@ F(w_t)
 \frac{L\eta_t^2}{2}\|g_t\|^2.
 $$
 
-Now take conditional expectation given \(w_t\). Since
+Now take conditional expectation given $$w_t$$. Since
 
 $$
 \mathbb{E}[g_t \mid w_t]
@@ -309,7 +309,7 @@ $$
 
 is the price of stochasticity and curvature. It appears because the stochastic step is noisy and the function may be curved.
 
-The first term scales like \(\eta_t\), while the second term scales like \(\eta_t^2\). Therefore, when \(\eta_t\) is small enough, the descent term dominates.
+The first term scales like $$\eta_t$$, while the second term scales like $$\eta_t^2$$. Therefore, when $$\eta_t$$ is small enough, the descent term dominates.
 
 This is the mathematical reason SGD can make progress.
 
@@ -408,9 +408,9 @@ w_t
 (1-\eta)w_t.
 $$
 
-If \(0<\eta<2\), this converges to \(0\), which is the minimizer.
+If $$0<\eta<2$$, this converges to $$0$$, which is the minimizer.
 
-Now imagine that instead of observing the exact gradient \(w_t\), we observe a noisy version
+Now imagine that instead of observing the exact gradient $$w_t$$, we observe a noisy version
 
 $$
 g_t
@@ -438,9 +438,9 @@ w_t
 \eta_t \xi_t.
 $$
 
-The first term pulls \(w_t\) toward zero. The second term injects noise.
+The first term pulls $$w_t$$ toward zero. The second term injects noise.
 
-If \(\eta_t\) is fixed, the algorithm may keep fluctuating around zero. But if \(\eta_t\) decreases over time, the noise term becomes smaller and smaller. This is why classical SGD often uses decreasing step sizes such as
+If $$\eta_t$$ is fixed, the algorithm may keep fluctuating around zero. But if $$\eta_t$$ decreases over time, the noise term becomes smaller and smaller. This is why classical SGD often uses decreasing step sizes such as
 
 $$
 \eta_t
@@ -456,7 +456,7 @@ Early in training, the algorithm explores aggressively. Later in training, the s
 
 In practice, we often use a compromise between full gradient descent and one-sample SGD. This is called mini-batch SGD.
 
-Instead of choosing one sample, we choose a random batch \(B_t\subseteq \{1,\dots,n\}\) and compute
+Instead of choosing one sample, we choose a random batch $$B_t\subseteq \{1,\dots,n\}$$ and compute
 
 $$
 g_t
@@ -521,9 +521,9 @@ There are several reasons SGD can be preferable.
 
 ### 8.1 One Full Gradient May Be Too Expensive
 
-If \(n\) is huge, one full gradient step costs \(n\) gradient computations.
+If $$n$$ is huge, one full gradient step costs $$n$$ gradient computations.
 
-SGD can make \(n\) small updates for roughly the same cost as one full gradient update.
+SGD can make $$n$$ small updates for roughly the same cost as one full gradient update.
 
 So even if each SGD step is noisy, the algorithm may make much faster practical progress in terms of computation time.
 
@@ -541,7 +541,7 @@ In modern machine learning, we do not only care about minimizing training loss. 
 
 Empirically, SGD often finds solutions that generalize well. One intuitive explanation is that SGD noise biases the trajectory toward wider, flatter regions of the loss landscape, although the full theoretical picture is subtle.
 
-A flat minimum is one where small perturbations of \(w\) do not change the loss too much. Such solutions may be more stable and generalize better.
+A flat minimum is one where small perturbations of $$w$$ do not change the loss too much. Such solutions may be more stable and generalize better.
 
 ---
 
@@ -617,7 +617,7 @@ F(w_{t+1})
 \frac{L\eta_t^2G^2}{2}.
 $$
 
-Summing from \(t=0\) to \(T-1\), taking expectations, and telescoping gives
+Summing from $$t=0$$ to $$T-1$$, taking expectations, and telescoping gives
 
 $$
 \sum_{t=0}^{T-1}
@@ -636,7 +636,7 @@ $$
 
 This inequality says that the average gradient norm becomes small if the step sizes are chosen properly.
 
-For example, if we choose a constant step size \(\eta\), then
+For example, if we choose a constant step size $$\eta$$, then
 
 $$
 \frac{1}{T}
@@ -651,17 +651,17 @@ $$
 L\eta G^2.
 $$
 
-The first term decreases with \(T\). The second term is the noise floor caused by stochastic gradients.
+The first term decreases with $$T$$. The second term is the noise floor caused by stochastic gradients.
 
-If \(\eta\) is small, the noise floor is small. But if \(\eta\) is too small, progress is slow. This is the central step-size tradeoff in SGD.
+If $$\eta$$ is small, the noise floor is small. But if $$\eta$$ is too small, progress is slow. This is the central step-size tradeoff in SGD.
 
 ---
 
 ## 10. The Role of the Learning Rate
 
-The learning rate \(\eta_t\) controls the balance between progress and noise.
+The learning rate $$\eta_t$$ controls the balance between progress and noise.
 
-If \(\eta_t\) is too large, SGD becomes unstable:
+If $$\eta_t$$ is too large, SGD becomes unstable:
 
 $$
 w_{t+1}
@@ -673,7 +673,7 @@ $$
 
 may jump wildly across the loss landscape.
 
-If \(\eta_t\) is too small, SGD becomes slow and may barely move.
+If $$\eta_t$$ is too small, SGD becomes slow and may barely move.
 
 A decreasing learning rate helps resolve this tension:
 
@@ -709,7 +709,7 @@ $$
 
 ## 11. Convex Picture: Moving Toward the Optimum
 
-When \(F\) is convex, we can make the intuition even cleaner.
+When $$F$$ is convex, we can make the intuition even cleaner.
 
 Convexity means
 

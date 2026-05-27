@@ -343,7 +343,7 @@ This vector has a single 1 in the coordinate corresponding to $$(s,a)$$ and 0 ev
 Now define
 
 $$
-Q_\theta(s,a)=\theta^T \phi(s,a).
+Q_\theta(s,a)=\theta^{\texttt{T}} \phi(s,a).
 $$
 
 Since $$\phi(s,a)$$ is one-hot, this simply selects one coordinate of $$\theta$$:
@@ -384,7 +384,7 @@ $$
 The approximate action-value function is
 
 $$
-Q_\theta(s,a)=\theta^T \phi(s,a),
+Q_\theta(s,a)=\theta^{\texttt{T}} \phi(s,a),
 $$
 
 where
@@ -442,13 +442,13 @@ $$
 Using the linear form,
 
 $$
-Q_\theta(s_t,a_t)=\theta^T\phi(s_t,a_t),
+Q_\theta(s_t,a_t)=\theta^{\texttt{T}}\phi(s_t,a_t),
 $$
 
 and
 
 $$
-Q_\theta(s_{t+1},a_{t+1})=\theta^T\phi(s_{t+1},a_{t+1}).
+Q_\theta(s_{t+1},a_{t+1})=\theta^{\texttt{T}}\phi(s_{t+1},a_{t+1}).
 $$
 
 Hence
@@ -458,9 +458,9 @@ $$
 =
 r_t
 +
-\gamma\theta^T\phi(s_{t+1},a_{t+1})
+\gamma\theta^{\texttt{T}}\phi(s_{t+1},a_{t+1})
 -
-\theta^T\phi(s_t,a_t).
+\theta^{\texttt{T}}\phi(s_t,a_t).
 $$
 
 The semi-gradient TD update is
@@ -506,7 +506,7 @@ But with linear approximation, we restrict ourselves to
 $$
 \mathcal F
 =
-\{Q_\theta:Q_\theta(s,a)=\theta^T\phi(s,a)\}.
+\{Q_\theta:Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a)\}.
 $$
 
 Even if $$Q_\theta\in\mathcal F$$, the Bellman update $$T^\pi Q_\theta$$ may not lie in $$\mathcal F$$.
@@ -563,7 +563,7 @@ $$
 With linear approximation,
 
 $$
-Q_\theta(s,a)=\theta^T\phi(s,a),
+Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a),
 $$
 
 so
@@ -573,9 +573,9 @@ $$
 =
 r_t
 +
-\gamma\max_{a'}\theta^T\phi(s_{t+1},a')
+\gamma\max_{a'}\theta^{\texttt{T}}\phi(s_{t+1},a')
 -
-\theta^T\phi(s_t,a_t).
+\theta^{\texttt{T}}\phi(s_t,a_t).
 $$
 
 The semi-gradient update is
@@ -623,7 +623,7 @@ The move from linear approximation to neural approximation can be thought of as 
 In linear approximation, we write
 
 $$
-Q_\theta(s,a)=\theta^T\phi(s,a),
+Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a),
 $$
 
 where $$\phi$$ is chosen by us.
@@ -710,7 +710,7 @@ $$
 This shows the connection with linear approximation. Linear approximation uses fixed features:
 
 $$
-Q_\theta(s,a)=\theta^T\phi(s,a).
+Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a).
 $$
 
 A two-layer neural network uses learned features:
@@ -1212,13 +1212,13 @@ $$
 Equivalently, this is linear approximation with one-hot features:
 
 $$
-Q_\theta(s,a)=\theta^T\phi(s,a).
+Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a).
 $$
 
 In linear function approximation, we use meaningful low-dimensional features:
 
 $$
-Q_\theta(s,a)=\theta^T\phi(s,a),
+Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a),
 \qquad
 \phi(s,a)\in\mathbb R^d.
 $$
@@ -1332,7 +1332,7 @@ $$
 Linear function approximation uses fixed features:
 
 $$
-Q_\theta(s,a)=\theta^T\phi(s,a).
+Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a).
 $$
 
 Neural function approximation uses learned nonlinear features. For example, a two-layer network gives

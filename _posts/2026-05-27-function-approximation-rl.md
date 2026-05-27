@@ -78,7 +78,20 @@ $$
 Q(s,a), \qquad (s,a)\in \mathcal S\times \mathcal A.
 $$
 
-If there are $$|\mathcal S|$$ states and \(|\mathcal A|\) actions, then the table has size
+If the state space has size
+
+$$
+|\mathcal S|
+$$
+
+and the action space has size
+
+$$
+|\mathcal A|,
+$$
+
+then the tabular $$Q$$-function contains one entry for every state-action pair. Therefore, the table has size
+
 
 $$
 |\mathcal S||\mathcal A|.

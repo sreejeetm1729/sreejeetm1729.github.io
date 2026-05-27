@@ -78,7 +78,7 @@ $$
 Q(s,a), \qquad (s,a)\in \mathcal S\times \mathcal A.
 $$
 
-If there are \(|\mathcal S|\) states and \(|\mathcal A|\) actions, then the table has size
+If there are $$|\mathcal S|$$ states and \(|\mathcal A|\) actions, then the table has size
 
 $$
 |\mathcal S||\mathcal A|.

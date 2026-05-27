@@ -1,5 +1,5 @@
 ---
-title: "Function Approximation in Reinforcement Learning: From Tables to Linear Models to Neural Networks"
+title: "Function Approximation in RL: From Tables to Linear Models to Neural Networks"
 date: 2026-05-27 00:00:00 -0500
 categories: [rl-blogs]
 tags: [rl, function-approximation, q-learning, deep-rl, neural-networks]

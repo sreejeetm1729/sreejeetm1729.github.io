@@ -104,7 +104,7 @@ The beauty of the tabular setting is that the Bellman equations become finite-di
 For a fixed policy $$\pi$$, the Bellman operator is
 
 $$
-(T^\pi Q)(s,a)
+(\mathcal{T}^\pi Q)(s,a)
 =
 r(s,a)
 +
@@ -126,13 +126,13 @@ $$
 The value function $$Q^\pi$$ is the fixed point of this operator:
 
 $$
-Q^\pi = T^\pi Q^\pi.
+Q^\pi = \mathcal{T}^\pi Q^\pi.
 $$
 
 For optimal control, the Bellman optimality operator is
 
 $$
-(T^\star Q)(s,a)
+(\mathcal{T}^\star Q)(s,a)
 =
 r(s,a)
 +
@@ -146,7 +146,7 @@ $$
 The optimal action-value function satisfies
 
 $$
-Q^\star = T^\star Q^\star.
+Q^\star = \mathcal{T}^\star Q^\star.
 $$
 
 In the tabular case, $$Q$$ is just a vector in
@@ -496,7 +496,7 @@ There is an important difference between the tabular and linear settings.
 In the tabular case, the Bellman operator maps tables to tables. So the fixed-point equation
 
 $$
-Q^\pi=T^\pi Q^\pi
+Q^\pi=\mathcal{T}^\pi Q^\pi
 $$
 
 has a solution inside the tabular space.
@@ -509,14 +509,14 @@ $$
 \{Q_\theta:Q_\theta(s,a)=\theta^{\texttt{T}}\phi(s,a)\}.
 $$
 
-Even if $$Q_\theta\in\mathcal F$$, the Bellman update $$T^\pi Q_\theta$$ may not lie in $$\mathcal F$$.
+Even if $$Q_\theta\in\mathcal F$$, the Bellman update $$\mathcal{T}^\pi Q_\theta$$ may not lie in $$\mathcal F$$.
 
 So the exact Bellman equation may not have a solution inside the approximation class.
 
 Instead, linear TD methods are often understood through a projected Bellman equation:
 
 $$
-Q_\theta = \Pi T^\pi Q_\theta,
+Q_\theta = \Pi \mathcal{T}^\pi Q_\theta,
 $$
 
 where $$\Pi$$ is a projection operator onto the function class $$\mathcal F$$ under a suitable norm.
@@ -593,7 +593,7 @@ This is the natural linear-function-approximation version of tabular $$Q$$-Learn
 However, the theory becomes more delicate. In the tabular setting, the Bellman optimality operator is a contraction in the sup norm:
 
 $$
-\|T^\star Q_1-T^\star Q_2\|_\infty
+\|\mathcal{T}^\star Q_1-\mathcal{T}^\star Q_2\|_\infty
 \leq
 \gamma\|Q_1-Q_2\|_\infty.
 $$
@@ -1297,7 +1297,7 @@ This is why function approximation is one of the central themes of modern RL.
 The Bellman equation still gives the target:
 
 $$
-Q^\star=T^\star Q^\star.
+Q^\star=\mathcal{T}^\star Q^\star.
 $$
 
 But after introducing a parameterized approximation

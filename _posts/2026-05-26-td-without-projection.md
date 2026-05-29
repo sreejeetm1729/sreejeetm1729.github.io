@@ -50,7 +50,7 @@ where $$\gamma \in (0,1)$$ is the discount factor.
 The value function is the fixed point of the Bellman operator
 
 $$
-(T^\mu V)(s)
+(\mathcal{T}^\mu V)(s)
 =
 R_\mu(s)
 +

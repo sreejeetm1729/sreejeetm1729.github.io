@@ -382,11 +382,10 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <h2>Projects</h2>
 
 <div class="cv-entry">
-  <div class="cv-entry-title">Federated MARL-GYM</div>
-  <div class="cv-entry-desc">
-  <a href="https://github.com/sreejeetm1729/Federated-MARL-Gym-Environment" target="_blank">
-    <i class="fab fa-github"></i> GitHub
+  <div class="cv-entry-title">Federated MARL-GYM</div><a href="https://github.com/sreejeetm1729/Federated-MARL-Gym-Environment" target="_blank">
+    <i class="fab fa-github"></i> 
   </a>
+  <div class="cv-entry-desc">
     We introduce a custom multi-agent reinforcement learning environment built with Gymnasium and Pygame, designed for evaluating federated RL (FRL) algorithms. The environment models a grid world where multiple agents navigate to accomplish spatially distributed tasks, like reaching delivery points.
   </div>
 </div>

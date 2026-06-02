@@ -119,7 +119,7 @@ order: 3
 <h2><span style="font-size: 1rem;">♦️</span> Selected First-Authored Publications</h2>
 
 <div class="pub-entry">
-  <div class="pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
+  <div class="pub-title">[C5] Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Machine Learning, <strong>ICML 2026</strong>.</div>
   <div class="pub-links">
@@ -132,7 +132,7 @@ order: 3
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title">Adversarially-Robust TD Learning with Markovian Data</div>
+  <div class="pub-title">[C4] Adversarially-Robust TD Learning with Markovian Data</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
   <div class="pub-links">
@@ -145,7 +145,7 @@ order: 3
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title">Robust Q-Learning under Corrupted Rewards</div>
+  <div class="pub-title">[C3] Robust Q-Learning under Corrupted Rewards</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">IEEE Conference on Decision and Control, <strong>CDC 2024</strong>.</div>
   <div class="pub-links">
@@ -158,7 +158,7 @@ order: 3
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title">Robust Federated Q-Learning with Almost No Communication</div>
+  <div class="pub-title">[C2] Robust Federated Q-Learning with Almost No Communication</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
@@ -171,7 +171,7 @@ order: 3
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title">Variance-Reduced Q-Learning over Static and Time-Varying Networks</div>
+  <div class="pub-title">[C1] Variance-Reduced Q-Learning over Static and Time-Varying Networks</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">

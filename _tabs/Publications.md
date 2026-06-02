@@ -132,7 +132,7 @@ order: 3
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title">[C4] Adversarially-Robust TD Learning with Markovian Data</div>
+  <div class="pub-title">[C4] Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
   <div class="pub-links">

@@ -2,6 +2,7 @@
 title: Publications
 icon: fas fa-file-alt
 order: 3
+math: true
 ---
 
 <style>
@@ -171,7 +172,7 @@ order: 3
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title">[C1] Variance-Reduced Q-Learning over Static and Time-Varying Networks</div>
+  <div class="pub-title"><span style="color:#a5f3fc;">[\(C_1\)]</span> Variance-Reduced Q-Learning over Static and Time-Varying Networks</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">

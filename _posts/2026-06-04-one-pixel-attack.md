@@ -455,136 +455,14 @@ $$
 
 The population is repeatedly updated until either the attack succeeds or the query budget is exhausted.
 
----
 
-## 11. Pseudocode
-
-A targeted one-pixel attack can be summarized as follows.
-
-```text
-Input:
-    image x
-    classifier f
-    target class t
-    population size N
-    number of generations G
-    mutation scale F
-    crossover probability CR
-
-Initialize:
-    Randomly sample N candidates:
-        z_m = (i_m, j_m, r_m, g_m, b_m)
-
-For generation = 1, 2, ..., G:
-
-    For each candidate z_m:
-
-        1. Choose three distinct candidates z_a, z_b, z_c.
-
-        2. Mutation:
-               v_m = z_a + F * (z_b - z_c)
-
-        3. Crossover:
-               u_m = crossover(z_m, v_m, CR)
-
-        4. Clip u_m to valid image coordinates and color range.
-
-        5. Evaluate:
-               old_score = p_t(x modified by z_m)
-               new_score = p_t(x modified by u_m)
-
-        6. Selection:
-               if new_score > old_score:
-                   z_m = u_m
-
-    If any candidate causes the model to predict target class t:
-        return successful adversarial image
-
-Return the best candidate found
-```
-
-The untargeted version is identical except that the score is changed from target-class confidence to true-class confidence reduction.
-
----
-
-## 12. A small implementation sketch
-
-Below is a simple implementation-oriented sketch. This is not a full optimized attack implementation. The goal is to show how the one-pixel modification is represented.
-
-```python
-import torch
-
-def apply_one_pixel(image, candidate):
-    """
-    image: Tensor of shape (C, H, W), values in [0, 1]
-    candidate: (i, j, r, g, b)
-    """
-    adv = image.clone()
-
-    i, j, r, g, b = candidate
-
-    _, H, W = adv.shape
-
-    i = int(round(i))
-    j = int(round(j))
-
-    i = max(0, min(H - 1, i))
-    j = max(0, min(W - 1, j))
-
-    adv[0, i, j] = float(r)
-    adv[1, i, j] = float(g)
-    adv[2, i, j] = float(b)
-
-    adv = torch.clamp(adv, 0.0, 1.0)
-
-    return adv
-```
-
-For a targeted attack, the objective can be written as:
-
-```python
-def targeted_score(model, image, candidate, target_class):
-    """
-    Returns the model's probability for the target class
-    after applying the one-pixel perturbation.
-    """
-    adv = apply_one_pixel(image, candidate)
-
-    with torch.no_grad():
-        logits = model(adv.unsqueeze(0))
-        probs = torch.softmax(logits, dim=1)
-
-    return probs[0, target_class].item()
-```
-
-For an untargeted attack, we can use:
-
-```python
-def untargeted_score(model, image, candidate, true_class):
-    """
-    Returns one minus the model's probability for the true class.
-    Larger score means the model is less confident in the correct class.
-    """
-    adv = apply_one_pixel(image, candidate)
-
-    with torch.no_grad():
-        logits = model(adv.unsqueeze(0))
-        probs = torch.softmax(logits, dim=1)
-
-    return 1.0 - probs[0, true_class].item()
-```
-
-The differential evolution optimizer repeatedly proposes candidates and keeps the ones with better scores.
-
----
-
-## 13. Why can one pixel matter?
+## 11. Why can one pixel matter?
 
 At first, it feels impossible that one pixel should matter so much.
 
 But there are several reasons why it can.
 
-### 13.1 Neural networks do not see images like humans
+### 11.1 Neural networks do not see images like humans
 
 Humans recognize objects using semantic structure. If we see a dog, we use global information: shape, texture, pose, background, and context.
 
@@ -592,7 +470,7 @@ A neural network uses learned feature representations. These representations may
 
 So a tiny input change may cause a large change in the network's internal activations.
 
-### 13.2 Decision boundaries can be close to natural images
+### 11.2 Decision boundaries can be close to natural images
 
 A classifier divides the image space into decision regions.
 
@@ -628,7 +506,7 @@ The shocking part is that the set of all one-pixel modifications can sometimes i
 
 In other words, even this tiny sparse modification set may cross the decision boundary.
 
-### 13.3 One pixel can propagate through the network
+### 11.3 One pixel can propagate through the network
 
 In a convolutional neural network, early layers apply filters to local neighborhoods.
 
@@ -636,7 +514,7 @@ Changing one pixel affects the local convolutional responses around that pixel. 
 
 So although the perturbation is local in the input image, its effect does not necessarily remain local inside the network.
 
-### 13.4 Softmax decisions can be unstable near ties
+### 11.4 Softmax decisions can be unstable near ties
 
 The final prediction is determined by the largest probability:
 
@@ -670,7 +548,7 @@ The image may still look like a dog to us, but the classifier's decision has cha
 
 ---
 
-## 14. Geometry of the one-pixel attack
+## 12. Geometry of the one-pixel attack
 
 The image space is high-dimensional.
 
@@ -733,11 +611,11 @@ This gives a clean geometric interpretation:
 
 ---
 
-## 15. One-pixel versus many-pixel attacks
+## 13. One-pixel versus many-pixel attacks
 
 It is useful to compare the one-pixel attack with more standard adversarial attacks.
 
-### 15.1 FGSM
+### 13.1 FGSM
 
 The Fast Gradient Sign Method changes many pixels slightly:
 
@@ -752,7 +630,7 @@ $$
 
 This is an $$\ell_\infty$$-bounded attack.
 
-### 15.2 PGD
+### 13.2 PGD
 
 Projected Gradient Descent repeatedly applies gradient steps and projects the perturbation back into a constraint set:
 
@@ -770,7 +648,7 @@ $$
 
 PGD is usually a white-box attack.
 
-### 15.3 One-pixel attack
+### 13.3 One-pixel attack
 
 The one-pixel attack changes very few pixels, often just one.
 
@@ -788,7 +666,7 @@ This makes it conceptually different from attacks such as FGSM and PGD.
 
 ---
 
-## 16. Is the one-pixel attack invisible?
+## 14. Is the one-pixel attack invisible?
 
 Not always.
 
@@ -816,7 +694,7 @@ Its importance comes from the fact that the classifier can be fooled by changing
 
 ---
 
-## 17. Experimental message of the original paper
+## 15. Experimental message of the original paper
 
 The original paper showed that deep networks trained on image datasets could be fooled by one-pixel modifications in a nontrivial number of cases.
 
@@ -832,11 +710,11 @@ The main lesson is this:
 
 ---
 
-## 18. Robustness lessons
+## 16. Robustness lessons
 
 The one-pixel attack teaches several important lessons.
 
-### 18.1 Accuracy is not robustness
+### 16.1 Accuracy is not robustness
 
 A model can achieve high clean accuracy and still be vulnerable to adversarial perturbations.
 
@@ -848,7 +726,7 @@ Robustness asks a different question:
 
 The one-pixel attack shows that the answer can be no.
 
-### 18.2 Human similarity and model similarity are different
+### 16.2 Human similarity and model similarity are different
 
 To a human, two images may look almost identical.
 
@@ -856,7 +734,7 @@ To a neural network, those two images may lie on opposite sides of a decision bo
 
 This means that the model's learned geometry is not necessarily aligned with human perceptual geometry.
 
-### 18.3 Sparse perturbations matter
+### 16.3 Sparse perturbations matter
 
 Many attacks focus on small dense perturbations. The one-pixel attack shows that sparse perturbations can also be dangerous.
 
@@ -871,7 +749,7 @@ Examples include:
 - small physical marks,
 - local occlusions.
 
-### 18.4 Black-box attacks are realistic
+### 16.4 Black-box attacks are realistic
 
 White-box attacks are useful for analysis, but black-box attacks are often more realistic.
 
@@ -881,11 +759,11 @@ The one-pixel attack is a simple example of this broader principle.
 
 ---
 
-## 19. Possible defenses
+## 17. Possible defenses
 
 There is no perfect defense against all adversarial attacks, but the one-pixel attack suggests several directions.
 
-### 19.1 Adversarial training
+### 17.1 Adversarial training
 
 A robust training objective can be written as
 
@@ -912,7 +790,7 @@ Then the model is trained against the worst one-pixel perturbation.
 
 This is conceptually clean but computationally expensive, because we need to search over many possible pixel modifications during training.
 
-### 19.2 Randomized preprocessing
+### 17.2 Randomized preprocessing
 
 One can try to reduce the effect of a carefully chosen pixel using randomized transformations, such as:
 
@@ -924,7 +802,7 @@ One can try to reduce the effect of a carefully chosen pixel using randomized tr
 
 However, such defenses must be evaluated carefully. If the attacker knows the defense, they may adapt the attack.
 
-### 19.3 Median filtering
+### 17.3 Median filtering
 
 Since the one-pixel attack may create an isolated abnormal pixel, median filtering can sometimes remove the perturbation.
 
@@ -934,7 +812,7 @@ This can suppress isolated artifacts.
 
 However, median filtering is not a complete defense. It can also remove useful image details, and adaptive attacks may find perturbations that survive filtering.
 
-### 19.4 Certified sparse robustness
+### 17.4 Certified sparse robustness
 
 A stronger goal is to prove that the classifier is invariant to all one-pixel changes:
 
@@ -953,7 +831,7 @@ Such guarantees are difficult, but they are much more meaningful than testing ag
 
 ---
 
-## 20. Why this attack is conceptually beautiful
+## 18. Why this attack is conceptually beautiful
 
 The one-pixel attack is beautiful because it is minimal.
 
@@ -982,7 +860,7 @@ That is the essence of adversarial fragility.
 
 ---
 
-## 21. Summary
+## 19. Summary
 
 The one-pixel attack is a sparse black-box adversarial attack on image classifiers.
 
@@ -1031,11 +909,8 @@ The one-pixel attack is therefore not just a trick. It is a compact demonstratio
 1. Jiawei Su, Danilo Vasconcellos Vargas, and Kouichi Sakurai, **“One Pixel Attack for Fooling Deep Neural Networks,”** arXiv:1710.08864, 2017.  
    [https://arxiv.org/abs/1710.08864](https://arxiv.org/abs/1710.08864)
 
-2. Jiawei Su, Danilo Vasconcellos Vargas, and Kouichi Sakurai, **“One Pixel Attack for Fooling Deep Neural Networks,”** *IEEE Transactions on Evolutionary Computation*, 23(5):828--841, 2019.  
-   [https://ieeexplore.ieee.org/document/8601309](https://ieeexplore.ieee.org/document/8601309)
-
-3. Ian J. Goodfellow, Jonathon Shlens, and Christian Szegedy, **“Explaining and Harnessing Adversarial Examples,”** ICLR, 2015.  
+2. Ian J. Goodfellow, Jonathon Shlens, and Christian Szegedy, **“Explaining and Harnessing Adversarial Examples,”** ICLR, 2015.  
    [https://arxiv.org/abs/1412.6572](https://arxiv.org/abs/1412.6572)
 
-4. Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and Adrian Vladu, **“Towards Deep Learning Models Resistant to Adversarial Attacks,”** ICLR, 2018.  
+3. Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and Adrian Vladu, **“Towards Deep Learning Models Resistant to Adversarial Attacks,”** ICLR, 2018.  
    [https://arxiv.org/abs/1706.06083](https://arxiv.org/abs/1706.06083)

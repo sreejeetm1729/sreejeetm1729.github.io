@@ -95,7 +95,7 @@ math: true
   margin-top: 0px;
   padding: 13px 15px;
   border-radius: 12px;
-  border-left: 4px solid #e8c4bd;
+  border-left: 4px solid #f5e6b8;
   background: rgba(232, 196, 189, 0.08);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
 }

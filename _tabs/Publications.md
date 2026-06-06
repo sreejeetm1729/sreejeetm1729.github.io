@@ -91,7 +91,7 @@ math: true
 }
 
 .pub-summary-card.open {
-  max-height: 300px;
+  max-height: 2000px;
   opacity: 1;
   transform: translateY(-8px) !important;
 }

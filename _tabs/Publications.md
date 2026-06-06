@@ -93,8 +93,7 @@ math: true
 .pub-summary-card.open {
   max-height: 300px;
   opacity: 1;
-  transform: translateY(0);
-  margin-top: 0px;
+  transform: translateY(-8px) !important;
 }
 
 .pub-summary-inner {

@@ -176,11 +176,11 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
-    <a class="link-summary" href="#">Summary</a>
-    <a class="link-paper" href="#">Paper</a>
-    <a class="link-poster" href="#">Poster</a>
-    <a class="link-slides" href="#">Slides</a>
-    <a class="link-code" href="#">Code</a>
+    [<a class="link-summary" href="#">Summary</a>]
+    [<a class="link-paper" href="#">Paper</a>]
+    [<a class="link-poster" href="#">Poster</a>]
+    [<a class="link-slides" href="#">Slides</a>]
+    [<a class="link-code" href="#">Code</a>]
   </div>
 </div>
 

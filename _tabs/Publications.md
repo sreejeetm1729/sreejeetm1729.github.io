@@ -214,9 +214,7 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Machine Learning, <strong>ICML 2026</strong>.</div>
   <div class="pub-links">
-    <span class="pub-link-item">
-  [<button class="link-summary" onclick="togglePubSummary('icml2026-summary')">Summary</button>]
-</span>
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('icml2026-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2509.08933">Paper</a>]
     [<a class="link-poster" href="https://icml.cc/media/PosterPDFs/ICML%202026/64666.png?t=1779063413.0709436">Poster</a>]
     [<a class="link-slides" href="https://icml.cc/media/icml-2026/Slides/64666.pdf">Slides</a>]

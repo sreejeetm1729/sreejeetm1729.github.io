@@ -269,14 +269,24 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">IEEE Conference on Decision and Control, <strong>CDC 2024</strong>.</div>
   <div class="pub-links">
-    [<a class="link-summary" href="#">Summary</a>]
-    [<a class="link-paper" href="#">Paper</a>]
-    [<a class="link-poster" href="#">Poster</a>]
-    [<a class="link-slides" href="#">Slides</a>]
-    [<a class="link-code" href="#">Code</a>]
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2024-summary')">Summary</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2409.03237">Paper</a>]
+    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/Sreejeet_Maity_AI_Symposium.pdf">Poster</a>]
+    [<a class="link-slides" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/CDC_Presentation_Slides.pdf">Slides</a>]
+    [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards">Code</a>]
   </div>
 </div>
-
+<div id="cdc2024-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('cdc2024-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+       Recently, there has been a surge of interest in analyzing the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of such algorithms in non-ideal environments - such as in the presence of corrupted rewards - is poorly understood. Motivated by this gap, we investigate the robustness of the celebrated Qlearning algorithm to a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We start by proving that such an attack can cause the vanilla Q-learning algorithm to incur arbitrarily large errors. We then develop a novel robust synchronous Qlearning algorithm that uses historical reward data to construct robust empirical Bellman operators at each time step. Finally, we prove a finite-time convergence rate for our algorithm that matches known state-of-the-art bounds (in the absence of attacks) up to a small inevitable error term that scales with the adversarial corruption fraction.
+    </div>
+  </div>
+</div>
 <div class="pub-entry">
   <div class="pub-title"><span style="color:#e8c4bd;">[\(C_2\)]</span> Robust Federated Q-Learning with Almost No Communication</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>

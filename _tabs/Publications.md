@@ -83,6 +83,11 @@ math: true
   overflow: hidden;
   transform: translateY(-4px);
   transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease;
+  margin-top: 2px;
+}
+
+.pub-summary-card p {
+  margin-top: 0;
 }
 
 .pub-summary-card.open {

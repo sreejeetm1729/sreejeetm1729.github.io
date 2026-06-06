@@ -59,6 +59,81 @@ math: true
   font-size: 14px;
   line-height: 1.5;
 }
+
+.link-summary {
+  color: #e8c4bd;
+  font-weight: 700;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.link-summary:hover {
+  color: #f3d7d2;
+  text-decoration: underline;
+}
+
+.pub-summary-card {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-4px);
+  transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.pub-summary-card.open {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pub-summary-inner {
+  margin-top: 10px;
+  padding: 13px 15px;
+  border-radius: 12px;
+  border-left: 4px solid #e8c4bd;
+  background: rgba(232, 196, 189, 0.08);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.pub-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #e8c4bd;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.pub-summary-close {
+  border: none;
+  background: transparent;
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.pub-summary-close:hover {
+  color: #e8c4bd;
+}
+
+.pub-summary-text {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.pub-summary-text strong {
+  color: #e8c4bd;
+}
 /* smooth matte dark-mode palette */
 
 .link-summary {
@@ -270,9 +345,9 @@ We study the problem of learning the optimal policy in a discounted, infinite-ho
 </div>
 
 <script>
-function toggleSummary(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.style.display = el.style.display === "none" ? "block" : "none";
-}
+  function togglePubSummary(id) {
+    const card = document.getElementById(id);
+    if (!card) return;
+    card.classList.toggle("open");
+  }
 </script>

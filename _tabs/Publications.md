@@ -92,7 +92,7 @@ math: true
 }
 
 .pub-summary-inner {
-  margin-top: 10px;
+  margin-top: 2px;
   padding: 13px 15px;
   border-radius: 12px;
   border-left: 4px solid #e8c4bd;

@@ -246,10 +246,10 @@ math: true
   <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('aistats2025-summary')">Summary</a>]
-    [<a class="link-paper" href="#">Paper</a>]
-    [<a class="link-poster" href="#">Poster</a>]
-    [<a class="link-slides" href="#">Slides</a>]
-    [<a class="link-code" href="#">Code</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2502.04662">Paper</a>]
+    [<a class="link-poster" href="https://virtual.aistats.org/media/PosterPDFs/AISTATS%202025/9390.png?t=1745618638.4746892">Poster</a>]
+    [<a class="link-slides" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data/blob/main/AISTATS%20Slides.pdf">Slides</a>]
+    [<a class="link-code" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data">Code</a>]
   </div>
 </div>
 <div id="aistats2025-summary" class="pub-summary-card">

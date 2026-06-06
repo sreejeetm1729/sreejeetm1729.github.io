@@ -44,7 +44,7 @@ math: true
 .pub-links a {
   text-decoration: none;
   font-weight: 700;
-  margin-right: 12px;
+  margin-right: 0px;
   font-size: 14px;
   background-color: transparent !important;
   padding: 0 !important;
@@ -176,7 +176,7 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
-    [<a class="link-summary" href="#"; style="margin-left:-1mm;">Summary</a>]
+    [<a class="link-summary" href="#">Summary</a>]
     [<a class="link-paper" href="#">Paper</a>]
     [<a class="link-poster" href="#">Poster</a>]
     [<a class="link-slides" href="#">Slides</a>]

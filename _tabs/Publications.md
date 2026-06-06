@@ -292,14 +292,24 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
-    [<a class="link-summary" href="#">Summary</a>]
-    [<a class="link-paper" href="#">Paper</a>]
-    [<a class="link-poster" href="#">Poster</a>]
-    [<a class="link-slides" href="#">Slides</a>]
-    [<a class="link-code" href="#">Code</a>]
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-1-summary')">Summary</a>]
+    [<a class="link-paper" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC26_DistRobustQ.pdf">Paper</a>]
+    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/Robust-FedQ%20Poster.pdf">Poster</a>]
+    [<a class="link-slides" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC%202026%20DisRobQ-ppt.pdf">Slides</a>]
+    [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication">Code</a>]
   </div>
 </div>
-
+<div id="acc2026-1-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('acc2026-1-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      We consider a federated reinforcement learning setting involving M agents, all of whom interact with a common Markov Decision Process (MDP). The agents exchange information via a central server to learn the optimal value function. Our goal is to understand to what extent one can hope for collaborative sample-complexity speedups in such a setting, when a small fraction of the agents are adversarial and can act arbitrarily. To that end, we propose Robust Fed-Q, a federated Q-learning algorithm that blends ideas from both model-based and model-free RL, along with the median-of-means device from robust statistics. We prove that despite corruption, with high-probability, Robust Fed-Q (i) guarantees exact convergence to the optimal value function in the limit of infinite samples, and (ii) enjoys near-optimal finite-time rates that benefit from collaboration. In addition, our approach requires just O˜(1) rounds of communication to achieve each of the above guarantees, a feature of independent interest in FL where communication is the major bottleneck.
+    </div>
+  </div>
+</div>
 <div class="pub-entry">
   <div class="pub-title"><span style="color:#e8c4bd;">[\(C_1\)]</span> Variance-Reduced Q-Learning over Static and Time-Varying Networks</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>

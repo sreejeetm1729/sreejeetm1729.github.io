@@ -226,7 +226,7 @@ math: true
 <div id="icml2026-summary" class="pub-summary-card">
   <div class="pub-summary-inner">
     <div class="pub-summary-header">
-      <span>Paper Summary</span>
+      <span style="color: #f5e6b8;">Summary</span>
       <button class="pub-summary-close" onclick="togglePubSummary('icml2026-summary')">×</button>
     </div>
     <div class="pub-summary-text">

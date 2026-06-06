@@ -205,9 +205,7 @@ math: true
 
 <div class="pub-note">
   <strong>Comments on Publication Venues.</strong>
-  The category “Selective ML/CS Conferences” refers to papers published in highly selective machine learning and computer science venues, such as <em>NeurIPS</em>, <em>ICML</em>, <em>ICLR</em>, and <em>AISTATS</em>, typically with acceptance rates below 30%. These tend to be long papers of at least the same quality as typical journal papers in quality and rigor. 
-  <br><br>
-  In control theory, the premier journals are <em>IEEE Transactions on Automatic Control</em> and <em>Automatica</em>, while the main flagship conferences are the <em>IEEE Conference on Decision and Control</em> and the <em>American Control Conference</em>.
+  The category “Selective ML/CS Conferences” refers to papers published in highly selective machine learning and computer science venues, such as <em>NeurIPS</em>, <em>ICML</em>, <em>ICLR</em>, and <em>AISTATS</em>, typically with acceptance rates below 30%. These tend to be long papers of at least the same quality as typical journal papers in quality and rigor. In control theory, the premier journals are <em>IEEE Transactions on Automatic Control</em> and <em>Automatica</em>, while the main flagship conferences are the <em>IEEE Conference on Decision and Control</em> and the <em>American Control Conference</em>.
 </div>
 
 <div class="pub-section">

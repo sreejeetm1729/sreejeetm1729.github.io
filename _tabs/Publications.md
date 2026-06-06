@@ -51,6 +51,14 @@ math: true
   border-radius: 0 !important;
 }
 
+.pub-summary {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-left: 3px solid #e8c4bd;
+  background: rgba(232, 196, 189, 0.08);
+  font-size: 14px;
+  line-height: 1.5;
+}
 /* smooth matte dark-mode palette */
 
 .link-summary {
@@ -131,12 +139,16 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Machine Learning, <strong>ICML 2026</strong>.</div>
   <div class="pub-links">
-    [<a class="link-summary" href="https://icml.cc/virtual/2026/poster/64666">Summary</a>]
+    [<a class="link-summary" href="javascript:void(0);" onclick="toggleSummary('icml2026-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2509.08933">Paper</a>]
     [<a class="link-poster" href="https://icml.cc/media/PosterPDFs/ICML%202026/64666.png?t=1779063413.0709436">Poster</a>]
     [<a class="link-slides" href="https://icml.cc/media/icml-2026/Slides/64666.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-with-Markovian-Data">Code</a>]
   </div>
+</div>
+
+<div id="icml2026-summary" class="pub-summary" style="display:none;">
+We study the problem of learning the optimal policy in a discounted, infinite-horizon reinforcement learning (RL) setting in the presence of adversarially corrupted rewards. To address this problem, we develop a novel robust variant of the Q-learning algorithm and analyze it under the challenging asynchronous sampling model with time-correlated data. Despite corruption, we prove that the finite-time guarantees of our approach match existing bounds, up to an additive term that scales with the fraction of corrupted samples. We also establish an information-theoretic lower bound, revealing that our guarantees are near-optimal. Notably, our algorithm is agnostic to the underlying reward distribution and provides the first finite-time robustness guarantees for asynchronous Q-learning. A key element of our analysis is a refined Azuma-Hoeffding inequality for almost-martingales, which may have broader applicability in the study of RL algorithms.
 </div>
 
 <div class="pub-entry">
@@ -256,3 +268,11 @@ math: true
 <div class="pub-section">
 <h2><span style="font-size: 1rem;">♥️</span> Under Preparation/Review</h2>
 </div>
+
+<script>
+function toggleSummary(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = el.style.display === "none" ? "block" : "none";
+}
+</script>

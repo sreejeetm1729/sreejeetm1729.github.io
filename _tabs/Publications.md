@@ -304,7 +304,7 @@ math: true
       <button class="pub-summary-close" onclick="togglePubSummary('acc2026-1-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-      We consider a federated reinforcement learning setting involving M agents, all of whom interact with a common Markov Decision Process (MDP). The agents exchange information via a central server to learn the optimal value function. Our goal is to understand to what extent one can hope for collaborative sample-complexity speedups in such a setting, when a small fraction of the agents are adversarial and can act arbitrarily. To that end, we propose Robust Fed-Q, a federated Q-learning algorithm that blends ideas from both model-based and model-free RL, along with the median-of-means device from robust statistics. We prove that despite corruption, with high-probability, Robust Fed-Q (i) guarantees exact convergence to the optimal value function in the limit of infinite samples, and (ii) enjoys near-optimal finite-time rates that benefit from collaboration. In addition, our approach requires just O˜(1) rounds of communication to achieve each of the above guarantees, a feature of independent interest in FL where communication is the major bottleneck.
+      We consider a federated reinforcement learning setting involving M agents, all of whom interact with a common Markov Decision Process (MDP). The agents exchange information via a central server to learn the optimal value function. Our goal is to understand to what extent one can hope for collaborative sample-complexity speedups in such a setting, when a small fraction of the agents are adversarial and can act arbitrarily. To that end, we propose Robust Fed-Q, a federated Q-learning algorithm that blends ideas from both model-based and model-free RL, along with the median-of-means device from robust statistics. We prove that despite corruption, with high-probability, Robust Fed-Q (i) guarantees exact convergence to the optimal value function in the limit of infinite samples, and (ii) enjoys near-optimal finite-time rates that benefit from collaboration. In addition, our approach requires just constant rounds of communication to achieve each of the above guarantees, a feature of independent interest in FL where communication is the major bottleneck.
     </div>
   </div>
 </div>
@@ -313,14 +313,24 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
-    [<a class="link-summary" href="#">Summary</a>]
-    [<a class="link-paper" href="#">Paper</a>]
-    [<a class="link-poster" href="#">Poster</a>]
-    [<a class="link-slides" href="#">Slides</a>]
-    [<a class="link-code" href="#">Code</a>]
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-2-summary')">Summary</a>]
+    [<a class="link-paper" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC26_GraphQ.pdf">Paper</a>]
+    [<a class="link-poster" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/Summary_VRDQ.pdf">Poster</a>]
+    [<a class="link-slides" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf">Slides</a>]
+    [<a class="link-code" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks">Code</a>]
   </div>
 </div>
-
+<div id="acc2026-2-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('acc2026-2-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      We investigate a decentralized reinforcement learning problem involving multiple agents that interact with the same Markov Decision Process (MDP). The agents can exchange information over a network to collectively learn the optimal state-action value function. For this setting, we introduce a novel epoch-based distributed Q-learning algorithm called VRDQ, where within each epoch, agents locally estimaten the Bellman optimality operator and diffuse information using a consensus-based protocol. For both static and time-varying networks, we establish high-probability finite-time convergence rates for VRDQ that enjoy linear speedups from collaboration. Crucially, we prove that such speedups in sample-complexity require only \(\tilde{O}(1)\) communication, substantially improving upon the communication costs in prior work.
+    </div>
+  </div>
+</div>
 </div>
 
 <div class="pub-section">

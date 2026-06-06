@@ -89,6 +89,7 @@ math: true
   max-height: 300px;
   opacity: 1;
   transform: translateY(0);
+  margin-top: 0px;
 }
 
 .pub-summary-inner {

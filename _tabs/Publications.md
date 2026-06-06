@@ -245,11 +245,22 @@ math: true
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
   <div class="pub-links">
-    [<a class="link-summary" href="#">Summary</a>]
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('aistats2025-summary')">Summary</a>]
     [<a class="link-paper" href="#">Paper</a>]
     [<a class="link-poster" href="#">Poster</a>]
     [<a class="link-slides" href="#">Slides</a>]
     [<a class="link-code" href="#">Code</a>]
+  </div>
+</div>
+<div id="aistats2025-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('icml2026-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      One of the most basic problems in reinforcement learning (RL) is policy evaluation: estimating the long-term return, i.e., value function, corresponding to a given fixed policy. The celebrated Temporal Difference (TD) learning algorithm addresses this problem, and recent work has investigated finite-time convergence guarantees for this algorithm and variants thereof. However, these guarantees hinge on the reward observations being always generated from a well-behaved (e.g., sub-Gaussian) true reward distribution. Motivated by harsh, real-world environments where such an idealistic assumption may no longer hold, we revisit the policy evaluation problem from the perspective of adversarial robustness. In particular, we consider a Huber-contaminated reward model where an adversary can arbitrarily corrupt each reward sample with a small probability ϵ. Under this observation model, we first show that the adversary can cause the vanilla TD algorithm to converge to any arbitrary value function. We then develop a novel algorithm called Robust-TD and prove that its finite-time guarantees match that of vanilla TD with linear function approximation up to a small O(ϵ) term that captures the effect of corruption. We complement this result with a minimax lower bound, revealing that such an additive corruption-induced term is unavoidable. To our knowledge, these results are the first of their kind in the context of adversarial robustness of stochastic approximation schemes driven by Markov noise. The key new technical tool that enables our results is an analysis of the Median-of-Means estimator with corrupted, time-correlated data that might be of independent interest to the literature on robust statistics.
+    </div>
   </div>
 </div>
 

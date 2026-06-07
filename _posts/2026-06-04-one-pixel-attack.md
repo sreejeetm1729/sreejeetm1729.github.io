@@ -2,6 +2,7 @@
 title: "The One-Pixel Attack: Fooling a Neural Network by Changing One Pixel"
 date: 2026-06-04 00:00:00 -0400
 categories: [rl-blogs]
+rl_section: adversarial-ml
 tags: [Adversarial ML]
 description: "A detailed explanation of the one-pixel attack, why it works, how it is formulated, and what it teaches us about neural network robustness."
 math: true

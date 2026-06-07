@@ -2,6 +2,7 @@
 title: "Stochastic Gradient Descent: Why Randomness Works"
 date: 2026-05-13
 categories: [rl-blogs]
+rl_section: rl-fundamentals
 tags: [optimization, gradient-descent, stochastic-gradient-descent, machine-learning]
 math: true
 ---

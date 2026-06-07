@@ -3,6 +3,7 @@ layout: post
 title: "The Beauty of a Simple Proof: TD Learning Without Projection"
 date: 2026-05-26
 categories: [rl-blogs]
+rl_section: research-papers
 tags: [TD Learning, Function Approximation, Markovian Sampling, Stochastic Approximation]
 math: true
 ---

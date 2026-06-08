@@ -370,7 +370,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC26_DistRobustQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(C_2\)]</span>
@@ -378,7 +378,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 </div>
 </div>

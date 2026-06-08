@@ -3,7 +3,7 @@ title: Resume
 icon: fas fa-user-tie
 order: 7
 ---
-
+ 
 <style>
 .cv-page {
   font-size: 16px;

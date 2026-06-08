@@ -1,6 +1,6 @@
 ---
 title: RL Blogs
-icon: fas fa-robot
+icon: fas fa-pen-nib 
 order: 6
 math: true
 ---

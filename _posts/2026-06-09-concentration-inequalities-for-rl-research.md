@@ -962,7 +962,7 @@ $$
 Choosing
 
 $$
-\lambda=rac{t}{V+bt/3}
+\lambda=\frac{t}{V+bt/3}
 $$
 
 gives $\lambda b<3$ and yields
@@ -1045,7 +1045,7 @@ Azuma-Hoeffding is the martingale analogue of Hoeffding's inequality.
 
 ### Theorem 6: Azuma-Hoeffding inequality
 
-Let $(M_i)_{i=0}^n$ be a martingale with respect to $(\mathcal{F}_i)_{i=0}^n$. Suppose there exist deterministic constants $c_1,\ldots,c_n$ such that
+Let $\{M_i\}_{i=0}^{n}$ be a martingale with respect to $\{\mathcal{F}_i\}_{i=0}^{n}$. Suppose there exist deterministic constants $c_1,\ldots,c_n$ such that
 
 $$
 \lvert M_i-M_{i-1}\rvert\le c_i
@@ -1166,7 +1166,7 @@ $$
 The optimal choice is
 
 $$
-\lambda=rac{t}{\sum_{i=1}^n c_i^2}.
+\lambda=\frac{t}{\sum_{i=1}^n c_i^2}.
 $$
 
 Substituting gives

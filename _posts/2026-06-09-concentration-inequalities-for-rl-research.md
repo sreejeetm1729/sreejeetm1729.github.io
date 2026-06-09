@@ -7,7 +7,7 @@ tags: [markov inequality, chebyshev inequality, hoeffding inequality, chernoff b
 math: true
 ---
 
-Concentration inequalities are among the most useful tools in modern probability, learning theory, stochastic approximation, and reinforcement learning. They convert local information about a random process into global high-probability control. In the analysis of algorithms, this is often the difference between saying
+Concentration inequalities are among the most useful tools in modern probability, learning theory, stochastic approximation, and reinforcement learning (RL). They convert local information about a random process into global high-probability control. In the analysis of algorithms, this is often the difference between saying
 
 $$
 \mathbb{E}[\mathrm{error}] \text{ is small}

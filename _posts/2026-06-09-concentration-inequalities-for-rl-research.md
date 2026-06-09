@@ -49,7 +49,7 @@ This last point is especially important in robust reinforcement learning. In rew
 
 ## 1. Basic notation
 
-Let \(X\) be a real-valued random variable. We write
+Let $X$ be a real-valued random variable. We write
 
 $$
 \mathbb{E}[X]
@@ -65,7 +65,7 @@ $$
 
 for its variance whenever these quantities exist.
 
-For independent random variables \(X_1,\ldots,X_n\), define
+For independent random variables $X_1,\ldots,X_n$, define
 
 $$
 S_n = \sum_{i=1}^n X_i.
@@ -77,7 +77,7 @@ $$
 \mathcal{F}_0 \subseteq \mathcal{F}_1 \subseteq \cdots \subseteq \mathcal{F}_n
 $$
 
-be a filtration. A stochastic process \(M_0,M_1,\ldots,M_n\) is a martingale with respect to \((\mathcal{F}_i)_{i=0}^n\) if
+be a filtration. A stochastic process $M_0,M_1,\ldots,M_n$ is a martingale with respect to $(\mathcal{F}_i)_{i=0}^n$ if
 
 $$
 M_i \text{ is } \mathcal{F}_i\text{-measurable}
@@ -110,7 +110,7 @@ Markov's inequality is the most basic concentration inequality. It is weak, but 
 
 ### Theorem 1: Markov's inequality
 
-Let \(X\ge 0\) be a nonnegative random variable. Then, for every \(a>0\),
+Let $X\ge 0$ be a nonnegative random variable. Then, for every $a>0$,
 
 $$
 \mathbb{P}(X\ge a)
@@ -120,7 +120,7 @@ $$
 
 ### Proof
 
-Since \(X\ge 0\), we have the pointwise inequality
+Since $X\ge 0$, we have the pointwise inequality
 
 $$
 X \ge a\mathbf{1}\{X\ge a\}.
@@ -134,7 +134,7 @@ $$
 \mathbb{E}\left[a\mathbf{1}\{X\ge a\}\right].
 $$
 
-Since \(a\) is deterministic,
+Since $a$ is deterministic,
 
 $$
 \mathbb{E}\left[a\mathbf{1}\{X\ge a\}\right]
@@ -150,7 +150,7 @@ $$
 a\mathbb{P}(X\ge a),
 $$
 
-and dividing by \(a\) proves
+and dividing by $a$ proves
 
 $$
 \mathbb{P}(X\ge a)
@@ -170,11 +170,11 @@ $$
 X \text{ small with some probability.}
 $$
 
-But the price is that the resulting tail decays only like \(1/a\). This is usually too weak for sharp finite-time learning theory.
+But the price is that the resulting tail decays only like $1/a$. This is usually too weak for sharp finite-time learning theory.
 
 ### A useful general form
 
-If \(g\) is nonnegative and increasing, then
+If $g$ is nonnegative and increasing, then
 
 $$
 \mathbb{P}(X\ge a)
@@ -186,8 +186,8 @@ $$
 
 This is the bridge to many stronger inequalities. For example:
 
-- taking \(g(x)=x^2\) leads to Chebyshev-type bounds;
-- taking \(g(x)=e^{\lambda x}\) leads to Chernoff-type bounds.
+- taking $g(x)=x^2$ leads to Chebyshev-type bounds;
+- taking $g(x)=e^{\lambda x}$ leads to Chernoff-type bounds.
 
 Markov's inequality is therefore not just a standalone result. It is the engine underneath many concentration arguments.
 
@@ -197,7 +197,7 @@ Markov's inequality uses a first moment. Chebyshev's inequality applies Markov's
 
 ### Theorem 2: Chebyshev's inequality
 
-Let \(X\) be a random variable with finite mean \(\mu=\mathbb{E}[X]\) and finite variance \(\sigma^2=\operatorname{Var}(X)\). Then, for every \(t>0\),
+Let $X$ be a random variable with finite mean $\mu=\mathbb{E}[X]$ and finite variance $\sigma^2=\operatorname{Var}(X)$. Then, for every $t>0$,
 
 $$
 \mathbb{P}\left(\lvert X-\mu\rvert\ge t\right)
@@ -205,7 +205,7 @@ $$
 \frac{\sigma^2}{t^2}.
 $$
 
-Equivalently, for every \(k>0\),
+Equivalently, for every $k>0$,
 
 $$
 \mathbb{P}\left(\lvert X-\mu\rvert\ge k\sigma\right)
@@ -221,7 +221,7 @@ $$
 Y=(X-\mu)^2.
 $$
 
-The event \(\lvert X-\mu\rvert\ge t\) is the same as the event \((X-\mu)^2\ge t^2\). Therefore,
+The event $\lvert X-\mu\rvert\ge t$ is the same as the event $(X-\mu)^2\ge t^2$. Therefore,
 
 $$
 \mathbb{P}\left(\lvert X-\mu\rvert\ge t\right)
@@ -257,7 +257,7 @@ $$
 
 ### Sample mean version
 
-Let \(X_1,\ldots,X_n\) be independent random variables with common mean \(\mu\) and common variance \(\sigma^2\). Define the sample mean
+Let $X_1,\ldots,X_n$ be independent random variables with common mean $\mu$ and common variance $\sigma^2$. Define the sample mean
 
 $$
 \overline{X}_n = \frac{1}{n}\sum_{i=1}^n X_i.
@@ -285,7 +285,7 @@ $$
 \frac{\sigma^2}{nt^2}.
 $$
 
-Equivalently, with probability at least \(1-\delta\),
+Equivalently, with probability at least $1-\delta$,
 
 $$
 \lvert \overline{X}_n-\mu\rvert
@@ -295,13 +295,13 @@ $$
 
 ### Intuition
 
-Chebyshev is robust because it only needs a second moment. This makes it useful when the distribution may be heavy-tailed. But the dependence on \(\delta\) is weak:
+Chebyshev is robust because it only needs a second moment. This makes it useful when the distribution may be heavy-tailed. But the dependence on $\delta$ is weak:
 
 $$
 \sqrt{\frac{1}{\delta}}.
 $$
 
-In learning theory, one usually wants logarithmic dependence on \(1/\delta\), such as
+In learning theory, one usually wants logarithmic dependence on $1/\delta$, such as
 
 $$
 \sqrt{\frac{\log(1/\delta)}{n}}.
@@ -313,7 +313,7 @@ Chebyshev does not give that. To get logarithmic confidence dependence, we need 
 
 Before Hoeffding, Chernoff, and Bernstein, it is useful to isolate the main proof pattern.
 
-Let \(S\) be a random variable. For any \(\lambda>0\),
+Let $S$ be a random variable. For any $\lambda>0$,
 
 $$
 \mathbb{P}(S\ge t)
@@ -337,7 +337,7 @@ $$
 \exp(-\lambda t)\mathbb{E}\left[e^{\lambda S}\right].
 $$
 
-Since this holds for every \(\lambda>0\), we can optimize over \(\lambda\):
+Since this holds for every $\lambda>0$, we can optimize over $\lambda$:
 
 $$
 \mathbb{P}(S\ge t)
@@ -354,7 +354,7 @@ $$
 \mathbb{E}\left[e^{\lambda S}\right]
 $$
 
-is called the moment generating function of \(S\). The reason exponential moments are powerful is that they transform sums into products under independence. If \(S_n=\sum_{i=1}^n X_i\) and the \(X_i\)'s are independent, then
+is called the moment generating function of $S$. The reason exponential moments are powerful is that they transform sums into products under independence. If $S_n=\sum_{i=1}^n X_i$ and the $X_i$'s are independent, then
 
 $$
 \mathbb{E}\left[e^{\lambda S_n}\right]
@@ -376,7 +376,7 @@ Hoeffding's inequality is one of the most common concentration inequalities in l
 
 The main ingredient is Hoeffding's lemma.
 
-Let \(X\) be a random variable such that
+Let $X$ be a random variable such that
 
 $$
 X\in[a,b]
@@ -389,7 +389,7 @@ $$
 \mu=\mathbb{E}[X].
 $$
 
-Then, for every \(\lambda\in\mathbb{R}\),
+Then, for every $\lambda\in\mathbb{R}$,
 
 $$
 \mathbb{E}\left[e^{\lambda(X-\mu)}\right]
@@ -397,11 +397,11 @@ $$
 \exp\left(\frac{\lambda^2(b-a)^2}{8}\right).
 $$
 
-This says that a centered bounded random variable behaves like a sub-Gaussian random variable with proxy variance \((b-a)^2/4\).
+This says that a centered bounded random variable behaves like a sub-Gaussian random variable with proxy variance $(b-a)^2/4$.
 
 ### Theorem 3: Hoeffding's inequality
 
-Let \(X_1,\ldots,X_n\) be independent random variables with
+Let $X_1,\ldots,X_n$ be independent random variables with
 
 $$
 X_i\in[a_i,b_i]
@@ -420,7 +420,7 @@ $$
 \mathbb{E}[S_n] = \sum_{i=1}^n \mathbb{E}[X_i].
 $$
 
-Then, for every \(t>0\),
+Then, for every $t>0$,
 
 $$
 \mathbb{P}\left(S_n-\mathbb{E}[S_n]\ge t\right)
@@ -464,7 +464,7 @@ $$
 S_n-\mathbb{E}[S_n]=\sum_{i=1}^n Y_i.
 $$
 
-For any \(\lambda>0\), Markov's inequality gives
+For any $\lambda>0$, Markov's inequality gives
 
 $$
 \mathbb{P}\left(\sum_{i=1}^n Y_i\ge t\right)
@@ -525,7 +525,7 @@ $$
 -\lambda t + \frac{\lambda^2V_H}{8}
 $$
 
-over \(\lambda>0\). Differentiating gives
+over $\lambda>0$. Differentiating gives
 
 $$
 -t+\frac{\lambda V_H}{4}=0,
@@ -537,7 +537,7 @@ $$
 \lambda^* = \frac{4t}{V_H}.
 $$
 
-Substituting \(\lambda^*\) yields
+Substituting $\lambda^*$ yields
 
 $$
 -\lambda^* t + \frac{(\lambda^*)^2V_H}{8}
@@ -557,11 +557,11 @@ $$
 \exp\left(-\frac{2t^2}{V_H}\right).
 $$
 
-The lower tail follows by applying the same argument to \(-Y_i\). The two-sided bound follows from the union bound.
+The lower tail follows by applying the same argument to $-Y_i$. The two-sided bound follows from the union bound.
 
 ### Sample mean form
 
-If \(X_i\in[a,b]\) independently and all have mean \(\mu\), then
+If $X_i\in[a,b]$ independently and all have mean $\mu$, then
 
 $$
 \mathbb{P}\left(\lvert \overline{X}_n-\mu\rvert\ge t\right)
@@ -569,7 +569,7 @@ $$
 2\exp\left(-\frac{2nt^2}{(b-a)^2}\right).
 $$
 
-Equivalently, with probability at least \(1-\delta\),
+Equivalently, with probability at least $1-\delta$,
 
 $$
 \lvert \overline{X}_n-\mu\rvert
@@ -616,11 +616,11 @@ $$
 \mu=\mathbb{E}[S_n].
 $$
 
-The random variable \(S_n\) counts how many successes occur.
+The random variable $S_n$ counts how many successes occur.
 
 ### Theorem 4: Multiplicative Chernoff bound
 
-For every \(\varepsilon>0\),
+For every $\varepsilon>0$,
 
 $$
 \mathbb{P}\left(S_n\ge (1+\varepsilon)\mu\right)
@@ -628,7 +628,7 @@ $$
 \left(\frac{e^{\varepsilon}}{(1+\varepsilon)^{1+\varepsilon}}\right)^\mu.
 $$
 
-For every \(\varepsilon\in(0,1)\),
+For every $\varepsilon\in(0,1)$,
 
 $$
 \mathbb{P}\left(S_n\le (1-\varepsilon)\mu\right)
@@ -644,7 +644,7 @@ $$
 \exp\left(-\frac{\mu\varepsilon^2}{2+\varepsilon}\right).
 $$
 
-In particular, for \(\varepsilon\in(0,1)\),
+In particular, for $\varepsilon\in(0,1)$,
 
 $$
 \mathbb{P}\left(S_n\ge (1+\varepsilon)\mu\right)
@@ -654,7 +654,7 @@ $$
 
 ### Proof of the upper-tail bound
 
-For \(\lambda>0\), Markov's inequality gives
+For $\lambda>0$, Markov's inequality gives
 
 $$
 \mathbb{P}(S_n\ge (1+\varepsilon)\mu)
@@ -671,7 +671,7 @@ $$
 \prod_{i=1}^n \mathbb{E}\left[e^{\lambda X_i}\right].
 $$
 
-If \(X_i\sim\operatorname{Bernoulli}(p_i)\), then
+If $X_i\sim\operatorname{Bernoulli}(p_i)$, then
 
 $$
 \mathbb{E}\left[e^{\lambda X_i}\right]
@@ -681,7 +681,7 @@ $$
 1+p_i(e^{\lambda}-1).
 $$
 
-Using \(1+x\le e^x\),
+Using $1+x\le e^x$,
 
 $$
 1+p_i(e^{\lambda}-1)
@@ -717,7 +717,7 @@ $$
 \lambda = \log(1+\varepsilon),
 $$
 
-so \(e^{\lambda}=1+\varepsilon\). Substituting gives
+so $e^{\lambda}=1+\varepsilon$. Substituting gives
 
 $$
 -\lambda(1+\varepsilon)
@@ -755,7 +755,7 @@ $$
 
 ### Proof of the lower-tail bound
 
-Let \(\lambda<0\). By Markov's inequality,
+Let $\lambda<0$. By Markov's inequality,
 
 $$
 \mathbb{P}(S_n\le (1-\varepsilon)\mu)
@@ -763,7 +763,7 @@ $$
 \mathbb{P}(e^{\lambda S_n}\ge e^{\lambda(1-\varepsilon)\mu}).
 $$
 
-Since \(\lambda<0\), the event \(S_n\le (1-\varepsilon)\mu\) becomes an upper-tail event for \(e^{\lambda S_n}\). Thus
+Since $\lambda<0$, the event $S_n\le (1-\varepsilon)\mu$ becomes an upper-tail event for $e^{\lambda S_n}$. Thus
 
 $$
 \mathbb{P}(S_n\le (1-\varepsilon)\mu)
@@ -815,9 +815,9 @@ $$
 
 ### Intuition
 
-Chernoff bounds are multiplicative. They say that if the expected number of visits is \(\mu\), then the probability of seeing much fewer or much more than \(\mu\) visits decays exponentially in \(\mu\).
+Chernoff bounds are multiplicative. They say that if the expected number of visits is $\mu$, then the probability of seeing much fewer or much more than $\mu$ visits decays exponentially in $\mu$.
 
-This is extremely useful in asynchronous RL. If a state-action pair \((s,a)\) has visitation probability \(\lambda(s,a)\), then after \(t\) i.i.d. draws, its visit count is roughly binomial with mean
+This is extremely useful in asynchronous RL. If a state-action pair $(s,a)$ has visitation probability $\lambda(s,a)$, then after $t$ i.i.d. draws, its visit count is roughly binomial with mean
 
 $$
 \lambda(s,a)t.
@@ -831,7 +831,7 @@ Hoeffding uses only boundedness. Bernstein uses boundedness plus variance. It is
 
 ### Theorem 5: Bernstein's inequality
 
-Let \(X_1,\ldots,X_n\) be independent random variables such that
+Let $X_1,\ldots,X_n$ be independent random variables such that
 
 $$
 \mathbb{E}[X_i]=0
@@ -850,7 +850,7 @@ $$
 V = \sum_{i=1}^n \mathbb{E}[X_i^2].
 $$
 
-Then, for every \(t>0\),
+Then, for every $t>0$,
 
 $$
 \mathbb{P}\left(\sum_{i=1}^n X_i\ge t\right)
@@ -874,7 +874,7 @@ $$
 
 The proof is again based on the exponential method. We first use a moment generating function bound.
 
-For \(\lambda\in(0,3/b)\), one can show that
+For $\lambda\in(0,3/b)$, one can show that
 
 $$
 \mathbb{E}\left[e^{\lambda X_i}\right]
@@ -884,13 +884,13 @@ $$
 \right).
 $$
 
-This inequality follows from the Taylor expansion of the exponential and the bound \(\lvert X_i\rvert\le b\). Indeed, for \(k\ge 2\),
+This inequality follows from the Taylor expansion of the exponential and the bound $\lvert X_i\rvert\le b$. Indeed, for $k\ge 2$,
 
 $$
 \lvert X_i\rvert^k \le b^{k-2}X_i^2.
 $$
 
-Using \(\mathbb{E}[X_i]=0\),
+Using $\mathbb{E}[X_i]=0$,
 
 $$
 \mathbb{E}[e^{\lambda X_i}]
@@ -926,7 +926,7 @@ $$
 \frac{\lambda^2\mathbb{E}[X_i^2]}{2(1-\lambda b/3)}.
 $$
 
-Since \(1+x\le e^x\),
+Since $1+x\le e^x$,
 
 $$
 \mathbb{E}[e^{\lambda X_i}]
@@ -948,7 +948,7 @@ $$
 \right).
 $$
 
-Thus, for every \(\lambda\in(0,3/b)\),
+Thus, for every $\lambda\in(0,3/b)$,
 
 $$
 \mathbb{P}\left(\sum_{i=1}^n X_i\ge t\right)
@@ -965,7 +965,7 @@ $$
 \lambda=rac{t}{V+bt/3}
 $$
 
-gives \(\lambda b<3\) and yields
+gives $\lambda b<3$ and yields
 
 $$
 \mathbb{P}\left(\sum_{i=1}^n X_i\ge t\right)
@@ -975,11 +975,11 @@ $$
 \right).
 $$
 
-The two-sided version follows by applying the same argument to \(-X_i\) and using the union bound.
+The two-sided version follows by applying the same argument to $-X_i$ and using the union bound.
 
 ### Two regimes
 
-Bernstein has two regimes. When \(t\) is small compared to \(V/b\), the term \(V\) dominates, and the exponent behaves like
+Bernstein has two regimes. When $t$ is small compared to $V/b$, the term $V$ dominates, and the exponent behaves like
 
 $$
 -\frac{t^2}{2V}.
@@ -987,7 +987,7 @@ $$
 
 This is the sub-Gaussian regime.
 
-When \(t\) is large compared to \(V/b\), the term \(bt\) dominates, and the exponent behaves like
+When $t$ is large compared to $V/b$, the term $bt$ dominates, and the exponent behaves like
 
 $$
 -\frac{3t}{2b}.
@@ -999,29 +999,29 @@ Thus Bernstein smoothly interpolates between Gaussian-like and exponential-like 
 
 ### Why Bernstein is often sharper than Hoeffding
 
-Suppose \(X_i\in[-b,b]\). Hoeffding effectively uses the worst-case scale \(b^2n\). Bernstein uses the actual variance
+Suppose $X_i\in[-b,b]$. Hoeffding effectively uses the worst-case scale $b^2n$. Bernstein uses the actual variance
 
 $$
 V=\sum_{i=1}^n \mathbb{E}[X_i^2].
 $$
 
-If \(V\ll nb^2\), Bernstein can be much sharper.
+If $V\ll nb^2$, Bernstein can be much sharper.
 
 In RL proofs, Bernstein is useful when controlling empirical counts or transition estimates because Bernoulli variables may have small variance when the probability of the event is small.
 
 ## 8. Martingales: why independence is not always necessary
 
-Many stochastic approximation algorithms are not sums of independent random variables. The iterate at time \(t+1\) depends on the random data observed at time \(t\), and also on the entire past through the current iterate.
+Many stochastic approximation algorithms are not sums of independent random variables. The iterate at time $t+1$ depends on the random data observed at time $t$, and also on the entire past through the current iterate.
 
 This is where martingales enter.
 
-A martingale difference sequence \((D_i)_{i=1}^n\) satisfies
+A martingale difference sequence $(D_i)_{i=1}^n$ satisfies
 
 $$
 \mathbb{E}[D_i\mid \mathcal{F}_{i-1}]=0.
 $$
 
-It need not be independent. The random variable \(D_i\) may depend strongly on the past. The only requirement is that, after conditioning on the past, its mean is zero.
+It need not be independent. The random variable $D_i$ may depend strongly on the past. The only requirement is that, after conditioning on the past, its mean is zero.
 
 This is precisely the structure of many noise terms in stochastic approximation. For example, a Bellman noise term often has the form
 
@@ -1045,14 +1045,14 @@ Azuma-Hoeffding is the martingale analogue of Hoeffding's inequality.
 
 ### Theorem 6: Azuma-Hoeffding inequality
 
-Let \((M_i)_{i=0}^n\) be a martingale with respect to \((\mathcal{F}_i)_{i=0}^n\). Suppose there exist deterministic constants \(c_1,\ldots,c_n\) such that
+Let $(M_i)_{i=0}^n$ be a martingale with respect to $(\mathcal{F}_i)_{i=0}^n$. Suppose there exist deterministic constants $c_1,\ldots,c_n$ such that
 
 $$
 \lvert M_i-M_{i-1}\rvert\le c_i
 \quad \text{almost surely for every } i.
 $$
 
-Then, for every \(t>0\),
+Then, for every $t>0$,
 
 $$
 \mathbb{P}(M_n-M_0\ge t)
@@ -1103,7 +1103,7 @@ D_i\in[-c_i,c_i]
 \quad \text{almost surely}.
 $$
 
-For \(\lambda>0\), Markov's inequality gives
+For $\lambda>0$, Markov's inequality gives
 
 $$
 \mathbb{P}(M_n-M_0\ge t)
@@ -1114,7 +1114,7 @@ $$
 \mathbb{E}\left[\exp\left(\lambda\sum_{i=1}^n D_i\right)\right].
 $$
 
-We now control the exponential moment iteratively using conditional expectation. Since \(D_n\) is conditionally zero-mean and bounded in \([-c_n,c_n]\), Hoeffding's lemma gives
+We now control the exponential moment iteratively using conditional expectation. Since $D_n$ is conditionally zero-mean and bounded in $[-c_n,c_n]$, Hoeffding's lemma gives
 
 $$
 \mathbb{E}\left[e^{\lambda D_n}\mid \mathcal{F}_{n-1}\right]
@@ -1209,7 +1209,7 @@ Standard Azuma-Hoeffding requires deterministic bounded differences. It only see
 
 This can be too crude.
 
-Suppose a martingale difference \(D_i\) satisfies both of the following:
+Suppose a martingale difference $D_i$ satisfies both of the following:
 
 1. A crude deterministic bound:
 
@@ -1224,15 +1224,15 @@ $$
 \lvert D_i\rvert\le c_i
 $$
 
-with high probability, where \(c_i\ll b_i\).
+with high probability, where $c_i\ll b_i$.
 
-Standard Azuma-Hoeffding forces us to use \(b_i\). But if the event \(\lvert D_i\rvert>c_i\) is rare, the true fluctuations should be closer to the scale \(c_i\), not \(b_i\).
+Standard Azuma-Hoeffding forces us to use $b_i$. But if the event $\lvert D_i\rvert>c_i$ is rare, the true fluctuations should be closer to the scale $c_i$, not $b_i$.
 
 This is the setting where refined high-probability versions of Azuma-Hoeffding become useful.
 
 ### Theorem 7: Shamir-Spencer type probabilistic Azuma-Hoeffding inequality
 
-Let \((X_i)_{i=0}^n\) be a martingale with \(X_0\) constant. Suppose that for each \(0\le i<n\), there exist deterministic numbers \(c_i>0\), \(b_i>0\), and \(r\in(0,1)\) such that
+Let $(X_i)_{i=0}^n$ be a martingale with $X_0$ constant. Suppose that for each $0\le i<n$, there exist deterministic numbers $c_i>0$, $b_i>0$, and $r\in(0,1)$ such that
 
 $$
 \mathbb{P}\left(\lvert X_{i+1}-X_i\rvert\le c_i\right)
@@ -1272,7 +1272,7 @@ This form is adapted from a theorem of Shamir and Spencer. It is the kind of res
 
 ### What the theorem says
 
-The ordinary Azuma-Hoeffding bound with deterministic increments \(b_i\) would give the scale
+The ordinary Azuma-Hoeffding bound with deterministic increments $b_i$ would give the scale
 
 $$
 \sqrt{\left(\sum_{i=0}^{n-1}b_i^2\right)\log(1/\delta)}.
@@ -1286,7 +1286,7 @@ $$
 \sum_{i=0}^{n-1}b_i\sqrt{r}.
 $$
 
-If \(c_i\ll b_i\) and \(r\) is very small, this can be dramatically sharper.
+If $c_i\ll b_i$ and $r$ is very small, this can be dramatically sharper.
 
 The extra term
 
@@ -1362,7 +1362,7 @@ $$
 
 is a martingale.
 
-Next, because \(D_i\) is conditionally mean-zero,
+Next, because $D_i$ is conditionally mean-zero,
 
 $$
 \mathbb{E}[D_i\mathbf{1}_{B_i^c}\mid\mathcal{F}_{i-1}]
@@ -1383,7 +1383,7 @@ $$
 b_i r.
 $$
 
-On \(B_i^c\), \(\lvert D_i\rvert\le c_i\). Hence
+On $B_i^c$, $\lvert D_i\rvert\le c_i$. Hence
 
 $$
 \lvert \widetilde{D}_i\rvert
@@ -1391,7 +1391,7 @@ $$
 c_i+b_ir.
 $$
 
-If \(b_i\sqrt{r}\le c_i\), then \(b_ir\le c_i\), and therefore
+If $b_i\sqrt{r}\le c_i$, then $b_ir\le c_i$, and therefore
 
 $$
 \lvert \widetilde{D}_i\rvert
@@ -1399,7 +1399,7 @@ $$
 2c_i.
 $$
 
-Azuma-Hoeffding applied to \((\widetilde{M}_k)\) gives
+Azuma-Hoeffding applied to $(\widetilde{M}_k)$ gives
 
 $$
 \mathbb{P}\left(
@@ -1411,7 +1411,7 @@ $$
 \delta.
 $$
 
-Now compare the original sum and the truncated martingale. On the event that no bad event \(B_i\) occurs,
+Now compare the original sum and the truncated martingale. On the event that no bad event $B_i$ occurs,
 
 $$
 D_i
@@ -1431,7 +1431,7 @@ $$
 \sum_{i=1}^n b_i r.
 $$
 
-Since \(r\le \sqrt{r}\) for \(r\in(0,1)\),
+Since $r\le \sqrt{r}$ for $r\in(0,1)$,
 
 $$
 \sum_{i=1}^n b_i r
@@ -1449,7 +1449,7 @@ $$
 nr.
 $$
 
-Since \(nr\le n\sqrt{r}\), we get the high-probability control
+Since $nr\le n\sqrt{r}$, we get the high-probability control
 
 $$
 \left\lvert\sum_{i=1}^nD_i\right\rvert
@@ -1486,7 +1486,7 @@ $$
 O(1).
 $$
 
-If we use standard Azuma-Hoeffding, the martingale increment bound is forced to use the crude \(O(T^p)\) scale. This can destroy the finite-time rate. The refined high-probability Azuma-Hoeffding principle allows the proof to exploit the fact that the large bound is only needed on rare events.
+If we use standard Azuma-Hoeffding, the martingale increment bound is forced to use the crude $O(T^p)$ scale. This can destroy the finite-time rate. The refined high-probability Azuma-Hoeffding principle allows the proof to exploit the fact that the large bound is only needed on rare events.
 
 This is exactly the conceptual role of the Shamir-Spencer inequality in the analysis of reward-agnostic robust asynchronous Q-learning.
 
@@ -1496,7 +1496,7 @@ Azuma-Hoeffding is the martingale analogue of Hoeffding. Freedman's inequality i
 
 Instead of depending only on a uniform increment bound, Freedman also uses the conditional variance process.
 
-Let \((M_i)_{i=0}^n\) be a martingale and define
+Let $(M_i)_{i=0}^n$ be a martingale and define
 
 $$
 D_i=M_i-M_{i-1}.
@@ -1520,7 +1520,7 @@ in Bernstein's inequality.
 
 ### Theorem 8: Freedman's inequality
 
-Let \((M_i)_{i=0}^n\) be a martingale with increments
+Let $(M_i)_{i=0}^n$ be a martingale with increments
 
 $$
 D_i=M_i-M_{i-1}.
@@ -1541,7 +1541,7 @@ V_n=
 \mathbb{E}[D_i^2\mid\mathcal{F}_{i-1}].
 $$
 
-Then, for every \(t>0\) and \(v>0\),
+Then, for every $t>0$ and $v>0$,
 
 $$
 \mathbb{P}\left(M_n-M_0\ge t \text{ and } V_n\le v\right)
@@ -1551,7 +1551,7 @@ $$
 \right).
 $$
 
-A two-sided version follows if \(\lvert D_i\rvert\le b\) almost surely:
+A two-sided version follows if $\lvert D_i\rvert\le b$ almost surely:
 
 $$
 \mathbb{P}\left(\lvert M_n-M_0\rvert\ge t \text{ and } V_n\le v\right)
@@ -1565,7 +1565,7 @@ $$
 
 Freedman's proof is based on an exponential supermartingale.
 
-For \(\lambda\in(0,3/b)\), one can show that
+For $\lambda\in(0,3/b)$, one can show that
 
 $$
 \mathbb{E}\left[e^{\lambda D_i}\mid\mathcal{F}_{i-1}\right]
@@ -1632,7 +1632,7 @@ Z_n
 \exp(\lambda t-\phi(\lambda)v).
 $$
 
-By Markov's inequality applied to \(Z_n\),
+By Markov's inequality applied to $Z_n$,
 
 $$
 \mathbb{P}(M_n-M_0\ge t,\, V_n\le v)
@@ -1640,7 +1640,7 @@ $$
 \exp(-\lambda t+\phi(\lambda)v).
 $$
 
-Optimizing over \(\lambda\) yields the Bernstein-type exponent
+Optimizing over $\lambda$ yields the Bernstein-type exponent
 
 $$
 -\frac{t^2}{2(v+bt/3)}.
@@ -1658,9 +1658,9 @@ $$
 
 ### Intuition
 
-Freedman's inequality says that martingale fluctuations are governed not only by the worst possible jump size \(b\), but also by the accumulated conditional variance \(V_n\).
+Freedman's inequality says that martingale fluctuations are governed not only by the worst possible jump size $b$, but also by the accumulated conditional variance $V_n$.
 
-This is extremely important in adaptive processes. Even if the increments are bounded by \(b\), the process may usually have much smaller conditional variance. Freedman captures this. Azuma-Hoeffding does not.
+This is extremely important in adaptive processes. Even if the increments are bounded by $b$, the process may usually have much smaller conditional variance. Freedman captures this. Azuma-Hoeffding does not.
 
 In reinforcement learning, Freedman is often the right tool when the martingale noise has a variance structure that depends on the current state, action, or value function.
 
@@ -1724,7 +1724,7 @@ $$
 S_n \approx \mu
 $$
 
-with exponentially high probability in \(\mu\).
+with exponentially high probability in $\mu$.
 
 ### Bernstein
 
@@ -1736,7 +1736,7 @@ $$
 \exp\left(-\frac{t^2}{2(V+bt/3)}\right).
 $$
 
-It is sharper than Hoeffding when \(V\ll nb^2\).
+It is sharper than Hoeffding when $V\ll nb^2$.
 
 ### Azuma-Hoeffding
 
@@ -1752,7 +1752,7 @@ It is the default martingale concentration inequality.
 
 ### Refined high-probability Azuma-Hoeffding
 
-Use when increments are always bounded by \(b_i\), but are usually bounded by a much smaller \(c_i\). It gives concentration at the typical scale \(c_i\), plus a small penalty for rare bad increments.
+Use when increments are always bounded by $b_i$, but are usually bounded by a much smaller $c_i$. It gives concentration at the typical scale $c_i$, plus a small penalty for rare bad increments.
 
 This is useful when a deterministic worst-case bound exists only for technical safety, but the actual algorithm behaves much better on a good event.
 
@@ -1820,7 +1820,7 @@ $$
 \exp(-c\lambda(s,a)t)
 $$
 
-for a numerical constant \(c>0\).
+for a numerical constant $c>0$.
 
 ### Question 5: Is it a martingale noise term with bounded increments?
 
@@ -1852,7 +1852,7 @@ O\left(
 \right)
 $$
 
-with high probability, where \(V_T\) is the predictable quadratic variation.
+with high probability, where $V_T$ is the predictable quadratic variation.
 
 ### Question 7: Is the martingale increment usually small but rarely large?
 
@@ -1870,7 +1870,7 @@ $$
 \lvert D_t\rvert\le c_t \quad \text{with high probability},
 $$
 
-where \(c_t\ll b_t\). Then the refined inequality can preserve the \(c_t\)-scale rather than paying the full \(b_t\)-scale.
+where $c_t\ll b_t$. Then the refined inequality can preserve the $c_t$-scale rather than paying the full $b_t$-scale.
 
 ## 14. How these tools appear in reinforcement learning proofs
 
@@ -1878,7 +1878,7 @@ Finite-time RL proofs often contain several different random objects. No single 
 
 ### Visit counts
 
-Suppose a state-action pair \((s,a)\) is visited with probability \(\lambda(s,a)\). Under an i.i.d. sampling abstraction, the count
+Suppose a state-action pair $(s,a)$ is visited with probability $\lambda(s,a)$. Under an i.i.d. sampling abstraction, the count
 
 $$
 N_t(s,a)
@@ -1902,7 +1902,7 @@ N_t(s,a)
 \frac{1}{2}\lambda(s,a)t
 $$
 
-with high probability once \(t\) is large enough. This kind of event is needed before empirical estimates for every state-action pair become reliable.
+with high probability once $t$ is large enough. This kind of event is needed before empirical estimates for every state-action pair become reliable.
 
 ### Empirical rewards
 
@@ -1948,7 +1948,7 @@ This hierarchy is exactly why concentration inequalities are so central in reinf
 - H. Chernoff. A measure of asymptotic efficiency for tests of a hypothesis based on the sum of observations. *The Annals of Mathematical Statistics*, 23(4):493--507, 1952.
 - W. Hoeffding. Probability inequalities for sums of bounded random variables. *Journal of the American Statistical Association*, 58(301):13--30, 1963.
 - D. A. Freedman. On tail probabilities for martingales. *The Annals of Probability*, 3(1):100--118, 1975.
-- E. Shamir and J. Spencer. Sharp concentration of the chromatic number on random graphs \(G_{n,p}\). *Combinatorica*, 7(1):121--129, 1987.
+- E. Shamir and J. Spencer. Sharp concentration of the chromatic number on random graphs $G_{n,p}$. *Combinatorica*, 7(1):121--129, 1987.
 - S. Boucheron, G. Lugosi, and P. Massart. *Concentration Inequalities: A Nonasymptotic Theory of Independence*. Oxford University Press, 2013.
 - P. Massart. *Concentration Inequalities and Model Selection*. Springer, 2007.
 - S. Maity and A. Mitra. Corruption-Tolerant Asynchronous Q-learning with Near-Optimal Rates. ICML, 2026.

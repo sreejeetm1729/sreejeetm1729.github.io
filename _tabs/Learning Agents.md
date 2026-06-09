@@ -4,7 +4,7 @@ icon: fas fa-robot
 order: 8
 ---
 
-
+This page hosts small interactive environments for building intuition about learning, control, rewards, disturbances, and task completion. 
 <style>
 .learning-agents-copy {
   margin: 0.25rem 0 1.25rem 0;
@@ -258,10 +258,6 @@ order: 8
 </style>
 
 <div class="learning-agents-copy">
-
-## Learning Agents
-
-This page hosts small interactive environments for building intuition about learning, control, rewards, disturbances, and task completion. The demo below is a 3D drone playground where the drone must compensate for inertia and wind while solving simple reinforcement-learning-style tasks such as hovering, cargo delivery, and waypoint tracking.
 
 </div>
 

@@ -1,6 +1,6 @@
 ---
 title: "Discounted vs. Average Reward Reinforcement Learning"
-date: 2026-06-10
+date: 2026-06-09
 categories: [rl-blogs]
 rl_section: rl-fundamentals
 tags: [reinforcement-learning, mdp, discounted-rl, average-reward, bellman-equation, q-learning]

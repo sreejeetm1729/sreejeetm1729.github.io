@@ -207,7 +207,10 @@ $$
 
 The key fact is that $\mathcal{T}_\gamma$ is a contraction in the sup norm.
 
-For any two value functions $V,W\in\mathbb{R}^{|\mathcal{S}|}$,
+For any two value functions 
+$$
+V,W\in\mathbb{R}^{\lvert\mathcal{S}\rvert},
+$$
 
 $$
 \|\mathcal{T}_\gamma V-\mathcal{T}_\gamma W\|_\infty

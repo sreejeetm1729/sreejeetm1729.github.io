@@ -1045,7 +1045,15 @@ Azuma-Hoeffding is the martingale analogue of Hoeffding's inequality.
 
 ### Theorem 6: Azuma-Hoeffding inequality
 
-Let $\{M_i\}_{i=0}^{n}$ be a martingale with respect to $\{\mathcal{F}_i\}_{i=0}^{n}$. Suppose there exist deterministic constants $c_1,\ldots,c_n$ such that
+Let
+$$
+\{M_i\}_{i=0}^{n}
+$$
+be a martingale with respect to
+$$
+\{\mathcal{F}_i\}_{i=0}^{n}.
+$$
+Suppose there exist deterministic constants $c_1,\ldots,c_n$ such that
 
 $$
 \lvert M_i-M_{i-1}\rvert\le c_i

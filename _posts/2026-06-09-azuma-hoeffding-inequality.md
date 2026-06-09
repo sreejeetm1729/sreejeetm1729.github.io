@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Azuma-Hoeffding Inequality"
 date: 2026-06-09
 categories: [rl-blogs]

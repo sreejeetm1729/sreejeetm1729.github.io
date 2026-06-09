@@ -1,7 +1,9 @@
 ---
+layout: post
 title: "Bernstein's Inequality"
 date: 2026-06-09
 categories: [rl-blogs]
+rl_section: rl-fundamentals
 tags: [probability, concentration, bernstein-inequality, variance-sensitive-bounds, reinforcement-learning]
 math: true
 ---

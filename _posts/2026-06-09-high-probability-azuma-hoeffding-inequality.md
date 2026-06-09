@@ -1,7 +1,9 @@
 ---
+layout: post
 title: "A High-Probability Azuma-Hoeffding Inequality for Almost-Bounded Martingales"
 date: 2026-06-09
 categories: [rl-blogs]
+rl_section: rl-fundamentals
 tags: [probability, concentration, martingales, azuma-hoeffding, shamir-spencer, robust-rl]
 math: true
 ---

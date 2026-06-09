@@ -1,7 +1,9 @@
 ---
+layout: post
 title: "Multiplicative Chernoff Bound and Chernoff Inequality"
 date: 2026-06-09
 categories: [rl-blogs]
+rl_section: rl-fundamentals
 tags: [probability, concentration, chernoff-bound, bernoulli, visit-counts, reinforcement-learning]
 math: true
 ---

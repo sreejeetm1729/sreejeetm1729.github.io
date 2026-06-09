@@ -1,7 +1,9 @@
 ---
+layout: post
 title: "Chebyshev's Inequality"
 date: 2026-06-09
 categories: [rl-blogs]
+rl_section: rl-fundamentals
 tags: [probability, concentration, chebyshev-inequality, variance, heavy-tails, reinforcement-learning]
 math: true
 ---

@@ -1,7 +1,9 @@
 ---
+layout: post
 title: "Freedman's Inequality for Martingales"
 date: 2026-06-09
 categories: [rl-blogs]
+rl_section: rl-fundamentals
 tags: [probability, concentration, martingales, freedman-inequality, stochastic-approximation, reinforcement-learning]
 math: true
 ---

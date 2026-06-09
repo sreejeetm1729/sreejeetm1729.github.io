@@ -265,9 +265,8 @@ This page hosts small interactive environments for building intuition about lear
     <div class="rl3d-header">
       <h2>3D Drone RL Playground</h2>
       <p>
-        Move your mouse over the arena to control the drone. Try different environments and tasks:
-        hover, deliver cargo, or visit waypoints. The drone receives reward for completing the task
-        while compensating for wind and inertia.
+         The demo below is a 3D drone playground where the drone must compensate for inertia and wind while solving simple reinforcement-learning-style tasks such as hovering, cargo delivery, and waypoint tracking. Move your mouse over the arena to control the drone. Try different environments and tasks:
+        hover, deliver cargo, or visit waypoints. The drone receives reward for completing the task while compensating for wind and inertia.
       </p>
     </div>
 

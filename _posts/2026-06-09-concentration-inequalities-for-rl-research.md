@@ -77,7 +77,7 @@ $$
 \mathcal{F}_0 \subseteq \mathcal{F}_1 \subseteq \cdots \subseteq \mathcal{F}_n
 $$
 
-be a filtration. A stochastic process $M_0,M_1,\ldots,M_n$ is a martingale with respect to $(\mathcal{F}_i)_{i=0}^n$ if
+be a filtration. A stochastic process $M_0,M_1,\ldots,M_n$ is a martingale with respect to $$\{\mathcal{F}_i\}_{i=0}^{n}$$ if
 
 $$
 M_i \text{ is } \mathcal{F}_i\text{-measurable}

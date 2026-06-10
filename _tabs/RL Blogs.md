@@ -7,7 +7,9 @@ math: true
 
 Reinforcement learning is one of the most beautiful meeting points of probability, optimization, dynamic programming, stochastic approximation, and control. At its core, RL asks a deceptively simple question: how should an agent learn to make good decisions from interaction?
 
-This page collects my notes on reinforcement learning and related areas. Some posts are meant to build foundations from the ground up: value functions, Bellman equations, temporal-difference learning, Q-learning, function approximation, and policy-gradient ideas. Others are more research-oriented, focusing on robustness, adversarial corruption, Markovian data, decentralized learning, and the technical ideas that shape modern RL theory. I also use this space to write about papers that influenced how I think about learning algorithms. The goal is not only to summarize results, but to explain the mathematical intuition behind them: what problem the paper solves, why the proof technique is interesting, and how the idea connects to broader questions in reliable and robust learning.
+This page brings together my notes on reinforcement learning, optimization, and learning under uncertainty. Some posts build the core mathematical foundations of RL; others are closer to my research interests, focusing on robustness, adversarial corruption, Markovian data, decentralized algorithms, and finite-time analysis.
+
+I also use this space to discuss papers that have shaped how I think about learning algorithms. Rather than simply summarizing results, my goal is to unpack the mathematical ideas behind them: what problem is being addressed, why the proof technique matters, where the assumptions enter, and how the result connects to broader questions about reliable and robust decision-making.
 
 ---
 

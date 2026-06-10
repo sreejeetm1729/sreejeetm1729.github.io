@@ -29,7 +29,7 @@
       width:100%;
       max-width:none;
       margin:0;
-      padding:16px;
+      padding:12px;
       border-radius:0;
       background:rgba(255,255,255,.82);
       border:0;
@@ -92,10 +92,10 @@
     #stageWrap{
       position:relative;
       width:100%;
-      height:min(760px, 72vh);
-      min-height:600px;
+      height:min(520px, 58vh);
+      min-height:430px;
       overflow:hidden;
-      border-radius:22px;
+      border-radius:18px;
       border:1px solid var(--line);
       background:#d8e4f1;
     }
@@ -203,10 +203,10 @@
       #stageWrap{
       position:relative;
       width:100%;
-      height:min(760px, 72vh);
-      min-height:600px;
+      height:min(520px, 58vh);
+      min-height:430px;
       overflow:hidden;
-      border-radius:22px;
+      border-radius:18px;
       border:1px solid var(--line);
       background:#d8e4f1;
     }
@@ -224,6 +224,81 @@
   text-decoration:none;
 }
 .tiny-credit a:hover{ text-decoration:underline; }
+
+/* Compact website embed overrides */
+.header h2{
+  font-size:1.28rem !important;
+  margin-bottom:.28rem !important;
+}
+.header p{
+  font-size:.92rem !important;
+  line-height:1.42 !important;
+  margin-bottom:.75rem !important;
+}
+.toolbar{
+  gap:.45rem !important;
+  margin-bottom:.65rem !important;
+}
+.toolbar label{
+  font-size:.72rem !important;
+}
+.toolbar select,
+.toolbar button{
+  padding:.48rem .65rem !important;
+  font-size:.78rem !important;
+}
+.taskCard{
+  max-width:340px !important;
+  padding:.7rem .82rem !important;
+}
+.taskTitle{
+  font-size:.9rem !important;
+}
+.taskDesc{
+  font-size:.78rem !important;
+}
+.bottomPanels{
+  grid-template-columns:1.2fr .8fr !important;
+  gap:.65rem !important;
+  margin-top:.65rem !important;
+}
+.panel{
+  padding:.7rem !important;
+  border-radius:16px !important;
+}
+.panel h3{
+  font-size:.92rem !important;
+  margin-bottom:.45rem !important;
+}
+.scoreGrid{
+  gap:.45rem !important;
+}
+.stat{
+  padding:.52rem !important;
+  border-radius:12px !important;
+}
+.stat span{
+  font-size:.72rem !important;
+}
+.stat strong{
+  font-size:.9rem !important;
+}
+#rewardCanvas{
+  height:112px !important;
+}
+.tiny-credit{
+  margin-top:6px !important;
+  font-size:.72rem !important;
+}
+@media (max-width:900px){
+  #stageWrap{
+    height:460px !important;
+    min-height:380px !important;
+  }
+  .bottomPanels{
+    grid-template-columns:1fr !important;
+  }
+}
 </style>
 </head>
 <body>

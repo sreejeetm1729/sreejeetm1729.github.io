@@ -6,7 +6,6 @@ math: true
 ---
 
 <div class="learning-agents-intro">
-  <h2>Learning Agents</h2>
   <p>
     This page hosts small interactive environments for building intuition about learning,
     control, rewards, disturbances, and task completion. Each playground is isolated in
@@ -25,7 +24,7 @@ math: true
 
   <iframe
     class="learning-agent-frame drone-frame"
-    src="{{ '/assets/html/rl3d_drone_playground_clean.html' | relative_url }}"
+    src="{{ '/assets/html/rl3d_drone_playground_compact.html' | relative_url }}"
     title="3D Drone RL Playground"
     loading="lazy"
     allow="fullscreen"
@@ -43,7 +42,7 @@ math: true
 
   <iframe
     class="learning-agent-frame city-frame"
-    src="{{ '/assets/html/living_city_learning_clean.html' | relative_url }}"
+    src="{{ '/assets/html/living_city_learning_compact.html' | relative_url }}"
     title="Learning to Navigate a Living City"
     loading="lazy"
     allow="fullscreen"
@@ -72,8 +71,8 @@ math: true
 }
 
 .learning-agent-block {
-  width: min(1420px, calc(100vw - 32px));
-  margin: 1.5rem 0 2.25rem;
+  width: min(1120px, calc(100vw - 28px));
+  margin: 1.15rem 0 1.75rem;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -88,7 +87,7 @@ math: true
 .learning-agent-heading h3 {
   margin: 0 0 0.35rem;
   color: var(--heading-color, #111827);
-  font-size: 1.45rem;
+  font-size: 1.28rem;
   font-weight: 850;
 }
 
@@ -102,18 +101,18 @@ math: true
   display: block;
   width: 100%;
   border: 0;
-  border-radius: 24px;
+  border-radius: 18px;
   background: #f8fafc;
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
   overflow: hidden;
 }
 
 .drone-frame {
-  height: 980px;
+  height: 760px;
 }
 
 .city-frame {
-  height: 1120px;
+  height: 820px;
 }
 
 .learning-agent-credit {
@@ -134,11 +133,11 @@ math: true
   }
 
   .drone-frame {
-    height: 920px;
+    height: 720px;
   }
 
   .city-frame {
-    height: 1040px;
+    height: 780px;
   }
 }
 </style>

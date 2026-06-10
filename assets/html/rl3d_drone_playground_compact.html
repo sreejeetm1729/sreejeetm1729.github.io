@@ -14,7 +14,7 @@
     }
 
     #rl3d-drone-widget {
-      max-width: 1120px;
+      max-width: 1040px;
       margin: 24px auto;
       padding: 1.4rem;
       border-radius: 22px;
@@ -31,20 +31,20 @@
     .rl3d-header h2 {
       margin: 0 0 0.45rem 0;
       color: #ffffff;
-      font-size: 1.55rem;
+      font-size: 1.28rem;
     }
 
     .rl3d-header p {
-      margin: 0 0 1.1rem 0;
+      margin: 0 0 0.75rem 0;
       color: #cbd5e1;
-      line-height: 1.6;
+      line-height: 1.45;
     }
 
     .rl3d-toolbar {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.65rem;
     }
 
     .rl3d-toolbar label {
@@ -60,7 +60,7 @@
       min-width: 220px;
       border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 999px;
-      padding: 0.65rem 0.85rem;
+      padding: 0.52rem 0.75rem;
       color: #0f172a;
       background: #e0f2fe;
       font-weight: 800;
@@ -70,7 +70,7 @@
     #rl3d-stage-wrap {
       position: relative;
       width: 100%;
-      height: 620px;
+      height: 430px;
       overflow: hidden;
       border-radius: 18px;
       background: #020617;
@@ -162,16 +162,16 @@
     }
 
     .rl3d-controls {
-      margin-top: 0.9rem;
+      margin-top: 0.65rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.65rem;
+      gap: 0.5rem;
     }
 
     .rl3d-controls button {
       border: none;
       border-radius: 999px;
-      padding: 0.72rem 1.05rem;
+      padding: 0.58rem 0.82rem;
       cursor: pointer;
       font-weight: 850;
       color: #0f172a;
@@ -193,14 +193,14 @@
     }
 
     .rl3d-stats {
-      margin-top: 0.9rem;
+      margin-top: 0.65rem;
       display: grid;
-      grid-template-columns: repeat(5, minmax(120px, 1fr));
-      gap: 0.65rem;
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
+      gap: 0.5rem;
     }
 
     .rl3d-stats div {
-      padding: 0.78rem;
+      padding: 0.58rem;
       border-radius: 15px;
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -220,7 +220,7 @@
 
     @media (max-width: 850px) {
       #rl3d-stage-wrap {
-        height: 480px;
+        height: 390px;
       }
 
       .rl3d-stats {
@@ -241,7 +241,27 @@
         min-width: 180px;
       }
     }
-  </style>
+  
+/* Compact website embed overrides */
+#rl3d-compass-card{
+  width:118px !important;
+  height:118px !important;
+}
+#rl3d-compass{
+  width:118px !important;
+  height:96px !important;
+}
+#rl3d-task-card{
+  max-width:300px !important;
+  padding:.65rem .78rem !important;
+}
+.rl3d-task-title{ font-size:.9rem !important; }
+.rl3d-task-desc{ font-size:.78rem !important; }
+#rl3d-top-hint{
+  font-size:.78rem !important;
+  padding:.45rem .65rem !important;
+}
+</style>
 </head>
 
 <body>

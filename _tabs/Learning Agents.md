@@ -60,7 +60,7 @@ aside[aria-label="Panel"] {
   display: none !important;
 }
 
-/* Give the page content the space that the right panel used to occupy. */
+/* Let the main page use the freed horizontal space. */
 #main-wrapper,
 #main-wrapper > .container,
 #main-wrapper > .container > .row {
@@ -75,8 +75,8 @@ main[aria-label="Main Content"],
 
 /* Page intro */
 .learning-agents-intro {
-  max-width: 900px;
-  margin: 0.25rem auto 1.1rem;
+  max-width: 980px;
+  margin: 0.25rem auto 1.05rem;
   color: var(--text-color, #334155);
 }
 
@@ -85,22 +85,25 @@ main[aria-label="Main Content"],
   color: var(--text-color, #334155);
 }
 
-/* Simulator sections */
+/* Wider simulator sections */
 .learning-agent-block {
-  width: min(980px, calc(100vw - 36px));
-  margin: 1.15rem auto 1.75rem;
+  width: min(1220px, calc(100vw - 24px));
+  margin: 1.2rem auto 2rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .learning-agent-heading {
-  max-width: 900px;
-  margin: 0 auto 0.7rem;
+  max-width: 1040px;
+  margin: 0 auto 0.75rem;
   padding: 0 0.25rem;
 }
 
 .learning-agent-heading h3 {
-  margin: 0 0 0.28rem;
+  margin: 0 0 0.3rem;
   color: var(--heading-color, #111827);
-  font-size: 1.22rem;
+  font-size: 1.25rem;
   font-weight: 850;
 }
 
@@ -117,16 +120,17 @@ main[aria-label="Main Content"],
   border: 0;
   border-radius: 18px;
   background: #f8fafc;
-  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
   overflow: hidden;
 }
 
+/* Taller iframes so the simulator itself does not scroll internally */
 .drone-frame {
-  height: 720px;
+  height: 860px;
 }
 
 .city-frame {
-  height: 780px;
+  height: 940px;
 }
 
 .learning-agent-credit {
@@ -143,25 +147,29 @@ main[aria-label="Main Content"],
 
 @media (max-width: 900px) {
   .learning-agent-block {
-    width: calc(100vw - 20px);
+    width: calc(100vw - 16px);
   }
 
   .drone-frame {
-    height: 700px;
+    height: 820px;
   }
 
   .city-frame {
-    height: 760px;
+    height: 900px;
   }
 }
 
 @media (max-width: 600px) {
+  .learning-agent-block {
+    width: calc(100vw - 10px);
+  }
+
   .drone-frame {
-    height: 680px;
+    height: 790px;
   }
 
   .city-frame {
-    height: 730px;
+    height: 860px;
   }
 
   .learning-agent-heading h3 {

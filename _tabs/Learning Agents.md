@@ -39,12 +39,12 @@ math: true
   </div>
 
   <iframe
-    class="learning-agent-frame city-frame"
-    src="{{ '/assets/html/living_city_learning_compact.html' | relative_url }}"
-    title="Learning to Navigate a Living City"
-    loading="lazy"
-    allow="fullscreen"
-  ></iframe>
+  class="learning-agent-frame city-frame"
+  src="{{ '/assets/html/living_city_learning_dashboard_only_no_trace_minimap.html' | relative_url }}"
+  title="Learning to Navigate a Living City"
+  loading="lazy"
+  allow="fullscreen"
+></iframe>
 
   <div class="learning-agent-credit">
     Built with <a href="https://threejs.org/" target="_blank" rel="noopener">Three.js</a> (MIT). Procedural city assets.

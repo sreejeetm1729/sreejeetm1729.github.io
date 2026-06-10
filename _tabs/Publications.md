@@ -213,7 +213,7 @@ math: true
 <h2><span style="font-size: 1rem;">♦️</span> Selected First-Authored Publications</h2>
 
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(ML_2\)]</span> Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
+  <div class="pub-title"><span style="color:#e8c4bd;">[\(M_2\),\(C_5\)]</span> Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Machine Learning, <strong>ICML 2026</strong>.</div>
   <div class="pub-links">
@@ -239,7 +239,7 @@ math: true
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(ML_1\)]</span> Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</div>
+  <div class="pub-title"><span style="color:#e8c4bd;">[\(M_1\),\(C_4\)]</span> Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
   <div class="pub-links">

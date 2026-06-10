@@ -1,10 +1,9 @@
 ---
-
 title: Learning Agents
 icon: fas fa-robot
 order: 8
 math: true
-----------
+---
 
 <div class="learning-agents-intro">
   <p>

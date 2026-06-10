@@ -34,19 +34,24 @@ This post is a coherent guide to the inequalities I repeatedly use in research:
 
 The goal is not just to list statements. The goal is to understand the logic connecting them.
 
-At a high level:
+**Markov's inequality** is the starting point. It only uses nonnegativity and the first moment. Because it knows almost nothing about the distribution, it gives a very general but often loose bound.
 
-- Markov uses only one moment.
-- Chebyshev uses a second moment.
-- Hoeffding uses boundedness.
-- Chernoff uses the moment generating function.
-- Bernstein uses both variance and boundedness.
-- Azuma-Hoeffding extends Hoeffding to martingales.
-- Freedman extends Bernstein to martingales.
-- The refined high-probability Azuma-Hoeffding principle handles processes whose increments are usually small, but only crudely bounded on rare events.
+**Chebyshev's inequality** uses one more piece of information: the variance. This already improves the picture. Instead of only controlling the probability that a nonnegative random variable is large, Chebyshev controls how far a random variable moves away from its mean.
 
-This last point is especially important in robust reinforcement learning. In reward-agnostic robust Q-learning, one may only have a crude deterministic bound on the iterates, while a much sharper bound holds with high probability. Standard Azuma-Hoeffding sees only the crude bound and can become vacuous. A refined inequality can exploit the sharper typical behavior.
+**Hoeffding's inequality** becomes sharper because it uses boundedness. If each random variable is known to lie in a fixed interval, then very large deviations are impossible, and the sum concentrates exponentially fast.
 
+**Chernoff bounds** push this idea through moment generating functions. Rather than controlling a deviation directly, we exponentially tilt the random variable and optimize the resulting bound. This is especially powerful for sums of Bernoulli random variables and leads to the familiar multiplicative Chernoff bounds.
+
+**Bernstein's inequality** combines two kinds of information: variance and boundedness. This is often sharper than Hoeffding when the variance is small. Hoeffding only sees the worst-case range; Bernstein also sees the typical scale of fluctuations.
+
+The same hierarchy reappears for dependent data. Azuma-Hoeffding is the martingale analogue of Hoeffding: if the increments of a martingale are uniformly bounded, then the martingale concentrates. Freedman's inequality is the martingale analogue of Bernstein: it uses both bounded increments and the predictable variance process.
+
+The final inequality in this post is a refined high-probability version of Azuma-Hoeffding, in the spirit of Shamir and Spencer. This refinement is useful when the increments are not always small deterministically, but are small on a high-probability event. In other words, the process has two scales: a crude worst-case scale and a much sharper typical scale.
+
+
+So the guiding theme is simple:
+
+as we move from Markov to Chebyshev to Hoeffding, Chernoff, Bernstein, Azuma-Hoeffding, Freedman, and refined high-probability martingale inequalities, we progressively inject more structure into the problem. More structure gives sharper concentration.
 ## 1. Basic notation
 
 Let $X$ be a real-valued random variable. We write

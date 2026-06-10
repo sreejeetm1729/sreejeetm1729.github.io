@@ -40,7 +40,7 @@ math: true
 
   <iframe
   class="learning-agent-frame city-frame"
-  src="{{ '/assets/html/living_city_learning_dashboard_only_no_trace_minimap.html' | relative_url }}"
+  src="{{ '/assets/html/living_city_learning_dashboard_width_fixed.html' | relative_url }}"
   title="Learning to Navigate a Living City"
   loading="lazy"
   allow="fullscreen"

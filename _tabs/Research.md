@@ -382,3 +382,5 @@ statistical benefits of collaboration with substantially reduced communication.
   </p> 
 </div>
 </div>
+<hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
+<h2>[<strong style="color:#208894;">Theme 4</strong>] Byzantine-Robust Federated Representation Learning for Temporal-Difference Methods</h2>

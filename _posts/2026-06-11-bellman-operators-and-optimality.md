@@ -29,7 +29,7 @@ Consider a finite discounted Markov decision process
 $$
 \mathcal{M}
 =
-(\mathcal{S},\mathcal{A},P,r,\gamma),
+(\mathcal{S},\mathcal{A},\mathcal{P},r,\gamma),
 $$
 
 where:

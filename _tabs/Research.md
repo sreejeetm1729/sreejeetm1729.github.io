@@ -389,7 +389,7 @@ This project studies how a collection of heterogeneous reinforcement learning ag
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
 
   <div style="flex:0 0 280px;">
-    <img src="{{ '/assets/research/rep_1.png' | relative_url }}"
+    <img src="{{ '/assets/research/rep_2.png' | relative_url }}"
          alt="Robust Federated Q-Learning"
          style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
   </div>

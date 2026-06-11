@@ -380,7 +380,9 @@ statistical benefits of collaboration with substantially reduced communication.
     </span>
     <a href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
-</div>
-</div>
+
+
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <h2>[<strong style="color:#208894;">Theme 4</strong>] Byzantine-Robust Federated Representation Learning for Temporal-Difference Methods</h2>
+</div>
+</div>

@@ -399,8 +399,7 @@ This project studies how a collection of heterogeneous reinforcement learning ag
   <p>
 The key idea is to separate what is shared from what is personalized. The value functions of the honest agents are modeled through a common low-dimensional representation, while each agent has its own local parameter vector. Thus, the shared representation captures common structure across agents, while the personalized heads absorb agent-specific MDP heterogeneity.
 </p>
-</div>
-</div>
+
 
 </div>
 </div>

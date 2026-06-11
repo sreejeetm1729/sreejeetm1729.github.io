@@ -96,13 +96,13 @@ $$
 The policy-specific Bellman operator is the map
 
 $$
-T^\pi:\mathbb{R}^{|\mathcal{S}|}\to \mathbb{R}^{|\mathcal{S}|}
+\mathcal{T}^{\pi}:\mathbb{R}^{|\mathcal{S}|}\to \mathbb{R}^{|\mathcal{S}|}
 $$
 
 defined by
 
 $$
-(T^\pi V)(s)
+(\mathcal{T}^{\pi} V)(s)
 =
 r^\pi(s)
 +
@@ -114,19 +114,19 @@ $$
 In vector form,
 
 $$
-T^\pi V
+\mathcal{T}^{\pi} V
 =
 r^\pi+\gamma P^\pi V.
 $$
 
-Thus $$T^\pi$$ is an affine operator. It first averages the future value using the transition matrix $$P^\pi$$, then discounts it by $$\gamma$$, and finally shifts it by the reward vector $$r^\pi$$.
+Thus $$\mathcal{T}^{\pi}$$ is an affine operator. It first averages the future value using the transition matrix $$P^\pi$$, then discounts it by $$\gamma$$, and finally shifts it by the reward vector $$r^\pi$$.
 
 The value function of policy $$\pi$$ satisfies the Bellman equation
 
 $$
 V^\pi
 =
-T^\pi V^\pi.
+\mathcal{T}^{\pi} V^\pi.
 $$
 
 Equivalently,
@@ -212,7 +212,7 @@ The operator form is not merely notation. It exposes the geometry of dynamic pro
 
 ## 4. Sup norm and value-function geometry
 
-For a value function $$V\in\mathbb{R}^{|\mathcal{S}|}$$, define the sup norm
+For a value function $$V\in\mathbb{R}^{\lvert\mathcal{S}\rvert}$$, define the sup norm
 
 $$
 \|V\|_\infty
@@ -241,7 +241,7 @@ A Bellman operator maps one point in this space to another point.
 The policy Bellman operator
 
 $$
-T^\pi V
+\mathcal{T}^{\pi} V
 =
 r^\pi+\gamma P^\pi V
 $$
@@ -254,12 +254,12 @@ Its fixed point is the policy value function $$V^\pi$$.
 
 ## 5. Contraction of the policy Bellman operator
 
-The most important property of $$T^\pi$$ is contraction.
+The most important property of $$\mathcal{T}^{\pi}$$ is contraction.
 
-For any two value functions $$V,W\in\mathbb{R}^{|\mathcal{S}|}$$,
+For any two value functions $$V,W\in\mathbb{R}^{\lvert\mathcal{S}\rvert}$$,
 
 $$
-\|T^\pi V-T^\pi W\|_\infty
+\|\mathcal{T}^{\pi} V-\mathcal{T}^{\pi} W\|_\infty
 \le
 \gamma
 \|V-W\|_\infty.
@@ -270,7 +270,7 @@ $$
 For any state $$s$$,
 
 $$
-(T^\pi V)(s)
+(\mathcal{T}^{\pi} V)(s)
 =
 r^\pi(s)
 +
@@ -281,7 +281,7 @@ $$
 and
 
 $$
-(T^\pi W)(s)
+(\mathcal{T}^{\pi} W)(s)
 =
 r^\pi(s)
 +
@@ -292,7 +292,7 @@ $$
 Subtracting,
 
 $$
-(T^\pi V)(s)-(T^\pi W)(s)
+(\mathcal{T}^{\pi} V)(s)-(\mathcal{T}^{\pi} W)(s)
 =
 \gamma
 \sum_{s'}P^\pi(s,s')
@@ -303,7 +303,7 @@ Taking absolute values,
 
 $$
 \left|
-(T^\pi V)(s)-(T^\pi W)(s)
+(\mathcal{T}^{\pi} V)(s)-(\mathcal{T}^{\pi} W)(s)
 \right|
 \le
 \gamma
@@ -323,7 +323,7 @@ for every $$s'$$,
 
 $$
 \left|
-(T^\pi V)(s)-(T^\pi W)(s)
+(\mathcal{T}^{\pi} V)(s)-(\mathcal{T}^{\pi} W)(s)
 \right|
 \le
 \gamma
@@ -341,7 +341,7 @@ Thus
 
 $$
 \left|
-(T^\pi V)(s)-(T^\pi W)(s)
+(\mathcal{T}^{\pi} V)(s)-(\mathcal{T}^{\pi} W)(s)
 \right|
 \le
 \gamma
@@ -351,13 +351,13 @@ $$
 Taking the maximum over $$s$$ gives
 
 $$
-\|T^\pi V-T^\pi W\|_\infty
+\|\mathcal{T}^{\pi} V-\mathcal{T}^{\pi} W\|_\infty
 \le
 \gamma
 \|V-W\|_\infty.
 $$
 
-This proves that $$T^\pi$$ is a $$\gamma$$-contraction under the sup norm.
+This proves that $$\mathcal{T}^{\pi}$$ is a $$\gamma$$-contraction under the sup norm.
 
 ---
 
@@ -365,26 +365,26 @@ This proves that $$T^\pi$$ is a $$\gamma$$-contraction under the sup norm.
 
 The contraction proof says that Bellman updates shrink value-function differences.
 
-Let $$V^\pi$$ be the fixed point of $$T^\pi$$. Then
+Let $$V^\pi$$ be the fixed point of $$\mathcal{T}^{\pi}$$. Then
 
 $$
 V^\pi
 =
-T^\pi V^\pi.
+\mathcal{T}^{\pi} V^\pi.
 $$
 
 For any other value estimate $$V$$,
 
 $$
-T^\pi V - V^\pi
+\mathcal{T}^{\pi} V - V^\pi
 =
-T^\pi V - T^\pi V^\pi.
+\mathcal{T}^{\pi} V - \mathcal{T}^{\pi} V^\pi.
 $$
 
 Using the affine form,
 
 $$
-T^\pi V - T^\pi V^\pi
+\mathcal{T}^{\pi} V - \mathcal{T}^{\pi} V^\pi
 =
 \gamma P^\pi(V-V^\pi).
 $$
@@ -415,7 +415,7 @@ This is why exact policy evaluation converges.
 
 ## 7. Unique fixed point of the policy operator
 
-Since $$T^\pi$$ is a contraction on the complete metric space $$\mathbb{R}^{|\mathcal{S}|}$$ under $$\|\cdot\|_\infty$$, the Banach fixed-point theorem implies that $$T^\pi$$ has a unique fixed point.
+Since $$\mathcal{T}^{\pi}$$ is a contraction on the complete metric space $$\mathbb{R}^{\lvert\mathcal{S}\rvert}$$ under $$\|\cdot\|_\infty$$, the Banach fixed-point theorem implies that $$\mathcal{T}^{\pi}$$ has a unique fixed point.
 
 That unique fixed point is $$V^\pi$$.
 
@@ -424,9 +424,9 @@ We can also prove uniqueness directly.
 Suppose $$U$$ and $$V$$ are both fixed points:
 
 $$
-U=T^\pi U,
+U=\mathcal{T}^{\pi} U,
 \qquad
-V=T^\pi V.
+V=\mathcal{T}^{\pi} V.
 $$
 
 Then
@@ -434,13 +434,13 @@ Then
 $$
 \|U-V\|_\infty
 =
-\|T^\pi U-T^\pi V\|_\infty.
+\|\mathcal{T}^{\pi} U-\mathcal{T}^{\pi} V\|_\infty.
 $$
 
 By contraction,
 
 $$
-\|T^\pi U-T^\pi V\|_\infty
+\|\mathcal{T}^{\pi} U-\mathcal{T}^{\pi} V\|_\infty
 \le
 \gamma\|U-V\|_\infty.
 $$
@@ -482,15 +482,15 @@ Given any initial value vector $$V_0$$, define
 $$
 V_{k+1}
 =
-T^\pi V_k.
+\mathcal{T}^{\pi} V_k.
 $$
 
-Since $$V^\pi=T^\pi V^\pi$$,
+Since $$V^\pi=\mathcal{T}^{\pi} V^\pi$$,
 
 $$
 \|V_{k+1}-V^\pi\|_\infty
 =
-\|T^\pi V_k-T^\pi V^\pi\|_\infty.
+\|\mathcal{T}^{\pi} V_k-\mathcal{T}^{\pi} V^\pi\|_\infty.
 $$
 
 Using contraction,
@@ -522,7 +522,7 @@ This is the core deterministic stability result behind dynamic programming.
 The Bellman residual of a value function $$V$$ under policy $$\pi$$ is
 
 $$
-\|T^\pi V-V\|_\infty.
+\|\mathcal{T}^{\pi} V-V\|_\infty.
 $$
 
 It measures how far $$V$$ is from satisfying the Bellman equation.
@@ -533,17 +533,17 @@ $$
 \|V-V^\pi\|_\infty
 \le
 \frac{1}{1-\gamma}
-\|T^\pi V-V\|_\infty.
+\|\mathcal{T}^{\pi} V-V\|_\infty.
 $$
 
 ### Proof
 
-Since $$V^\pi=T^\pi V^\pi$$,
+Since $$V^\pi=\mathcal{T}^{\pi} V^\pi$$,
 
 $$
 V-V^\pi
 =
-V-T^\pi V+T^\pi V-T^\pi V^\pi.
+V-\mathcal{T}^{\pi} V+\mathcal{T}^{\pi} V-\mathcal{T}^{\pi} V^\pi.
 $$
 
 Taking norms,
@@ -551,15 +551,15 @@ Taking norms,
 $$
 \|V-V^\pi\|_\infty
 \le
-\|V-T^\pi V\|_\infty
+\|V-\mathcal{T}^{\pi} V\|_\infty
 +
-\|T^\pi V-T^\pi V^\pi\|_\infty.
+\|\mathcal{T}^{\pi} V-\mathcal{T}^{\pi} V^\pi\|_\infty.
 $$
 
 By contraction,
 
 $$
-\|T^\pi V-T^\pi V^\pi\|_\infty
+\|\mathcal{T}^{\pi} V-\mathcal{T}^{\pi} V^\pi\|_\infty
 \le
 \gamma
 \|V-V^\pi\|_\infty.
@@ -570,7 +570,7 @@ Therefore,
 $$
 \|V-V^\pi\|_\infty
 \le
-\|V-T^\pi V\|_\infty
+\|V-\mathcal{T}^{\pi} V\|_\infty
 +
 \gamma
 \|V-V^\pi\|_\infty.
@@ -581,7 +581,7 @@ Rearranging,
 $$
 (1-\gamma)\|V-V^\pi\|_\infty
 \le
-\|V-T^\pi V\|_\infty.
+\|V-\mathcal{T}^{\pi} V\|_\infty.
 $$
 
 Hence,
@@ -590,7 +590,7 @@ $$
 \|V-V^\pi\|_\infty
 \le
 \frac{1}{1-\gamma}
-\|T^\pi V-V\|_\infty.
+\|\mathcal{T}^{\pi} V-V\|_\infty.
 $$
 
 So if a value function approximately satisfies the Bellman equation, then it is close to the true policy value function.
@@ -612,7 +612,7 @@ $$
 then
 
 $$
-(T^\pi V)(s)\le (T^\pi W)(s)
+(\mathcal{T}^{\pi} V)(s)\le (\mathcal{T}^{\pi} W)(s)
 \qquad
 \text{for all }s\in\mathcal{S}.
 $$
@@ -622,7 +622,7 @@ $$
 Assume $$V\le W$$ componentwise. Then for every state $$s$$,
 
 $$
-(T^\pi V)(s)
+(\mathcal{T}^{\pi} V)(s)
 =
 r^\pi(s)
 +
@@ -633,7 +633,7 @@ $$
 and
 
 $$
-(T^\pi W)(s)
+(\mathcal{T}^{\pi} W)(s)
 =
 r^\pi(s)
 +
@@ -652,15 +652,15 @@ $$
 Therefore,
 
 $$
-(T^\pi V)(s)
+(\mathcal{T}^{\pi} V)(s)
 \le
-(T^\pi W)(s).
+(\mathcal{T}^{\pi} W)(s).
 $$
 
 So
 
 $$
-T^\pi V\le T^\pi W.
+\mathcal{T}^{\pi} V\le \mathcal{T}^{\pi} W.
 $$
 
 ---
@@ -670,9 +670,9 @@ $$
 Let $$\mathbf{1}$$ denote the all-ones vector. For any constant $$c\in\mathbb{R}$$,
 
 $$
-T^\pi(V+c\mathbf{1})
+\mathcal{T}^{\pi}(V+c\mathbf{1})
 =
-T^\pi V+\gamma c\mathbf{1}.
+\mathcal{T}^{\pi} V+\gamma c\mathbf{1}.
 $$
 
 ### Proof
@@ -680,7 +680,7 @@ $$
 For every state $$s$$,
 
 $$
-(T^\pi(V+c\mathbf{1}))(s)
+(\mathcal{T}^{\pi}(V+c\mathbf{1}))(s)
 =
 r^\pi(s)
 +
@@ -692,7 +692,7 @@ $$
 Expanding,
 
 $$
-(T^\pi(V+c\mathbf{1}))(s)
+(\mathcal{T}^{\pi}(V+c\mathbf{1}))(s)
 =
 r^\pi(s)
 +
@@ -712,17 +712,17 @@ $$
 Thus
 
 $$
-(T^\pi(V+c\mathbf{1}))(s)
+(\mathcal{T}^{\pi}(V+c\mathbf{1}))(s)
 =
-(T^\pi V)(s)+\gamma c.
+(\mathcal{T}^{\pi} V)(s)+\gamma c.
 $$
 
 Therefore,
 
 $$
-T^\pi(V+c\mathbf{1})
+\mathcal{T}^{\pi}(V+c\mathbf{1})
 =
-T^\pi V+\gamma c\mathbf{1}.
+\mathcal{T}^{\pi} V+\gamma c\mathbf{1}.
 $$
 
 This identity says that adding a constant to all future values only affects the current Bellman backup by the discounted amount $$\gamma c$$.
@@ -736,13 +736,13 @@ The policy-specific Bellman operator evaluates a fixed policy. The Bellman optim
 Define
 
 $$
-T^\star:\mathbb{R}^{|\mathcal{S}|}\to\mathbb{R}^{|\mathcal{S}|}
+\mathcal{T}^{\star}:\mathbb{R}^{|\mathcal{S}|}\to\mathbb{R}^{|\mathcal{S}|}
 $$
 
 by
 
 $$
-(T^\star V)(s)
+(\mathcal{T}^{\star} V)(s)
 =
 \max_{a\in\mathcal{A}}
 \left\{
@@ -759,7 +759,7 @@ The Bellman optimality equation is
 $$
 V^\star
 =
-T^\star V^\star.
+\mathcal{T}^{\star} V^\star.
 $$
 
 In words:
@@ -775,7 +775,7 @@ This is the mathematical foundation of optimal control in discounted MDPs.
 For a deterministic policy $$\pi$$,
 
 $$
-(T^\pi V)(s)
+(\mathcal{T}^{\pi} V)(s)
 =
 r(s,\pi(s))
 +
@@ -786,28 +786,28 @@ $$
 The optimality operator can be written as
 
 $$
-(T^\star V)(s)
+(\mathcal{T}^{\star} V)(s)
 =
 \max_{\pi}
-(T^\pi V)(s),
+(\mathcal{T}^{\pi} V)(s),
 $$
 
 where the maximum may be taken over deterministic stationary policies.
 
-This means that $$T^\star$$ is the pointwise maximum of many affine operators.
+This means that $$\mathcal{T}^{\star}$$ is the pointwise maximum of many affine operators.
 
-The operator $$T^\pi$$ is affine:
+The operator $$\mathcal{T}^{\pi}$$ is affine:
 
 $$
-T^\pi V
+\mathcal{T}^{\pi} V
 =
 r^\pi+\gamma P^\pi V.
 $$
 
-The operator $$T^\star$$ is generally nonlinear because of the maximum:
+The operator $$\mathcal{T}^{\star}$$ is generally nonlinear because of the maximum:
 
 $$
-(T^\star V)(s)
+(\mathcal{T}^{\star} V)(s)
 =
 \max_a
 \left\{
@@ -823,18 +823,18 @@ P_aV
 \sum_{s'}P(s'\mid s,a)V(s').
 $$
 
-Thus $$T^\star$$ is piecewise affine. Different regions of value-function space correspond to different greedy actions.
+Thus $$\mathcal{T}^{\star}$$ is piecewise affine. Different regions of value-function space correspond to different greedy actions.
 
 ---
 
 ## 14. Contraction of the Bellman optimality operator
 
-Despite being nonlinear, $$T^\star$$ is still a contraction.
+Despite being nonlinear, $$\mathcal{T}^{\star}$$ is still a contraction.
 
-For all $$V,W\in\mathbb{R}^{|\mathcal{S}|}$$,
+For all $$V,W\in\mathbb{R}^{\lvert\mathcal{S}\rvert}$$,
 
 $$
-\|T^\star V-T^\star W\|_\infty
+\|\mathcal{T}^{\star} V-\mathcal{T}^{\star} W\|_\infty
 \le
 \gamma
 \|V-W\|_\infty.
@@ -856,7 +856,7 @@ $$
 Then
 
 $$
-(T^\star V)(s)
+(\mathcal{T}^{\star} V)(s)
 =
 \max_a F_a(V),
 $$
@@ -864,7 +864,7 @@ $$
 and
 
 $$
-(T^\star W)(s)
+(\mathcal{T}^{\star} W)(s)
 =
 \max_a F_a(W).
 $$
@@ -883,7 +883,7 @@ Therefore,
 
 $$
 \left|
-(T^\star V)(s)-(T^\star W)(s)
+(\mathcal{T}^{\star} V)(s)-(\mathcal{T}^{\star} W)(s)
 \right|
 \le
 \max_a
@@ -947,7 +947,7 @@ Taking the maximum over actions,
 
 $$
 \left|
-(T^\star V)(s)-(T^\star W)(s)
+(\mathcal{T}^{\star} V)(s)-(\mathcal{T}^{\star} W)(s)
 \right|
 \le
 \gamma
@@ -957,28 +957,28 @@ $$
 Finally, taking the maximum over states gives
 
 $$
-\|T^\star V-T^\star W\|_\infty
+\|\mathcal{T}^{\star} V-\mathcal{T}^{\star} W\|_\infty
 \le
 \gamma
 \|V-W\|_\infty.
 $$
 
-So $$T^\star$$ is a $$\gamma$$-contraction under the sup norm.
+So $$\mathcal{T}^{\star}$$ is a $$\gamma$$-contraction under the sup norm.
 
 ---
 
 ## 15. Unique fixed point of the optimality operator
 
-Since $$T^\star$$ is a contraction, it has a unique fixed point.
+Since $$\mathcal{T}^{\star}$$ is a contraction, it has a unique fixed point.
 
 That fixed point is $$V^\star$$.
 
 Suppose $$U$$ and $$V$$ both satisfy
 
 $$
-U=T^\star U,
+U=\mathcal{T}^{\star} U,
 \qquad
-V=T^\star V.
+V=\mathcal{T}^{\star} V.
 $$
 
 Then
@@ -986,13 +986,13 @@ Then
 $$
 \|U-V\|_\infty
 =
-\|T^\star U-T^\star V\|_\infty.
+\|\mathcal{T}^{\star} U-\mathcal{T}^{\star} V\|_\infty.
 $$
 
 By contraction,
 
 $$
-\|T^\star U-T^\star V\|_\infty
+\|\mathcal{T}^{\star} U-\mathcal{T}^{\star} V\|_\infty
 \le
 \gamma
 \|U-V\|_\infty.
@@ -1021,15 +1021,15 @@ Value iteration repeatedly applies the Bellman optimality operator:
 $$
 V_{k+1}
 =
-T^\star V_k.
+\mathcal{T}^{\star} V_k.
 $$
 
-Since $$V^\star=T^\star V^\star$$,
+Since $$V^\star=\mathcal{T}^{\star} V^\star$$,
 
 $$
 \|V_{k+1}-V^\star\|_\infty
 =
-\|T^\star V_k-T^\star V^\star\|_\infty.
+\|\mathcal{T}^{\star} V_k-\mathcal{T}^{\star} V^\star\|_\infty.
 $$
 
 Using contraction,
@@ -1069,7 +1069,7 @@ $$
 then
 
 $$
-T^\star V\le T^\star W.
+\mathcal{T}^{\star} V\le \mathcal{T}^{\star} W.
 $$
 
 ### Proof
@@ -1091,15 +1091,15 @@ $$
 Taking the maximum over $$a$$ on both sides preserves the inequality:
 
 $$
-(T^\star V)(s)
+(\mathcal{T}^{\star} V)(s)
 \le
-(T^\star W)(s).
+(\mathcal{T}^{\star} W)(s).
 $$
 
 Thus,
 
 $$
-T^\star V\le T^\star W.
+\mathcal{T}^{\star} V\le \mathcal{T}^{\star} W.
 $$
 
 ---
@@ -1109,9 +1109,9 @@ $$
 For any constant $$c\in\mathbb{R}$$,
 
 $$
-T^\star(V+c\mathbf{1})
+\mathcal{T}^{\star}(V+c\mathbf{1})
 =
-T^\star V+\gamma c\mathbf{1}.
+\mathcal{T}^{\star} V+\gamma c\mathbf{1}.
 $$
 
 ### Proof
@@ -1119,7 +1119,7 @@ $$
 For each state $$s$$,
 
 $$
-(T^\star(V+c\mathbf{1}))(s)
+(\mathcal{T}^{\star}(V+c\mathbf{1}))(s)
 =
 \max_a
 \left\{
@@ -1133,7 +1133,7 @@ $$
 Expanding the sum,
 
 $$
-(T^\star(V+c\mathbf{1}))(s)
+(\mathcal{T}^{\star}(V+c\mathbf{1}))(s)
 =
 \max_a
 \left\{
@@ -1156,7 +1156,7 @@ $$
 we get
 
 $$
-(T^\star(V+c\mathbf{1}))(s)
+(\mathcal{T}^{\star}(V+c\mathbf{1}))(s)
 =
 \max_a
 \left\{
@@ -1172,17 +1172,17 @@ $$
 The term $$\gamma c$$ does not depend on $$a$$, so
 
 $$
-(T^\star(V+c\mathbf{1}))(s)
+(\mathcal{T}^{\star}(V+c\mathbf{1}))(s)
 =
-(T^\star V)(s)+\gamma c.
+(\mathcal{T}^{\star} V)(s)+\gamma c.
 $$
 
 Hence,
 
 $$
-T^\star(V+c\mathbf{1})
+\mathcal{T}^{\star}(V+c\mathbf{1})
 =
-T^\star V+\gamma c\mathbf{1}.
+\mathcal{T}^{\star} V+\gamma c\mathbf{1}.
 $$
 
 ---
@@ -1208,7 +1208,7 @@ For such a policy,
 $$
 T^{\pi_V}V
 =
-T^\star V.
+\mathcal{T}^{\star} V.
 $$
 
 This identity is central.
@@ -1220,7 +1220,7 @@ However, one has to be careful. The identity
 $$
 T^{\pi_V}V
 =
-T^\star V
+\mathcal{T}^{\star} V
 $$
 
 does not mean that $$\pi_V$$ is optimal. It only means that $$\pi_V$$ is greedy with respect to the current estimate $$V$$.
@@ -1238,13 +1238,13 @@ Let $$\pi^\star$$ be greedy with respect to $$V^\star$$. Then
 $$
 T^{\pi^\star}V^\star
 =
-T^\star V^\star.
+\mathcal{T}^{\star} V^\star.
 $$
 
 Since $$V^\star$$ satisfies the Bellman optimality equation,
 
 $$
-T^\star V^\star
+\mathcal{T}^{\star} V^\star
 =
 V^\star.
 $$
@@ -1282,13 +1282,13 @@ Let $$\pi$$ be a policy. Suppose another policy $$\pi'$$ satisfies
 $$
 T^{\pi'}V^\pi
 \ge
-T^\pi V^\pi.
+\mathcal{T}^{\pi} V^\pi.
 $$
 
 Since
 
 $$
-T^\pi V^\pi=V^\pi,
+\mathcal{T}^{\pi} V^\pi=V^\pi,
 $$
 
 this means
@@ -1358,15 +1358,15 @@ If $$\pi'$$ is greedy with respect to $$V^\pi$$, then
 $$
 T^{\pi'}V^\pi
 =
-T^\star V^\pi.
+\mathcal{T}^{\star} V^\pi.
 $$
 
 Since
 
 $$
-T^\star V^\pi
+\mathcal{T}^{\star} V^\pi
 \ge
-T^\pi V^\pi
+\mathcal{T}^{\pi} V^\pi
 =
 V^\pi,
 $$
@@ -1393,7 +1393,7 @@ $$
 \pi_{k+1}
 \in
 \arg\max_{\pi}
-T^\pi V^{\pi_k}.
+\mathcal{T}^{\pi} V^{\pi_k}.
 $$
 
 In words:
@@ -1403,7 +1403,7 @@ In words:
 
 The operator interpretation is elegant.
 
-Each policy $$\pi$$ defines an affine contraction $$T^\pi$$. Policy evaluation finds the fixed point of that contraction. Policy improvement then switches to another affine contraction whose one-step backup is no worse.
+Each policy $$\pi$$ defines an affine contraction $$\mathcal{T}^{\pi}$$. Policy evaluation finds the fixed point of that contraction. Policy improvement then switches to another affine contraction whose one-step backup is no worse.
 
 Thus policy iteration moves through a finite collection of affine contractions until it reaches one whose fixed point also satisfies the Bellman optimality equation.
 
@@ -1414,7 +1414,7 @@ Thus policy iteration moves through a finite collection of affine contractions u
 The optimal Bellman residual of a value function $$V$$ is
 
 $$
-\|T^\star V-V\|_\infty.
+\|\mathcal{T}^{\star} V-V\|_\infty.
 $$
 
 It measures how close $$V$$ is to satisfying the Bellman optimality equation.
@@ -1425,19 +1425,19 @@ $$
 \|V-V^\star\|_\infty
 \le
 \frac{1}{1-\gamma}
-\|T^\star V-V\|_\infty.
+\|\mathcal{T}^{\star} V-V\|_\infty.
 $$
 
 ### Proof
 
-Since $$V^\star=T^\star V^\star$$,
+Since $$V^\star=\mathcal{T}^{\star} V^\star$$,
 
 $$
 V-V^\star
 =
-V-T^\star V
+V-\mathcal{T}^{\star} V
 +
-T^\star V-T^\star V^\star.
+\mathcal{T}^{\star} V-\mathcal{T}^{\star} V^\star.
 $$
 
 Taking norms,
@@ -1445,15 +1445,15 @@ Taking norms,
 $$
 \|V-V^\star\|_\infty
 \le
-\|V-T^\star V\|_\infty
+\|V-\mathcal{T}^{\star} V\|_\infty
 +
-\|T^\star V-T^\star V^\star\|_\infty.
+\|\mathcal{T}^{\star} V-\mathcal{T}^{\star} V^\star\|_\infty.
 $$
 
 Using contraction,
 
 $$
-\|T^\star V-T^\star V^\star\|_\infty
+\|\mathcal{T}^{\star} V-\mathcal{T}^{\star} V^\star\|_\infty
 \le
 \gamma
 \|V-V^\star\|_\infty.
@@ -1464,7 +1464,7 @@ Therefore,
 $$
 \|V-V^\star\|_\infty
 \le
-\|V-T^\star V\|_\infty
+\|V-\mathcal{T}^{\star} V\|_\infty
 +
 \gamma
 \|V-V^\star\|_\infty.
@@ -1475,7 +1475,7 @@ Rearranging,
 $$
 (1-\gamma)\|V-V^\star\|_\infty
 \le
-\|V-T^\star V\|_\infty.
+\|V-\mathcal{T}^{\star} V\|_\infty.
 $$
 
 Hence,
@@ -1484,7 +1484,7 @@ $$
 \|V-V^\star\|_\infty
 \le
 \frac{1}{1-\gamma}
-\|T^\star V-V\|_\infty.
+\|\mathcal{T}^{\star} V-V\|_\infty.
 $$
 
 This bound is extremely useful. It says that small Bellman residual implies small distance to the optimal value function.
@@ -1516,7 +1516,7 @@ Since $$\pi_V$$ is greedy with respect to $$V$$,
 $$
 T^{\pi_V}V
 =
-T^\star V.
+\mathcal{T}^{\star} V.
 $$
 
 Because $$\|V-V^\star\|_\infty\le \varepsilon$$,
@@ -1529,14 +1529,14 @@ V
 V^\star+\varepsilon\mathbf{1}.
 $$
 
-Using monotonicity and the shift property of $$T^\star$$,
+Using monotonicity and the shift property of $$\mathcal{T}^{\star}$$,
 
 $$
-T^\star V
+\mathcal{T}^{\star} V
 \ge
-T^\star(V^\star-\varepsilon\mathbf{1})
+\mathcal{T}^{\star}(V^\star-\varepsilon\mathbf{1})
 =
-T^\star V^\star-\gamma\varepsilon\mathbf{1}
+\mathcal{T}^{\star} V^\star-\gamma\varepsilon\mathbf{1}
 =
 V^\star-\gamma\varepsilon\mathbf{1}.
 $$
@@ -1551,7 +1551,7 @@ T^{\pi_V}(V^\star+\varepsilon\mathbf{1})
 T^{\pi_V}V^\star+\gamma\varepsilon\mathbf{1}.
 $$
 
-Since $$T^{\pi_V}V=T^\star V$$, we combine the inequalities:
+Since $$T^{\pi_V}V=\mathcal{T}^{\star} V$$, we combine the inequalities:
 
 $$
 V^\star-\gamma\varepsilon\mathbf{1}
@@ -1647,7 +1647,7 @@ $$
 The policy-specific Bellman operator for Q-functions is
 
 $$
-(T^\pi Q)(s,a)
+(\mathcal{T}^{\pi} Q)(s,a)
 =
 r(s,a)
 +
@@ -1659,7 +1659,7 @@ $$
 The optimal Q-Bellman operator is
 
 $$
-(T^\star Q)(s,a)
+(\mathcal{T}^{\star} Q)(s,a)
 =
 r(s,a)
 +
@@ -1673,7 +1673,7 @@ The corresponding fixed-point equations are
 $$
 Q^\pi
 =
-T^\pi Q^\pi,
+\mathcal{T}^{\pi} Q^\pi,
 $$
 
 and
@@ -1681,7 +1681,7 @@ and
 $$
 Q^\star
 =
-T^\star Q^\star.
+\mathcal{T}^{\star} Q^\star.
 $$
 
 The optimal value function is recovered by
@@ -1703,7 +1703,7 @@ $$
 The Q-function operators satisfy the same contraction properties:
 
 $$
-\|T^\pi Q_1-T^\pi Q_2\|_\infty
+\|\mathcal{T}^{\pi} Q_1-\mathcal{T}^{\pi} Q_2\|_\infty
 \le
 \gamma
 \|Q_1-Q_2\|_\infty,
@@ -1712,7 +1712,7 @@ $$
 and
 
 $$
-\|T^\star Q_1-T^\star Q_2\|_\infty
+\|\mathcal{T}^{\star} Q_1-\mathcal{T}^{\star} Q_2\|_\infty
 \le
 \gamma
 \|Q_1-Q_2\|_\infty.
@@ -1727,7 +1727,7 @@ This is the deterministic fixed-point structure behind Q-learning.
 The policy operator
 
 $$
-T^\pi V
+\mathcal{T}^{\pi} V
 =
 r^\pi+\gamma P^\pi V
 $$
@@ -1737,7 +1737,7 @@ is affine. It has one fixed point, and repeated application moves geometrically 
 The optimality operator
 
 $$
-(T^\star V)(s)
+(\mathcal{T}^{\star} V)(s)
 =
 \max_a
 \left\{
@@ -1749,327 +1749,16 @@ is nonlinear because of the maximum. But it is still a contraction.
 
 Geometrically, each action defines an affine surface. The optimality operator takes the upper envelope of these surfaces.
 
-Thus $$T^\star$$ is piecewise affine:
+Thus $$\mathcal{T}^{\star}$$ is piecewise affine:
 
 - inside one region, action $$a_1$$ is greedy;
 - inside another region, action $$a_2$$ is greedy;
 - at the boundary, multiple actions may be tied.
 
-Value iteration moves through these regions. The greedy action may change along the way. But regardless of these switches, contraction ensures convergence to $$V^\star$$.
+Value iteration moves through these regions. The greedy action may change along the way. But regardless of these switches, contraction ensures convergence to $$V^\star$$. The Bellman optimality operator is nonlinear, but it is still stable because the future-value part is discounted.
 
-This is the key point:
 
-> The Bellman optimality operator is nonlinear, but it is still stable because the future-value part is discounted.
-
----
-
-## 27. Interactive Bellman contraction demo
-
-The following small demo visualizes the contraction idea for a two-state Markov reward process. It repeatedly applies
-
-$$
-V_{k+1}
-=
-r+\gamma PV_k.
-$$
-
-The red point is the current value estimate. The green point is the Bellman fixed point.
-
-<div class="bellman-demo">
-  <div class="bellman-controls">
-    <label>
-      Discount $$\gamma$$:
-      <input id="bellmanGamma" type="range" min="0.05" max="0.98" step="0.01" value="0.75">
-      <span id="bellmanGammaVal">0.75</span>
-    </label>
-
-    <label>
-      Initial $$V_1$$:
-      <input id="bellmanV1" type="range" min="-10" max="10" step="0.5" value="8">
-      <span id="bellmanV1Val">8</span>
-    </label>
-
-    <label>
-      Initial $$V_2$$:
-      <input id="bellmanV2" type="range" min="-10" max="10" step="0.5" value="-8">
-      <span id="bellmanV2Val">-8</span>
-    </label>
-
-    <button id="bellmanReset">Reset</button>
-    <button id="bellmanStep">One Bellman step</button>
-    <button id="bellmanRun">Run</button>
-  </div>
-
-  <canvas id="bellmanCanvas" width="620" height="420"></canvas>
-
-  <div class="bellman-readout">
-    <p><strong>Current iterate:</strong> <span id="bellmanCurrent"></span></p>
-    <p><strong>Fixed point:</strong> <span id="bellmanFixed"></span></p>
-    <p><strong>Error:</strong> <span id="bellmanError"></span></p>
-  </div>
-</div>
-
-<style>
-.bellman-demo {
-  border: 1px solid var(--main-border-color, #ddd);
-  border-radius: 14px;
-  padding: 1rem;
-  margin: 1.5rem 0;
-  background: var(--card-bg, #fff);
-}
-
-.bellman-controls {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.bellman-controls label {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  flex-wrap: wrap;
-}
-
-.bellman-controls input[type="range"] {
-  width: 220px;
-}
-
-.bellman-controls button {
-  max-width: 180px;
-  border: 1px solid var(--main-border-color, #ccc);
-  border-radius: 8px;
-  padding: 0.35rem 0.7rem;
-  background: transparent;
-  cursor: pointer;
-}
-
-#bellmanCanvas {
-  width: 100%;
-  max-width: 720px;
-  height: auto;
-  border: 1px solid var(--main-border-color, #ddd);
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-}
-
-.bellman-readout {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-}
-</style>
-
-<script>
-(function () {
-  const canvas = document.getElementById("bellmanCanvas");
-  if (!canvas) return;
-
-  const ctx = canvas.getContext("2d");
-
-  const gammaSlider = document.getElementById("bellmanGamma");
-  const v1Slider = document.getElementById("bellmanV1");
-  const v2Slider = document.getElementById("bellmanV2");
-
-  const gammaVal = document.getElementById("bellmanGammaVal");
-  const v1Val = document.getElementById("bellmanV1Val");
-  const v2Val = document.getElementById("bellmanV2Val");
-
-  const currentText = document.getElementById("bellmanCurrent");
-  const fixedText = document.getElementById("bellmanFixed");
-  const errorText = document.getElementById("bellmanError");
-
-  const resetBtn = document.getElementById("bellmanReset");
-  const stepBtn = document.getElementById("bellmanStep");
-  const runBtn = document.getElementById("bellmanRun");
-
-  const P = [
-    [0.75, 0.25],
-    [0.35, 0.65]
-  ];
-
-  const r = [2.0, -1.0];
-
-  let gamma = parseFloat(gammaSlider.value);
-  let V = [parseFloat(v1Slider.value), parseFloat(v2Slider.value)];
-  let running = false;
-  let timer = null;
-
-  function solveFixedPoint(g) {
-    const a = 1 - g * P[0][0];
-    const b = -g * P[0][1];
-    const c = -g * P[1][0];
-    const d = 1 - g * P[1][1];
-
-    const det = a * d - b * c;
-
-    const x = (d * r[0] - b * r[1]) / det;
-    const y = (-c * r[0] + a * r[1]) / det;
-
-    return [x, y];
-  }
-
-  function bellmanStep() {
-    V = [
-      r[0] + gamma * (P[0][0] * V[0] + P[0][1] * V[1]),
-      r[1] + gamma * (P[1][0] * V[0] + P[1][1] * V[1])
-    ];
-    draw();
-  }
-
-  function toCanvas(point) {
-    const scale = 18;
-    const cx = canvas.width / 2;
-    const cy = canvas.height / 2;
-
-    return [
-      cx + scale * point[0],
-      cy - scale * point[1]
-    ];
-  }
-
-  function drawAxes() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = "#999";
-
-    ctx.beginPath();
-    ctx.moveTo(0, canvas.height / 2);
-    ctx.lineTo(canvas.width, canvas.height / 2);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.moveTo(canvas.width / 2, 0);
-    ctx.lineTo(canvas.width / 2, canvas.height);
-    ctx.stroke();
-
-    ctx.fillStyle = "#666";
-    ctx.font = "13px sans-serif";
-    ctx.fillText("V(s1)", canvas.width - 55, canvas.height / 2 - 8);
-    ctx.fillText("V(s2)", canvas.width / 2 + 8, 18);
-
-    for (let x = -15; x <= 15; x += 5) {
-      const px = canvas.width / 2 + 18 * x;
-      ctx.beginPath();
-      ctx.moveTo(px, canvas.height / 2 - 4);
-      ctx.lineTo(px, canvas.height / 2 + 4);
-      ctx.stroke();
-      if (x !== 0) ctx.fillText(String(x), px - 7, canvas.height / 2 + 18);
-    }
-
-    for (let y = -10; y <= 10; y += 5) {
-      const py = canvas.height / 2 - 18 * y;
-      ctx.beginPath();
-      ctx.moveTo(canvas.width / 2 - 4, py);
-      ctx.lineTo(canvas.width / 2 + 4, py);
-      ctx.stroke();
-      if (y !== 0) ctx.fillText(String(y), canvas.width / 2 + 8, py + 4);
-    }
-  }
-
-  function drawPoint(point, color, label) {
-    const [x, y] = toCanvas(point);
-    ctx.beginPath();
-    ctx.arc(x, y, 6, 0, 2 * Math.PI);
-    ctx.fillStyle = color;
-    ctx.fill();
-
-    ctx.fillStyle = color;
-    ctx.font = "14px sans-serif";
-    ctx.fillText(label, x + 9, y - 9);
-  }
-
-  function drawArrow(from, to) {
-    const [x1, y1] = toCanvas(from);
-    const [x2, y2] = toCanvas(to);
-
-    ctx.strokeStyle = "#777";
-    ctx.lineWidth = 2;
-
-    ctx.beginPath();
-    ctx.moveTo(x1, y1);
-    ctx.lineTo(x2, y2);
-    ctx.stroke();
-
-    const angle = Math.atan2(y2 - y1, x2 - x1);
-    const len = 9;
-
-    ctx.beginPath();
-    ctx.moveTo(x2, y2);
-    ctx.lineTo(x2 - len * Math.cos(angle - Math.PI / 6), y2 - len * Math.sin(angle - Math.PI / 6));
-    ctx.lineTo(x2 - len * Math.cos(angle + Math.PI / 6), y2 - len * Math.sin(angle + Math.PI / 6));
-    ctx.closePath();
-    ctx.fillStyle = "#777";
-    ctx.fill();
-  }
-
-  function draw() {
-    gamma = parseFloat(gammaSlider.value);
-
-    gammaVal.textContent = gamma.toFixed(2);
-    v1Val.textContent = v1Slider.value;
-    v2Val.textContent = v2Slider.value;
-
-    const fixed = solveFixedPoint(gamma);
-
-    const next = [
-      r[0] + gamma * (P[0][0] * V[0] + P[0][1] * V[1]),
-      r[1] + gamma * (P[1][0] * V[0] + P[1][1] * V[1])
-    ];
-
-    drawAxes();
-    drawArrow(V, next);
-    drawPoint(fixed, "#1b8a3a", "fixed point");
-    drawPoint(V, "#c0392b", "current");
-
-    const err = Math.max(Math.abs(V[0] - fixed[0]), Math.abs(V[1] - fixed[1]));
-
-    currentText.textContent = "(" + V[0].toFixed(3) + ", " + V[1].toFixed(3) + ")";
-    fixedText.textContent = "(" + fixed[0].toFixed(3) + ", " + fixed[1].toFixed(3) + ")";
-    errorText.textContent = err.toFixed(4);
-  }
-
-  function reset() {
-    V = [parseFloat(v1Slider.value), parseFloat(v2Slider.value)];
-    draw();
-  }
-
-  resetBtn.addEventListener("click", function () {
-    running = false;
-    if (timer) clearInterval(timer);
-    runBtn.textContent = "Run";
-    reset();
-  });
-
-  stepBtn.addEventListener("click", function () {
-    bellmanStep();
-  });
-
-  runBtn.addEventListener("click", function () {
-    running = !running;
-
-    if (running) {
-      runBtn.textContent = "Pause";
-      timer = setInterval(bellmanStep, 450);
-    } else {
-      runBtn.textContent = "Run";
-      if (timer) clearInterval(timer);
-    }
-  });
-
-  gammaSlider.addEventListener("input", draw);
-  v1Slider.addEventListener("input", reset);
-  v2Slider.addEventListener("input", reset);
-
-  reset();
-})();
-</script>
-
----
-
-## 28. Why Bellman contraction matters in RL theory
+## 27. Why Bellman contraction matters in RL theory
 
 The contraction property is not just a clean mathematical fact. It is the reason many RL algorithms are stable.
 
@@ -2109,20 +1798,7 @@ appear throughout RL theory.
 
 The closer $$\gamma$$ is to one, the weaker the contraction becomes. Long-horizon problems are hard precisely because Bellman errors decay slowly.
 
----
-
-## 29. Summary table
-
-| Object                   | Definition                                                                    | Role                        | Structure                              | Fixed point |
-| ------------------------ | ----------------------------------------------------------------------------- | --------------------------- | -------------------------------------- | ----------- |
-| Policy Bellman operator  | $$T^\pi V=r^\pi+\gamma P^\pi V$$                                              | Evaluates a fixed policy    | Affine contraction                     | $$V^\pi$$   |
-| Optimal Bellman operator | $$(T^\star V)(s)=\max_a\{r(s,a)+\gamma P_aV\}$$                               | Optimizes over actions      | Nonlinear piecewise-affine contraction | $$V^\star$$ |
-| Policy Q-operator        | $$(T^\pi Q)(s,a)=r(s,a)+\gamma\mathbb{E}_{s'}\mathbb{E}_{a'\sim\pi}Q(s',a')$$ | Evaluates policy in Q-space | Affine contraction                     | $$Q^\pi$$   |
-| Optimal Q-operator       | $$(T^\star Q)(s,a)=r(s,a)+\gamma\mathbb{E}_{s'}\max_{a'}Q(s',a')$$            | Basis of Q-learning         | Nonlinear contraction                  | $$Q^\star$$ |
-
----
-
-## 30. Final takeaway
+## 28. Final takeaway
 
 The Bellman equation is best understood as a fixed-point equation.
 
@@ -2131,13 +1807,13 @@ For a fixed policy,
 $$
 V^\pi
 =
-T^\pi V^\pi,
+\mathcal{T}^{\pi} V^\pi,
 $$
 
 where
 
 $$
-T^\pi V
+\mathcal{T}^{\pi} V
 =
 r^\pi+\gamma P^\pi V.
 $$
@@ -2149,13 +1825,13 @@ For optimal control,
 $$
 V^\star
 =
-T^\star V^\star,
+\mathcal{T}^{\star} V^\star,
 $$
 
 where
 
 $$
-(T^\star V)(s)
+(\mathcal{T}^{\star} V)(s)
 =
 \max_a
 \left\{

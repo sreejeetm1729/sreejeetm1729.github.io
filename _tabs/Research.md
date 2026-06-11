@@ -385,10 +385,12 @@ statistical benefits of collaboration with substantially reduced communication.
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <h2>[<strong style="color:#208894;">Theme 4</strong>] Byzantine-Robust Federated Representation Learning</h2>
 This project studies how a collection of heterogeneous reinforcement learning agents can collaboratively learn a shared value-function representation when some participating clients are adversarial. Each honest agent interacts with its own Markov decision process under a fixed policy, generating temporally dependent data through a local Markov chain. The agents may have different transition kernels, reward functions, policies, and value functions, so forcing all clients to learn a single common value parameter can introduce a persistent heterogeneity bias.
-
+<p>
 The key idea is to separate what is shared from what is personalized. The value functions of the honest agents are modeled through a common low-dimensional representation, while each agent has its own local parameter vector. Thus, the shared representation captures common structure across agents, while the personalized heads absorb agent-specific MDP heterogeneity.
-
+</p>
+<p>
 The central challenge is that the learning process must be reliable under several simultaneous difficulties: Markovian sampling noise, heterogeneous MDPs, two-level learning of representations and local TD parameters, and Byzantine clients that may send arbitrary updates to the server. Unlike reward-level corruption models, the adversary here acts at the client level, directly corrupting the information used for federated aggregation.
 The proposed direction is to combine local temporal-difference learning with robust server-side aggregation. Honest agents perform local TD updates using their Markovian trajectories and send representation updates to the server. The server then updates the shared representation using a Byzantine-resilient aggregation rule, such as coordinate-wise median, trimmed mean, geometric median, or median-of-means aggregation. The main theoretical goal is to characterize finite-time convergence for shared-representation TD learning under Byzantine attacks. In particular, the project asks whether one can recover the benefits of federated representation learning—such as linear speedup with the number of honest agents—while paying only the unavoidable statistical price for adversarial corruption.
+</p>
 </div>
 </div>

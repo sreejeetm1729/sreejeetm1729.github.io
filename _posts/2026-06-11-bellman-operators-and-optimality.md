@@ -87,7 +87,7 @@ $$
 and the policy-induced transition matrix
 
 $$
-P^\pi(s,s')
+\mathcal{P}^{\pi}(s,s')
 =
 \sum_{a\in\mathcal{A}}
 \pi(a\mid s)P(s'\mid s,a).
@@ -108,7 +108,7 @@ r^\pi(s)
 +
 \gamma
 \sum_{s'\in\mathcal{S}}
-P^\pi(s,s')V(s').
+\mathcal{P}^{\pi}(s,s')V(s').
 $$
 
 In vector form,
@@ -116,10 +116,10 @@ In vector form,
 $$
 \mathcal{T}^{\pi} V
 =
-r^\pi+\gamma P^\pi V.
+r^\pi+\gamma \mathcal{P}^{\pi} V.
 $$
 
-Thus $$\mathcal{T}^{\pi}$$ is an affine operator. It first averages the future value using the transition matrix $$P^\pi$$, then discounts it by $$\gamma$$, and finally shifts it by the reward vector $$r^\pi$$.
+Thus $$\mathcal{T}^{\pi}$$ is an affine operator. It first averages the future value using the transition matrix $$\mathcal{P}^{\pi}$$, then discounts it by $$\gamma$$, and finally shifts it by the reward vector $$r^\pi$$.
 
 The value function of policy $$\pi$$ satisfies the Bellman equation
 
@@ -134,13 +134,13 @@ Equivalently,
 $$
 V^\pi
 =
-r^\pi+\gamma P^\pi V^\pi.
+r^\pi+\gamma \mathcal{P}^{\pi} V^\pi.
 $$
 
 Rearranging gives
 
 $$
-(I-\gamma P^\pi)V^\pi
+(I-\gamma \mathcal{P}^{\pi})V^\pi
 =
 r^\pi.
 $$
@@ -150,10 +150,10 @@ Therefore,
 $$
 V^\pi
 =
-(I-\gamma P^\pi)^{-1}r^\pi.
+(I-\gamma \mathcal{P}^{\pi})^{-1}r^\pi.
 $$
 
-The inverse exists because $$\gamma<1$$ and $$P^\pi$$ is stochastic.
+The inverse exists because $$\gamma<1$$ and $$\mathcal{P}^{\pi}$$ is stochastic.
 
 ---
 
@@ -164,15 +164,15 @@ The equation
 $$
 V^\pi
 =
-(I-\gamma P^\pi)^{-1}r^\pi
+(I-\gamma \mathcal{P}^{\pi})^{-1}r^\pi
 $$
 
 has a useful expansion. Since $$\gamma<1$$,
 
 $$
-(I-\gamma P^\pi)^{-1}
+(I-\gamma \mathcal{P}^{\pi})^{-1}
 =
-\sum_{t=0}^{\infty}\gamma^t(P^\pi)^t.
+\sum_{t=0}^{\infty}\gamma^t(\mathcal{P}^{\pi})^t.
 $$
 
 Therefore,
@@ -181,7 +181,7 @@ $$
 V^\pi
 =
 \sum_{t=0}^{\infty}
-\gamma^t(P^\pi)^t r^\pi.
+\gamma^t(\mathcal{P}^{\pi})^t r^\pi.
 $$
 
 This expression has a direct interpretation.
@@ -195,13 +195,13 @@ $$
 The second term is the one-step-ahead expected reward:
 
 $$
-\gamma P^\pi r^\pi.
+\gamma \mathcal{P}^{\pi} r^\pi.
 $$
 
 The third term is the two-step-ahead expected reward:
 
 $$
-\gamma^2(P^\pi)^2r^\pi.
+\gamma^2(\mathcal{P}^{\pi})^2r^\pi.
 $$
 
 Thus the Bellman equation is a compact fixed-point representation of the infinite discounted return.
@@ -243,10 +243,10 @@ The policy Bellman operator
 $$
 \mathcal{T}^{\pi} V
 =
-r^\pi+\gamma P^\pi V
+r^\pi+\gamma \mathcal{P}^{\pi} V
 $$
 
-is an affine map. It takes a value vector, averages it through $$P^\pi$$, shrinks the future part by $$\gamma$$, and translates it by $$r^\pi$$.
+is an affine map. It takes a value vector, averages it through $$\mathcal{P}^{\pi}$$, shrinks the future part by $$\gamma$$, and translates it by $$r^\pi$$.
 
 Its fixed point is the policy value function $$V^\pi$$.
 
@@ -275,7 +275,7 @@ $$
 r^\pi(s)
 +
 \gamma
-\sum_{s'}P^\pi(s,s')V(s'),
+\sum_{s'}\mathcal{P}^{\pi}(s,s')V(s'),
 $$
 
 and
@@ -286,7 +286,7 @@ $$
 r^\pi(s)
 +
 \gamma
-\sum_{s'}P^\pi(s,s')W(s').
+\sum_{s'}\mathcal{P}^{\pi}(s,s')W(s').
 $$
 
 Subtracting,
@@ -295,7 +295,7 @@ $$
 (\mathcal{T}^{\pi} V)(s)-(\mathcal{T}^{\pi} W)(s)
 =
 \gamma
-\sum_{s'}P^\pi(s,s')
+\sum_{s'}\mathcal{P}^{\pi}(s,s')
 \bigl(V(s')-W(s')\bigr).
 $$
 
@@ -307,7 +307,7 @@ $$
 \right|
 \le
 \gamma
-\sum_{s'}P^\pi(s,s')
+\sum_{s'}\mathcal{P}^{\pi}(s,s')
 |V(s')-W(s')|.
 $$
 
@@ -328,13 +328,13 @@ $$
 \le
 \gamma
 \|V-W\|_\infty
-\sum_{s'}P^\pi(s,s').
+\sum_{s'}\mathcal{P}^{\pi}(s,s').
 $$
 
-Because $$P^\pi$$ is stochastic,
+Because $$\mathcal{P}^{\pi}$$ is stochastic,
 
 $$
-\sum_{s'}P^\pi(s,s')=1.
+\sum_{s'}\mathcal{P}^{\pi}(s,s')=1.
 $$
 
 Thus
@@ -386,7 +386,7 @@ Using the affine form,
 $$
 \mathcal{T}^{\pi} V - \mathcal{T}^{\pi} V^\pi
 =
-\gamma P^\pi(V-V^\pi).
+\gamma \mathcal{P}^{\pi}(V-V^\pi).
 $$
 
 Therefore the error evolves as
@@ -394,7 +394,7 @@ Therefore the error evolves as
 $$
 e^+
 =
-\gamma P^\pi e,
+\gamma \mathcal{P}^{\pi} e,
 $$
 
 where
@@ -403,7 +403,7 @@ $$
 e=V-V^\pi.
 $$
 
-The matrix $$P^\pi$$ averages the error across next states. The discount factor $$\gamma$$ shrinks it.
+The matrix $$\mathcal{P}^{\pi}$$ averages the error across next states. The discount factor $$\gamma$$ shrinks it.
 
 So a Bellman update has a simple geometric meaning:
 
@@ -627,7 +627,7 @@ $$
 r^\pi(s)
 +
 \gamma
-\sum_{s'}P^\pi(s,s')V(s'),
+\sum_{s'}\mathcal{P}^{\pi}(s,s')V(s'),
 $$
 
 and
@@ -638,15 +638,15 @@ $$
 r^\pi(s)
 +
 \gamma
-\sum_{s'}P^\pi(s,s')W(s').
+\sum_{s'}\mathcal{P}^{\pi}(s,s')W(s').
 $$
 
-Since $$V(s')\le W(s')$$ for every $$s'$$ and $$P^\pi(s,s')\ge 0$$,
+Since $$V(s')\le W(s')$$ for every $$s'$$ and $$\mathcal{P}^{\pi}(s,s')\ge 0$$,
 
 $$
-\sum_{s'}P^\pi(s,s')V(s')
+\sum_{s'}\mathcal{P}^{\pi}(s,s')V(s')
 \le
-\sum_{s'}P^\pi(s,s')W(s').
+\sum_{s'}\mathcal{P}^{\pi}(s,s')W(s').
 $$
 
 Therefore,
@@ -685,7 +685,7 @@ $$
 r^\pi(s)
 +
 \gamma
-\sum_{s'}P^\pi(s,s')
+\sum_{s'}\mathcal{P}^{\pi}(s,s')
 \bigl(V(s')+c\bigr).
 $$
 
@@ -697,16 +697,16 @@ $$
 r^\pi(s)
 +
 \gamma
-\sum_{s'}P^\pi(s,s')V(s')
+\sum_{s'}\mathcal{P}^{\pi}(s,s')V(s')
 +
 \gamma c
-\sum_{s'}P^\pi(s,s').
+\sum_{s'}\mathcal{P}^{\pi}(s,s').
 $$
 
-Since $$P^\pi$$ is stochastic,
+Since $$\mathcal{P}^{\pi}$$ is stochastic,
 
 $$
-\sum_{s'}P^\pi(s,s')=1.
+\sum_{s'}\mathcal{P}^{\pi}(s,s')=1.
 $$
 
 Thus
@@ -801,7 +801,7 @@ The operator $$\mathcal{T}^{\pi}$$ is affine:
 $$
 \mathcal{T}^{\pi} V
 =
-r^\pi+\gamma P^\pi V.
+r^\pi+\gamma \mathcal{P}^{\pi} V.
 $$
 
 The operator $$\mathcal{T}^{\star}$$ is generally nonlinear because of the maximum:
@@ -1729,7 +1729,7 @@ The policy operator
 $$
 \mathcal{T}^{\pi} V
 =
-r^\pi+\gamma P^\pi V
+r^\pi+\gamma \mathcal{P}^{\pi} V
 $$
 
 is affine. It has one fixed point, and repeated application moves geometrically toward that point.
@@ -1815,7 +1815,7 @@ where
 $$
 \mathcal{T}^{\pi} V
 =
-r^\pi+\gamma P^\pi V.
+r^\pi+\gamma \mathcal{P}^{\pi} V.
 $$
 
 This operator is affine, monotone, and a $$\gamma$$-contraction. Repeated application converges geometrically to $$V^\pi$$.

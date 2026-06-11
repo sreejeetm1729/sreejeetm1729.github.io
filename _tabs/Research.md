@@ -239,7 +239,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_1\)]</span>
+    <span style="color:#a5f3fc;">[\(C_3\)]</span>
     <strong>Adversarially-Robust TD-Learning with Markovian Data</strong>
     <span style="color:#d8a7a7;">
       (AISTATS 2025)
@@ -365,7 +365,7 @@ statistical benefits of collaboration with substantially reduced communication.
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_1\)]</span>
+    <span style="color:#a5f3fc;">[\(C_4\)]</span>
     <strong>Robust Federated Q-Learning with Almost No Communication</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)
@@ -373,7 +373,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <a href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC26_DistRobustQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_2\)]</span>
+    <span style="color:#a5f3fc;">[\(C_5\)]</span>
     <strong>Variance-Reduced Q-Learning under Static and Time-Varying Networks</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)

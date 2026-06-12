@@ -2,6 +2,7 @@
 title: "Linear TD vs Neural TD: A Tale of Two Geometries"
 date: 2026-06-12
 categories: [rl-blogs]
+rl_section: research-papers
 tags: [reinforcement-learning, temporal-difference-learning, linear-td, neural-td, function-approximation, bellman-operators, mspbe]
 math: true
 ---

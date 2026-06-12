@@ -1,5 +1,5 @@
 ---
-title: "Turbo the Snail as a Robust POMDP"
+title: "From Snail Trails to Robust POMDPs: Safe Learning with Hidden Monsters"
 date: 2026-06-11
 categories: [rl-blogs]
 rl_section: rl-fundamentals

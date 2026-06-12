@@ -1,6 +1,6 @@
 ---
 title: Bellman Operators and Bellman Optimality
-date: 2026-06-11
+date: 2026-06-10
 categories: [rl-blogs]
 rl_section: rl-fundamentals
 tags: [reinforcement-learning, bellman-equation, bellman-operator, dynamic-programming, value-iteration, policy-iteration]

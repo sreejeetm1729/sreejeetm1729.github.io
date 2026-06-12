@@ -55,7 +55,7 @@ Here $\mu$ is the stationary distribution of the Markov chain over state-action 
 For a candidate action-value function $f:\mathcal{X}\to\mathbb{R}$, define the Bellman operator
 
 $$
-(T^\pi f)(x)
+(\mathcal{T}^{\pi} f)(x)
 :=
 \mathbb{E}\bigl[r+\gamma f(x')\mid x\bigr],
 \qquad
@@ -121,7 +121,7 @@ The projected Bellman equation is
 $$
 f^\star
 =
-\Pi_{\mathcal{F}}T^\pi f^\star.
+\Pi_{\mathcal{F}}\mathcal{T}^{\pi} f^\star.
 $$
 
 The corresponding mean-squared projected Bellman error is
@@ -129,7 +129,7 @@ The corresponding mean-squared projected Bellman error is
 $$
 \operatorname{MSPBE}_{\mathcal{F}}(f)
 :=
-\lVert f-\Pi_{\mathcal{F}}T^\pi f\rVert_\mu^2.
+\lVert f-\Pi_{\mathcal{F}}\mathcal{T}^{\pi} f\rVert_\mu^2.
 $$
 
 This is the first key point:
@@ -148,7 +148,7 @@ $$
 Therefore a projected Bellman fixed point satisfies
 
 $$
-\langle f^\star-T^\pi f^\star, f-f^\star\rangle_\mu
+\langle f^\star-\mathcal{T}^{\pi} f^\star, f-f^\star\rangle_\mu
 \ge 0,
 \qquad
 \forall f\in\mathcal{F}.
@@ -245,20 +245,20 @@ Equivalently,
 $$
 Q_{\theta^\star}
 =
-\Pi_{\mathcal{F}_{\operatorname{lin}}}T^\pi Q_{\theta^\star}.
+\Pi_{\mathcal{F}_{\operatorname{lin}}}\mathcal{T}^{\pi} Q_{\theta^\star}.
 $$
 
-To see this, the normal equation for projecting $T^\pi Q_\theta$ onto the linear span of $\phi$ is
+To see this, the normal equation for projecting $\mathcal{T}^{\pi} Q_\theta$ onto the linear span of $\phi$ is
 
 $$
-\mathbb{E}\Bigl[\phi(x)\bigl(\phi(x)^{\texttt{T}}\theta-(T^\pi Q_\theta)(x)\bigr)\Bigr]
+\mathbb{E}\Bigl[\phi(x)\bigl(\phi(x)^{\texttt{T}}\theta-(\mathcal{T}^{\pi} Q_\theta)(x)\bigr)\Bigr]
 =0.
 $$
 
 But
 
 $$
-(T^\pi Q_\theta)(x)
+(\mathcal{T}^{\pi} Q_\theta)(x)
 =
 \mathbb{E}\bigl[r+\gamma\phi(x')^{\texttt{T}}\theta\mid x\bigr],
 $$
@@ -534,7 +534,7 @@ In the clean population form, it satisfies the variational inequality
 
 $$
 \left\langle
-\widehat Q_0(\cdot;W^\star)-T^\pi\widehat Q_0(\cdot;W^\star),
+\widehat Q_0(\cdot;W^\star)-\mathcal{T}^{\pi}\widehat Q_0(\cdot;W^\star),
 \widehat Q_0(\cdot;W)-\widehat Q_0(\cdot;W^\star)
 \right\rangle_\mu
 \ge 0
@@ -548,7 +548,7 @@ $$
 \widehat Q_0(\cdot;W^\star)
 =
 \Pi_{\mathcal{F}_{B,m}}
-T^\pi \widehat Q_0(\cdot;W^\star).
+\mathcal{T}^{\pi} \widehat Q_0(\cdot;W^\star).
 $$
 
 Thus the target of the analysis is the projected Bellman fixed point over $\mathcal{F}_{B,m}$, not an arbitrary nonlinear neural optimum.
@@ -607,7 +607,7 @@ $$
 \langle \bar g_0(W),W-W^\star\rangle
 =
 \left\langle
-\widehat Q_0(\cdot;W)-T^\pi\widehat Q_0(\cdot;W),
+\widehat Q_0(\cdot;W)-\mathcal{T}^{\pi}\widehat Q_0(\cdot;W),
  h_W
 \right\rangle_\mu.
 $$
@@ -617,7 +617,7 @@ Add and subtract the residual at $W^\star$:
 $$
 \begin{aligned}
 &\left\langle
-\widehat Q_0(W)-T^\pi\widehat Q_0(W),
+\widehat Q_0(W)-\mathcal{T}^{\pi}\widehat Q_0(W),
 \widehat Q_0(W)-\widehat Q_0(W^\star)
 \right\rangle_\mu \\
 &=
@@ -629,7 +629,7 @@ $$
 \right\rangle_\mu \\
 &\quad+
 \left\langle
-\widehat Q_0(W^\star)-T^\pi\widehat Q_0(W^\star),
+\widehat Q_0(W^\star)-\mathcal{T}^{\pi}\widehat Q_0(W^\star),
  h_W
 \right\rangle_\mu.
 \end{aligned}

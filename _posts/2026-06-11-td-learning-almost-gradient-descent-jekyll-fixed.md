@@ -88,7 +88,7 @@ V_\theta(s)
 \theta\in \mathbb R^d.
 $$
 
-Let $\Phi\in \mathbb R^{|\mathcal S|\times d}$ be the feature matrix whose row corresponding to state $s$ is $\phi(s)^{\texttt{T}}$. Then the vector of approximate values is
+Let $\Phi\in \mathbb R^{\lvert\mathcal S\rvert\times d}$ be the feature matrix whose row corresponding to state $s$ is $\phi(s)^{\texttt{T}}$. Then the vector of approximate values is
 
 $$
 V_\theta = \Phi \theta.
@@ -170,7 +170,7 @@ A TD fixed point is a feature-space value function that remains unchanged under 
 
 Geometrically, TD is trying to find the intersection between the feature space and the Bellman-updated-and-projected feature space.
 
-The projection equation also implies a useful orthogonality condition. Since $\Phi\theta^*$ is the $D$-projection of $\mathcal{T}(\Phi\theta^*)$ onto the feature space, the residual
+The projection equation also implies a useful orthogonality condition. Since $$\Phi\theta^*$$ is the $$D$$-projection of $$\mathcal{T}(\Phi\theta^*)$$ onto the feature space, the residual
 
 $$
 \mathcal{T}(\Phi\theta^*)-\Phi\theta^*

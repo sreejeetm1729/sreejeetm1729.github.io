@@ -53,7 +53,7 @@ $$
 Equivalently, if we define the Bellman operator
 
 $$
-T V
+\mathcal{T} V
 =
 r+\gamma P V,
 $$
@@ -61,7 +61,7 @@ $$
 then
 
 $$
-V^\mu = T V^\mu.
+V^\mu = \mathcal{T} V^\mu.
 $$
 
 The Bellman operator is a $\gamma$-contraction in appropriate norms. In the tabular setting, this already gives a clean way to understand value iteration and TD-style methods.
@@ -83,12 +83,12 @@ We approximate the value function by
 $$
 V_\theta(s)
 =
-\phi(s)^\top \theta,
+\phi(s)^{\texttt{T}} \theta,
 \qquad
 \theta\in \mathbb R^d.
 $$
 
-Let $\Phi\in \mathbb R^{|\mathcal S|\times d}$ be the feature matrix whose row corresponding to state $s$ is $\phi(s)^\top$. Then the vector of approximate values is
+Let $\Phi\in \mathbb R^{|\mathcal S|\times d}$ be the feature matrix whose row corresponding to state $s$ is $\phi(s)^{\texttt{T}}$. Then the vector of approximate values is
 
 $$
 V_\theta = \Phi \theta.
@@ -105,7 +105,7 @@ The natural prediction norm is the stationary-distribution weighted norm
 $$
 \|V\|_D^2
 =
-V^\top D V
+V^{\texttt{T}} D V
 =
 \sum_{s\in \mathcal S} \pi(s) V(s)^2.
 $$
@@ -133,7 +133,7 @@ The central object in linear TD theory is not the true Bellman fixed point $V^\m
 $$
 \Phi \theta^*
 =
-\Pi_D T(\Phi \theta^*).
+\Pi_D \mathcal{T}(\Phi \theta^*).
 $$
 
 This is the value-function approximation that is invariant under applying the Bellman operator and then projecting back into the feature space.
@@ -147,7 +147,7 @@ The equation
 $$
 \Phi\theta^*
 =
-\Pi_D T(\Phi\theta^*)
+\Pi_D \mathcal{T}(\Phi\theta^*)
 $$
 
 has a simple interpretation.
@@ -155,7 +155,7 @@ has a simple interpretation.
 Start with an approximate value function $\Phi\theta$. Apply the Bellman operator:
 
 $$
-T(\Phi\theta)
+\mathcal{T}(\Phi\theta)
 =
 r+\gamma P\Phi\theta.
 $$
@@ -163,25 +163,25 @@ $$
 This new vector usually does not lie in the span of the features. So we project it back:
 
 $$
-\Pi_D T(\Phi\theta).
+\Pi_D \mathcal{T}(\Phi\theta).
 $$
 
 A TD fixed point is a feature-space value function that remains unchanged under this operation.
 
 Geometrically, TD is trying to find the intersection between the feature space and the Bellman-updated-and-projected feature space.
 
-The projection equation also implies a useful orthogonality condition. Since $\Phi\theta^*$ is the $D$-projection of $T(\Phi\theta^*)$ onto the feature space, the residual
+The projection equation also implies a useful orthogonality condition. Since $\Phi\theta^*$ is the $D$-projection of $\mathcal{T}(\Phi\theta^*)$ onto the feature space, the residual
 
 $$
-T(\Phi\theta^*)-\Phi\theta^*
+\mathcal{T}(\Phi\theta^*)-\Phi\theta^*
 $$
 
 is $D$-orthogonal to every vector in the feature space. Therefore, for every $\theta$,
 
 $$
-(\Phi\theta-\Phi\theta^*)^\top D
+(\Phi\theta-\Phi\theta^*)^{\texttt{T}} D
 \left(
-T(\Phi\theta^*)-\Phi\theta^*
+\mathcal{T}(\Phi\theta^*)-\Phi\theta^*
 \right)
 =
 0.
@@ -206,9 +206,9 @@ $$
 =
 r_t
 +
-\gamma \phi(s_t')^\top \theta_t
+\gamma \phi(s_t')^{\texttt{T}} \theta_t
 -
-\phi(s_t)^\top \theta_t.
+\phi(s_t)^{\texttt{T}} \theta_t.
 $$
 
 Then it updates
@@ -240,7 +240,7 @@ g_t(\theta)
 =
 \phi(s_t)
 \left(
-r_t+\gamma \phi(s_t')^\top\theta-\phi(s_t)^\top\theta
+r_t+\gamma \phi(s_t')^{\texttt{T}}\theta-\phi(s_t)^{\texttt{T}}\theta
 \right).
 $$
 
@@ -257,9 +257,9 @@ A direct calculation gives
 $$
 \bar g(\theta)
 =
-\Phi^\top D
+\Phi^{\texttt{T}} D
 \left(
-T(\Phi\theta)-\Phi\theta
+\mathcal{T}(\Phi\theta)-\Phi\theta
 \right).
 $$
 
@@ -276,11 +276,11 @@ where
 $$
 A
 =
-\Phi^\top D(I-\gamma P)\Phi,
+\Phi^{\texttt{T}} D(I-\gamma P)\Phi,
 \qquad
 b
 =
-\Phi^\top D r.
+\Phi^{\texttt{T}} D r.
 $$
 
 The TD fixed point satisfies
@@ -300,7 +300,7 @@ At first glance, this looks exactly like stochastic approximation for solving a 
 The matrix
 
 $$
-A=\Phi^\top D(I-\gamma P)\Phi
+A=\Phi^{\texttt{T}} D(I-\gamma P)\Phi
 $$
 
 is generally **not symmetric**. Therefore the update
@@ -334,7 +334,7 @@ The point of the paper is that, despite this, TD has enough of the same geometry
 For gradient descent on a convex function $f$, the expected update direction points toward the minimizer. In a strongly convex quadratic, one has something like
 
 $$
-(\theta^*-\theta)^\top (-\nabla f(\theta))
+(\theta^*-\theta)^{\texttt{T}} (-\nabla f(\theta))
 \ge
 c\|\theta-\theta^*\|^2.
 $$
@@ -350,7 +350,7 @@ Surprisingly, the answer is yes, but the cleanest alignment is not in parameter 
 The central inequality is
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 \ge
 (1-\gamma)
 \|V_{\theta^*}-V_\theta\|_D^2.
@@ -377,34 +377,34 @@ $$
 Then
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 =
-(\theta^*-\theta)^\top
-\Phi^\top D
+(\theta^*-\theta)^{\texttt{T}}
+\Phi^{\texttt{T}} D
 \left(
-T V_\theta - V_\theta
+\mathcal{T} V_\theta - V_\theta
 \right).
 $$
 
 Since $e=\Phi(\theta^*-\theta)$, this becomes
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 =
-e^\top D
+e^{\texttt{T}} D
 \left(
-T V_\theta - V_\theta
+\mathcal{T} V_\theta - V_\theta
 \right).
 $$
 
-Now add and subtract $T V_{\theta^*}$ and $V_{\theta^*}$:
+Now add and subtract $\mathcal{T} V_{\theta^*}$ and $V_{\theta^*}$:
 
 $$
-T V_\theta - V_\theta
+\mathcal{T} V_\theta - V_\theta
 =
-\left(TV_\theta-TV_{\theta^*}\right)
+\left(\mathcal{T}V_\theta-\mathcal{T}V_{\theta^*}\right)
 +
-\left(TV_{\theta^*}-V_{\theta^*}\right)
+\left(\mathcal{T}V_{\theta^*}-V_{\theta^*}\right)
 +
 \left(V_{\theta^*}-V_\theta\right).
 $$
@@ -412,25 +412,25 @@ $$
 Therefore,
 
 $$
-e^\top D(TV_\theta - V_\theta)
+e^{\texttt{T}} D(\mathcal{T}V_\theta - V_\theta)
 =
-e^\top D(TV_\theta-TV_{\theta^*})
+e^{\texttt{T}} D(\mathcal{T}V_\theta-\mathcal{T}V_{\theta^*})
 +
-e^\top D(TV_{\theta^*}-V_{\theta^*})
+e^{\texttt{T}} D(\mathcal{T}V_{\theta^*}-V_{\theta^*})
 +
-e^\top D e.
+e^{\texttt{T}} D e.
 $$
 
 The middle term vanishes by the projected Bellman orthogonality:
 
 $$
-e^\top D(TV_{\theta^*}-V_{\theta^*})=0.
+e^{\texttt{T}} D(\mathcal{T}V_{\theta^*}-V_{\theta^*})=0.
 $$
 
 Also,
 
 $$
-e^\top D e
+e^{\texttt{T}} D e
 =
 \|e\|_D^2.
 $$
@@ -438,7 +438,7 @@ $$
 Since
 
 $$
-TV_\theta-TV_{\theta^*}
+\mathcal{T}V_\theta-\mathcal{T}V_{\theta^*}
 =
 \gamma P(V_\theta-V_{\theta^*})
 =
@@ -448,19 +448,19 @@ $$
 we get
 
 $$
-e^\top D(TV_\theta-TV_{\theta^*})
+e^{\texttt{T}} D(\mathcal{T}V_\theta-\mathcal{T}V_{\theta^*})
 =
--\gamma e^\top D P e.
+-\gamma e^{\texttt{T}} D P e.
 $$
 
 Hence
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 =
 \|e\|_D^2
 -
-\gamma e^\top D P e.
+\gamma e^{\texttt{T}} D P e.
 $$
 
 Now use the fact that $P$ is Markov and $\pi$ is stationary. By Jensen's inequality,
@@ -474,7 +474,7 @@ $$
 Therefore,
 
 $$
-e^\top D P e
+e^{\texttt{T}} D P e
 \le
 \|e\|_D\|Pe\|_D
 \le
@@ -484,7 +484,7 @@ $$
 Thus,
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 \ge
 (1-\gamma)\|e\|_D^2.
 $$
@@ -492,7 +492,7 @@ $$
 Since $e=V_{\theta^*}-V_\theta$, we obtain
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 \ge
 (1-\gamma)
 \|V_{\theta^*}-V_\theta\|_D^2.
@@ -576,7 +576,7 @@ $$
 =
 \|\Delta_t\|_2^2
 -
-2\alpha \Delta_t^\top \bar g(\theta_t)
+2\alpha \Delta_t^{\texttt{T}} \bar g(\theta_t)
 +
 \alpha^2\|\bar g(\theta_t)\|_2^2.
 $$
@@ -584,7 +584,7 @@ $$
 Now use the two key inequalities:
 
 $$
-\Delta_t^\top \bar g(\theta_t)
+\Delta_t^{\texttt{T}} \bar g(\theta_t)
 \ge
 (1-\gamma)
 \|V_{\theta^*}-V_{\theta_t}\|_D^2
@@ -701,7 +701,7 @@ Define the feature covariance matrix
 $$
 \Sigma
 =
-\Phi^\top D\Phi.
+\Phi^{\texttt{T}} D\Phi.
 $$
 
 Then
@@ -709,7 +709,7 @@ Then
 $$
 \|V_\theta-V_{\theta^*}\|_D^2
 =
-(\theta-\theta^*)^\top \Sigma(\theta-\theta^*).
+(\theta-\theta^*)^{\texttt{T}} \Sigma(\theta-\theta^*).
 $$
 
 If the minimum eigenvalue of $\Sigma$ is
@@ -761,7 +761,7 @@ g_t(\theta_t)
 =
 \phi(s_t)
 \left(
-r_t+\gamma\phi(s_t')^\top\theta_t-\phi(s_t)^\top\theta_t
+r_t+\gamma\phi(s_t')^{\texttt{T}}\theta_t-\phi(s_t)^{\texttt{T}}\theta_t
 \right).
 $$
 
@@ -808,7 +808,7 @@ $$
 =
 \|\theta^*-\theta_t\|_2^2
 -
-2\alpha_t(\theta^*-\theta_t)^\top g_t(\theta_t)
+2\alpha_t(\theta^*-\theta_t)^{\texttt{T}} g_t(\theta_t)
 +
 \alpha_t^2\|g_t(\theta_t)\|_2^2.
 $$
@@ -1167,15 +1167,15 @@ TD instead solves
 $$
 \Phi\theta^*
 =
-\Pi_D T(\Phi\theta^*).
+\Pi_D \mathcal{T}(\Phi\theta^*).
 $$
 
 How far can $\Phi\theta^*$ be from $V^\mu$?
 
-Because $T$ is a $\gamma$-contraction and $\Pi_D$ is non-expansive in the $D$-norm, the projected Bellman operator
+Because $\mathcal{T}$ is a $\gamma$-contraction and $\Pi_D$ is non-expansive in the $D$-norm, the projected Bellman operator
 
 $$
-\Pi_D T
+\Pi_D \mathcal{T}
 $$
 
 is also a $\gamma$-contraction in the $D$-norm. This implies
@@ -1238,9 +1238,9 @@ $$
 +
 \alpha_t z_t
 \left(
-r_t+\gamma\phi(s_{t+1})^\top\theta_t
+r_t+\gamma\phi(s_{t+1})^{\texttt{T}}\theta_t
 -
-\phi(s_t)^\top\theta_t
+\phi(s_t)^{\texttt{T}}\theta_t
 \right).
 $$
 
@@ -1249,11 +1249,11 @@ The trace $z_t$ accumulates past features with geometrically decaying weights. T
 The relevant operator for TD($\lambda$) is
 
 $$
-T^{(\lambda)}
+\mathcal{T}^{(\lambda)}
 =
 (1-\lambda)
 \sum_{k=0}^{\infty}
-\lambda^k T^{k+1}.
+\lambda^k \mathcal{T}^{k+1}.
 $$
 
 The projected fixed point becomes
@@ -1261,10 +1261,10 @@ The projected fixed point becomes
 $$
 \Phi\theta^*
 =
-\Pi_D T^{(\lambda)}(\Phi\theta^*).
+\Pi_D \mathcal{T}^{(\lambda)}(\Phi\theta^*).
 $$
 
-The operator $\Pi_D T^{(\lambda)}$ is a contraction with modulus
+The operator $\Pi_D \mathcal{T}^{(\lambda)}$ is a contraction with modulus
 
 $$
 \kappa
@@ -1314,7 +1314,7 @@ There are several reasons I like this paper.
 The paper does not claim that TD is SGD. Instead, it proves the precise weaker statement that matters:
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 \ge
 (1-\gamma)
 \|V_{\theta^*}-V_\theta\|_D^2.
@@ -1381,7 +1381,7 @@ $$
 The parameter convergence rates depend on
 
 $$
-\omega=\lambda_{\min}(\Phi^\top D\Phi).
+\omega=\lambda_{\min}(\Phi^{\texttt{T}} D\Phi).
 $$
 
 This quantity measures whether the features are well-conditioned under the states the policy actually visits.
@@ -1416,7 +1416,7 @@ $$
 \alpha_t
 \phi(s_t)
 \left(
-r_t+\gamma\phi(s_{t+1})^\top\theta_t-\phi(s_t)^\top\theta_t
+r_t+\gamma\phi(s_{t+1})^{\texttt{T}}\theta_t-\phi(s_t)^{\texttt{T}}\theta_t
 \right).
 $$
 
@@ -1425,13 +1425,13 @@ At the proof level, the important object is not the raw update but its expected 
 $$
 \bar g(\theta)
 =
-\Phi^\top D(T\Phi\theta-\Phi\theta).
+\Phi^{\texttt{T}} D(\mathcal{T}\Phi\theta-\Phi\theta).
 $$
 
 This direction is not a gradient. But because of the projected Bellman equation, stationarity, and contraction, it satisfies a strong alignment property:
 
 $$
-(\theta^*-\theta)^\top \bar g(\theta)
+(\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
 \ge
 (1-\gamma)
 \|V_{\theta^*}-V_\theta\|_D^2.
@@ -1454,7 +1454,7 @@ The main ideas are:
    $$
    \Phi\theta^*
    =
-   \Pi_D T(\Phi\theta^*).
+   \Pi_D \mathcal{T}(\Phi\theta^*).
    $$
 
 2. The expected TD update is
@@ -1462,13 +1462,13 @@ The main ideas are:
    $$
    \bar g(\theta)
    =
-   \Phi^\top D(T\Phi\theta-\Phi\theta).
+   \Phi^{\texttt{T}} D(\mathcal{T}\Phi\theta-\Phi\theta).
    $$
 
 3. Although TD is not gradient descent, its expected update satisfies the gradient-like inequality
 
    $$
-   (\theta^*-\theta)^\top \bar g(\theta)
+   (\theta^*-\theta)^{\texttt{T}} \bar g(\theta)
    \ge
    (1-\gamma)
    \|V_{\theta^*}-V_\theta\|_D^2.

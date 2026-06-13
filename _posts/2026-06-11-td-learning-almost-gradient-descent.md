@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "TD Learning Is Almost Gradient Descent: A Finite-Time View of Linear TD"
 date: 2026-06-11
 categories: [rl-blogs]

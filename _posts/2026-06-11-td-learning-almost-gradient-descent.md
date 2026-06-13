@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TD Learning Is Almost Gradient Descent: A Finite-Time View of Linear TD"
-date: 2026-06-13
+date: 2026-06-11
 categories: [rl-blogs]
 rl_section: research-papers
 tags: [td-learning, linear-function-approximation, finite-time-analysis, markovian-noise, reinforcement-learning-theory]

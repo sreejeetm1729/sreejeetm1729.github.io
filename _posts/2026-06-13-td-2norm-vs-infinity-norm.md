@@ -1300,22 +1300,7 @@ The 2-norm is ideal when the algorithm's mean update direction has a stable angl
 
 ---
 
-## 17. Summary table
-
-| Setting                        |                          Natural norm | Reason                                                                                               |
-| ------------------------------ | ------------------------------------: | ---------------------------------------------------------------------------------------------------- |
-| Tabular policy evaluation      | $\|\cdot\|_\nu$ or $\|\cdot\|_\infty$ | Fixed-policy Bellman operator is stable; stationary distribution gives weighted 2-norm geometry      |
-| Linear TD                      |    weighted 2-norm / parameter 2-norm | Mean update is $b-A\theta$; analysis uses inner-product drift                                        |
-| Projected Bellman equation     |                       weighted 2-norm | Projection $\Pi_\nu$ is an orthogonal projection in $L_2(\nu)$                                       |
-| Tabular Q-learning             |                         infinity norm | Optimal Bellman operator is a $\gamma$-contraction in max norm                                       |
-| Function approximation control |                     problem-dependent | Max-norm contraction may fail; 2-norm gives average guarantees but may need coverage/concentrability |
-| Robust TD                      |                  2-norm often natural | Robust estimation error enters via inner products and Cauchy--Schwarz                                |
-| Robust Q-learning              |           infinity norm often natural | Coordinate-wise Bellman errors and max-norm contraction fit tabular control                          |
-| Decentralized TD               |                      Frobenius/2-norm | Average/disagreement decomposition is orthogonal                                                     |
-
----
-
-## 18. The main takeaway
+## 17. The main takeaway
 
 Your intuition is exactly right.
 

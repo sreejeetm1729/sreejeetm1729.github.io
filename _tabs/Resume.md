@@ -436,12 +436,12 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <div class="cv-card">
   <div class="cv-entry-title">Mathematics</div>
-  <div class="cv-entry-desc">Linear Algebra, Matrix Theory, Probability Theory, Random Process, Randomized Algorithms, Graph Theory, Robust Statistics, Non-Linear and Optimal Control, Analysis, Causal Inference, Bayesian Analysis, High-Dimensional Statistics, Stochastic Optimization.</div>
+  <div class="cv-entry-desc">Linear Algebra, Matrix Theory, Probability Theory, Random Process, Randomized Algorithms, Graph Theory, Analysis, Causal Inference, Bayesian Analysis, High-Dimensional Statistics, Stochastic Optimization.</div>
 </div>
 
 <div class="cv-card">
   <div class="cv-entry-title">Research</div>
-  <div class="cv-entry-desc">Reinforcement Learning, Statistical Learning Theory, Bandit Algorithms, Optimization, Information Theory, Control Theory, Stochastic Approximation, Distributed Networks.</div>
+  <div class="cv-entry-desc">Reinforcement Learning, Statistical Learning Theory, Bandit Algorithms, Optimization, Information Theory, Control Theory, Stochastic Approximation, Robust Statistics, Distributed Networks.</div>
 </div>
 
 </div>

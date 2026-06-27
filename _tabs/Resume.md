@@ -398,8 +398,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <ul class="cv-list">
   <li>Head Teaching Assistant for <span class="cv-highlight">ECE 516: Systems and Control Engineering</span> and <span class="cv-highlight">ECE 308: Elements of Control Systems</span>, Department of Electrical and Computer Engineering, NC State.</li>
-  <li>Served as a reviewer for 30+ papers in multiple flagship control/ ML venues, including the American Control Conference (ACC), the IEEE Conference on Decision and Control (CDC), Learning for Dynamics and Control (L4DC), Annual Conference on Neural Information Processing Systems(NeuRIPS), Journal of Machine Learning Research (JMLR), Transactions in Machine Learning Reserach (TMLR), IEEE Transactions in Automatic Control (TACON), Transactions in Signal and Information Processing over
-Networks (TSIPN), and Transactions in Signal Processing (TSP).</li>
+  <li>Served as a reviewer for 40+ papers in multiple flagship control/ ML venues, including the American Control Conference (ACC), the IEEE Conference on Decision and Control (CDC), Learning for Dynamics and Control (L4DC), Annual Conference on Neural Information Processing Systems(NeuRIPS), Journal of Machine Learning Research (JMLR), Transactions in Machine Learning Reserach (TMLR), IEEE Transactions in Automatic Control (TACON), Transactions in Signal and Information Processing over Networks (TSIPN), and Transactions in Signal Processing (TSP).</li>
 </ul>
 
 </div>
@@ -427,22 +426,22 @@ Networks (TSIPN), and Transactions in Signal Processing (TSP).</li>
 
 <div class="cv-card">
   <div class="cv-entry-title">Programming</div>
-  <div class="cv-entry-desc">Python, MATLAB, Simulink, C++.</div>
+  <div class="cv-entry-desc">Python, MATLAB, Simulink, C/C++.</div>
 </div>
 
 <div class="cv-card">
   <div class="cv-entry-title">Software and Libraries</div>
-  <div class="cv-entry-desc">PyTorch, TensorFlow, Scikit-learn, NumPy, Pandas, Gymnasium, MuJoCo.</div>
+  <div class="cv-entry-desc">PyTorch, TensorFlow, NumPy, Pandas, scikit-learn, Stable-Baselines3, CVXPY, CasADi, CleanRL, Gymnasium,  MuJoCo.</div>
 </div>
 
 <div class="cv-card">
   <div class="cv-entry-title">Mathematics</div>
-  <div class="cv-entry-desc">Linear Algebra, Probability Theory, Robust Statistics, Stochastic Optimization.</div>
+  <div class="cv-entry-desc">Linear Algebra, Matrix Theory, Probability Theory, Stochastic Process, Randomized Algorithms, Graph Theory, Robust Statistics, Non-Linear and Optimal Control, Analysis, Causal Inference, Bayesian Analysis, High-Dimensional Statistics, Stochastic Optimization.</div>
 </div>
 
 <div class="cv-card">
   <div class="cv-entry-title">Research</div>
-  <div class="cv-entry-desc">Reinforcement Learning, Statistical Learning Theory, Optimization, Control Theory.</div>
+  <div class="cv-entry-desc">Reinforcement Learning, Statistical Learning Theory, Bandit Algorithms, Optimization, Information Theory, Control Theory, Distributed Networks.</div>
 </div>
 
 </div>

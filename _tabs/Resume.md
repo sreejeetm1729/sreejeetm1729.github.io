@@ -338,43 +338,6 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 </ul>
 
 </div>
-
-<div class="cv-section">
-
-<h2>Works Under Review / Preparation</h2>
-
-<div class="cv-grid">
-
-<div class="cv-card">
-  <div class="cv-entry-title">Resilient RL Algorithms using Batch Robustification Under Corruptive Events</div>
-  <div class="cv-entry-desc">
-    Robust Q-Learning methods for adversarially corrupted rewards and transitions, using batch-level robust Bellman updates with finite-time guarantees.
-  </div>
-</div>
-
-<div class="cv-card">
-  <div class="cv-entry-title">Byzantine-Resilient Federated Q-Learning with Logarithmic Communication</div>
-  <div class="cv-entry-desc">
-    Federated reinforcement learning with Byzantine agents, near-optimal finite-time sample complexity, collaborative speedups, and minimal communication.
-  </div>
-</div>
-
-<div class="cv-card">
-  <div class="cv-entry-title">Decentralized Q-Learning over Random Networks with Near-Optimal Rates</div>
-  <div class="cv-entry-desc">
-    Decentralized reinforcement learning over random communication graphs with finite-time guarantees and collaboration benefits.
-  </div>
-</div>
-
-<div class="cv-card">
-  <div class="cv-entry-title">Learning Robust Trading Policies under Adversarial Market Signal Corruption</div>
-  <div class="cv-entry-desc">
-    Robust deep Q-Learning methods for algorithmic trading under noisy, corrupted, or adversarially manipulated market signals.
-  </div>
-</div>
-
-</div>
-
 </div>
 
 <div class="cv-section">

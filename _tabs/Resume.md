@@ -329,8 +329,8 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <ul class="cv-list">
   <li><span class="cv-highlight">Multi-Agent Robust FRL with Sparse Communication</span>, NCSU Robotics Symposium 2026.</li>
   <li><span class="cv-highlight">Corruption-Tolerant Agnostic Q-Learning</span>, NeurIPS 2025 Reliable ML Workshop.</li>
-  <li><span class="cv-highlight">Robust Federated RL with Byzantine Agents</span>, Applied AI Symposium 2025.</li>
-  <li><span class="cv-highlight">Theoretical Limits of Robust TD Learning</span>, New York RL Workshop, NYRL 2025, Amazon.</li>
+  <li><span class="cv-highlight">Robust Federated RL with Byzantine Agents</span>, Applied AI Symposium 2025, NESCW 2026.</li>
+  <li><span class="cv-highlight">Theoretical Limits of Robust TD Learning</span>, New York RL Workshop (NYRL) 2025, Amazon.</li>
   <li><span class="cv-highlight">Towards Finite-Time Theory for Adversarially-Robust RL: Mathematical Guarantees and Fundamental Limits</span>, Northeast Systems and Control Symposium, NESCW 2025.</li>
   <li><span class="cv-highlight">Adversarially-Robust Deep Q-Network for Algorithmic Trading</span>, MLSS 2025, NCSU.</li>
   <li><span class="cv-highlight">Robust Algorithms for Adversarial Reinforcement Learning</span>, Applied AI Symposium 2024.</li>

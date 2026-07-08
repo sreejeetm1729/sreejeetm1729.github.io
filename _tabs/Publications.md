@@ -22,10 +22,10 @@ math: true
 .pub-title {
   font-weight: 700;
   font-size: 16px;
-  white-space: nowrap;
-  overflow-x: auto;
+  line-height: 1.45;
+  white-space: normal;
+  overflow: visible;
 }
-
 .pub-authors {
   margin-top: 0.2rem;
 }

@@ -262,8 +262,7 @@ math: true
   </div>
 </div>
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(C_4\)]</span>Robust Asynchronous Q-Learning under Reward and State Corruption
-via Batching</div>
+  <div class="pub-title"><span style="color:#e8c4bd;">[\(C_4\)]</span> Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</div>
   <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="pub-venue">IEEE Conference on Decision and Control, <strong>CDC 2026</strong>.</div>
   <div class="pub-links">

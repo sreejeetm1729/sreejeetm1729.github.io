@@ -258,7 +258,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <ul class="cv-list">
     <li>
       <span class="cv-highlight">Robust optimal policy learning from corrupted and correlated observations.</span>
-      Showed that vanilla Q-Learning is provably fragile under reward corruption, designed robust Bellman-update methods, and established finite-time convergence with matching minimax lower bounds.  Results disseminated across <strong>ICML 2026</strong>, <strong>NeurIPS 2025</strong>, and <strong>IEEE CDC 2024</strong>.
+      Showed that vanilla Q-Learning is provably fragile under reward corruption, designed robust Bellman-update methods, and established finite-time convergence with matching minimax lower bounds.  Results disseminated across <strong>ICML 2026</strong>, <strong>NeurIPS 2025</strong>, and <strong>IEEE CDC 2024, CDC 2026</strong>.
     </li>
 
     <li>
@@ -300,6 +300,12 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <div class="cv-pub-title">Adversarially-Robust TD Learning with Markovian Data</div>
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">International Conference on Artificial Intelligence and Statistics, AISTATS 2025</div>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-pub-title">Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</div>
+  <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
+  <div class="cv-pub-venue">IEEE Conference on Decision and Control, CDC 2026</div>
 </div>
 
 <div class="cv-entry">

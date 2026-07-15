@@ -98,7 +98,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     \end{equation}
   </div>
    
-   The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026 </span> work completes this line by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption.
+   The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026</span> work completes this line for reward corruption by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption. Finally, the <span class="research-tag">CDC 2026</span> work then extends the framework to simultaneous reward and state corruption, introducing an epoch-based algorithm that uses batched online data to construct robust, low-variance estimates of the Bellman optimality operator. It establishes the first robustness guarantee for asynchronous Q-Learning under joint reward and state corruption, while achieving a minimax-optimal dependence on the corruption fraction in the reward-only setting.
 </p>
 
 </div>
@@ -144,6 +144,15 @@ Can reinforcement learning still discover an optimal policy when the feedback it
       (CDC 2024)
     </span>
     <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+  </p>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_3\)]</span>
+    <strong>Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</strong>
+    <span style="color:#d8a7a7;">
+      (CDC 2026)
+    </span>
+    <a href="https://example.com" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
   <p style="margin-bottom:0.65rem;">

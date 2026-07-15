@@ -261,6 +261,31 @@ math: true
     </div>
   </div>
 </div>
+<div class="pub-entry">
+  <div class="pub-title"><span style="color:#e8c4bd;">[\(C_4\)]</span>Robust Asynchronous Q-Learning under Reward and State Corruption
+via Batching</div>
+  <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
+  <div class="pub-venue">IEEE Conference on Decision and Control, <strong>CDC 2026</strong>.</div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2026-summary')">Summary</a>]
+    [<a class="link-paper" href="www.example.com">Paper</a>]
+    [<a class="link-poster" href="www.example.com">Poster</a>]
+    [<a class="link-slides" href="www.example.com">Slides</a>]
+    [<a class="link-code" href="www.example.com">Code</a>]
+  </div>
+</div>
+
+<div id="cdc2026-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('cdc2024-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+       Motivated by reinforcement learning in harsh environments, we consider the problem of learning an optimal policy subject to adversarially corrupted feedback. Specifically, at each time-step, an adversary can perturb both the reward and state observations of the learner following the Huber contamination model. To defend against such data corruption, we propose BR-Async-Q: a novel, epoch-based, robust Q-learning algorithm built upon two key ideas: (i) partitioning the online data stream into batches to reduce variance, and (ii) constructing robust estimates of the Bellman optimality operator using such batched data. We prove a high-probability error bound for BR-Async-Q that matches that for vanilla Q-learning, up to a small additive term that scales with the fraction of corrupted samples. To our knowledge, this provides the first robustness guarantee for asynchronous Q-learning subject to both reward and state corruption. Furthermore, when only rewards are corrupted, the dependence of our algorithm’s bound on the corruption fraction is minimax optimal.
+    </div>
+  </div>
+</div>
 
 <div class="pub-entry">
   <div class="pub-title"><span style="color:#e8c4bd;">[\(C_3\)]</span> Robust Q-Learning under Corrupted Rewards</div>

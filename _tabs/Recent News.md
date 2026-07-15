@@ -6,6 +6,15 @@ order: 4
 
 <ul>
   <li style="font-size:15px">
+    <em><strong>July 2026</strong></em>: Our work titled
+    "<strong>Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</strong>"
+    was accepted at the
+    <a href="https://cdc2026.ieeecss.org/" style="color:#0891b2;">
+      65th IEEE Conference on Decision and Control (CDC 2026)
+    </a>.
+  </li>
+
+  <li style="font-size:15px">
     <em><strong>April 2026</strong></em>: Our work titled
     "<strong>Corruption-Tolerant Asynchronous Q-Learning with Near-Optimal Rates</strong>"
     was accepted at the

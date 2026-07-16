@@ -291,37 +291,37 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <h2>Selected First-Authored Publications</h2>
 
 <div class="cv-entry">
-  <div class="cv-pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
+  [1]<div class="cv-pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">International Conference on Machine Learning, ICML 2026</div>
 </div>
 
 <div class="cv-entry">
-  <div class="cv-pub-title">Adversarially-Robust TD Learning with Markovian Data</div>
+  [2]<div class="cv-pub-title">Adversarially-Robust TD Learning with Markovian Data</div>
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">International Conference on Artificial Intelligence and Statistics, AISTATS 2025</div>
 </div>
 
 <div class="cv-entry">
-  <div class="cv-pub-title">Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</div>
+  [3]<div class="cv-pub-title">Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</div>
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">IEEE Conference on Decision and Control, CDC 2026</div>
 </div>
 
 <div class="cv-entry">
-  <div class="cv-pub-title">Robust Q-Learning under Corrupted Rewards</div>
+  [4]<div class="cv-pub-title">Robust Q-Learning under Corrupted Rewards</div>
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">IEEE Conference on Decision and Control, CDC 2024</div>
 </div>
 
 <div class="cv-entry">
-  <div class="cv-pub-title">Robust Federated Q-Learning with Almost No Communication</div>
+  [5]<div class="cv-pub-title">Robust Federated Q-Learning with Almost No Communication</div>
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">American Control Conference, ACC 2026</div>
 </div>
 
 <div class="cv-entry">
-  <div class="cv-pub-title">Variance-Reduced Q-Learning over Static and Time-Varying Networks</div>
+  [6] Variance-Reduced Q-Learning over Static and Time-Varying Networks
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="cv-pub-venue">American Control Conference, ACC 2026</div>
 </div>

@@ -291,31 +291,31 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <h2>Selected First-Authored Publications</h2>
 
 <div class="cv-entry">
-  [1]<div class="cv-pub-title">Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
+  [1] Corruption-Tolerant Optimal Asynchronous Q-Learning
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">International Conference on Machine Learning, ICML 2026</div>
 </div>
 
 <div class="cv-entry">
-  [2]<div class="cv-pub-title">Adversarially-Robust TD Learning with Markovian Data</div>
+  [2] Adversarially-Robust TD Learning with Markovian Data
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">International Conference on Artificial Intelligence and Statistics, AISTATS 2025</div>
 </div>
 
 <div class="cv-entry">
-  [3]<div class="cv-pub-title">Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</div>
+  [3] Robust Asynchronous Q-Learning under Reward and State Corruption via Batching
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">IEEE Conference on Decision and Control, CDC 2026</div>
 </div>
 
 <div class="cv-entry">
-  [4]<div class="cv-pub-title">Robust Q-Learning under Corrupted Rewards</div>
+  [4] Robust Q-Learning under Corrupted Rewards
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">IEEE Conference on Decision and Control, CDC 2024</div>
 </div>
 
 <div class="cv-entry">
-  [5]<div class="cv-pub-title">Robust Federated Q-Learning with Almost No Communication</div>
+  [5] Robust Federated Q-Learning with Almost No Communication
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-pub-venue">American Control Conference, ACC 2026</div>
 </div>

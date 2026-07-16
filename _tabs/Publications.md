@@ -412,13 +412,13 @@ math: true
 <ol class="workshop-list">
 
   <li class="workshop-entry">
-    <strong>Towards Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
+    <strong>Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
     <span style="color:#e6c98f; font-style:bold;">CORAL Seminar, North Carolina State University</span>.
   </li>
 
 </ol>
 <div class="pub-section">
-<h2><span style="font-size: 1rem;">♥️</span> Under Preparation/Review</h2>
+<h2><span style="font-size: 1rem;">♥️</span> Thesis </h2>
 </div>
 
 <script>

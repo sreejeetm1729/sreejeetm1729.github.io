@@ -326,7 +326,7 @@ The third direction of my research focuses on robust federated reinforcement lea
        alt="Plot 2"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ 'assets/research/Robust_BR_varying_variance (1).png' | relative_url }}"
+  <img src="{{ 'assets/research/F3 (2).png' | relative_url }}"
        alt="Plot 3"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 

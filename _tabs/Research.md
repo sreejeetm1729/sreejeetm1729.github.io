@@ -411,7 +411,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC26_GraphQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 
 

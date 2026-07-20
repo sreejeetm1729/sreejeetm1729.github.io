@@ -291,37 +291,37 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <h2>Selected First-Authored Publications</h2>
 
 <div class="cv-entry">
-  [1] \color{#fca5a5}{Corruption-Tolerant Optimal Asynchronous Q-Learning}
+  [1] Corruption-Tolerant Optimal Asynchronous Q-Learning
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-entry-meta">International Conference on Machine Learning, ICML 2026</div>
 </div>
 
 <div class="cv-entry">
-  [2] \color{#fca5a5}{Adversarially-Robust TD Learning with Markovian Data}
+  [2] Adversarially-Robust TD Learning with Markovian Data
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-entry-meta">International Conference on Artificial Intelligence and Statistics, AISTATS 2025</div>
 </div>
 
 <div class="cv-entry">
-  [3] \color{#fca5a5}{Robust Asynchronous Q-Learning under Reward and State Corruption via Batching}
+  [3] Robust Asynchronous Q-Learning under Reward and State Corruption via Batching
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-entry-meta">IEEE Conference on Decision and Control, CDC 2026</div>
 </div>
 
 <div class="cv-entry">
-  [4] \color{#fca5a5}{Robust Q-Learning under Corrupted Rewards}
+  [4] Robust Q-Learning under Corrupted Rewards
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-entry-meta">IEEE Conference on Decision and Control, CDC 2024</div>
 </div>
 
 <div class="cv-entry">
-  [5] \color{#fca5a5}{Robust Federated Q-Learning with Almost No Communication}
+  [5] Robust Federated Q-Learning with Almost No Communication
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
   <div class="cv-entry-meta">American Control Conference, ACC 2026</div>
 </div>
 
 <div class="cv-entry">
-  [6] \color{#fca5a5}{Variance-Reduced Q-Learning over Static and Time-Varying Networks}
+  [6] Variance-Reduced Q-Learning over Static and Time-Varying Networks
   <div><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
   <div class="cv-entry-meta">American Control Conference, ACC 2026</div>
 </div>

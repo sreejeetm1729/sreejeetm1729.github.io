@@ -267,7 +267,7 @@ math: true
   <div class="pub-venue">IEEE Conference on Decision and Control, <strong>CDC 2026</strong>.</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2026-summary')">Summary</a>]
-    [<a class="link-paper" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-under-Reward-and-State-Corruption-via-Batching/blob/main/CDC_2026_BatchQ.pdf">Paper</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2607.20822">Paper</a>]
     [<a class="link-poster" href="www.example.com">Poster</a>]
     [<a class="link-slides" href="www.example.com">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-under-Reward-and-State-Corruption-via-Batching">Code</a>]

@@ -165,7 +165,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     <span style="color:#d8a7a7;">
       (CDC 2026)
     </span>
-    <a href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-under-Reward-and-State-Corruption-via-Batching/blob/main/CDC26_BatchAsyncQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://arxiv.org/pdf/2607.20822" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
   <p style="margin-bottom:0.65rem;">

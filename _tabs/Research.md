@@ -143,6 +143,25 @@ Can reinforcement learning still discover an optimal policy when the feedback it
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
+<div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
+
+  <img src="{{ 'assets/research/Vanilla_Q_error_asymmetric_corruption_300dpi (2).png' | relative_url }}"
+       alt="Plot 1"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ 'assets/research/BR_Q_error_batch_size_low_corruption_preview_300dpi (2).png' | relative_url }}"
+       alt="Plot 2"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ 'assets/research/BR_Q_error_batch_size_high_corruption_preview_300dpi (2).png' | relative_url }}"
+       alt="Plot 3"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ 'assets/research/BR_Q_error_asymmetric_corruption_300dpi (2).png.png' | relative_url }}"
+       alt="Plot 4"
+       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+</div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
   <strong style="color:#bfdbfe;">Figure</strong>: Vanilla vs Robust \(Q\)-Learning under adversarial corruption in both states and rewards via Batching.
 </div>

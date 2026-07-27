@@ -157,7 +157,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
        alt="Plot 3"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ 'assets/research/BR_Q_error_asymmetric_corruption_300dpi (2).png.png' | relative_url }}"
+  <img src="{{ 'assets/research/BR_Q_error_asymmetric_corruption_300dpi (2).png' | relative_url }}"
        alt="Plot 4"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 

@@ -53,3 +53,19 @@
   background-color: transparent;
   border-top-color: rgb(255 255 255 / 8%);
 }
+
+/* Transparent Home top bar */
+#main-wrapper:has(.home-math-page) #topbar-wrapper,
+#main-wrapper:has(.home-math-page) #topbar {
+  background-color: transparent;
+}
+
+/* Transparent search bar on Home */
+#main-wrapper:has(.home-math-page) #search,
+#main-wrapper:has(.home-math-page) #search-input {
+  background: transparent;
+}
+
+#main-wrapper:has(.home-math-page) #search {
+  border-color: rgb(255 255 255 / 18%);
+}

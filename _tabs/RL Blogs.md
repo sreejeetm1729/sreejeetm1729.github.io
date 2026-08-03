@@ -4,7 +4,7 @@ icon: fas fa-pen-nib
 order: 6
 math: true
 ---
-
+<div class="home-math-page" aria-hidden="true"></div>
 Reinforcement learning is one of the most beautiful meeting points of probability, optimization, dynamic programming, stochastic approximation, and control. At its core, RL asks a deceptively simple question: how should an agent learn to make good decisions from interaction?
 
 This page brings together my notes on reinforcement learning, optimization, and learning under uncertainty. Some posts build the core mathematical foundations of RL; others are closer to my research interests, focusing on robustness, adversarial corruption, Markovian data, decentralized algorithms, and finite-time analysis.

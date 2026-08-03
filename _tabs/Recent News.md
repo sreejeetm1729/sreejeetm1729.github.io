@@ -3,7 +3,7 @@ title: Recent News
 icon: fas fa-newspaper
 order: 4
 ---
-<div class="home-math-page" aria-hidden="true"></div>
+
 <ul>
   <li style="font-size:15px">
     <em><strong>July 2026</strong></em>: Our work titled

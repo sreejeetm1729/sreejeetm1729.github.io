@@ -3,7 +3,7 @@ title: Who am I 🍂🍁?
 icon: fas fa-user
 order: 1
 ---
-
+<div class="home-math-page" aria-hidden="true"></div>
 <div style="display:flex; align-items:flex-start; gap:28px;">
 
   <div style="flex:0 0 230px;">

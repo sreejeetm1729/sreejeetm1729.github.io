@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Asymptotic Analysis of Q-Learning: A Complete Proof-Oriented Guide"
-date: 2026-08-08 18:10:00 -0400
+date: 2026-08-08
 categories: [rl-blogs]
 rl_section: research-papers
 tags: [reinforcement-learning, q-learning, stochastic-approximation, asymptotic-analysis, central-limit-theorem, theory]

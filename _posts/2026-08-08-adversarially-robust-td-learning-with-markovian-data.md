@@ -112,7 +112,11 @@ Two uncertainties now interact. The learner must distinguish clean heavy-tailed 
 
 ## The vulnerability of vanilla TD
 
-The paper first isolates the effect of corruption by considering deterministic corrupted rewards. Let $$C\in\mathbb R^{|\mathcal S|}$$ collect the adversarial reward values. Under the usual Robbins-Monro step-size conditions, vanilla TD converges almost surely to
+The paper first isolates the effect of corruption by considering deterministic corrupted rewards. Let 
+$$
+C\in\mathbb R^{|\mathcal S|}
+$$ 
+collect the adversarial reward values. Under the usual Robbins-Monro step-size conditions, vanilla TD converges almost surely to
 
 $$
 \widetilde\theta^\star

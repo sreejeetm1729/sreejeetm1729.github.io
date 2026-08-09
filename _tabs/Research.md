@@ -305,11 +305,18 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 The third direction of my research focuses on robust federated reinforcement learning with Byzantine agents and minimal communication. In this setting, multiple agents interact with a common environment and send information to a central learner, but a fraction of the agents may be adversarial and can transmit arbitrary, corrupted messages. This creates a challenging tension between <strong>collaboration</strong>, <strong>robustness</strong>, and <strong>communication efficiency</strong>: the learner should benefit from distributed data collection while remaining resilient to malicious agents and avoiding excessive communication. In this line of work, which appeared at <span class="research-tag">ACC 2026</span>, we develop robust federated Q-Learning algorithms that achieve near-optimal finite-time guarantees with Byzantine tolerance and almost no communication, showing that collaborative speedups are still possible even when some agents are unreliable.
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
 
-  <div style="flex:0 0 280px;">
-    <img src="{{ '/assets/research/Slide18.mp4' | relative_url }}" 
-         alt="Robust Federated Q-Learning"
-         style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
-  </div>
+<div style="flex:0 0 280px;">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18); display:block;"
+  >
+    <source src="{{ '/assets/research/Slide18.mp4' | relative_url }}" type="video/mp4">
+  </video>
+</div>
 
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
 

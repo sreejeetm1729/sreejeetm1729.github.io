@@ -310,19 +310,7 @@ The third direction of my research focuses on robust federated reinforcement lea
          alt="Robust Federated Q-Learning"
          style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
   </div>
-  
-<div style="flex:0 0 280px;">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18); display:block;"
-  >
-    <source src="{{ '/assets/research/Slide18.mp4' | relative_url }}" type="video/mp4">
-  </video>
-</div>
+
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
 
   <p>

@@ -153,7 +153,11 @@ C\max\{\psi,\rho\}
 \right),
 $$
 
-where $|\mathbb E[f(X_t)\mid X_t=x]|\leq\psi$ and $\rho^2$ bounds the conditional variance. The factor $\tau$ expresses the effective-sample-size penalty: $N$ correlated samples behave roughly like $N/\tau$ independent samples.
+where 
+$$
+|\mathbb E[f(X_t)\mid X_t=x]|\leq\psi
+$$ 
+and $\rho^2$ bounds the conditional variance. The factor $\tau$ expresses the effective-sample-size penalty: $N$ correlated samples behave roughly like $N/\tau$ independent samples.
 
 This result is more than a technical lemma for TD. It shows that a median-of-means construction can simultaneously tolerate heavy tails, adversarial contamination, and Markovian dependence.
 

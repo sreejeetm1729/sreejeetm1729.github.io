@@ -260,29 +260,31 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       <span class="cv-highlight">Robust optimal policy learning from corrupted and correlated observations.</span>
       Showed that vanilla Q-Learning is provably fragile under reward corruption, designed robust Bellman-update methods, and established finite-time convergence with matching minimax lower bounds.  Results disseminated across <strong>ICML 2026</strong>, <strong>NeurIPS 2025</strong>, and <strong>IEEE CDC 2024, CDC 2026</strong>.
     </li>
-
     <li>
       <span class="cv-highlight">Robust policy evaluation under adversarial influences and Markovian data.</span>
       Developed finite-time theory for robust temporal-difference learning with Markovian noise and function approximation, including upper bounds and near-tight lower bounds.  This research is published in <strong>AISTATS 2025</strong>.
     </li>
-
     <li>
       <span class="cv-highlight">Robust federated and multi-agent reinforcement learning.</span>
-      Developed adversarially robust and communication-efficient reinforcement learning algorithms for federated multi-agent settings, including Byzantine-resilient methods with collaborative speedups.  Two papers published at <strong>ACC 2026</strong>.
+      Developed adversarially robust and communication-efficient reinforcement learning algorithms for federated multi-agent settings, including Byzantine-resilient methods with collaborative speedups. Two papers published at <strong>ACC 2026</strong>.
     </li>
   </ul>
 </div>
 
 <div class="cv-entry">
-  <div class="cv-entry-title">Research Collaboration · Neuromuscular Rehabilitation Engineering Laboratory</div>
-  <div class="cv-entry-meta">University of North Carolina at Chapel Hill · April 2026--Present</div>
+  <div class="cv-entry-title">Research Collaboration · Byzantine-Robust Representation Learning</div>
+  <div class="cv-entry-meta">Columbia University · April 2026--Present</div>
 
-  <ul class="cv-list">
-    <li>Developing personalized reinforcement learning methods for subject-specific tuning of commercial powered knee prostheses.</li>
-    <li>Formulating personalized MDP/CMDP models with user-specific dynamics, time-varying reward design, and safety-comfort constraints.</li>
-    <li>Exploring offline-to-online adaptation schemes that warm-start from population priors and enable safe, data-efficient personalization.</li>
-  </ul>
+  <p>Developing Byzantine-robust representation learning methods for heterogeneous reinforcement learning agents operating in distinct MDPs with temporally dependent data. The approach decomposes each agent's value function into a shared low-dimensional representation and a personalized local parameter, enabling collaborative learning of common structure while accommodating differences in transitions, rewards, policies, and value functions without persistent heterogeneity bias.</p>
 </div>
+
+<div class="cv-entry">
+  <div class="cv-entry-title">Research Collaboration · Robust Curriculum Learning for LLM Post-Training</div>
+  <div class="cv-entry-meta">August 2026--Present</div>
+
+  <p>Developing adaptive adversarial curricula for LLM reasoning post-training by extending static GDRO-style group reweighting to a sequential curriculum-learning framework, where a curriculum controller uses on-policy self-distillation and single-trajectory, corruption-tolerant $Q$-learning to prioritize difficult task groups despite unreliable verifier, teacher, or state feedback.</p>
+</div>
+
 
 </div>
 

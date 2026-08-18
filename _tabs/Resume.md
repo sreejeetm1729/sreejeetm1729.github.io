@@ -205,6 +205,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <span class="cv-chip">Statistical Learning Theory</span>
   <span class="cv-chip">Control Theory</span>
   <span class="cv-chip">Federated RL</span>
+  <span class="cv-chip">Applied Probability</span>
   <span class="cv-chip">Robust Statistics</span>
 </div>
 <div style="margin-top:2rem; padding:1rem 1.2rem; border:1px solid rgba(165,243,252,0.28); border-radius:14px; background:rgba(165,243,252,0.04); font-size:16px; line-height:1.7; text-align:justify;">

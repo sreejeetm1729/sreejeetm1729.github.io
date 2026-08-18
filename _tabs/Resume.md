@@ -195,16 +195,15 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
     <i class="fab fa-linkedin"></i> LinkedIn
   </a>
 
-  <a href="{{ '/assets/pdf/2026_Resume.pdf' | relative_url }}" target="_blank">
+  <a href="{{ '/assets/pdf/2026_Resume_new.pdf' | relative_url }}" target="_blank">
     <i class="fas fa-file-pdf"></i> Download CV
   </a>
 </div>
 
 <div class="cv-chip-row">
-  <span class="cv-chip">Robust RL</span>
+  <span class="cv-chip">Reinforcement Learning</span>
   <span class="cv-chip">Statistical Learning Theory</span>
   <span class="cv-chip">Control Theory</span>
-  <span class="cv-chip">Federated RL</span>
   <span class="cv-chip">Applied Probability</span>
   <span class="cv-chip">Robust Statistics</span>
 </div>

@@ -283,7 +283,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <div class="cv-entry-title">Research Collaboration · Robust Curriculum Learning for LLM Post-Training</div>
   <div class="cv-entry-meta">August 2026--Present</div>
 
-  <p>Developing adaptive adversarial curricula for LLM reasoning post-training by extending static GDRO-style group reweighting to a sequential curriculum-learning framework, where a curriculum controller uses on-policy self-distillation and single-trajectory, corruption-tolerant $Q$-learning to prioritize difficult task groups despite unreliable verifier, teacher, or state feedback.</p>
+  <p>Developing adaptive adversarial curricula for LLM reasoning post-training by extending static GDRO-style group reweighting to a sequential curriculum-learning framework, where a curriculum controller uses on-policy self-distillation and single-trajectory, corruption-tolerant Q-learning to prioritize difficult task groups despite unreliable verifier, teacher, or state feedback.</p>
 </div>
 
 

@@ -380,16 +380,6 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <div class="cv-grid">
 
 <div class="cv-card">
-  <div class="cv-entry-title">Programming</div>
-  <div class="cv-entry-desc">Python, MATLAB, Simulink, C/C++.</div>
-</div>
-
-<div class="cv-card">
-  <div class="cv-entry-title">Software and Libraries</div>
-  <div class="cv-entry-desc">PyTorch, TensorFlow, NumPy, Pandas, scikit-learn, Stable-Baselines3, CVXPY, CasADi, CleanRL, Gymnasium,  MuJoCo.</div>
-</div>
-
-<div class="cv-card">
   <div class="cv-entry-title">Mathematics</div>
   <div class="cv-entry-desc">Linear Algebra, Matrix Theory, Probability Theory, Random Process, Randomized Algorithms, Graph Theory, Analysis, Causal Inference, Bayesian Analysis, High-Dimensional Statistics, Stochastic Optimization.</div>
 </div>
@@ -397,6 +387,16 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <div class="cv-card">
   <div class="cv-entry-title">Research</div>
   <div class="cv-entry-desc">Reinforcement Learning, Statistical Learning Theory, Bandit Algorithms, Optimization, Information Theory, Control Theory, Stochastic Approximation, Robust Statistics, Distributed Networks.</div>
+</div>
+
+<div class="cv-card">
+  <div class="cv-entry-title">Programming</div>
+  <div class="cv-entry-desc">Python, MATLAB, Simulink, C/C++.</div>
+</div>
+
+<div class="cv-card">
+  <div class="cv-entry-title">Software and Libraries</div>
+  <div class="cv-entry-desc">PyTorch, TensorFlow, NumPy, Pandas, scikit-learn, Stable-Baselines3, CVXPY, CasADi, CleanRL, Gymnasium,  MuJoCo.</div>
 </div>
 
 </div>

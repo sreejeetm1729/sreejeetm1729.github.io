@@ -208,7 +208,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <span class="cv-chip">Stochastic Approximation Algorithms</span>
   <span class="cv-chip">Robust Statistics</span>
 </div>
-<div style="margin-top:2rem; padding:1rem 1.2rem; border:1px solid rgba(165,243,252,0.28); border-radius:14px; background:rgba(165,243,252,0.04); font-size:16px; line-height:1.7; text-align:justify;">
+<div style="margin-top:2rem; padding:1rem 1.2rem; border:1px solid rgba(165,243,252,0.28); border-radius:0px; background:rgba(165,243,252,0.04); font-size:16px; line-height:1.7; text-align:justify;">
 
   <strong style="color:#d8a7a7;">Collaboration Note.</strong>
   I am always happy to engage with researchers working on broad areas of reinforcement learning, control theory, federated learning, and trustworthy machine learning. If you are interested in discussing possible collaborations or exchanging research ideas, please reach out to
@@ -219,7 +219,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   <i class="fab fa-linkedin"></i>
 </a>.
 </div>
-<div style="margin-top:0.8rem; padding:1rem 1.2rem; border:1px solid rgba(165,243,252,0.28); border-radius:14px; background:rgba(165,243,252,0.04); font-size:16px; line-height:1.7; text-align:justify;">
+<div style="margin-top:0.8rem; padding:1rem 1.2rem; border:1px solid rgba(165,243,252,0.28); border-radius:0px; background:rgba(165,243,252,0.04); font-size:16px; line-height:1.7; text-align:justify;">
 
   <strong style="color:#a5f3fc;">Prospective Opportunities.</strong>
   I will be entering the academic and industry research job market next year (2027), and I would be grateful to hear about opportunities aligned with my interests in broad areas of <strong style="color:#e6c98f;">robust and safe RL, and reliable decision-making and control</strong>. I am also open to postdoctoral opportunities beginning in <strong style="color:#e6c98f;">Fall 2027</strong>, as well as opportunities in subsequent academic cycles. Prospective recruiters, search committees, and researchers are warmly welcome to reach out.

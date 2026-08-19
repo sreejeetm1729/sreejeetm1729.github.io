@@ -122,7 +122,7 @@ order: 7
 .cv-card {
   padding: 1rem;
   border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 14px;
+  border-radius: 0px;
   background: rgba(255,255,255,0.025);
 }
 

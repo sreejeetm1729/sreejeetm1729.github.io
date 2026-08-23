@@ -41,11 +41,11 @@ order: 4
     were accepted for oral presentation and publication at the
     <a href="https://acc2026.a2c2.org/" style="color:#0891b2;">
       2026 American Control Conference
-    </a>. Check out the works <a href="https://ieeexplore.ieee.org/abstract/document/11616421" style="color:#ec4d38;">
+    </a>. Learn more about the works <a href="https://ieeexplore.ieee.org/abstract/document/11616421" style="color:#ec4d38;">
       here
     </a> and <a href="https://ieeexplore.ieee.org/abstract/document/11616012" style="color:#ec4d38;">
-      here.
-    </a>
+      here
+    </a>!
   </li>
 
   <li style="font-size:15px">
@@ -115,7 +115,9 @@ order: 4
     was accepted at the
     <a href="https://aistats.org/" style="color:#0891b2;">
       28th International Conference on Artificial Intelligence and Statistics (AISTATS 2025)
-    </a>.
+    </a>. Check it out <a href="https://virtual.aistats.org/virtual/2025/poster/9390" style="color:#ec4d38;">
+      here
+    </a>!
   </li>
 
   <li style="font-size:15px">

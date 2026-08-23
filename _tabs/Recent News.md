@@ -11,7 +11,7 @@ order: 4
     was accepted as an Invited Paper at the
     <a href="https://cdc2026.ieeecss.org/" style="color:#0891b2;">
       65th IEEE Conference on Decision and Control (CDC 2026)
-    </a>. Check out the work <a href="https://arxiv.org/pdf/2607.20822v2" style="color:#0891b2;">
+    </a>. Check out the work <a href="https://arxiv.org/pdf/2607.20822v2" style="color:#ec4d38;">
       here
     </a>!
   </li>
@@ -22,7 +22,7 @@ order: 4
     was accepted at the
     <a href="https://icml.cc/" style="color:#0891b2;">
       43rd International Conference on Machine Learning (ICML 2026)
-    </a>. Learn more about our work <a href="https://icml.cc/virtual/2026/poster/64666" style="color:#0891b2;">
+    </a>. Learn more about our work <a href="https://icml.cc/virtual/2026/poster/64666" style="color:#ec4d38;">
       here
     </a>!
   </li>
@@ -41,7 +41,11 @@ order: 4
     were accepted for oral presentation and publication at the
     <a href="https://acc2026.a2c2.org/" style="color:#0891b2;">
       2026 American Control Conference
-    </a>.
+    </a>. Check out the works <a href="https://ieeexplore.ieee.org/abstract/document/11616421" style="color:#ec4d38;">
+      here
+    </a> and <a href="https://ieeexplore.ieee.org/abstract/document/11616012" style="color:#ec4d38;">
+      here.
+    </a>
   </li>
 
   <li style="font-size:15px">

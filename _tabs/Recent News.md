@@ -127,7 +127,9 @@ order: 4
     <a href="https://cdc2024.ieeecss.org/" style="color:#0891b2;">
       63rd IEEE Conference on Decision and Control 2024
     </a>
-    in Milan, Italy.
+    in Milan, Italy. Check it out <a href="https://ieeexplore.ieee.org/document/10885945" style="color:#ec4d38;">
+      here
+    </a>!
   </li>
 
   <li style="font-size:15px">

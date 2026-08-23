@@ -11,7 +11,9 @@ order: 4
     was accepted as an Invited Paper at the
     <a href="https://cdc2026.ieeecss.org/" style="color:#0891b2;">
       65th IEEE Conference on Decision and Control (CDC 2026)
-    </a>.
+    </a>. Check out the work <a href="https://arxiv.org/pdf/2607.20822v2" style="color:#0891b2;">
+      here
+    </a>!
   </li>
 
   <li style="font-size:15px">
@@ -20,7 +22,9 @@ order: 4
     was accepted at the
     <a href="https://icml.cc/" style="color:#0891b2;">
       43rd International Conference on Machine Learning (ICML 2026)
-    </a>.
+    </a>. Learn more about our work <a href="https://icml.cc/virtual/2026/poster/64666" style="color:#0891b2;">
+      here
+    </a>!
   </li>
 
   <li style="font-size:15px">

@@ -1,7 +1,7 @@
 ---
 title: Recent News
 icon: fas fa-newspaper
-order: 4
+order: 6
 ---
 
 <ul>

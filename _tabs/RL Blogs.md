@@ -1,7 +1,7 @@
 ---
 title: RL Blogs
 icon: fas fa-pen-nib 
-order: 6
+order: 4
 math: true
 ---
 <div class="home-math-page" aria-hidden="true"></div>

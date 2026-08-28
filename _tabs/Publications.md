@@ -244,9 +244,14 @@ math: true
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(M_1\)]</span> Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</div>
-  <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="pub-venue">International Conference on Artificial Intelligence and Statistics, <strong>AISTATS 2025</strong>.</div>
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_5^{*}\)]</span>
+  <strong>Sreejeet Maity</strong> and Aritra Mitra,
+  “Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2025.
+  </span>
+</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('aistats2025-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2502.04662">Paper</a>]

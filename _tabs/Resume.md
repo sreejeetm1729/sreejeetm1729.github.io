@@ -339,6 +339,30 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   </span>
 </div>
 
+<div class="cv-entry">
+  [7] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
+  “Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning”,
+  <span class="cv-entry-meta" style="display: inline;">
+    under review at <em>IEEE Transactions on Automatic Control (TAC)</em>.
+  </span>
+</div>
+
+<div class="cv-entry">
+  [8] <strong>S. Maity</strong><sup>†</sup>, F. Zhu, R. Heath, and A. Mitra,
+  “Decentralized Q-learning with Asynchronous Sampling and Partial Coverage”,
+  <span class="cv-entry-meta" style="display: inline;">
+    under review at <em>IEEE Transactions on Signal Processing (TSP)</em>.
+  </span>
+</div>
+
+<div class="cv-entry">
+  [9] <strong>S. Maity</strong>, L.Toso, J.Anderson, and A.Mitra,
+  “Value Function Representation for Adversarially Robust Federated TD Learning”,
+  <span class="cv-entry-meta" style="display: inline;">
+    in preparation for submission to <em>Transactions on Machine Learning Research (TMLR)</em>.
+  </span>
+</div>
+
 </div>
 </div>
 

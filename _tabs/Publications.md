@@ -272,9 +272,14 @@ math: true
   </div>
 </div>
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(C_4\)]</span> Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</div>
-  <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="pub-venue">IEEE Conference on Decision and Control, <strong>CDC 2026</strong>.</div>
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_4\)]</span>
+  <strong>Sreejeet Maity</strong> and Aritra Mitra,
+  “Robust Asynchronous Q-Learning under Reward and State Corruption via Batching”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>IEEE Conference on Decision and Control (CDC)</em>, 2026.
+  </span>
+</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2026-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2607.20822">Paper</a>]
@@ -297,9 +302,14 @@ math: true
 </div>
 
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(C_3\)]</span> Robust Q-Learning under Corrupted Rewards</div>
-  <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="pub-venue">IEEE Conference on Decision and Control, <strong>CDC 2024</strong>.</div>
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_3\)]</span>
+  <strong>Sreejeet Maity</strong><sup>†</sup> and Aritra Mitra,
+  “Robust Q-Learning under Corrupted Rewards”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>IEEE Conference on Decision and Control (CDC)</em>, 2024.
+  </span>
+</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2024-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2409.03237">Paper</a>]

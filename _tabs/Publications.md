@@ -338,7 +338,7 @@ math: true
   <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-2-summary')">Summary</a>]
-    [<a class="link-paper" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC26_GraphQ.pdf">Paper</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2607.21876">Paper</a>]
     [<a class="link-poster" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/Summary_VRDQ.pdf">Poster</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks">Code</a>]
@@ -351,7 +351,7 @@ math: true
       <button class="pub-summary-close" onclick="togglePubSummary('acc2026-2-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-      We investigate a decentralized reinforcement learning problem involving multiple agents that interact with the same Markov Decision Process (MDP). The agents can exchange information over a network to collectively learn the optimal state-action value function. For this setting, we introduce a novel epoch-based distributed Q-learning algorithm called VRDQ, where within each epoch, agents locally estimaten the Bellman optimality operator and diffuse information using a consensus-based protocol. For both static and time-varying networks, we establish high-probability finite-time convergence rates for VRDQ that enjoy linear speedups from collaboration. Crucially, we prove that such speedups in sample-complexity require only \(\tilde{O}(1)\) communication, substantially improving upon the communication costs in prior work.
+      We investigate a decentralized reinforcement learning problem involving multiple agents that interact with the same Markov Decision Process (MDP). The agents can exchange information over a network to collectively learn the optimal state-action value function. For this setting, we introduce a novel epoch-based distributed Q-learning algorithm called VRDQ, where within each epoch, agents locally estimate the Bellman optimality operator and diffuse information using a consensus-based protocol. For both static and time-varying networks, we establish high-probability finite-time convergence rates for VRDQ that enjoy linear speedups from collaboration. Crucially, we prove that such speedups in sample-complexity require only \(\tilde{O}(1)\) communication, substantially improving upon the communication costs in prior work.
     </div>
   </div>
 </div>

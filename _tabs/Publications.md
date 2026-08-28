@@ -177,9 +177,9 @@ math: true
 }
 
 .link-workshop {
-  color: #a5f3fc;
+  color: #047581;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
   background-color: transparent;
   padding: 0;
   border-radius: 0;

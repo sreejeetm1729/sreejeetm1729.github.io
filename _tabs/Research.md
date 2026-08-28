@@ -436,14 +436,14 @@ statistical benefits of collaboration with substantially reduced communication.
     <span style="color:#a5f3fc;">[\(J_1\)]</span>
     <strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>
     <span style="color:#d8a7a7;">
-      (Under Review, IEEE Transactions in Automatic Control (TAC))
+      (Under Review, TAC)
     </span>
   </p>
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(J_2\)]</span>
     <strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>
     <span style="color:#d8a7a7;">
-      (Under Review, IEEE Transactions in Signal Processing (TSP))
+      (Under Review, TSP)
     </span>
   </p>
 
@@ -473,6 +473,6 @@ The key idea is to separate what is shared from what is personalized. The value 
     <span style="color:#a5f3fc;">[\(J_3\)]</span>
     <strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>
     <span style="color:#d8a7a7;">
-      (Under Review, Transactions in Machine Learning Research (TMLR))
+      (Under Review, TMLR)
     </span>
   </p>

@@ -300,33 +300,43 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 </div>
 
 <div class="cv-entry">
-  [2] Adversarially-Robust TD Learning with Markovian Data
-  <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="cv-entry-meta">International Conference on Artificial Intelligence and Statistics, AISTATS 2025</div>
+  [2] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
+  “Adversarially-Robust TD Learning with Markovian Data”, in
+  <span class="cv-entry-meta" style="display: inline;">
+    <em>International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2025.
+  </span>
 </div>
 
 <div class="cv-entry">
-  [3] Robust Asynchronous Q-Learning under Reward and State Corruption via Batching
-  <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="cv-entry-meta">IEEE Conference on Decision and Control, CDC 2026</div>
+  [3] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
+  “Robust Asynchronous Q-Learning under Reward and State Corruption via Batching”, in
+  <span class="cv-entry-meta" style="display: inline;">
+    <em>IEEE Conference on Decision and Control (CDC)</em>, 2026.
+  </span>
 </div>
 
 <div class="cv-entry">
-  [4] Robust Q-Learning under Corrupted Rewards
-  <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="cv-entry-meta">IEEE Conference on Decision and Control, CDC 2024</div>
+  [4] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
+  “Robust Q-Learning under Corrupted Rewards”, in
+  <span class="cv-entry-meta" style="display: inline;">
+    <em>IEEE Conference on Decision and Control (CDC)</em>, 2024.
+  </span>
 </div>
 
 <div class="cv-entry">
-  [5] Robust Federated Q-Learning with Almost No Communication
-  <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="cv-entry-meta">American Control Conference, ACC 2026</div>
+  [5] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
+  “Robust Federated Q-Learning with Almost No Communication”, in
+  <span class="cv-entry-meta" style="display: inline;">
+    <em>American Control Conference (ACC)</em>, 2026.
+  </span>
 </div>
 
 <div class="cv-entry">
-  [6] Variance-Reduced Q-Learning over Static and Time-Varying Networks
-  <div><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
-  <div class="cv-entry-meta">American Control Conference, ACC 2026</div>
+  [6] <strong>S. Maity</strong><sup>†</sup>, F. Zhu, R. Heath, and A. Mitra,
+  “Variance-Reduced Q-Learning over Static and Time-Varying Networks”, in
+  <span class="cv-entry-meta" style="display: inline;">
+    <em>American Control Conference (ACC)</em>, 2026.
+  </span>
 </div>
 
 </div>

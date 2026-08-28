@@ -100,7 +100,7 @@ math: true
   margin-top: 0px;
   padding: 13px 15px;
   border-radius: 0px;
-  border-left: 4px solid #f5e6b8;
+  border-left: 2px solid #f5e6b8;
   background: rgba(232, 196, 189, 0.08);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
 }
@@ -213,9 +213,14 @@ math: true
 <h2><span style="font-size: 1rem;">♦️</span> Accepted First-Authored Publications</h2>
 
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(M_2\)]</span> Corruption-Tolerant Optimal Asynchronous Q-Learning</div>
-  <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="pub-venue">International Conference on Machine Learning, <strong>ICML 2026</strong>.</div>
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_6^{*}\)]</span>
+  <strong>Sreejeet Maity</strong> and Aritra Mitra,
+  “Corruption-Tolerant Optimal Asynchronous Q-Learning”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>International Conference on Machine Learning (ICML)</em>, 2026.
+  </span>
+</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('icml2026-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2509.08933">Paper</a>]

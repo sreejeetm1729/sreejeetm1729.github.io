@@ -99,7 +99,7 @@ math: true
 .pub-summary-inner {
   margin-top: 0px;
   padding: 13px 15px;
-  border-radius: 12px;
+  border-radius: 0px;
   border-left: 4px solid #f5e6b8;
   background: rgba(232, 196, 189, 0.08);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
@@ -310,9 +310,14 @@ math: true
   </div>
 </div>
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(C_2\)]</span> Robust Federated Q-Learning with Almost No Communication</div>
-  <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_2\)]</span>
+  <strong>Sreejeet Maity</strong> and Aritra Mitra,
+  “Robust Federated Q-Learning with Almost No Communication”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>American Control Conference (ACC)</em>, 2026.
+  </span>
+</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-1-summary')">Summary</a>]
     [<a class="link-paper" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC26_DistRobustQ.pdf">Paper</a>]

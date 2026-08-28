@@ -216,7 +216,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_6^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
-  “Corruption-Tolerant Optimal Asynchronous Q-Learning”, in
+  “<strong>Corruption-Tolerant Optimal Asynchronous Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
     <em>International Conference on Machine Learning (ICML)</em>, 2026.
   </span>
@@ -247,7 +247,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_5^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
-  “Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits”, in
+  “<strong>Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</strong>”, in
   <span class="pub-venue" style="display: inline;">
     <em>International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2025.
   </span>
@@ -305,7 +305,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_3\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
-  “Robust Q-Learning under Corrupted Rewards”, in
+  “<strong>Robust Q-Learning under Corrupted Rewards</strong>”, in
   <span class="pub-venue" style="display: inline;">
     <em>IEEE Conference on Decision and Control (CDC)</em>, 2024.
   </span>
@@ -333,7 +333,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_2\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
-  “Robust Federated Q-Learning with Almost No Communication”, in
+  “<strong>Robust Federated Q-Learning with Almost No Communication</strong>”, in
   <span class="pub-venue" style="display: inline;">
     <em>American Control Conference (ACC)</em>, 2026.
   </span>
@@ -361,7 +361,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_1\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, and Aritra Mitra,
-  “Variance-Reduced Q-Learning over Static and Time-Varying Networks”, in
+  “<strong>Variance-Reduced Q-Learning over Static and Time-Varying Networks</strong>”, in
   <span class="pub-venue" style="display: inline;">
     <em>American Control Conference (ACC)</em>, 2026.
   </span>

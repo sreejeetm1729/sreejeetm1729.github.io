@@ -275,7 +275,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_4\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
-  “Robust Asynchronous Q-Learning under Reward and State Corruption via Batching”, in
+  “<strong>Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</strong>”, in
   <span class="pub-venue" style="display: inline;">
     <em>IEEE Conference on Decision and Control (CDC)</em>, 2026.
   </span>

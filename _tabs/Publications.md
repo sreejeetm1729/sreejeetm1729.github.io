@@ -210,7 +210,7 @@ math: true
 
 <div class="pub-section">
 
-<h2><span style="font-size: 1rem;">♦️</span> Selected First-Authored Publications</h2>
+<h2><span style="font-size: 1rem;">♦️</span> Accepted First-Authored Publications</h2>
 
 <div class="pub-entry">
   <div class="pub-title"><span style="color:#e8c4bd;">[\(M_2\)]</span> Corruption-Tolerant Optimal Asynchronous Q-Learning</div>

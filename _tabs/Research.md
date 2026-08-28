@@ -432,7 +432,20 @@ statistical benefits of collaboration with substantially reduced communication.
     </span>
     <a href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC26_GraphQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
-
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(J_1\)]</span>
+    <strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, IEEE Transactions in Automatic Control (TAC))
+    </span>
+  </p>
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(J_2\)]</span>
+    <strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, IEEE Transactions in Signal Processing (TSP))
+    </span>
+  </p>
 
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <h2>[<strong style="color:#208894;">Theme 4</strong>] Byzantine-Robust Federated Representation Learning</h2>
@@ -452,6 +465,14 @@ This project studies how a collection of heterogeneous reinforcement learning ag
 The key idea is to separate what is shared from what is personalized. The value functions of the honest agents are modeled through a common low-dimensional representation, while each agent has its own local parameter vector. Thus, the shared representation captures common structure across agents, while the personalized heads absorb agent-specific MDP heterogeneity.
 </p>
 
+<h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
+<p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(J_3\)]</span>
+    <strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, Transactions in Machine Learning Research (TMLR))
+    </span>
+  </p>
 </div>
 </div>

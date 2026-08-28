@@ -304,7 +304,7 @@ math: true
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_3\)]</span>
-  <strong>Sreejeet Maity</strong><sup>†</sup> and Aritra Mitra,
+  <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “Robust Q-Learning under Corrupted Rewards”, in
   <span class="pub-venue" style="display: inline;">
     <em>IEEE Conference on Decision and Control (CDC)</em>, 2024.

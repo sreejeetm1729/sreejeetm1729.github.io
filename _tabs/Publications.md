@@ -333,9 +333,14 @@ math: true
   </div>
 </div>
 <div class="pub-entry">
-  <div class="pub-title"><span style="color:#e8c4bd;">[\(C_1\)]</span> Variance-Reduced Q-Learning over Static and Time-Varying Networks</div>
-  <div class="pub-authors"><strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra</div>
-  <div class="pub-venue">American Control Conference, <strong>ACC 2026</strong>.</div>
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_1\)]</span>
+  <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, and Aritra Mitra,
+  “Variance-Reduced Q-Learning over Static and Time-Varying Networks”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>American Control Conference (ACC)</em>, 2026.
+  </span>
+</div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-2-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2607.21876">Paper</a>]

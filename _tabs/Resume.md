@@ -295,9 +295,8 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <h2>Representative Publications</h2>
 
 <div class="cv-entry">
-  [1] Corruption-Tolerant Optimal Asynchronous Q-Learning
-  <div><strong>Sreejeet Maity</strong><sup>†</sup>, Aritra Mitra</div>
-  <div class="cv-entry-meta">International Conference on Machine Learning, ICML 2026</div>
+  [1] <strong>S. Maity</strong><sup>†</sup> and A. Mitra, “Corruption-Tolerant Optimal Asynchronous Q-Learning”, in <span class="cv-entry-meta" style="display: inline;"> <em>International Conference on Machine Learning (ICML)</em>, 2026.
+  </span>
 </div>
 
 <div class="cv-entry">

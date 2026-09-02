@@ -73,7 +73,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
    We then develop robust \(Q\)-Learning algorithms that use historical reward data to construct robust empirical Bellman operators. Our first variant is reward-statistics aware and leverages distributional information, such as reward scale, to obtain sharp finite-time guarantees. We then develop a reward-statistics agnostic version that does not require prior knowledge of the true reward distribution, using an agnostic tuning parameter \(\color{#fca5a5}{p}>1\) to control the robustness–concentration tradeoff. For both i.i.d. (\(\bar{\tau}_{\mathrm{mix}}=1\)) and Markovian data, both approaches achieve finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable corruption-dependent term, which scales with the adversarial corruption fraction.
    <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
     \begin{equation}
-    \Vert Q_t - Q^* \Vert_{\infty}
+    \Vert \hat{Q}_t - Q^* \Vert_{\infty}
     \;\leq\;
     \widetilde{\mathcal O}\!\left(\bar{\sigma}
     \sqrt{\frac{\bar{\tau}_{\mathrm{mix}}}{T}}
@@ -81,7 +81,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     +
     \mathcal O\!\left(
     \varepsilon \bar{\sigma}
-    \right), \quad \Vert Q_t - Q^* \Vert_{\infty}
+    \right), \quad \Vert \hat{Q}_T - Q^* \Vert_{\infty}
     \;\leq\;
     \widetilde{\mathcal O}\!\left(\bar{\sigma}^{1+1/\color{#fca5a5}{p}}
     \sqrt{\frac{\bar{\tau}_{\mathrm{mix}}}{T}}

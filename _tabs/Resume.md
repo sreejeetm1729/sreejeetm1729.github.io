@@ -13,7 +13,7 @@ order: 7
 .cv-hero {
   padding: 1.4rem 1.5rem;
   border: 1px solid rgba(216,167,167,0.35);
-  border-radius: 16px;
+  border-radius: 0px;
   background: rgba(255,255,255,0.025);
   margin-bottom: 2rem;
 }

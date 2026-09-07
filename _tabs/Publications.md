@@ -43,7 +43,7 @@ math: true
 
 .pub-links a {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   margin-right: 0px;
   font-size: 14px;
   background-color: transparent !important;

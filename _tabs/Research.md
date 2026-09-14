@@ -106,11 +106,19 @@ next-state corruption, with respective corruption probabilities
 mean rewards. The resulting lower bound captures the unavoidable dependence on both reward and next-state corruption:
 <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
   \begin{equation}
-    \Omega\left(
-      \frac{\bar{\sigma}\sqrt{\varepsilon_R}}{1-\gamma}
-      \,\vee\,
-      \frac{\gamma\bar R\,\varepsilon_Y}{(1-\gamma)^2}
-    \right),
+    \inf_{\hat Q_T}
+    \sup_{(\mathcal M,\mathcal A)\in\mathcal H_{\mathrm{joint}}}
+    \mathbb P_{\mathcal M,\mathcal A}\!\left(
+      \|\hat Q_T-Q_{\mathcal M}^*\|_\infty
+      \geq
+      \tilde c\left[
+        \frac{\bar{\sigma}\sqrt{\varepsilon_R}}{1-\gamma}
+        \,\vee\,
+        \frac{\gamma\bar R\,\varepsilon_Y}{(1-\gamma)^2}
+      \right]
+    \right)
+    \geq \hat{\delta},
+    \qquad \hat{\delta}>0,
   \end{equation}
 </div>
 where \(a \vee b = \max\{a,b\}\). The two terms capture distinct sources of

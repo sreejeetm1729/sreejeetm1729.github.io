@@ -92,13 +92,37 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     \right).
     \end{equation}
   </div>
-   We further prove an information-theoretic lower bound showing that the dependence on the corruption fraction is unavoidable. To state this formally, let \(\mathcal{H}(\varepsilon,\bar{\sigma},\mathcal{Q})\) denote the class of all finite-state, finite-action MDPs and observation models in which the true reward distributions have bounded mean rewards, variance at most \(\bar{\sigma}^2\), and are subject to an \(\varepsilon\)-fraction strong-contamination model.
+
+We further prove an information-theoretic lower bound showing that the dependence on the corruption fraction is unavoidable. To state this formally, let \(\mathcal{H}(\varepsilon,\bar{\sigma},\mathcal{Q})\) denote the class of all finite-state, finite-action MDPs and observation models in which the true reward distributions have bounded mean rewards, variance at most \(\bar{\sigma}^2\), and are subject to an \(\varepsilon\)-fraction strong-contamination model.
    <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
     \begin{equation}
      \inf_{\hat{Q}_T} \sup_{Q^* \in \mathcal{H}(\varepsilon, \bar{\sigma}, \mathcal{Q})} \mathbb{P}\left( \Vert \hat{Q}_T - Q^* \Vert_{\infty} \geq \frac{\tilde{c} \bar{\sigma} \sqrt{\varepsilon}}{(1-\gamma)}\right) \geq \hat{\delta}, \quad \hat{\delta} > 0.
     \end{equation}
   </div>
-   
+  
+We further characterize the fundamental limits under simultaneous reward and
+next-state corruption, with respective corruption probabilities
+\(\varepsilon_R\) and \(\varepsilon_Y\). Let \(\bar R\) bound the absolute
+mean rewards. In the regime \(\varepsilon_Y \leq 1-\gamma\) and
+\(\bar{\sigma}\sqrt{\varepsilon_R} \leq \bar R\), the unavoidable estimation
+error scales as
+<div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
+  \begin{equation}
+    \Omega\left(
+      \frac{\bar{\sigma}\sqrt{\varepsilon_R}}{1-\gamma}
+      \,\vee\,
+      \frac{\gamma\bar R\,\varepsilon_Y}{(1-\gamma)^2}
+    \right),
+  \end{equation}
+</div>
+where \(a \vee b = \max\{a,b\}\). The two terms capture distinct sources of
+statistical indistinguishability: reward corruption can conceal differences
+in mean rewards, while next-state corruption can conceal differences in
+transition dynamics. The additional horizon factor in the state-corruption
+term reflects the sensitivity of long-term returns to transition errors.
+Consequently, neither corruption contribution can generally be eliminated
+by collecting more samples.
+
    The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026</span> work completes this line for reward corruption by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption. Finally, the <span class="research-tag">CDC 2026</span> work then extends the framework to simultaneous reward and state corruption, introducing an epoch-based algorithm that uses batched online data to construct robust, low-variance estimates of the Bellman optimality operator. It establishes the first robustness guarantee for asynchronous Q-Learning under joint reward and state corruption, while achieving a minimax-optimal dependence on the corruption fraction in the reward-only setting.
 </p>
 

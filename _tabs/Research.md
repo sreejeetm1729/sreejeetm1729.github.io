@@ -138,7 +138,6 @@ in mean rewards, while next-state corruption can conceal differences in
 transition dynamics. The additional horizon factor in the state-corruption
 term reflects the sensitivity of long-term returns to transition errors. <strong  style="color: #0bb9c5;">Consequently, neither corruption contribution can generally be eliminated by collecting more samples.</strong>
 
-The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026</span> work completes this line for reward corruption by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption. Finally, the <span class="research-tag">CDC 2026</span> work then extends the framework to simultaneous reward and state corruption, introducing an epoch-based algorithm that uses batched online data to construct robust, low-variance estimates of the Bellman optimality operator. It establishes the first robustness guarantee for asynchronous Q-Learning under joint reward and state corruption, while achieving a minimax-optimal dependence on the corruption fraction in the reward-only setting.
 </p>
 
 </div>
@@ -205,6 +204,9 @@ The sequence of results gradually moves from idealized sampling models toward re
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
   <strong style="color:#bfdbfe;">Figure</strong>: Vanilla vs Robust \(Q\)-Learning under adversarial corruption in both states and rewards via Batching (<strong style="color:#bfdbfe;">CDC 2026</strong>).
 </div>
+
+The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026</span> work completes this line for reward corruption by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption. Finally, the <span class="research-tag">CDC 2026</span> work then extends the framework to simultaneous reward and state corruption, introducing an epoch-based algorithm that uses batched online data to construct robust, low-variance estimates of the Bellman optimality operator. It establishes the first robustness guarantee for asynchronous Q-Learning under joint reward and state corruption, while achieving a minimax-optimal dependence on the corruption fraction in the reward-only setting.
+
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
   <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>

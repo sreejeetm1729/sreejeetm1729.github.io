@@ -80,7 +80,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     \right)
     +
     \mathcal O\!\left(
-    \varepsilon \bar{\sigma}
+    \sqrt{\varepsilon} \bar{\sigma}
     \right), \quad \Vert \hat{Q}_T - Q^* \Vert_{\infty}
     \;\leq\;
     \widetilde{\mathcal O}\!\left(\bar{\sigma}^{1+1/\color{#fca5a5}{p}}
@@ -88,7 +88,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
     \right)
     +
     \mathcal O\!\left(
-    \varepsilon \bar{\sigma}
+    \sqrt{\varepsilon} \bar{\sigma}
     \right).
     \end{equation}
   </div>

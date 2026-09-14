@@ -99,13 +99,11 @@ We further prove an information-theoretic lower bound showing that the dependenc
      \inf_{\hat{Q}_T} \sup_{Q^* \in \mathcal{H}(\varepsilon, \bar{\sigma}, \mathcal{Q})} \mathbb{P}\left( \Vert \hat{Q}_T - Q^* \Vert_{\infty} \geq \frac{\tilde{c} \bar{\sigma} \sqrt{\varepsilon}}{(1-\gamma)}\right) \geq \hat{\delta}, \quad \hat{\delta} > 0.
     \end{equation}
   </div>
-  
+
 We further characterize the fundamental limits under simultaneous reward and
 next-state corruption, with respective corruption probabilities
 \(\varepsilon_R\) and \(\varepsilon_Y\). Let \(\bar R\) bound the absolute
-mean rewards. In the regime \(\varepsilon_Y \leq 1-\gamma\) and
-\(\bar{\sigma}\sqrt{\varepsilon_R} \leq \bar R\), the unavoidable estimation
-error scales as
+mean rewards. The resulting lower bound captures the unavoidable dependence on both reward and next-state corruption:
 <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
   \begin{equation}
     \Omega\left(

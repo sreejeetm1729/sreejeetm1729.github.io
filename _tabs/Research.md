@@ -102,8 +102,19 @@ We further prove an information-theoretic lower bound showing that the dependenc
 
 We further characterize the fundamental limits under simultaneous reward and
 next-state corruption, with respective corruption probabilities
-\(\varepsilon_R\) and \(\varepsilon_Y\). Let \(\bar R\) bound the absolute
-mean rewards. The resulting lower bound captures the unavoidable dependence on both reward and next-state corruption:
+\(\varepsilon_R\) and \(\varepsilon_Y\). Let
+\(\mathcal H_{\mathrm{joint}}\) denote the class of admissible pairs
+\((\mathcal M,\mathcal A)\), where \(\mathcal M\) is a finite-state,
+finite-action discounted MDP whose clean reward distributions have absolute
+mean at most \(\bar R\) and variance at most \(\bar{\sigma}^2\), and
+\(\mathcal A\) is an adversarial strategy permitted by the joint corruption
+model. Here, \(Q_{\mathcal M}^*\) denotes the optimal action-value function of
+\(\mathcal M\), while \(\hat Q_T\) is an arbitrary estimator based on
+\(T\) observations. The probability \(\mathbb P_{\mathcal M,\mathcal A}\)
+accounts for randomness in the observations, corruption, and estimator.
+For universal constants \(\tilde c>0\) and \(\hat{\delta}\in(0,1)\),
+independent of \(T\), the following lower bound captures the unavoidable
+estimation error:
 <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
   \begin{equation}
     \inf_{\hat Q_T}

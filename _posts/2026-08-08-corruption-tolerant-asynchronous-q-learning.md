@@ -225,19 +225,13 @@ O\left(
 \right).
 $$
 
-The suppressed logarithms depend on 
-$$
-T
-$$, 
+The suppressed logarithms depend on $T$, 
 
 $$
 |\mathcal S||\mathcal A|
-$$, 
+$$, and 
 
-and 
-$$
-1/\delta
-$$. 
+$1/\delta$. 
 
 When $\varepsilon=0$, the dominant statistical term recovers the known $T^{-1/2}$ behavior of asynchronous $Q$-Learning, up to logarithmic and problem-dependent factors. Under corruption, the attack magnitude disappears entirely; only $\sqrt\varepsilon$ remains.
 

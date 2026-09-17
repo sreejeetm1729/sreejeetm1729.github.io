@@ -163,7 +163,7 @@ $$
 \widetilde\sigma=\max\{\overline R,\overline\sigma\}.
 $$
 
-If $|\overline r_t(s_t,a_t)|>G_t$, the estimate is rejected and replaced by zero. Otherwise it is accepted. Denote the resulting reward proxy by $\widetilde r_t(s_t,a_t)$.
+If $$|\overline r_t(s_t,a_t)|>G_t$$, the estimate is rejected and replaced by zero. Otherwise it is accepted. Denote the resulting reward proxy by $$\widetilde r_t(s_t,a_t)$$.
 
 The threshold is carefully balanced. It is small enough to prevent a rare catastrophic estimator output from entering the recursion, but large enough that, after burn-in, an accurate robust estimate is accepted on the main high-probability event. The proof shows that thresholding eventually becomes inactive on this good event.
 
@@ -225,9 +225,9 @@ O\left(
 \right).
 $$
 
-The suppressed logarithms depend on $T$, $|\mathcal S||\mathcal A|$, and $1/\delta$. When $\varepsilon=0$, the dominant statistical term recovers the known $T^{-1/2}$ behavior of asynchronous $Q$-Learning, up to logarithmic and problem-dependent factors. Under corruption, the attack magnitude disappears entirely; only $\sqrt\varepsilon$ remains.
+The suppressed logarithms depend on $$T$$, $$|\mathcal S||\mathcal A|$$, and $$1/\delta$$. When $$\varepsilon=0$$, the dominant statistical term recovers the known $$T^{-1/2}$$ behavior of asynchronous $Q$-Learning, up to logarithmic and problem-dependent factors. Under corruption, the attack magnitude disappears entirely; only $$\sqrt\varepsilon$$ remains.
 
-The factor $1/\lambda_{\min}$ in the corruption term is also intuitive. If a state-action pair is rarely visited, the learner has fewer clean rewards for that pair, so an $\varepsilon$ fraction of corruption is harder to distinguish from the tails of the clean distribution.
+The factor $$1/\lambda_{\min}$$ in the corruption term is also intuitive. If a state-action pair is rarely visited, the learner has fewer clean rewards for that pair, so an $$\varepsilon$$ fraction of corruption is harder to distinguish from the tails of the clean distribution.
 
 ## A fundamental lower bound
 

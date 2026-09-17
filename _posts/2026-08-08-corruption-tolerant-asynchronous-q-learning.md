@@ -227,9 +227,9 @@ $$
 
 The suppressed logarithms depend on $T$, 
 
-$$
+$
 |\mathcal S||\mathcal A|
-$$, and 
+$, and 
 
 $1/\delta$. 
 
@@ -255,7 +255,7 @@ $$
 
 The construction uses two MDPs with optimal $Q$-functions separated by order $\overline\sigma\sqrt\varepsilon/(1-\gamma)$ and attack distributions that make their corrupted observations statistically indistinguishable. Therefore, no estimator can be accurate on both instances.
 
-The upper and lower bounds match in their dependence on $\varepsilon$, $\overline\sigma$, and $1-gamma$. The remaining gap concerns asynchronous coverage factors and logarithms, not the fundamental corruption scaling.
+The upper and lower bounds match in their dependence on $\varepsilon$, $\overline\sigma$, and $1-\gamma$. The remaining gap concerns asynchronous coverage factors and logarithms, not the fundamental corruption scaling.
 
 ## A useful noise-free exception
 

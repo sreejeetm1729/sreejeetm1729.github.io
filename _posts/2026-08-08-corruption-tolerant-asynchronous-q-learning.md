@@ -163,7 +163,6 @@ $$
 \widetilde\sigma=\max\{\overline R,\overline\sigma\}.
 $$
 
-If $|\bar{r}_t(s_t,a_t)|>G_t$, the estimate is rejected and replaced by zero. Otherwise it is accepted. Denote the resulting reward proxy by $\widetilde{r}_t(s_t,a_t)$.
 
 The threshold is carefully balanced. It is small enough to prevent a rare catastrophic estimator output from entering the recursion, but large enough that, after burn-in, an accurate robust estimate is accepted on the main high-probability event. The proof shows that thresholding eventually becomes inactive on this good event.
 

@@ -224,8 +224,9 @@ O\left(
 {\lambda_{\min}(1-\gamma)}
 \right).
 $$
+ 
 
-The suppressed logarithms depend on $T$, $|\mathcal S||\mathcal A|$, and $1/\delta$. When $\varepsilon=0$, the dominant statistical term recovers the known $T^{-1/2}$ behavior of asynchronous $Q$-Learning, up to logarithmic and problem-dependent factors. Under corruption, the attack magnitude disappears entirely; only $\sqrt\varepsilon$ remains.
+When $\varepsilon=0$, the dominant statistical term recovers the known $T^{-1/2}$ behavior of asynchronous $Q$-Learning, up to logarithmic and problem-dependent factors. Under corruption, the attack magnitude disappears entirely; only $\sqrt{\varepsilon}$ remains.
 
 The factor $1/\lambda_{\min}$ in the corruption term is also intuitive. If a state-action pair is rarely visited, the learner has fewer clean rewards for that pair, so an $\varepsilon$ fraction of corruption is harder to distinguish from the tails of the clean distribution.
 

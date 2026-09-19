@@ -340,7 +340,7 @@ math: true
 </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-1-summary')">Summary</a>]
-    [<a class="link-paper" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC26_DistRobustQ.pdf">Paper</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2609.20174">Paper</a>]
     [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/Robust-FedQ%20Poster.pdf">Poster</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC%202026%20DisRobQ-ppt.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication">Code</a>]

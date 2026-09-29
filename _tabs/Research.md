@@ -55,7 +55,7 @@ Can reinforcement learning still discover an optimal policy when the feedback it
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
 
   <div style="flex:0 0 380px;">
-    <img src="{{ '/assets/research/Theme 1-3.png' | relative_url }}" 
+    <img src="{{ '/assets/research/Theme 1-4.png' | relative_url }}" 
          alt="Robust optimal policy learning"
          style="width:1200px; height:auto; border-radius:4px; box-shadow:none; rgba(0,0,0,0.18);" />
   </div>

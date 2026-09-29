@@ -145,19 +145,19 @@ term reflects the sensitivity of long-term returns to transition errors. <strong
 
   <img src="{{ '/assets/research/van_1.png' | relative_url }}"
        alt="Plot 1"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ '/assets/research/rob_1.png' | relative_url }}"
        alt="Plot 2"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ '/assets/research/rob_2.png' | relative_url }}"
        alt="Plot 3"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ '/assets/research/rob_3.png' | relative_url }}"
        alt="Plot 4"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
@@ -167,38 +167,38 @@ term reflects the sensitivity of long-term returns to transition errors. <strong
 
   <img src="{{ '/assets/research/Vanilla_varying_epsilon (1).png' | relative_url }}"
        alt="Plot 1"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ 'assets/research/Vanilla_varying_variance (1).png' | relative_url }}"
        alt="Plot 2"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ 'assets/research/Robust_BR_varying_variance (1).png' | relative_url }}"
        alt="Plot 3"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ 'assets/research/Robust_BR-Async-Q (1).png' | relative_url }}"
        alt="Plot 4"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
   <img src="{{ 'assets/research/Vanilla_Q_error_asymmetric_corruption_300dpi (2).png' | relative_url }}"
        alt="Plot 1"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ 'assets/research/BR_Q_error_batch_size_low_corruption_preview_300dpi (2).png' | relative_url }}"
        alt="Plot 2"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ 'assets/research/BR_Q_error_batch_size_high_corruption_preview_300dpi (2).png' | relative_url }}"
        alt="Plot 3"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ 'assets/research/BR_Q_error_asymmetric_corruption_300dpi (2).png' | relative_url }}"
        alt="Plot 4"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">

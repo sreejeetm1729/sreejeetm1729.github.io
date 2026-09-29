@@ -291,10 +291,10 @@ The sequence of results gradually moves from idealized sampling models toward re
  Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We develop a robust temporal-difference learning method and prove that, with linear function approximation, its finite-time guarantees match those of Vanilla-TD up to a small \(O(\varepsilon)\) term that precisely captures the effect of adversarial corruption.
  <div style="display:flex; align-items:center; gap:12px; margin-top:1.2rem; margin-bottom:1.2rem;">
 
-  <div style="flex:0 0 420px; text-align:center;">
+  <div style="flex:0 0 400px; text-align:center;">
     <img src="{{ '/assets/research/Theme 2-1.png' | relative_url }}"
          alt="Robust TD illustration"
-         style="width:420px; max-width:100%; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);"  />
+         style="width:400px; max-width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);"  />
   </div>
 
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">

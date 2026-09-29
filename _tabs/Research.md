@@ -124,11 +124,10 @@ estimation error:
     \right)
     +
     \mathcal O\!\left(
-    \sqrt{\color{#fca5a5}{\varepsilon_R}} \bar{\sigma}
+    \sqrt{\varepsilon_R} \bar{\sigma}
     \right)
     +
-    \mathcal O\!\left(
-    \color{#fca5a5}{\varepsilon_Y} \bar{R}
+    \mathcal O\!\left(\varepsilon_Y \bar{R}
     \right).
     \end{equation}
 </div>

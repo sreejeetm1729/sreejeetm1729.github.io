@@ -124,11 +124,11 @@ estimation error:
     \right)
     +
     \mathcal O\!\left(
-    \sqrt{\varepsilon_R} \bar{\sigma}
+    \sqrt{\color{#fca5a5}{\varepsilon_R}} \bar{\sigma}
     \right)
     +
     \mathcal O\!\left(
-    \varepsilon_Y \bar{R}
+    \color{#fca5a5}{\varepsilon_Y} \bar{R}
     \right).
     \end{equation}
 </div>
@@ -141,9 +141,9 @@ estimation error:
       \|\hat Q_T-Q_{\mathcal M}^*\|_\infty
       \geq
       \tilde c\left[
-        \frac{\bar{\sigma}\sqrt{\varepsilon_R}}{1-\gamma}
+        \frac{\bar{\sigma}\sqrt{\color{#fca5a5}{\varepsilon_R}}}{1-\gamma}
         \,\vee\,
-        \frac{\gamma\bar R\,\varepsilon_Y}{(1-\gamma)^2}
+        \frac{\gamma\bar R\,\color{#fca5a5}{\varepsilon_Y}}{(1-\gamma)^2}
       \right]
     \right)
     \geq \hat{\delta},

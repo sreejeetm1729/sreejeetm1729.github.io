@@ -63,14 +63,14 @@ Can reinforcement learning still discover an optimal policy when the feedback it
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
  
   <p>
-  Recently, there has been a surge of interest in understanding the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of these algorithms in non-ideal environments, particularly under corrupted rewards, remains poorly understood. Motivated by this gap, we study the robustness of the celebrated Q-Learning algorithm under a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We first show that such attacks can cause vanilla Q-Learning to incur arbitrarily large errors.
+  Recently, there has been a surge of interest in understanding the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of these algorithms in non-ideal environments, particularly under corrupted rewards, remains poorly understood. Motivated by this gap, we study the robustness of the celebrated Q-Learning algorithm under a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the 
   </p>
 
   </div>
 
 </div>
 <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
-   We then develop robust \(Q\)-Learning algorithms that use historical reward data to construct robust empirical Bellman operators. Our first variant is reward-statistics aware and leverages distributional information, such as reward scale, to obtain sharp finite-time guarantees. We then develop a reward-statistics agnostic version that does not require prior knowledge of the true reward distribution, using an agnostic tuning parameter \(\color{#fca5a5}{p}>1\) to control the robustness–concentration tradeoff. For both i.i.d. (\(\bar{\tau}_{\mathrm{mix}}=1\)) and Markovian data, both approaches achieve finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable corruption-dependent term, which scales with the adversarial corruption fraction.
+   observed rewards. We first show that such attacks can cause vanilla Q-Learning to incur arbitrarily large errors. We then develop robust \(Q\)-Learning algorithms that use historical reward data to construct robust empirical Bellman operators. Our first variant is reward-statistics aware and leverages distributional information, such as reward scale, to obtain sharp finite-time guarantees. We then develop a reward-statistics agnostic version that does not require prior knowledge of the true reward distribution, using an agnostic tuning parameter \(\color{#fca5a5}{p}>1\) to control the robustness–concentration tradeoff. For both i.i.d. (\(\bar{\tau}_{\mathrm{mix}}=1\)) and Markovian data, both approaches achieve finite-time convergence rates that match known state-of-the-art bounds up to a small and inevitable corruption-dependent term, which scales with the adversarial corruption fraction.
    <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
     \begin{equation}
     \Vert \hat{Q}_T - Q^* \Vert_{\infty}

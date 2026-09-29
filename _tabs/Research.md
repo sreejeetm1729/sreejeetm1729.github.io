@@ -274,10 +274,10 @@ The sequence of results gradually moves from idealized sampling models toward re
 
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
 
-  <div style="flex:0 0 280px;">
-    <img src="{{ '/assets/research/robust_td.png' | relative_url }}"
+  <div style="flex:0 0 380px;">
+    <img src="{{ '/assets/research/Theme 2-2.png' | relative_url }}"
          alt="Robust optimal policy learning"
-         style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+         style="width:1200px; height:auto; border-radius:0px; box-shadow:none; rgba(0,0,0,0.18);" />
   </div>
 
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">

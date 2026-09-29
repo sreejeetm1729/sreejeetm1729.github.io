@@ -113,8 +113,26 @@ model. Here, \(Q_{\mathcal M}^*\) denotes the optimal action-value function of
 \(T\) observations. The probability \(\mathbb P_{\mathcal M,\mathcal A}\)
 accounts for randomness in the observations, corruption, and estimator.
 For universal constants \(\tilde c>0\) and \(\hat{\delta}\in(0,1)\),
-independent of \(T\), the following lower bound captures the unavoidable
+independent of \(T\), the following upper and lower bound captures the unavoidable
 estimation error:
+<div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
+    \begin{equation}
+    \Vert \hat{Q}_T - Q^* \Vert_{\infty}
+    \;\leq\;
+    \widetilde{\mathcal O}\!\left(\bar{\sigma}
+    \sqrt{\frac{\bar{\tau}_{\mathrm{mix}}}{T}}
+    \right)
+    +
+    \mathcal O\!\left(
+    \sqrt{\varepsilon_R} \bar{\sigma}
+    \right)
+    +
+    \mathcal O\!\left(
+    \varepsilon_Y \bar{R}
+    \right).
+    \end{equation}
+</div>
+
 <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">
   \begin{equation}
     \inf_{\hat Q_T}

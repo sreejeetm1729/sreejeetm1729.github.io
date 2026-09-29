@@ -275,7 +275,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
 
   <div style="flex:0 0 380px;">
-    <img src="{{ '/assets/research/Theme 2-2.png' | relative_url }}"
+    <img src="{{ '/assets/research/Theme 2-3.png' | relative_url }}"
          alt="Robust optimal policy learning"
          style="width:1200px; height:auto; border-radius:0px; box-shadow:none; rgba(0,0,0,0.18);" />
   </div>
@@ -294,7 +294,7 @@ The sequence of results gradually moves from idealized sampling models toward re
   <div style="flex:0 0 400px; text-align:center;">
     <img src="{{ '/assets/research/Theme 2-1.png' | relative_url }}"
          alt="Robust TD illustration"
-         style="width:400px; max-width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);"  />
+         style="width:400px; max-width:100%; height:auto; border-radius:5px; box-shadow:0 4px 14px rgba(0,0,0,0.18);"  />
   </div>
 
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:center;">

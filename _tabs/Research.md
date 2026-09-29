@@ -292,7 +292,7 @@ The sequence of results gradually moves from idealized sampling models toward re
  <div style="display:flex; align-items:center; gap:12px; margin-top:1.2rem; margin-bottom:1.2rem;">
 
   <div style="flex:0 0 420px; text-align:center;">
-    <img src="{{ '/assets/research/lfa.png' | relative_url }}"
+    <img src="{{ '/assets/research/Theme 2-1.png' | relative_url }}"
          alt="Robust TD illustration"
          style="width:420px; max-width:100%; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);"  />
   </div>

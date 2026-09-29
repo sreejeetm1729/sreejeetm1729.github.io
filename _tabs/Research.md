@@ -327,19 +327,19 @@ The sequence of results gradually moves from idealized sampling models toward re
 
   <img src="{{ '/assets/research/td_1.png' | relative_url }}"
        alt="Plot 1"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ '/assets/research/td_2.png' | relative_url }}"
        alt="Plot 2"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ '/assets/research/td_3.png' | relative_url }}"
        alt="Plot 3"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
   <img src="{{ '/assets/research/td_4.png' | relative_url }}"
        alt="Plot 4"
-       style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+       style="width:100%; height:auto; border-radius:0px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">

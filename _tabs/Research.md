@@ -274,7 +274,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.1 rem;">
 
-  <div style="flex:0 0 380px;">
+  <div style="flex:0 0 400px;">
     <img src="{{ '/assets/research/Theme 2-3.png' | relative_url }}"
          alt="Robust optimal policy learning"
          style="width:1200px; height:auto; border-radius:0px; box-shadow:none; rgba(0,0,0,0.18);" />
@@ -283,12 +283,12 @@ The sequence of results gradually moves from idealized sampling models toward re
   <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
  
   <p>
-  One of the fundamental challenges in reinforcement learning (RL) is policy evaluation, which involves estimating the value function—the long-term return—associated with a fixed policy. The well-known Temporal Difference (TD) learning algorithm addresses this problem, and recent research has provided finite-time convergence guarantees for TD and its variants. However, these guarantees typically rely on the assumption that reward observations are generated from a well-behaved (e.g., sub-Gaussian) true reward distribution.
+  One of the fundamental challenges in reinforcement learning (RL) is policy evaluation, which involves estimating the value function—the long-term return—associated with a fixed policy. The well-known Temporal Difference (TD) learning algorithm addresses this problem, and recent research has provided finite-time convergence guarantees for TD and its variants. However, these guarantees typically rely on the assumption that
   </p>
 </div>
   </div>
 <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
- Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We develop a robust temporal-difference learning method and prove that, with linear function approximation, its finite-time guarantees match those of Vanilla-TD up to a small \(O(\varepsilon)\) term that precisely captures the effect of adversarial corruption.
+  reward observations are generated from a well-behaved (e.g., sub-Gaussian) true reward distribution.Recognizing that such assumptions may not hold in harsh, real-world environments, we revisit the policy evaluation problem through the lens of adversarial robustness. We develop a robust temporal-difference learning method and prove that, with linear function approximation, its finite-time guarantees match those of Vanilla-TD up to a small \(O(\varepsilon)\) term that precisely captures the effect of adversarial corruption.
  <div style="display:flex; align-items:center; gap:12px; margin-top:1.2rem; margin-bottom:1.2rem;">
 
   <div style="flex:0 0 400px; text-align:center;">

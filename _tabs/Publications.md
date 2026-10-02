@@ -388,14 +388,14 @@ math: true
 </div>
 
 <div class="pub-section">
-<h2><span style="font-size: 1rem;"></span>Pre-prints/ Under Review/ Technical Articles</h2>
+<h2><span style="font-size: 1rem;"></span>Pre-prints/ Working Papers</h2>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_1\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
-    <em>Under Review at IEEE Transactions in Automatic Control (TAC).</em>.
+    <em>Under Review at IEEE Transactions in Automatic Control (TAC).</em>
   </span>
 </div>
   <div class="pub-links">

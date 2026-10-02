@@ -388,10 +388,10 @@ math: true
 </div>
 
 <div class="pub-section">
-<h2><span style="font-size: 1rem;"></span>Pre-prints/ Working Papers</h2>
+<h2><span style="font-size: 1rem;"></span>Pre-prints Under Review / Working Papers</h2>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_1\)]</span>
+  <span style="color:#e8c4bd;">[\(J_2\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -427,6 +427,34 @@ accommodate single-trajectory Markovian sampling and heterogeneous partial cover
 agents may explore different regions of the state-action space and learning relies on their collective
 coverage. Finally, our epoch-based design substantially improves the best known communication
 complexity for federated Q-learning under asynchronous sampling.
+    </div>
+  </div>
+</div>
+div class="pub-entry">
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(J_1\)]</span>
+  <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
+  “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>Under Review at IEEE Transactions in Signal Processing (TSP).</em>
+  </span>
+</div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tsp-summary')">Summary</a>]
+    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+  </div>
+</div>
+<div id="tsp-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('tsp-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      We investigate a decentralized reinforcement learning problem where multiple agents interact with the same
+Markov decision process (MDP). The goal is to collectively learn the optimal state-action value function by exchanging information over a network. Motivated by practical considerations, we consider an asynchronous sampling model, where each agent observes only a single state-action pair at every time-step. For this setting, we introduce a novel epoch-based decentralized Q-learning algorithm named AVRDQ, in which agents locally estimate the Bellman optimality operator and diffuse information using a consensus-based protocol. We further
+extend our framework to partial state-action coverage, where different agents may observe different subsets of the stateaction space. In both settings, we establish high-probability finite-time convergence guarantees for AVRDQ that exhibit linear collaborative speedups. To the best of our knowledge, this is the first work to simultaneously achieve linear collaborative speedups and poly-logarithmic communication complexity for
+decentralized Q-learning under asynchronous sampling, with guarantees further extending to partial state-action coverage.
     </div>
   </div>
 </div>

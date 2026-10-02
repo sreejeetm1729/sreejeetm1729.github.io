@@ -430,7 +430,7 @@ complexity for federated Q-learning under asynchronous sampling.
     </div>
   </div>
 </div>
-div class="pub-entry">
+
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_1\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,

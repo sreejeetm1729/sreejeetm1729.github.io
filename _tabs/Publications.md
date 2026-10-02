@@ -205,7 +205,7 @@ math: true
 
 <div class="pub-note">
   <strong>Comments on Publication Venues.</strong>
-  The category “Selective ML/CS Conferences <span style="color:#e8c4bd;">[\(C^{*}\)]</span>” refers to papers published in highly selective machine learning and computer science venues, such as <em>NeurIPS</em>, <em>ICML</em>, <em>ICLR</em>, and <em>AISTATS</em>, typically with acceptance rates below 25%. These tend to be long papers of at least the same quality as typical journal papers in quality and rigor. In control theory, the premier journals <span style="color:#e8c4bd;">[\(J^{*}\)]</span> are <em>IEEE Transactions on Automatic Control</em> and <em>Automatica</em>, while the main flagship conferences <span style="color:#e8c4bd;">[\(C\)]</span> are the <em>IEEE Conference on Decision and Control</em> and the <em>American Control Conference</em>.
+  The category “Selective ML/CS Conferences <span style="color:#e8c4bd;">[\(C^{*}\)]</span>” refers to papers published in highly selective machine learning and computer science venues, such as <em>NeurIPS</em>, <em>ICML</em>, <em>ICLR</em>, and <em>AISTATS</em>, typically with acceptance rates below 25%. These tend to be long papers of at least the same quality as typical journal papers in quality and rigor. In control theory, the premier journals <span style="color:#e8c4bd;">[\(J^{*}\)]</span> are <em>IEEE Transactions on Automatic Control</em> and <em>Automatica</em>, while the main flagship conferences <span style="color:#e8c4bd;">[\(C\)]</span> are the <em>IEEE Conference on Decision and Control</em> and the <em>American Control Conference</em>. 
 </div>
 
 <div class="pub-section">
@@ -389,7 +389,47 @@ math: true
 
 <div class="pub-section">
 <h2><span style="font-size: 1rem;"></span>Pre-prints/ Under Review/ Technical Articles</h2>
-
+<div class="pub-entry">
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(J_1\)]</span>
+  <strong>Sreejeet Maity</strong> and Aritra Mitra,
+  “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”, in
+  <span class="pub-venue" style="display: inline;">
+    <em>Under Review, IEEE Transactions in Automatic Control (TAC).</em>, 2026.
+  </span>
+</div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tac-summary')">Summary</a>]
+    [<a class="link-paper" href="https://www.researchgate.net/publication/415165787_Learning_from_Unreliable_Trajectories_Adversarially-Robust_Federated_Q-Learning">Paper</a>]
+  </div>
+</div>
+<div id="acc2026-1-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('tac-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      We study federated reinforcement learning in which multiple agents interact with a common Markov
+decision process and communicate through a central server to collaboratively learn the optimal stateaction
+value function. Our goal is to understand whether the sample-efficiency benefits of collaboration
+can be retained when a fraction of the agents behave adversarially and transmit arbitrarily corrupted
+information. To address this problem, we introduce Robust Async-Fed-Q, an epoch-based federated
+learning algorithm that combines variance-reduced estimation of the Bellman optimality operator at
+the agents with robust aggregation at the server. We establish high-probability finite-time guarantees
+showing that the proposed method preserves the statistical gains of collaboration among the honest
+agents while tolerating adversarial corruption. In particular, the effect of the adversarial agents decreases
+as the amount of data collected by each honest agent grows and eventually vanishes in the infinite-sample
+limit. We complement these guarantees with information-theoretic lower bounds that characterize the
+unavoidable statistical cost of adversarial corruption, leading to the first nearly matching upper and lower
+bounds for adversarially robust federated reinforcement learning. We further extend our framework to
+accommodate single-trajectory Markovian sampling and heterogeneous partial coverage, where different
+agents may explore different regions of the state-action space and learning relies on their collective
+coverage. Finally, our epoch-based design substantially improves the best known communication
+complexity for federated Q-learning under asynchronous sampling.
+    </div>
+  </div>
+</div>
 <div class="pub-section">
 
 <h2><span style="font-size: 1rem;">♠️</span> Accepted Workshop Presentations</h2>

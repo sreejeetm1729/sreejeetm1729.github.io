@@ -395,12 +395,12 @@ math: true
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
-    <em>Under Review at IEEE Transactions in Automatic Control (TAC).</em>
+    <em>Under Review.</em>
   </span>
 </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tac-summary')">Summary</a>]
-    [<a class="link-paper" href="https://www.researchgate.net/publication/415165787_Learning_from_Unreliable_Trajectories_Adversarially-Robust_Federated_Q-Learning">Paper</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2610.06918">Paper</a>]
   </div>
 </div>
 <div id="tac-summary" class="pub-summary-card">

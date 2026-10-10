@@ -462,6 +462,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(J_1\)]</span>
+    <strong>Sreejeet Maity</strong>, Leonardo Felipe Toso, James Anderson, Aritra Mitra,
     “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
       <em>Under Review at Transactions on Machine Learning Research (TMLR).</em>
@@ -488,6 +489,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_8\)]</span>
+    <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption</strong>”,
     <span class="pub-venue" style="display: inline;">
       <em>Under Review at Learning for Dynamics and Control (L4DC 2027).</em>
@@ -514,6 +516,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_7\)]</span>
+    <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
       <em>Under Review at European Control Conference (ECC 2027).</em>

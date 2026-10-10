@@ -386,8 +386,6 @@ math: true
   </div>
 </div>
 </div>
-
-<!-- C8: L4DC 2027 -->
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_2\)]</span>
@@ -413,8 +411,6 @@ math: true
     </div>
   </div>
 </div>
-
-<!-- C7: ECC 2027 -->
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_1\)]</span>

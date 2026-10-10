@@ -458,6 +458,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
     </div>
   </div>
 </div>
+
 <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_1\)]</span>
   “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,
@@ -479,7 +480,6 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
   </div>
 </div>
 
-<!-- Robust Policy Evaluation -->
 <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_8\)]</span>
   “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption</strong>”,
@@ -501,7 +501,6 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
   </div>
 </div>
 
-<!-- Adaptive Quantization -->
 <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(C_7\)]</span>
   “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,

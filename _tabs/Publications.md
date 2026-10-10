@@ -389,7 +389,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_2\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
-    “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption</strong>”,
+    “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption: Near-Optimality via Batching</strong>”,
     <span class="pub-venue" style="display: inline;">
       <em>Under Review at Learning for Dynamics and Control (L4DC), 2027.</em>
     </span>
@@ -579,6 +579,59 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 </ol>
 
 </div>
+
+</div>
+
+<div class="workshop-list">
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_8\)]</span>
+    <strong>Learning from Unreliable Data</strong>,
+    <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2026</a>.
+  </div>
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_7\)]</span>
+    <strong>Multi-Agent Robust FRL with Sparse Communication</strong>,
+    <a class="link-workshop" href="https://engr.ncsu.edu/robotics/#symposium">NCSU Robotics Symposium 2026</a>.
+  </div>
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_6\)]</span>
+    <strong>Agnostic Q-Learning under corrupted Feedback</strong>,
+    <a class="link-workshop" href="https://neurips.cc/virtual/2025/workshop/109580">NeurIPS 2025 Reliable ML Workshop</a>.
+  </div>
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_5\)]</span>
+    <strong>Robust Federated RL with Byzantine Agents</strong>,
+    <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2025</a>,
+    <a class="link-workshop" href="https://nescw.org/">NESCW 2026</a>.
+  </div>
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_4\)]</span>
+    <strong>Theoretical Limits of Robust TD Learning</strong>,
+    <a class="link-workshop" href="https://ny-rl.com/">New York RL Workshop, NYRL 2025, Amazon</a>.
+  </div>
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_3\)]</span>
+    <strong>Towards Finite-Time Theory for Adversarially-Robust RL</strong>,
+    <a class="link-workshop" href="https://nescw.org/">NESCW 2025</a>.
+  </div>
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_2\)]</span>
+    <strong>Adversarially-Robust Deep Q-Network for Algorithmic Trading</strong>,
+    <a class="link-workshop" href="https://sites.google.com/ncsu.edu/mlss2025">MLSS 2025, NCSU</a>.
+  </div>
+
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(W_1\)]</span>
+    <strong>Robust Algorithms for Adversarial Reinforcement Learning</strong>,
+    <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2024</a>.
+  </div>
 
 </div>
 

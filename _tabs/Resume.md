@@ -343,7 +343,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   [7] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
   “Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning”,
   <span class="cv-entry-meta" style="display: inline;">
-    under review at <em>IEEE Transactions on Automatic Control (TAC)</em>.
+    under review at <em>Journal of Machine Learning Research (JMLR)</em>.
   </span>
 </div>
 

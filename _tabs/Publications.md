@@ -210,7 +210,7 @@ math: true
 
 <div class="pub-section">
 
-<h2><span style="font-size: 1rem;">♦️</span> Accepted First-Authored Publications</h2>
+<h2><span style="font-size: 1rem;">♦️</span>Peer-Reviewed Conference Publications</h2>
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
@@ -437,7 +437,7 @@ math: true
 </div>
 
 <div class="pub-section">
-<h2><span style="font-size: 1rem;"></span>Pre-prints Under Review / Working Papers</h2>
+<h2><span style="font-size: 1rem;">♦️</span>Selected Journal Manuscripts</h2>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_3\)]</span>

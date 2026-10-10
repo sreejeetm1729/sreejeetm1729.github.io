@@ -485,7 +485,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 </div>
 
 <!-- C8: L4DC 2027 -->
-<div class="pub-entry" style="margin-top: 20px;">
+<div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_8\)]</span>
     “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption</strong>”,
@@ -511,7 +511,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 </div>
 
 <!-- C7: ECC 2027 -->
-<div class="pub-entry" style="margin-top: 20px;">
+<div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_7\)]</span>
     “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,

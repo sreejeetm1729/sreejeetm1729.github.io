@@ -538,55 +538,11 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 
 <h2><span style="font-size: 1rem;">♠️</span> Accepted Workshop Presentations</h2>
 
-<ol class="workshop-list">
-
-  <li class="workshop-entry">
-    <strong>Multi-Agent Robust FRL with Sparse Communication</strong>,
-    <a class="link-workshop" href="https://engr.ncsu.edu/robotics/#symposium">NCSU Robotics Symposium 2026</a>.
-  </li>
-
-  <li class="workshop-entry">
-    <strong>Agnostic Q-Learning under corrupted Feedback</strong>,
-    <a class="link-workshop" href="https://neurips.cc/virtual/2025/workshop/109580">NeurIPS 2025 Reliable ML Workshop</a>.
-  </li>
-
-  <li class="workshop-entry">
-    <strong>Robust Federated RL with Byzantine Agents</strong>,
-    <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2025</a>,
-    <a class="link-workshop" href="https://nescw.org/">NESCW 2026</a>.
-  </li>
-
-  <li class="workshop-entry">
-    <strong>Theoretical Limits of Robust TD Learning</strong>,
-    <a class="link-workshop" href="https://ny-rl.com/">New York RL Workshop, NYRL 2025, Amazon</a>.
-  </li>
-
-  <li class="workshop-entry">
-    <strong>Towards Finite-Time Theory for Adversarially-Robust RL</strong>,
-    <a class="link-workshop" href="https://nescw.org/"> NESCW 2025</a>.
-  </li>
-
-  <li class="workshop-entry">
-    <strong>Adversarially-Robust Deep Q-Network for Algorithmic Trading</strong>,
-    <a class="link-workshop" href="https://sites.google.com/ncsu.edu/mlss2025">MLSS 2025, NCSU</a>.
-  </li>
-
-  <li class="workshop-entry">
-    <strong>Robust Algorithms for Adversarial Reinforcement Learning</strong>,
-    <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2024</a>.
-  </li>
-
-</ol>
-
-</div>
-
-</div>
-
 <div class="workshop-list">
 
   <div class="workshop-entry">
     <span style="color:#e8c4bd;">[\(W_8\)]</span>
-    <strong>Learning from Unreliable Data</strong>,
+    <strong>Learning from Unreliable Data: Promise and Fundamental Limits</strong>,
     <a class="link-workshop" href="https://engr.ncsu.edu/applied-ai/events/symposium/">Applied AI Symposium 2026</a>.
   </div>
 
@@ -647,6 +603,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
   </li>
 
 </ol>
+
 <div class="pub-section">
 <h2><span style="font-size: 1rem;">♥️</span> Thesis </h2>
 </div>

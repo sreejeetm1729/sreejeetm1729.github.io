@@ -459,7 +459,7 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
   </div>
 </div>
 
-<div class="pub-entry" style="margin-top: 20px;">
+<div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(J_1\)]</span>
     “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,

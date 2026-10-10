@@ -595,14 +595,20 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
 
 <h2><span style="font-size: 1rem;">♣️</span> Invited Talks / Seminars</h2>
 
-<ol class="workshop-list">
+<div class="workshop-list">
 
-  <li class="workshop-entry">
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(T_2\)]</span>
     <strong>Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
     <span style="color:#e6c98f; font-style:bold;">CORAL Seminar, North Carolina State University</span>.
-  </li>
+  </div>
 
-</ol>
+  <div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(T_1\)]</span>
+    <strong>Learning When Data Lies: Promise and Fundamental Limits</strong>,
+    <span style="color:#e6c98f; font-style:bold;">CORAL Seminar, North Carolina State University</span>.
+  </div>
+</div>
 
 <div class="pub-section">
 <h2><span style="font-size: 1rem;">♥️</span> Thesis </h2>

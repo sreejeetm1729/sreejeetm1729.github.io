@@ -385,14 +385,13 @@ math: true
     </div>
   </div>
 </div>
-</div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(C_2\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption</strong>”,
     <span class="pub-venue" style="display: inline;">
-      <em>Under Review at Learning for Dynamics and Control (L4DC 2027).</em>
+      <em>Under Review at Learning for Dynamics and Control (L4DC), 2027.</em>
     </span>
   </div>
   <div class="pub-links">
@@ -417,7 +416,7 @@ math: true
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
-      <em>Under Review at European Control Conference (ECC 2027).</em>
+      <em>Under Review at European Control Conference (ECC), 2027.</em>
     </span>
   </div>
   <div class="pub-links">
@@ -535,59 +534,6 @@ decentralized Q-learning under asynchronous sampling, with guarantees further ex
   </div>
 </div>
 
-<!-- C8: L4DC 2027 -->
-<div class="pub-entry">
-  <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_8\)]</span>
-    <strong>Sreejeet Maity</strong>, Aritra Mitra,
-    “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption</strong>”,
-    <span class="pub-venue" style="display: inline;">
-      <em>Under Review at Learning for Dynamics and Control (L4DC 2027).</em>
-    </span>
-  </div>
-  <div class="pub-links">
-    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('l4dc27-summary')">Summary</a>]
-    [<a class="link-paper" href="https://www.example.com">Paper</a>]
-  </div>
-</div>
-<div id="l4dc27-summary" class="pub-summary-card">
-  <div class="pub-summary-inner">
-    <div class="pub-summary-header">
-      <span style="color:#f5e6b8;">Summary</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('l4dc27-summary')">×</button>
-    </div>
-    <div class="pub-summary-text">
-      <!-- Add summary here. -->
-    </div>
-  </div>
-</div>
-
-<!-- C7: ECC 2027 -->
-<div class="pub-entry">
-  <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_7\)]</span>
-    <strong>Sreejeet Maity</strong>, Aritra Mitra,
-    “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
-    <span class="pub-venue" style="display: inline;">
-      <em>Under Review at European Control Conference (ECC 2027).</em>
-    </span>
-  </div>
-  <div class="pub-links">
-    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc27-summary')">Summary</a>]
-    [<a class="link-paper" href="https://www.example.com">Paper</a>]
-  </div>
-</div>
-<div id="ecc27-summary" class="pub-summary-card">
-  <div class="pub-summary-inner">
-    <div class="pub-summary-header">
-      <span style="color:#f5e6b8;">Summary</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('ecc27-summary')">×</button>
-    </div>
-    <div class="pub-summary-text">
-      <!-- Add summary here. -->
-    </div>
-  </div>
-</div>
 <div class="pub-section">
 
 <h2><span style="font-size: 1rem;">♠️</span> Accepted Workshop Presentations</h2>

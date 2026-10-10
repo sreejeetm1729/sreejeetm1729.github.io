@@ -391,11 +391,11 @@ math: true
 <h2><span style="font-size: 1rem;"></span>Pre-prints Under Review / Working Papers</h2>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_2\)]</span>
+  <span style="color:#e8c4bd;">[\(J_3\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
-    <em>Under Review.</em>
+    <em>Under Review at Journal of Machine Learning Research (JMLR).</em>
   </span>
 </div>
   <div class="pub-links">
@@ -432,7 +432,7 @@ complexity for federated Q-learning under asynchronous sampling.
 </div>
 
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_1\)]</span>
+  <span style="color:#e8c4bd;">[\(J_2\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
   “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -456,6 +456,70 @@ Markov decision process (MDP). The goal is to collectively learn the optimal sta
 extend our framework to partial state-action coverage, where different agents may observe different subsets of the stateaction space. In both settings, we establish high-probability finite-time convergence guarantees for AVRDQ that exhibit linear collaborative speedups. To the best of our knowledge, this is the first work to simultaneously achieve linear collaborative speedups and poly-logarithmic communication complexity for
 decentralized Q-learning under asynchronous sampling, with guarantees further extending to partial state-action coverage.
     </div>
+  </div>
+</div>
+<div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(J_1\)]</span>
+  “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,
+  <span class="pub-venue" style="display: inline;">
+    <em>Under Review at Transactions on Machine Learning Research (TMLR).</em>
+  </span>
+</div>
+<div class="pub-links">
+  [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tmlr-summary')">Summary</a>]
+  [<a class="link-paper" href="https://www.example.com">Paper</a>]
+</div>
+<div id="tmlr-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color:#f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('tmlr-summary')">×</button>
+    </div>
+    <div class="pub-summary-text"></div>
+  </div>
+</div>
+
+<!-- Robust Policy Evaluation -->
+<div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_8\)]</span>
+  “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption</strong>”,
+  <span class="pub-venue" style="display: inline;">
+    <em>Under Review at Learning for Dynamics and Control (L4DC 2027).</em>
+  </span>
+</div>
+<div class="pub-links">
+  [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('l4dc27-summary')">Summary</a>]
+  [<a class="link-paper" href="https://www.example.com">Paper</a>]
+</div>
+<div id="l4dc27-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color:#f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('l4dc27-summary')">×</button>
+    </div>
+    <div class="pub-summary-text"></div>
+  </div>
+</div>
+
+<!-- Adaptive Quantization -->
+<div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(C_7\)]</span>
+  “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
+  <span class="pub-venue" style="display: inline;">
+    <em>Under Review at European Control Conference (ECC 2027).</em>
+  </span>
+</div>
+<div class="pub-links">
+  [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc27-summary')">Summary</a>]
+  [<a class="link-paper" href="https://www.example.com">Paper</a>]
+</div>
+<div id="ecc27-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color:#f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('ecc27-summary')">×</button>
+    </div>
+    <div class="pub-summary-text"></div>
   </div>
 </div>
 <div class="pub-section">

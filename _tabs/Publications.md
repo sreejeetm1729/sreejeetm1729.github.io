@@ -437,7 +437,7 @@ math: true
 </div>
 
 <div class="pub-section">
-<h2><span style="font-size: 1rem;">♦️</span>Selected Journal Manuscripts</h2>
+<h2><span style="font-size: 1rem;">♦️</span>Selected Journals</h2>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_3\)]</span>

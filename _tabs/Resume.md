@@ -410,7 +410,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <ul class="cv-list">
   <li>Head Teaching Assistant for <span class="cv-highlight">ECE 516: Systems and Control Engineering</span> and <span class="cv-highlight">ECE 308: Elements of Control Systems</span>, Department of Electrical and Computer Engineering, NC State.</li>
-  <li>Served as a reviewer for 40+ papers in multiple flagship control/ ML venues, including the American Control Conference (ACC), the IEEE Conference on Decision and Control (CDC), Learning for Dynamics and Control (L4DC), Annual Conference on Neural Information Processing Systems(NeuRIPS), Journal of Machine Learning Research (JMLR), Transactions in Machine Learning Reserach (TMLR), IEEE Transactions in Automatic Control (TACON), Transactions in Signal and Information Processing over Networks (TSIPN), and Transactions in Signal Processing (TSP).</li>
+  <li>Served as a reviewer for 60+ papers in multiple flagship control/ ML venues, including the American Control Conference (ACC), the IEEE Conference on Decision and Control (CDC), Learning for Dynamics and Control (L4DC), Annual Conference on Neural Information Processing Systems(NeuRIPS), Artifical Intelligence and Statistics Conference (AISTATS), Journal of Machine Learning Research (JMLR), Transactions in Machine Learning Reserach (TMLR), IEEE Transactions in Automatic Control (TAC), Transactions in Signal and Information Processing over Networks (TSIPN), and Transactions in Signal Processing (TSP).</li>
 </ul>
 
 </div>

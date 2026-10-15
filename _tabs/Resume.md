@@ -340,15 +340,31 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 </div>
 
 <div class="cv-entry">
-  [7] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
-  “Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning”,
+  [7] <strong>S. Maity</strong><sup>†</sup>, A. Mitra,
+  “Batched Temporal-Difference Learning under Joint State and Reward Corruption”, in
   <span class="cv-entry-meta" style="display: inline;">
-    under review at <em>Journal of Machine Learning Research (JMLR)</em>.
+    under review at <em> Learning for Dynamics and Control(L4DC)</em>, 2027.
   </span>
 </div>
 
 <div class="cv-entry">
-  [8] <strong>S. Maity</strong><sup>†</sup>, F. Zhu, R. Heath, and A. Mitra,
+  [8] <strong>S. Maity</strong><sup>†</sup>, A. Mitra,
+  “Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning over Rate-Limited Channels” in
+  <span class="cv-entry-meta" style="display: inline;">
+    under review at <em>European Control Conference (ECC)</em>, 2027.
+  </span>
+</div>
+
+<div class="cv-entry">
+  [9] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
+  “Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning”,
+  <span class="cv-entry-meta" style="display: inline;">
+    under review at <em>Journal of Machine Learning Reserach (JMLR)</em>.
+  </span>
+</div>
+
+<div class="cv-entry">
+  [10] <strong>S. Maity</strong><sup>†</sup>, F. Zhu, R. Heath, and A. Mitra,
   “Decentralized Q-learning with Asynchronous Sampling and Partial Coverage”,
   <span class="cv-entry-meta" style="display: inline;">
     under review at <em>IEEE Transactions on Signal Processing (TSP)</em>.
@@ -356,13 +372,20 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 </div>
 
 <div class="cv-entry">
-  [9] <strong>S. Maity</strong>, L.Toso, J.Anderson, and A.Mitra,
+  [11] <strong>S. Maity</strong>, L.Toso, J.Anderson, and A.Mitra,
   “Value Function Representation for Adversarially Robust Federated TD Learning”,
   <span class="cv-entry-meta" style="display: inline;">
-    in preparation for submission to <em>Transactions on Machine Learning Research (TMLR)</em>.
+    under review at <em>Transactions on Machine Learning Research (TMLR)</em>.
   </span>
 </div>
 
+<div class="cv-entry">
+  [12] <strong>S. Maity</strong><sup>†</sup>, A. Mitra,
+  “Variance-Reduced Q-Learning over Static and Time-Varying Networks”, in
+  <span class="cv-entry-meta" style="display: inline;">
+    under review at <em>Automatica</em>.
+  </span>
+</div>
 </div>
 </div>
 

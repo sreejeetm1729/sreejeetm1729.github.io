@@ -255,7 +255,13 @@ The sequence of results gradually moves from idealized sampling models toward re
     <a href="https://arxiv.org/pdf/2409.03237" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
-  
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(J_1\)]</span>
+    <strong>The Statistical Limits of Adversarially Robust Q-Learning</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, Automatica)
+    </span>
+  </p>
 
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(W_1\)]</span>
@@ -358,7 +364,23 @@ The sequence of results gradually moves from idealized sampling models toward re
     <a href="https://arxiv.org/pdf/2502.04662" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
+<p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_5\)]</span>
+    <strong>Batched Temporal-Difference Learning under Joint State and Reward Corruption</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, L4DC 2027)
+    </span>
+  </p>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_6\)]</span>
+    <strong>Adaptive Quantization Preserves Fast Convergence in TD Learning over Rate-Limited Channels</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, ECC 2027)
+    </span>
+  </p>
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
+
 <h2>[<strong style="color:#208894;">Theme 3</strong>] Robust Federated Multi-Agent Reinforcement Learning</h2>
 
 The third direction of my research focuses on robust federated reinforcement learning with Byzantine agents and minimal communication. In this setting, multiple agents interact with a common environment and send information to a central learner, but a fraction of the agents may be adversarial and can transmit arbitrary, corrupted messages. This creates a challenging tension between <strong>collaboration</strong>, <strong>robustness</strong>, and <strong>communication efficiency</strong>: the learner should benefit from distributed data collection while remaining resilient to malicious agents and avoiding excessive communication. In this line of work, which appeared at <span class="research-tag">ACC 2026</span>, we develop robust federated Q-Learning algorithms that achieve near-optimal finite-time guarantees with Byzantine tolerance and almost no communication, showing that collaborative speedups are still possible even when some agents are unreliable.
@@ -476,23 +498,23 @@ statistical benefits of collaboration with substantially reduced communication.
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_5\)]</span>
+    <span style="color:#a5f3fc;">[\(C_7\)]</span>
     <strong>Robust Federated Q-Learning with Almost No Communication</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC26_DistRobustQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://arxiv.org/abs/2609.20174" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_6\)]</span>
+    <span style="color:#a5f3fc;">[\(C_8\)]</span>
     <strong>Variance-Reduced Q-Learning under Static and Time-Varying Networks</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC26_GraphQ.pdf" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://arxiv.org/abs/2607.21876" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(J_1\)]</span>
+    <span style="color:#a5f3fc;">[\(J_2\)]</span>
     <strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>
     <span style="color:#d8a7a7;">
       (Under Review)
@@ -500,7 +522,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <a href="https://arxiv.org/pdf/2610.06918" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(J_2\)]</span>
+    <span style="color:#a5f3fc;">[\(J_3\)]</span>
     <strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>
     <span style="color:#d8a7a7;">
       (Under Review, TSP)
@@ -530,7 +552,7 @@ The key idea is to separate what is shared from what is personalized. The value 
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(J_3\)]</span>
+    <span style="color:#a5f3fc;">[\(J_4\)]</span>
     <strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>
     <span style="color:#d8a7a7;">
       (Under Review, TMLR)

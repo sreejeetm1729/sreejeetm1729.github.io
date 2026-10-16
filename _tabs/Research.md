@@ -515,7 +515,7 @@ statistical benefits of collaboration with substantially reduced communication.
   </p> 
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(J_2\)]</span>
-    <strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>
+    <strong>Learning from Unreliable Trajectories: Adversarially-Robust Fed. Q-Learning</strong>
     <span style="color:#d8a7a7;">
       (Under Review, JMLR)
     </span>

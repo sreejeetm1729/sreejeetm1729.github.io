@@ -503,7 +503,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="https://arxiv.org/abs/2609.20174" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://arxiv.org/pdf/2609.20174" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(C_8\)]</span>
@@ -511,7 +511,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <span style="color:#d8a7a7;">
       (ACC 2026)
     </span>
-    <a href="https://arxiv.org/abs/2607.21876" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
+    <a href="https://arxiv.org/pdf/2607.21876" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(J_2\)]</span>

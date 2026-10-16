@@ -525,7 +525,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <span style="color:#a5f3fc;">[\(J_3\)]</span>
     <strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>
     <span style="color:#d8a7a7;">
-      (Under Review, TSP)
+      (In preparation)
     </span>
   </p>
 

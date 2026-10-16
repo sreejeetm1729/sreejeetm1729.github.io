@@ -325,7 +325,7 @@ math: true
       <button class="pub-summary-close" onclick="togglePubSummary('cdc2024-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-       Recently, there has been a surge of interest in analyzing the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of such algorithms in non-ideal environments - such as in the presence of corrupted rewards - is poorly understood. Motivated by this gap, we investigate the robustness of the celebrated Q-learning algorithm to a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We start by proving that such an attack can cause the vanilla Q-learning algorithm to incur arbitrarily large errors. We then develop a novel robust synchronous Qlearning algorithm that uses historical reward data to construct robust empirical Bellman operators at each time step. Finally, we prove a finite-time convergence rate for our algorithm that matches known state-of-the-art bounds (in the absence of attacks) up to a small inevitable error term that scales with the adversarial corruption fraction.
+       Recently, there has been a surge of interest in analyzing the non-asymptotic behavior of model-free reinforcement learning algorithms. However, the performance of such algorithms in non-ideal environments - such as in the presence of corrupted rewards - is poorly understood. Motivated by this gap, we investigate the robustness of the celebrated Q-learning algorithm to a strong-contamination attack model, where an adversary can arbitrarily perturb a small fraction of the observed rewards. We start by proving that such an attack can cause the vanilla Q-learning algorithm to incur arbitrarily large errors. We then develop a novel robust synchronous Q-learning algorithm that uses historical reward data to construct robust empirical Bellman operators at each time step. Finally, we prove a finite-time convergence rate for our algorithm that matches known state-of-the-art bounds (in the absence of attacks) up to a small inevitable error term that scales with the adversarial corruption fraction.
     </div>
   </div>
 </div>
@@ -485,7 +485,7 @@ complexity for federated Q-learning under asynchronous sampling.
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
   “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”, in
   <span class="pub-venue" style="display: inline;">
-    <em>Under Review at IEEE Transactions in Signal Processing (TSP).</em>
+    <em>Manuscript in preparation for IEEE Transactions in Signal Processing (TSP).</em>
   </span>
 </div>
   <div class="pub-links">

@@ -367,7 +367,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
   [10] <strong>S. Maity</strong><sup>†</sup>, F. Zhu, R. Heath, and A. Mitra,
   “Decentralized Q-learning with Asynchronous Sampling and Partial Coverage”,
   <span class="cv-entry-meta" style="display: inline;">
-    under review at <em>IEEE Transactions on Signal Processing (TSP)</em>.
+    Manuscript in preparation for <em>IEEE Transactions on Signal Processing (TSP)</em>.
   </span>
 </div>
 

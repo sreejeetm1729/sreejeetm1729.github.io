@@ -448,34 +448,20 @@ math: true
   </span>
 </div>
   <div class="pub-links">
-    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tac-summary')">Summary</a>]
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('jmlr-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2610.06918">Paper</a>]
   </div>
 </div>
-<div id="tac-summary" class="pub-summary-card">
+<div id="jmlr-summary" class="pub-summary-card">
   <div class="pub-summary-inner">
     <div class="pub-summary-header">
       <span style="color: #f5e6b8;">Summary</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('tac-summary')">×</button>
+      <button class="pub-summary-close" onclick="togglePubSummary('jmlr-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-      We study federated reinforcement learning in which multiple agents interact with a common Markov
-decision process and communicate through a central server to collaboratively learn the optimal stateaction
-value function. Our goal is to understand whether the sample-efficiency benefits of collaboration
-can be retained when a fraction of the agents behave adversarially and transmit arbitrarily corrupted
-information. To address this problem, we introduce Robust Async-Fed-Q, an epoch-based federated
-learning algorithm that combines variance-reduced estimation of the Bellman optimality operator at
-the agents with robust aggregation at the server. We establish high-probability finite-time guarantees
-showing that the proposed method preserves the statistical gains of collaboration among the honest
-agents while tolerating adversarial corruption. In particular, the effect of the adversarial agents decreases
-as the amount of data collected by each honest agent grows and eventually vanishes in the infinite-sample
-limit. We complement these guarantees with information-theoretic lower bounds that characterize the
-unavoidable statistical cost of adversarial corruption, leading to the first nearly matching upper and lower
-bounds for adversarially robust federated reinforcement learning. We further extend our framework to
-accommodate single-trajectory Markovian sampling and heterogeneous partial coverage, where different
-agents may explore different regions of the state-action space and learning relies on their collective
-coverage. Finally, our epoch-based design substantially improves the best known communication
-complexity for federated Q-learning under asynchronous sampling.
+      We study federated reinforcement learning in which multiple agents interact with a common Markov decision process and communicate through a central server to collaboratively learn the optimal state-action value function. Our goal is to understand whether the sample-efficiency benefits of collaboration can be retained when a fraction of the agents behave adversarially and transmit arbitrarily corrupted
+information. To address this problem, we introduce Robust Async-Fed-Q, an epoch-based federated learning algorithm that combines variance-reduced estimation of the Bellman optimality operator at the agents with robust aggregation at the server. We establish high-probability finite-time guarantees showing that the proposed method preserves the statistical gains of collaboration among the honest agents while tolerating adversarial corruption. In particular, the effect of the adversarial agents decreases as the amount of data collected by each honest agent grows and eventually vanishes in the infinite-sample
+limit. We complement these guarantees with information-theoretic lower bounds that characterize the unavoidable statistical cost of adversarial corruption, leading to the first nearly matching upper and lower bounds for adversarially robust federated reinforcement learning. We further extend our framework to accommodate single-trajectory Markovian sampling and heterogeneous partial coverage, where different agents may explore different regions of the state-action space and learning relies on their collective coverage. Finally, our epoch-based design substantially improves the best known communication complexity for federated Q-learning under asynchronous sampling.
     </div>
   </div>
 </div>

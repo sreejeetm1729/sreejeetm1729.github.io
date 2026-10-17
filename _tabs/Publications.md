@@ -214,7 +214,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_8^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_11^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Corruption-Tolerant Optimal Asynchronous Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -245,7 +245,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_7^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_10^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -273,7 +273,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_6\)]</span>
+  <span style="color:#e8c4bd;">[\(C_9\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -303,7 +303,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_5\)]</span>
+  <span style="color:#e8c4bd;">[\(C_8\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Q-Learning under Corrupted Rewards</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -331,7 +331,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_4\)]</span>
+  <span style="color:#e8c4bd;">[\(C_7\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Federated Q-Learning with Almost No Communication</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -359,7 +359,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_3\)]</span>
+  <span style="color:#e8c4bd;">[\(C_6\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, and Aritra Mitra,
   “<strong>Variance-Reduced Q-Learning over Static and Time-Varying Networks</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -387,7 +387,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_2\)]</span>
+    <span style="color:#e8c4bd;">[\(C_5\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption: Near-Optimality via Batching</strong>”,
     <span class="pub-venue" style="display: inline;">
@@ -412,7 +412,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_1\)]</span>
+    <span style="color:#e8c4bd;">[\(C_4\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
     <span class="pub-venue" style="display: inline;">

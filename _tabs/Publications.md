@@ -214,7 +214,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_11^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{11}^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Corruption-Tolerant Optimal Asynchronous Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -245,7 +245,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_10^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{10}^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</strong>”, in
   <span class="pub-venue" style="display: inline;">

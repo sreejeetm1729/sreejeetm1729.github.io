@@ -623,7 +623,15 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 </div>
 
 <div class="pub-section">
-<h2><span style="font-size: 1rem;">♥️</span> Thesis </h2>
+  <h2><span style="font-size: 1rem;">♥️</span> Ph.D. Thesis</h2>
+  <div class="pub-entry">
+    <div class="pub-title" style="font-weight: normal;">
+      <strong>Towards a Finite-Time Theory of Adversarially Robust Reinforcement Learning: Algorithms, Guarantees, and Fundamental Limits</strong>,
+      <span class="pub-venue" style="display: inline;">
+        <em>(Ongoing; Expected Completion: December 2027–March 2028)</em>
+      </span>
+    </div>
+  </div>
 </div>
 
 <script>

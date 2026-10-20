@@ -548,7 +548,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 
 <div class="pub-section">
 
-<h2><span style="font-size: 1rem;">♠️</span> Accepted Workshop Presentations</h2>
+<h2><span style="font-size: 1rem;">♠️</span> Workshop and Symposium Presentations</h2>
 
 <div class="workshop-list">
 

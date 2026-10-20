@@ -610,23 +610,53 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 <div class="workshop-list">
 
   <div class="workshop-entry">
-    <span style="color:#e8c4bd;">[\(S_3\)]</span>
-    <strong>Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
-    <span style="color:#e6c98f; font-style:bold;">CORAL Seminar, North Carolina State University (Spring 2026)</span>.
+    <div>
+      <span style="color:#e8c4bd;">[\(S_3\)]</span>
+      <strong>Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>
+    </div>
+    <div style="margin-left: 2.5rem;">
+      <strong>Venue:</strong>
+      <span style="color:#e6c98f;">
+        CORAL Seminar, North Carolina State University (Spring 2026)
+      </span>
+    </div>
+    <div style="margin-left: 2.5rem;">
+      <strong>Host:</strong> ECE Department and Control Faculty, NC State University
+    </div>
   </div>
 
   <div class="workshop-entry">
-    <span style="color:#e8c4bd;">[\(S_2\)]</span>
-    <strong>Unreliable Collaboration at Scale: Near-Optimal Federated Reinforcement Learning in Presence of Advsersaries</strong>,
-    <span style="color:#e6c98f; font-style:bold;">Computer Science Departmental Talk, North Carolina State University (Fall 2026)</span>.
+    <div>
+      <span style="color:#e8c4bd;">[\(S_2\)]</span>
+      <strong>Unreliable Collaboration at Scale: Near-Optimal Federated Reinforcement Learning in the Presence of Adversaries</strong>
+    </div>
+    <div style="margin-left: 2.5rem;">
+      <strong>Venue:</strong>
+      <span style="color:#e6c98f;">
+        Computer Science Departmental Talk, North Carolina State University (Fall 2026)
+      </span>
+    </div>
+    <div style="margin-left: 2.5rem;">
+      <strong>Host:</strong> Prof. Min Chi, Department of Computer Science, NC State University
+    </div>
   </div>
 
-
-<div class="workshop-entry">
-    <span style="color:#e8c4bd;">[\(S_1\)]</span>
-    <strong>Learning When the Data Lies: Promise and Fundamental Limits</strong>,
-    <span style="color:#e6c98f; font-style:bold;">Columbia University, New York (Spring 2027)</span>.
+  <div class="workshop-entry">
+    <div>
+      <span style="color:#e8c4bd;">[\(S_1\)]</span>
+      <strong>Learning When the Data Lies: Promise and Fundamental Limits</strong>
+    </div>
+    <div style="margin-left: 2.5rem;">
+      <strong>Venue:</strong>
+      <span style="color:#e6c98f;">
+        Columbia University, New York (Spring 2027)
+      </span>
+    </div>
+    <div style="margin-left: 2.5rem;">
+      <strong>Host:</strong> Prof. James Anderson, Columbia University
+    </div>
   </div>
+
 </div>
 
 <div class="pub-section">

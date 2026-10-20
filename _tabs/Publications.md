@@ -537,10 +537,10 @@ limit. We complement these guarantees with information-theoretic lower bounds th
       <button class="pub-summary-close" onclick="togglePubSummary('automatica-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-      We develop a novel batch-based robust asynchronous Q-learning algorithm for discounted Markov decision processes under adversarial reward and next-state observation corruption. Our algorithm aggregates observations within batches using robust mean estimators, separating Bellman estimation from iterative updates and controlling the propagation of adversarial errors. We establish high-probability finite-time convergence guarantees with a statistical error that decays at the standard inverse-square-root sample rate and corruption-dependent errors that scale linearly with next-state corruption and with the square root of reward corruption. Crucially, the corruption-induced error is independent of the minimum state–action visitation probability, improving upon existing robust asynchronous Q-learning guarantees. We establish matching information-theoretic lower bounds, demonstrating that these corruption-dependent rates are minimax-optimal in their dependence on the corruption levels and discount factor. We further extend our guarantees to single-trajectory Markovian sampling, establishing robustness under temporally dependent and adversarially corrupted feedback.
+    <!-- Add summary here. -->
     </div>
   </div>
-
+</div>
 
 <div class="pub-section">
 

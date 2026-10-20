@@ -610,13 +610,13 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 <div class="workshop-list">
 
   <div class="workshop-entry">
-    <span style="color:#e8c4bd;">[\(T_2\)]</span>
+    <span style="color:#e8c4bd;">[\(IT_2\)]</span>
     <strong>Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
     <span style="color:#e6c98f; font-style:bold;">CORAL Seminar, North Carolina State University (Spring 2026)</span>.
   </div>
 
   <div class="workshop-entry">
-    <span style="color:#e8c4bd;">[\(T_1\)]</span>
+    <span style="color:#e8c4bd;">[\(IT_1\)]</span>
     <strong>Learning When Data Lies: Promise and Fundamental Limits</strong>,
     <span style="color:#e6c98f; font-style:bold;">Computer Science Departmental Talk, North Carolina State University (Fall 2026)</span>.
   </div>
@@ -626,6 +626,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   <h2><span style="font-size: 1rem;">♥️</span> Ph.D. Thesis</h2>
   <div class="pub-entry">
     <div class="pub-title" style="font-weight: normal;">
+    <span style="color:#e8c4bd;">[\(T\)]</span>
       <strong>Towards a Finite-Time Theory of Adversarially Robust Reinforcement Learning: Algorithms, Guarantees, and Fundamental Limits</strong>,
       <span class="pub-venue" style="display: inline;">
         <em>(Ongoing; Expected Completion: December 2027–March 2028)</em>

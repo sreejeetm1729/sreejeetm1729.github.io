@@ -442,7 +442,7 @@ math: true
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_4\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
-  “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”, in
+  “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”,
   <span class="pub-venue" style="display: inline;">
     <em>Under Review at Journal of Machine Learning Research (JMLR).</em>
   </span>
@@ -469,7 +469,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_3\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
-  “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”, in
+  “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”,
   <span class="pub-venue" style="display: inline;">
     <em>Manuscript in preparation for IEEE Transactions in Signal Processing (TSP).</em>
   </span>

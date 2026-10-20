@@ -214,7 +214,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_{11}^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{12}^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Corruption-Tolerant Optimal Asynchronous Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -245,7 +245,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_{10}^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{11}^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -273,7 +273,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_9\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{10}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -303,7 +303,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_8\)]</span>
+  <span style="color:#e8c4bd;">[\(C_9\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Q-Learning under Corrupted Rewards</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -331,7 +331,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_7\)]</span>
+  <span style="color:#e8c4bd;">[\(C_8\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Federated Q-Learning with Almost No Communication</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -359,7 +359,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_6\)]</span>
+  <span style="color:#e8c4bd;">[\(C_7\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, and Aritra Mitra,
   “<strong>Variance-Reduced Q-Learning over Static and Time-Varying Networks</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -387,7 +387,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_5\)]</span>
+    <span style="color:#e8c4bd;">[\(C_6\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption: Near-Optimality via Batching</strong>”,
     <span class="pub-venue" style="display: inline;">
@@ -412,7 +412,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_4\)]</span>
+    <span style="color:#e8c4bd;">[\(C_5\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
@@ -540,7 +540,6 @@ limit. We complement these guarantees with information-theoretic lower bounds th
       We develop a novel batch-based robust asynchronous Q-learning algorithm for discounted Markov decision processes under adversarial reward and next-state observation corruption. Our algorithm aggregates observations within batches using robust mean estimators, separating Bellman estimation from iterative updates and controlling the propagation of adversarial errors. We establish high-probability finite-time convergence guarantees with a statistical error that decays at the standard inverse-square-root sample rate and corruption-dependent errors that scale linearly with next-state corruption and with the square root of reward corruption. Crucially, the corruption-induced error is independent of the minimum state–action visitation probability, improving upon existing robust asynchronous Q-learning guarantees. We establish matching information-theoretic lower bounds, demonstrating that these corruption-dependent rates are minimax-optimal in their dependence on the corruption levels and discount factor. We further extend our guarantees to single-trajectory Markovian sampling, establishing robustness under temporally dependent and adversarially corrupted feedback.
     </div>
   </div>
-</div>
 
 
 <div class="pub-section">

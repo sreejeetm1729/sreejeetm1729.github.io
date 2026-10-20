@@ -381,7 +381,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <div class="cv-entry">
   [12] <strong>S. Maity</strong><sup>†</sup>, A. Mitra,
-  “Variance-Reduced Q-Learning over Static and Time-Varying Networks”, in
+  “Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data”, in
   <span class="cv-entry-meta" style="display: inline;">
     under review at <em>Automatica</em>.
   </span>

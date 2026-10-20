@@ -617,14 +617,14 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 
   <div class="workshop-entry">
     <span style="color:#e8c4bd;">[\(S_2\)]</span>
-    <strong>Unreliable Collaboration at Scale: Near-Optimal Federated Reinforcement Learning in Presence of Advsersaries.</strong>,
+    <strong>Unreliable Collaboration at Scale: Near-Optimal Federated Reinforcement Learning in Presence of Advsersaries</strong>,
     <span style="color:#e6c98f; font-style:bold;">Computer Science Departmental Talk, North Carolina State University (Fall 2026)</span>.
   </div>
 </div>
 
 <div class="workshop-entry">
     <span style="color:#e8c4bd;">[\(S_1\)]</span>
-    <strong>Learning When the Data Lies: Promise and Fundamental Limits.</strong>,
+    <strong>Learning When the Data Lies: Promise and Fundamental Limits</strong>,
     <span style="color:#e6c98f; font-style:bold;">Columbia University, New York (Spring 2027)</span>.
   </div>
 

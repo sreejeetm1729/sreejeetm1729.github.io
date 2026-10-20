@@ -517,7 +517,8 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   </div>
 </div>
 
-<div class="pub-title" style="font-weight: normal;">
+<div class="pub-entry">
+  <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_1\)]</span>
   <strong>Sreejeet Maity, Aritra Mitra,
   “<strong>Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data</strong>”,

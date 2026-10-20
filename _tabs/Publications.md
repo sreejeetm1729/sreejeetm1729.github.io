@@ -605,22 +605,28 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 
 <div class="pub-section">
 
-<h2><span style="font-size: 1rem;">♣️</span> Invited Talks / Seminars</h2>
+<h2><span style="font-size: 1rem;">♣️</span> Selected Invited Talks or Seminars</h2>
 
 <div class="workshop-list">
 
   <div class="workshop-entry">
-    <span style="color:#e8c4bd;">[\(IT_2\)]</span>
+    <span style="color:#e8c4bd;">[\(S_3\)]</span>
     <strong>Finite-Time Rates for Adversarially-Robust Reinforcement Learning</strong>,
     <span style="color:#e6c98f; font-style:bold;">CORAL Seminar, North Carolina State University (Spring 2026)</span>.
   </div>
 
   <div class="workshop-entry">
-    <span style="color:#e8c4bd;">[\(IT_1\)]</span>
-    <strong>Learning When Data Lies: Promise and Fundamental Limits</strong>,
+    <span style="color:#e8c4bd;">[\(S_2\)]</span>
+    <strong>Unreliable Collaboration at Scale: Near-Optimal Federated Reinforcement Learning in Presence of Advsersaries.</strong>,
     <span style="color:#e6c98f; font-style:bold;">Computer Science Departmental Talk, North Carolina State University (Fall 2026)</span>.
   </div>
 </div>
+
+<div class="workshop-entry">
+    <span style="color:#e8c4bd;">[\(S_1\)]</span>
+    <strong>Learning When the Data Lies: Promise and Fundamental Limits.</strong>,
+    <span style="color:#e6c98f; font-style:bold;">Columbia University, New York (Spring 2027)</span>.
+  </div>
 
 <div class="pub-section">
   <h2><span style="font-size: 1rem;">♥️</span> Ph.D. Thesis</h2>

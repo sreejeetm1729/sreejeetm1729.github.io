@@ -636,7 +636,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
     <span style="color:#e8c4bd;">[\(T\)]</span>
       <strong>Towards a Finite-Time Theory of Adversarially Robust Reinforcement Learning: Algorithms, Guarantees, and Fundamental Limits</strong>,
       <span class="pub-venue" style="display: inline;">
-        <em>(Ongoing; Expected Completion: December 2027–March 2028)</em>
+        <em>(Ongoing; Expected Completion: December 2027)</em>
       </span>
     </div>
   </div>

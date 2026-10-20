@@ -517,31 +517,34 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   </div>
 </div>
 
+
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_1\)]</span>
-  <strong>Sreejeet Maity, Aritra Mitra,
-  “<strong>Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data</strong>”,
-  <span class="pub-venue" style="display: inline;">
-    <em>Under Review at Automatica.</em>
-  </span>
-</div>
+    <span style="color:#e8c4bd;">[\(J_1\)]</span>
+    <strong>Sreejeet Maity</strong>, Aritra Mitra,
+    “<strong>Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data</strong>”,
+    <span class="pub-venue" style="display: inline;">
+      <em>Under Review at Automatica.</em>
+    </span>
+  </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('automatica-summary')">Summary</a>]
     [<a class="link-paper" href="https://www.example.com">Paper</a>]
   </div>
 </div>
-<div id="tsp-summary" class="pub-summary-card">
+
+<div id="automatica-summary" class="pub-summary-card">
   <div class="pub-summary-inner">
     <div class="pub-summary-header">
-      <span style="color: #f5e6b8;">Summary</span>
+      <span style="color:#f5e6b8;">Summary</span>
       <button class="pub-summary-close" onclick="togglePubSummary('automatica-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-    <!-- Add summary here. -->
+      <!-- Add summary here. -->
     </div>
   </div>
 </div>
+
 
 <div class="pub-section">
 

@@ -244,30 +244,30 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
     <a href="https://amitra2.wordpress.ncsu.edu/"
        target="_blank"
        rel="noopener noreferrer"
-       style="color:#208894; font-weight:100; text-decoration:none;">
+       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
       <em>Dr. Aritra Mitra</em>
     </a>
   </div>
 
   <div class="cv-entry-desc">
     <strong>Thesis:</strong>
-    <em>Towards a Finite-Time Theory of Adversarially Robust RL: Algorithms, Guarantees, and Fundamental Limits</em>
+    <a style="color:#d8a7a7; font-weight:100; text-decoration:none;"><em>Towards a Finite-Time Theory of Adversarially Robust RL: Algorithms, Guarantees, and Fundamental Limits</em></a>
   </div>
 
   <div class="cv-entry-desc">
-    <strong>Expected Graduation:</strong> December 2027–March 2028
+    <strong>Expected Graduation:</strong> <a style="color:#d8a7a7; font-weight:100; text-decoration:none;"><em>December 2027–March 2028</em></a>
   </div>
 </div>
 
 
 <div class="cv-entry">
   <div class="cv-entry-title">Indian Institute of Science, Bangalore</div>
-  <div class="cv-entry-meta">M.Tech. in Robotics and Autonomous Systems · Aug 2021--June 2023 · Bangalore, India</div>
+  <div class="cv-entry-meta">M.Tech. in Robotics and Autonomous Systems · Aug 2021-June 2023 · Bangalore, India</div>
 </div>
 
 <div class="cv-entry">
   <div class="cv-entry-title">Jadavpur University</div>
-  <div class="cv-entry-meta">B.E. in Electrical Engineering · Aug 2017--July 2021 · Kolkata, India</div>
+  <div class="cv-entry-meta">B.E. in Electrical Engineering · Aug 2017-July 2021 · Kolkata, India</div>
 </div>
 
 </div>

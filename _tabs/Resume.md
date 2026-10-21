@@ -274,8 +274,6 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <div class="cv-section">
 
-<div class="cv-section">
-
 <h2>Research Experience</h2>
 
 <!-- ======================================= -->
@@ -304,15 +302,15 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
               padding:0.7rem 0.9rem;
               border-left:3px solid #208894;">
 
-    <strong>Ph.D. Advisor:</strong>
+  <strong>Ph.D. Advisor:</strong>
     <a href="https://amitra2.wordpress.ncsu.edu/"
        target="_blank"
        rel="noopener noreferrer"
-       style="color:#208894; font-weight:800; text-decoration:none;">
-      Dr. Aritra Mitra
+       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
+      <em>Dr. Aritra Mitra</em>
     </a>
 
-    <div class="cv-entry-desc" style="margin-top:0.15rem;">
+  <div class="cv-entry-desc" style="margin-top:0.15rem;">
       Department of Electrical and Computer Engineering,
       North Carolina State University
     </div>
@@ -394,15 +392,15 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
               padding:0.7rem 0.9rem;
               border-left:3px solid #208894;">
 
-    <strong>Research Collaborator:</strong>
+  <strong>Research Collaborator:</strong>
     <a href="https://profheath.org/"
        target="_blank"
        rel="noopener noreferrer"
-       style="color:#208894; font-weight:800; text-decoration:none;">
-      Prof. Robert W. Heath Jr.
+       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
+      <em>Prof. Robert W. Heath Jr</em>.
     </a>
 
-    <div class="cv-entry-desc" style="margin-top:0.15rem;">
+  <div class="cv-entry-desc" style="margin-top:0.15rem;">
       Department of Electrical and Computer Engineering,
       University of California, San Diego
     </div>
@@ -452,15 +450,15 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
               padding:0.7rem 0.9rem;
               border-left:3px solid #208894;">
 
-    <strong>Research Collaborator:</strong>
+  <strong>Research Collaborator:</strong>
     <a href="https://www.columbia.edu/~ja3451/"
        target="_blank"
        rel="noopener noreferrer"
-       style="color:#208894; font-weight:800; text-decoration:none;">
-      Prof. James Anderson
+       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
+      <em>Prof. James Anderson</em>
     </a>
 
-    <div class="cv-entry-desc" style="margin-top:0.15rem;">
+  <div class="cv-entry-desc" style="margin-top:0.15rem;">
       Department of Electrical Engineering,
       Columbia University, New York
     </div>

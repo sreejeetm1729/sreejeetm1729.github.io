@@ -251,7 +251,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
   <div class="cv-entry-desc">
     <strong>Thesis:</strong>
-    <em>Towards a Finite-Time Theory of Adversarially Robust Reinforcement Learning: Algorithms, Guarantees, and Fundamental Limits</em>
+    <em>Towards a Finite-Time Theory of Adversarially Robust RL: Algorithms, Guarantees, and Fundamental Limits</em>
   </div>
 
   <div class="cv-entry-desc">

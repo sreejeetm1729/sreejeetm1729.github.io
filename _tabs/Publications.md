@@ -621,7 +621,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
       </span>
     </div>
     <div style="margin-left: 2.5rem;">
-      <strong>Host:</strong> ECE Department and Control Faculty, NC State University
+      <strong>Host:</strong> ECE Department and Control Faculty, North Carolina State University.
     </div>
   </div>
 
@@ -637,7 +637,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
       </span>
     </div>
     <div style="margin-left: 2.5rem;">
-      <strong>Host:</strong> Prof. Min Chi, Department of Computer Science, NC State University
+      <strong>Host:</strong> Prof. Min Chi, Department of Computer Science, North Carolina State University.
     </div>
   </div>
 
@@ -653,7 +653,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
       </span>
     </div>
     <div style="margin-left: 2.5rem;">
-      <strong>Host:</strong> Prof. James Anderson, Columbia University
+      <strong>Host:</strong> Prof. James Anderson, Department of Electrical Engineering, Columbia University.
     </div>
   </div>
 

@@ -628,7 +628,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   <div class="workshop-entry">
     <div>
       <span style="color:#e8c4bd;">[\(S_2\)]</span>
-      <strong>Unreliable Collaboration at Scale: Near-Optimal Federated RL in the Presence of Adversaries</strong>
+      <strong>Unreliable Collaboration at Scale: Near-Optimal Adversarial Federated RL</strong>
     </div>
     <div style="margin-left: 2.5rem;">
       <strong>Venue:</strong>

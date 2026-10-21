@@ -274,42 +274,217 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <div class="cv-section">
 
+<div class="cv-section">
+
 <h2>Research Experience</h2>
 
-<div class="cv-entry">
-  <div class="cv-entry-title">Graduate Research / Teaching Assistant</div>
-  <div class="cv-entry-meta">North Carolina State University · Aug 2023--Present</div>
+<!-- ======================================= -->
+<!-- 1. NORTH CAROLINA STATE UNIVERSITY      -->
+<!-- ======================================= -->
+
+<div class="cv-card" style="margin-bottom:1.5rem;">
+
+  <div class="cv-entry-title">
+    Graduate Research / Teaching Assistant
+  </div>
+
+  <div class="cv-entry-meta">
+    <a href="https://www.ncsu.edu/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:inherit; font-weight:700; text-decoration:none;">
+      North Carolina State University
+    </a>
+    · Aug 2023–Present · Raleigh, NC
+  </div>
+
+  <div class="cv-card"
+       style="margin-top:0.85rem;
+              margin-bottom:1rem;
+              padding:0.7rem 0.9rem;
+              border-left:3px solid #208894;">
+
+    <strong>Ph.D. Advisor:</strong>
+    <a href="https://amitra2.wordpress.ncsu.edu/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:#208894; font-weight:800; text-decoration:none;">
+      Dr. Aritra Mitra
+    </a>
+
+    <div class="cv-entry-desc" style="margin-top:0.15rem;">
+      Department of Electrical and Computer Engineering,
+      North Carolina State University
+    </div>
+
+  </div>
 
   <ul class="cv-list">
+
     <li>
-      <span class="cv-highlight">Robust optimal policy learning from corrupted and correlated observations.</span>
-      Showed that vanilla Q-Learning is provably fragile under reward corruption, designed robust Bellman-update methods, and established finite-time convergence with matching minimax lower bounds.  Results disseminated across <strong>ICML 2026</strong>, <strong>NeurIPS 2025</strong>, and <strong>IEEE CDC 2024, CDC 2026</strong>.
+      <span class="cv-highlight">
+        Robust optimal policy learning from corrupted
+        and correlated observations.
+      </span>
+      Showed that vanilla Q-learning is provably fragile
+      under reward corruption, designed robust
+      Bellman-update methods, and established finite-time
+      convergence with matching minimax lower bounds.
+      Results disseminated across
+      <strong>ICML 2026</strong>,
+      <strong>NeurIPS 2025</strong>,
+      and <strong>IEEE CDC 2024, CDC 2026</strong>.
     </li>
+
     <li>
-      <span class="cv-highlight">Robust policy evaluation under adversarial influences and Markovian data.</span>
-      Developed finite-time theory for robust temporal-difference learning with Markovian noise and function approximation, including upper bounds and near-tight lower bounds.  This research is published in <strong>AISTATS 2025</strong>.
+      <span class="cv-highlight">
+        Robust policy evaluation under adversarial
+        influences and Markovian data.
+      </span>
+      Developed finite-time theory for robust
+      temporal-difference learning with Markovian noise
+      and function approximation, including upper bounds
+      and near-tight lower bounds.
+      This research is published in
+      <strong>AISTATS 2025</strong>.
     </li>
+
     <li>
-      <span class="cv-highlight">Robust federated and multi-agent reinforcement learning.</span>
-      Developed adversarially robust and communication-efficient reinforcement learning algorithms for federated multi-agent settings, including Byzantine-resilient methods with collaborative speedups. Two papers published at <strong>ACC 2026</strong>.
+      <span class="cv-highlight">
+        Robust federated and multi-agent
+        reinforcement learning.
+      </span>
+      Developed adversarially robust and
+      communication-efficient reinforcement learning
+      algorithms for federated multi-agent settings,
+      including Byzantine-resilient methods with
+      collaborative speedups.
+      Two papers published at
+      <strong>ACC 2026</strong>.
     </li>
+
   </ul>
+
 </div>
 
-<div class="cv-entry">
-  <div class="cv-entry-title">Research Collaboration · Byzantine-Robust Representation Learning</div>
-  <div class="cv-entry-meta">Columbia University · April 2026--Present</div>
 
-  <p>Developing Byzantine-robust representation learning methods for heterogeneous reinforcement learning agents operating in distinct MDPs with temporally dependent data. The approach decomposes each agent's value function into a shared low-dimensional representation and a personalized local parameter, enabling collaborative learning of common structure while accommodating differences in transitions, rewards, policies, and value functions without persistent heterogeneity bias.</p>
+<!-- ======================================= -->
+<!-- 2. UNIVERSITY OF CALIFORNIA, SAN DIEGO  -->
+<!-- ======================================= -->
+
+<div class="cv-card" style="margin-bottom:1.5rem;">
+
+  <div class="cv-entry-title">
+    Research Collaboration · Decentralized Reinforcement Learning
+  </div>
+
+  <div class="cv-entry-meta">
+    <a href="https://ucsd.edu/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:inherit; font-weight:700; text-decoration:none;">
+      University of California, San Diego
+    </a>
+    · September 2025–Present · San Diego, CA
+  </div>
+
+  <div class="cv-card"
+       style="margin-top:0.85rem;
+              margin-bottom:1rem;
+              padding:0.7rem 0.9rem;
+              border-left:3px solid #208894;">
+
+    <strong>Research Collaborator:</strong>
+    <a href="https://profheath.org/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:#208894; font-weight:800; text-decoration:none;">
+      Prof. Robert W. Heath Jr.
+    </a>
+
+    <div class="cv-entry-desc" style="margin-top:0.15rem;">
+      Department of Electrical and Computer Engineering,
+      University of California, San Diego
+    </div>
+
+  </div>
+
+  <div class="cv-entry-desc">
+    <span class="cv-highlight">
+      Decentralized Q-learning with asynchronous sampling
+      and partial state-action coverage.
+    </span>
+    Developing decentralized Q-learning algorithms
+    that enable agents with partial state-action
+    coverage to learn collaboratively from asynchronous
+    observations. Establishing finite-time convergence
+    guarantees and quantifying the benefits of variance
+    reduction over static and time-varying
+    communication networks.
+  </div>
+
 </div>
 
-<div class="cv-entry">
-  <div class="cv-entry-title">Research Collaboration · Robust Curriculum Learning for LLM Post-Training</div>
-  <div class="cv-entry-meta">August 2026--Present</div>
 
-  <p>Developing adaptive adversarial curricula for LLM reasoning post-training by extending static GDRO-style group reweighting to a sequential curriculum-learning framework, where a curriculum controller uses on-policy self-distillation and single-trajectory, corruption-tolerant Q-learning to prioritize difficult task groups despite unreliable verifier, teacher, or state feedback.</p>
+<!-- ======================================= -->
+<!-- 3. COLUMBIA UNIVERSITY                  -->
+<!-- ======================================= -->
+
+<div class="cv-card" style="margin-bottom:1.5rem;">
+
+  <div class="cv-entry-title">
+    Research Collaboration · Byzantine-Robust Representation Learning
+  </div>
+
+  <div class="cv-entry-meta">
+    <a href="https://www.columbia.edu/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:inherit; font-weight:700; text-decoration:none;">
+      Columbia University
+    </a>
+    · May 2026–Present · New York, NY
+  </div>
+
+  <div class="cv-card"
+       style="margin-top:0.85rem;
+              margin-bottom:1rem;
+              padding:0.7rem 0.9rem;
+              border-left:3px solid #208894;">
+
+    <strong>Research Collaborator:</strong>
+    <a href="https://www.columbia.edu/~ja3451/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:#208894; font-weight:800; text-decoration:none;">
+      Prof. James Anderson
+    </a>
+
+    <div class="cv-entry-desc" style="margin-top:0.15rem;">
+      Department of Electrical Engineering,
+      Columbia University, New York
+    </div>
+
+  </div>
+
+  <div class="cv-entry-desc">
+    <span class="cv-highlight">
+      Byzantine-robust personalized federated policy
+      evaluation with shared representations.
+    </span>
+    Developing Byzantine-robust representation learning
+    methods for heterogeneous reinforcement learning
+    agents operating in distinct MDPs with temporally
+    dependent data. The approach decomposes each
+    agent's value function into a shared low-dimensional
+    representation and a personalized local parameter,
+    enabling collaborative learning of common structure
+    while accommodating differences in transitions,
+    rewards, policies, and value functions without
+    persistent heterogeneity bias.
+  </div>
+
 </div>
-
 
 </div>
 

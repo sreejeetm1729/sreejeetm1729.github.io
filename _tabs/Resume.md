@@ -244,7 +244,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
     <a href="https://amitra2.wordpress.ncsu.edu/"
        target="_blank"
        rel="noopener noreferrer"
-       style="color:#208894; font-weight:800; text-decoration:none;">
+       style="color:#208894; font-weight:100; text-decoration:none;">
       Dr. Aritra Mitra
     </a>
   </div>

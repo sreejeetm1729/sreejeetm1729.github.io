@@ -195,7 +195,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
     <i class="fab fa-linkedin"></i> LinkedIn
   </a>
 
-  <a href="{{ '/assets/pdf/Target_Academia_Resume.pdf' | relative_url }}" target="_blank">
+  <a href="{{ '/assets/pdf/Target_Academia.pdf' | relative_url }}" target="_blank">
     <i class="fas fa-file-pdf"></i> Download CV
   </a>
 </div>
@@ -231,11 +231,34 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <h2>Education</h2>
 
+
 <div class="cv-entry">
   <div class="cv-entry-title">North Carolina State University</div>
-  <div class="cv-entry-meta">Ph.D. in Electrical Engineering · Aug 2023--Present · Raleigh, NC</div>
-  <div class="cv-entry-desc">Advisor: <a href="https://amitra2.wordpress.ncsu.edu/" target="_blank" style="color:#208894; font-weight:800; text-decoration:none;">Dr. Aritra Mitra</a>.</div>
+
+  <div class="cv-entry-meta">
+    Ph.D. in Electrical Engineering · Aug 2023–Present · Raleigh, NC
+  </div>
+
+  <div class="cv-entry-desc">
+    <strong>Advisor:</strong>
+    <a href="https://amitra2.wordpress.ncsu.edu/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:#208894; font-weight:800; text-decoration:none;">
+      Dr. Aritra Mitra
+    </a>
+  </div>
+
+  <div class="cv-entry-desc">
+    <strong>Thesis:</strong>
+    <em>Towards a Finite-Time Theory of Adversarially Robust Reinforcement Learning: Algorithms, Guarantees, and Fundamental Limits</em>
+  </div>
+
+  <div class="cv-entry-desc">
+    <strong>Expected Graduation:</strong> December 2027–March 2028
+  </div>
 </div>
+
 
 <div class="cv-entry">
   <div class="cv-entry-title">Indian Institute of Science, Bangalore</div>

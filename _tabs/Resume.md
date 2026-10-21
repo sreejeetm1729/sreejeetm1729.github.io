@@ -328,10 +328,14 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       under reward corruption, designed robust
       Bellman-update methods, and established finite-time
       convergence with matching minimax lower bounds.
-      Results disseminated across
-      <strong>ICML 2026</strong>,
-      <strong>NeurIPS 2025</strong>,
-      and <strong>IEEE CDC 2024, CDC 2026</strong>.
+      Results published at
+<strong>ICML 2026</strong>,
+<strong>IEEE CDC 2024</strong>, and
+<strong>IEEE CDC 2026</strong>,
+with related work presented at the
+<strong>NeurIPS 2025 Reliable ML Workshop</strong>
+and an extended theoretical investigation
+<strong>under review at Automatica</strong>.
     </li>
 
     <li>
@@ -343,22 +347,23 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       temporal-difference learning with Markovian noise
       and function approximation, including upper bounds
       and near-tight lower bounds.
-      This research is published in
-      <strong>AISTATS 2025</strong>.
+      Results published at <strong>AISTATS 2025</strong>,
+with further developments on near-optimal finite-time
+guarantees and fundamental statistical limits
+<strong>under review at L4DC 2027</strong>. We also investigated communication-efficient policy evaluation under finite-bit communication constraints,
+developing adaptive quantization methods with provable
+finite-time convergence guarantees. This work is
+<strong>under review at ECC 2027</strong>.
     </li>
 
-    <li>
+  <li>
       <span class="cv-highlight">
         Robust federated and multi-agent
         reinforcement learning.
       </span>
-      Developed adversarially robust and
-      communication-efficient reinforcement learning
-      algorithms for federated multi-agent settings,
-      including Byzantine-resilient methods with
-      collaborative speedups.
-      Two papers published at
-      <strong>ACC 2026</strong>.
+      Developed adversarially robust and communication-efficient reinforcement learning
+      algorithms for federated multi-agent settings, including Byzantine-resilient methods with collaborative speedups. Two papers published at <strong>ACC 2026</strong>, with further work on adversarially robust federated reinforcement learning <strong>under review at JMLR</strong>.
+
     </li>
 
   </ul>

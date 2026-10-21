@@ -423,7 +423,11 @@ finite-time convergence guarantees. This work is
     observations. Establishing finite-time convergence
     guarantees and quantifying the benefits of variance
     reduction over static and time-varying
-    communication networks.
+    communication networks. Result published at <strong>ACC 2026</strong>,
+  with further developments on decentralized learning
+  under asynchronous sampling and partial coverage
+  <strong>under preparation for IEEE Transactions on
+  Signal Processing (TSP)</strong>.
   </div>
 
 </div>
@@ -484,7 +488,8 @@ finite-time convergence guarantees. This work is
     enabling collaborative learning of common structure
     while accommodating differences in transitions,
     rewards, policies, and value functions without
-    persistent heterogeneity bias.
+    persistent heterogeneity bias. This research is under review at
+  <strong>Transactions on Machine Learning Research (TMLR)</strong>.
   </div>
 
 </div>

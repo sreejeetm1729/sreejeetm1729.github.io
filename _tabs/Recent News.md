@@ -170,6 +170,6 @@ order: 6
   </li>
 
   <li style="font-size:15px">
-    <em><strong>February--March 2023</strong></em>: Received Ph.D. offers from North Carolina State University and Purdue University.
+    <em><strong>February-March 2023</strong></em>: Received Ph.D. offers from North Carolina State University and Purdue University.
   </li>
 </ul>

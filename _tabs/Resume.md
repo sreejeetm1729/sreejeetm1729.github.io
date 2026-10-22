@@ -156,6 +156,30 @@ order: 7
   color: #e6c98f;
 }
 
+.cv-publications .publication-theme {
+    margin: 1.75rem 0 0.9rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #9a3f3f;
+  }
+
+  .cv-publications .cv-entry {
+    display: grid;
+    grid-template-columns: 3.2em minmax(0, 1fr);
+    gap: 0.5em;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .cv-publications .publication-label {
+    white-space: nowrap;
+  }
+
+  .cv-publications .cv-entry-meta {
+    display: inline;
+    font-size: inherit;
+  }
+
 @media screen and (max-width: 768px) {
   .cv-grid {
     grid-template-columns: 1fr;
@@ -497,102 +521,201 @@ finite-time convergence guarantees. This work is
 </div>
 
 <div class="cv-section">
+<div class="cv-publications">
+  <h2>Publications</h2>
 
-<h2>List of Publications</h2>
+  <section aria-labelledby="publication-theme-1">
+    <h3 id="publication-theme-1" class="publication-theme">
+      Theme 1. Provably Robust Reinforcement Learning:
+      Algorithms and Statistical Limits
+    </h3>
 
-<div class="cv-entry">
-  [1] <strong>S. Maity</strong><sup>†</sup> and A. Mitra, “Corruption-Tolerant Optimal Asynchronous Q-Learning”, in <span class="cv-entry-meta" style="display: inline;"> <em>International Conference on Machine Learning (ICML)</em>, 2026.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P1)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Corruption-Tolerant Asynchronous Q-Learning with
+          Near-Optimal Rates.</strong>
+        <span class="cv-entry-meta">
+          <em>International Conference on Machine Learning (ICML)</em>, 2026.
+        </span>
+      </div>
+    </div>
 
-<div class="cv-entry">
-  [2] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
-  “Adversarially-Robust TD Learning with Markovian Data”, in
-  <span class="cv-entry-meta" style="display: inline;">
-    <em>International Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2025.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P2)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Robust Asynchronous Q-Learning under Reward and State
+          Corruption via Batching.</strong>
+        <span class="cv-entry-meta">
+          <em>IEEE Conference on Decision and Control (CDC)</em>, 2026.
+        </span>
+      </div>
+    </div>
 
-<div class="cv-entry">
-  [3] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
-  “Robust Asynchronous Q-Learning under Reward and State Corruption via Batching”, in
-  <span class="cv-entry-meta" style="display: inline;">
-    <em>IEEE Conference on Decision and Control (CDC)</em>, 2026.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P3)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Adversarially-Robust TD-Learning with Markovian Data:
+          Finite-Time Rates and Fundamental Limits.</strong>
+        <span class="cv-entry-meta">
+          <em>International Conference on Artificial Intelligence
+            and Statistics (AISTATS)</em>, 2025.
+        </span>
+      </div>
+    </div>
 
-<div class="cv-entry">
-  [4] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
-  “Robust Q-Learning under Corrupted Rewards”, in
-  <span class="cv-entry-meta" style="display: inline;">
-    <em>IEEE Conference on Decision and Control (CDC)</em>, 2024.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P4)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Robust Q-Learning under Corrupted Rewards.</strong>
+        <span class="cv-entry-meta">
+          <em>IEEE Conference on Decision and Control (CDC)</em>, 2024.
+        </span>
+      </div>
+    </div>
 
-<div class="cv-entry">
-  [5] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
-  “Robust Federated Q-Learning with Almost No Communication”, in
-  <span class="cv-entry-meta" style="display: inline;">
-    <em>American Control Conference (ACC)</em>, 2026.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P5)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Towards a Near-Optimal Finite-Time Theory of
+          Robust Policy Evaluation under Corruption.</strong>
+        <span class="cv-entry-meta">
+          Under review at
+          <em>Learning for Dynamics and Control (L4DC)</em>, 2027.
+        </span>
+      </div>
+    </div>
 
-<div class="cv-entry">
-  [6] <strong>S. Maity</strong><sup>†</sup>, F. Zhu, R. Heath, and A. Mitra,
-  “Variance-Reduced Q-Learning over Static and Time-Varying Networks”, in
-  <span class="cv-entry-meta" style="display: inline;">
-    <em>American Control Conference (ACC)</em>, 2026.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P6)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Towards Minimax-Optimal Asynchronous Q-Learning
+          from Corrupted Markovian Data.</strong>
+        <span class="cv-entry-meta">
+          Under review at <em>Automatica</em>.
+        </span>
+      </div>
+    </div>
+  </section>
 
-<div class="cv-entry">
-  [7] <strong>S. Maity</strong><sup>†</sup>, A. Mitra,
-  “Batched Temporal-Difference Learning under Joint State and Reward Corruption”, in
-  <span class="cv-entry-meta" style="display: inline;">
-    under review at <em> Learning for Dynamics and Control(L4DC)</em>, 2027.
-  </span>
-</div>
+  <section aria-labelledby="publication-theme-2">
+    <h3 id="publication-theme-2" class="publication-theme">
+      Theme 2. Adversarially Robust Federated Reinforcement Learning
+      with Collaborative Speedups
+    </h3>
 
-<div class="cv-entry">
-  [8] <strong>S. Maity</strong><sup>†</sup>, A. Mitra,
-  “Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning over Rate-Limited Channels” in
-  <span class="cv-entry-meta" style="display: inline;">
-    under review at <em>European Control Conference (ECC)</em>, 2027.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P7)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Robust Federated Q-Learning with Almost
+          No Communication.</strong>
+        <span class="cv-entry-meta">
+          <em>American Control Conference (ACC)</em>, 2026.
+        </span>
+      </div>
+    </div>
 
-<div class="cv-entry">
-  [9] <strong>S. Maity</strong><sup>†</sup> and A. Mitra,
-  “Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning”,
-  <span class="cv-entry-meta" style="display: inline;">
-    under review at <em>Journal of Machine Learning Reserach (JMLR)</em>.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P8)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Learning from Unreliable Trajectories:
+          Adversarially-Robust Federated Q-Learning.</strong>
+        <span class="cv-entry-meta">
+          Under review at
+          <em>Journal of Machine Learning Research (JMLR)</em>.
+        </span>
+      </div>
+    </div>
 
-<div class="cv-entry">
-  [10] <strong>S. Maity</strong><sup>†</sup>, F. Zhu, R. Heath, and A. Mitra,
-  “Decentralized Q-learning with Asynchronous Sampling and Partial Coverage”,
-  <span class="cv-entry-meta" style="display: inline;">
-    Manuscript in preparation for <em>IEEE Transactions on Signal Processing (TSP)</em>.
-  </span>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P9)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Leonardo Felipe Toso,
+        James Anderson, Aritra Mitra.
+        <strong>Value Function Representation for Adversarially
+          Robust Federated TD Learning.</strong>
+        <span class="cv-entry-meta">
+          Under review at
+          <em>Transactions on Machine Learning Research (TMLR)</em>.
+        </span>
+      </div>
+    </div>
+  </section>
 
-<div class="cv-entry">
-  [11] <strong>S. Maity</strong>, L.Toso, J.Anderson, and A.Mitra,
-  “Value Function Representation for Adversarially Robust Federated TD Learning”,
-  <span class="cv-entry-meta" style="display: inline;">
-    under review at <em>Transactions on Machine Learning Research (TMLR)</em>.
-  </span>
-</div>
+  <section aria-labelledby="publication-theme-3">
+    <h3 id="publication-theme-3" class="publication-theme">
+      Theme 3. Decentralized Reinforcement Learning over
+      Static and Time-Varying Networks
+    </h3>
 
-<div class="cv-entry">
-  [12] <strong>S. Maity</strong><sup>†</sup>, A. Mitra,
-  “Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data”,
-  <span class="cv-entry-meta" style="display: inline;">
-    under review at <em>Automatica</em>.
-  </span>
-</div>
-</div>
+    <div class="cv-entry">
+      <span class="publication-label">(P10)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Feng Zhu,
+        Robert W. Heath Jr., Aritra Mitra.
+        <strong>Variance-Reduced Q-Learning over Static and
+          Time-Varying Networks.</strong>
+        <span class="cv-entry-meta">
+          <em>American Control Conference (ACC)</em>, 2026.
+        </span>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <span class="publication-label">(P11)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Feng Zhu,
+        Robert W. Heath Jr., Aritra Mitra.
+        <strong>Decentralized Q-Learning with Asynchronous
+          Sampling and Partial Coverage.</strong>
+        <span class="cv-entry-meta">
+          Under review at
+          <em>IEEE Transactions on Signal Processing (TSP)</em>.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="publication-theme-4">
+    <h3 id="publication-theme-4" class="publication-theme">
+      Theme 4. Communication Constraints and Sparse Model Changes
+      in Reinforcement Learning
+    </h3>
+
+    <div class="cv-entry">
+      <span class="publication-label">(P12)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Aritra Mitra.
+        <strong>Adaptive Quantization Preserves Fast Rates in
+          TD-Learning over Rate Limited Channels.</strong>
+        <span class="cv-entry-meta">
+          Under review at
+          <em>European Control Conference (ECC)</em>, 2027.
+        </span>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <span class="publication-label">(P13)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Leonardo Felipe Toso.
+        <strong>Adaptive History Selection for Reinforcement
+          Learning under Sparse Model Changes.</strong>
+        <span class="cv-entry-meta">
+          Under review at
+          <em>European Control Conference (ECC)</em>, 2027.
+        </span>
+      </div>
+    </div>
+  </section>
 </div>
 
 <div class="cv-section">

@@ -21,7 +21,7 @@ order: 7
 .cv-name {
   font-size: 2.15rem;
   font-weight: 800;
-  color: #208894;
+  color: #0891b2;
   margin-bottom: 0.2rem;
 }
 
@@ -43,7 +43,7 @@ order: 7
 }
 
 .cv-links a {
-  color: #a5f3fc;
+  color: #0891b2;
   text-decoration: none;
   font-weight: 700;
   margin-right: 16px;
@@ -134,9 +134,9 @@ order: 7
   display: inline-block;
   margin: 0.25rem 0.35rem 0.25rem 0;
   padding: 0.2rem 0.55rem;
-  border-radius: 999px;
+  border-radius: 0px;
   border: 1px solid rgba(165,243,252,0.25);
-  color: #a5f3fc;
+  color: #0891b2;
   background: rgba(165,243,252,0.06);
   font-size: 0.9rem;
   font-weight: 700;

@@ -406,7 +406,7 @@ order: 7
 
   .education-refined .edu-degree {
     margin-top: 0.2rem;
-    color: var(--edu-accent);
+    color: #0891b2;
     font-size: 0.9rem;
   }
 

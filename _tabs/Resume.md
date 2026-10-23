@@ -600,7 +600,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
              href="https://arxiv.org/pdf/2607.20822"
              target="_blank"
              rel="noopener noreferrer">
-            IEEE CDC 2026 · Accepted ↗
+            IEEE CDC 2026 ↗
           </a>
 
           <span class="re-tag">

@@ -369,7 +369,124 @@ order: 7
   outline: 2px solid var(--re-accent);
   outline-offset: 4px;
 }
+.education-refined {
+    --edu-text: #ebe9e5;
+    --edu-muted: #a5a5ac;
+    --edu-accent: #d8a7a7;
+    --edu-rule: rgba(255, 255, 255, 0.11);
 
+    color: var(--edu-text);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .education-refined .edu-entry {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--edu-rule);
+  }
+
+  .education-refined .edu-entry:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .education-refined .edu-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 0.6rem 1.5rem;
+  }
+
+  .education-refined .edu-school {
+    color: var(--edu-text);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .education-refined .edu-degree {
+    margin-top: 0.2rem;
+    color: var(--edu-accent);
+    font-size: 0.9rem;
+  }
+
+  .education-refined .edu-time {
+    padding-top: 0.15rem;
+    color: var(--edu-muted);
+    font-size: 0.78rem;
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .education-refined .edu-place {
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .education-refined .edu-advisor {
+    margin: 0.65rem 0 0;
+    color: var(--edu-muted);
+    font-size: 0.85rem;
+  }
+
+  .education-refined .edu-advisor a {
+    color: var(--edu-accent);
+    text-decoration: none;
+    border-bottom: 0;
+  }
+
+  .education-refined .edu-advisor a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .education-refined .edu-thesis {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--edu-accent);
+  }
+
+  .education-refined .edu-label {
+    color: var(--edu-muted);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .education-refined .edu-thesis-title {
+    margin: 0.3rem 0 0;
+    color: var(--edu-text);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .education-refined .edu-graduation {
+    margin: 0.6rem 0 0;
+    color: var(--edu-muted);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 640px) {
+    .education-refined .edu-top {
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+    }
+
+    .education-refined .edu-time {
+      text-align: left;
+      white-space: normal;
+    }
+
+    .education-refined .edu-place {
+      display: inline;
+    }
+
+    .education-refined .edu-place::before {
+      content: " · ";
+    }
+  }
 @media (max-width: 640px) {
   .research-experience .re-timeline {
     margin-left: 0.2rem;
@@ -480,48 +597,100 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 </div> 
 </div>
 
-<div class="cv-section">
+<div class="cv-section education-refined">
 
-<h2>Education</h2>
+  <h2>Education</h2>
 
+  <!-- North Carolina State University -->
+  <article class="edu-entry">
 
-<div class="cv-entry">
-  <div class="cv-entry-title">North Carolina State University</div>
+    <div class="edu-top">
+      <div>
+        <div class="edu-school">
+          North Carolina State University
+        </div>
 
-  <div class="cv-entry-meta">
-    Ph.D. in Electrical Engineering · Aug 2023–Present · Raleigh, NC
-  </div>
+        <div class="edu-degree">
+          Ph.D. in Electrical Engineering
+        </div>
+      </div>
 
-  <div class="cv-entry-desc">
-    <strong>Advisor:</strong>
-    <a href="https://amitra2.wordpress.ncsu.edu/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
-      <em>Dr. Aritra Mitra</em>
-    </a>
-  </div>
+      <div class="edu-time">
+        Aug 2023–Present
+        <span class="edu-place">Raleigh, NC</span>
+      </div>
+    </div>
 
-  <div class="cv-entry-desc">
-    <strong>Thesis:</strong>
-    <a style="color:#d8a7a7; font-weight:100; text-decoration:none;"><em>Towards a Finite-Time Theory of Adversarially Robust RL: Algorithms, Guarantees, and Fundamental Limits</em></a>
-  </div>
+    <p class="edu-advisor">
+      Advisor:
+      <a href="https://amitra2.wordpress.ncsu.edu/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Dr. Aritra Mitra
+      </a>
+    </p>
 
-  <div class="cv-entry-desc">
-    <strong>Expected Graduation:</strong> <a style="color:#d8a7a7; font-weight:100; text-decoration:none;"><em>December 2027–March 2028</em></a>
-  </div>
-</div>
+    <div class="edu-thesis">
+      <div class="edu-label">Thesis</div>
 
+      <p class="edu-thesis-title">
+        <em>
+          Towards a Finite-Time Theory of Adversarially
+          Robust RL: Algorithms, Guarantees, and
+          Fundamental Limits
+        </em>
+      </p>
 
-<div class="cv-entry">
-  <div class="cv-entry-title">Indian Institute of Science, Bangalore</div>
-  <div class="cv-entry-meta">M.Tech. in Robotics and Autonomous Systems · Aug 2021-June 2023 · Bangalore, India</div>
-</div>
+      <p class="edu-graduation">
+        Expected graduation · December 2027–March 2028
+      </p>
+    </div>
 
-<div class="cv-entry">
-  <div class="cv-entry-title">Jadavpur University</div>
-  <div class="cv-entry-meta">B.E. in Electrical Engineering · Aug 2017-July 2021 · Kolkata, India</div>
-</div>
+  </article>
+
+  <!-- Indian Institute of Science -->
+  <article class="edu-entry">
+
+    <div class="edu-top">
+      <div>
+        <div class="edu-school">
+          Indian Institute of Science, Bangalore
+        </div>
+
+        <div class="edu-degree">
+          M.Tech. in Robotics and Autonomous Systems
+        </div>
+      </div>
+
+      <div class="edu-time">
+        Aug 2021–June 2023
+        <span class="edu-place">Bangalore, India</span>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- Jadavpur University -->
+  <article class="edu-entry">
+
+    <div class="edu-top">
+      <div>
+        <div class="edu-school">
+          Jadavpur University
+        </div>
+
+        <div class="edu-degree">
+          B.E. in Electrical Engineering
+        </div>
+      </div>
+
+      <div class="edu-time">
+        Aug 2017–July 2021
+        <span class="edu-place">Kolkata, India</span>
+      </div>
+    </div>
+
+  </article>
 
 </div>
 

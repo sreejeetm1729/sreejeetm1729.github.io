@@ -219,7 +219,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
     <i class="fab fa-linkedin"></i> LinkedIn
   </a>
 
-  <a href="{{ '/assets/pdf/Target_Academia.pdf' | relative_url }}" target="_blank">
+  <a href="{{ '/assets/pdf/Target_Academia_Resume-v1.pdf' | relative_url }}" target="_blank">
     <i class="fas fa-file-pdf"></i> Download CV
   </a>
 </div>

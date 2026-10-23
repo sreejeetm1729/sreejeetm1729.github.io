@@ -179,6 +179,235 @@ order: 7
     display: inline;
     font-size: inherit;
   }
+/* Scoped to Research Experience */
+.research-experience {
+  --re-text: #ebe9e5;
+  --re-muted: #a0a4a5;
+  --re-accent: #d8a7a7;
+  --re-border: rgba(255, 255, 255, 0.12);
+  --re-background: rgba(255, 255, 255, 0.025);
+}
+
+.research-experience .re-timeline {
+  position: relative;
+  margin-left: 0.35rem;
+  padding-left: 1.75rem;
+}
+
+.research-experience .re-timeline::before {
+  content: "";
+  position: absolute;
+  top: 1.8rem;
+  bottom: 1.8rem;
+  left: 0;
+  width: 1px;
+  background: rgba(216, 167, 167, 0.3);
+}
+
+.research-experience .re-card {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--re-border);
+  border-radius: 0;
+  background: var(--re-background);
+}
+
+.research-experience .re-card:last-child {
+  margin-bottom: 0;
+}
+
+.research-experience .re-card::before {
+  content: "";
+  position: absolute;
+  top: 1.7rem;
+  left: calc(-1.75rem - 5px);
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--re-accent);
+  border-radius: 0;
+  background: var(--main-bg, #1b1b1e);
+  box-sizing: border-box;
+}
+
+.research-experience .re-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 1rem;
+}
+
+.research-experience .re-institution {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--re-text);
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.research-experience .re-institution a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.research-experience .re-institution a:hover {
+  color: var(--re-accent);
+}
+
+.research-experience .re-role {
+  margin-top: 0.25rem;
+  color: var(--re-accent);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.research-experience .re-date {
+  color: var(--re-muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.research-experience .re-location {
+  display: block;
+  font-size: 0.73rem;
+  opacity: 0.85;
+}
+
+.research-experience .re-person {
+  margin: 0.75rem 0 0;
+  color: var(--re-muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.research-experience .re-person a {
+  color: var(--re-text);
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(216, 167, 167, 0.4);
+}
+
+.research-experience .re-person a:hover {
+  color: var(--re-accent);
+}
+
+.research-experience .re-department {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  color: var(--re-muted);
+}
+
+.research-experience .re-work {
+  margin-top: 1.2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--re-border);
+}
+
+.research-experience .re-topic {
+  margin: 0 0 0.5rem;
+  padding: 0;
+  color: var(--re-accent);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.research-experience .re-description {
+  margin: 0;
+  color: #c9cccb;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.research-experience .re-description + .re-description {
+  margin-top: 0.65rem;
+}
+
+.research-experience .re-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.research-experience .re-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.6rem;
+  border: 1px solid rgba(216, 167, 167, 0.3);
+  border-radius: 0;
+  background: rgba(216, 167, 167, 0.045);
+  color: #ddc5c5;
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.research-experience a.re-tag:hover {
+  color: #f0dddd;
+  border-color: var(--re-accent);
+  background: rgba(216, 167, 167, 0.1);
+}
+
+.research-experience .re-tag-review {
+  color: var(--re-muted);
+  border-color: var(--re-border);
+  background: transparent;
+}
+
+.research-experience a:focus-visible {
+  outline: 2px solid var(--re-accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .research-experience .re-timeline {
+    margin-left: 0.2rem;
+    padding-left: 1.15rem;
+  }
+
+  .research-experience .re-card {
+    padding: 1.1rem;
+  }
+
+  .research-experience .re-card::before {
+    left: calc(-1.15rem - 5px);
+    top: 1.4rem;
+  }
+
+  .research-experience .re-header {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .research-experience .re-date {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .research-experience .re-location {
+    display: inline;
+    margin-left: 0.4rem;
+  }
+
+  .research-experience .re-institution {
+    font-size: 1.05rem;
+  }
+
+  .research-experience .re-description {
+    font-size: 0.88rem;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .cv-grid {
@@ -296,227 +525,297 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 </div>
 
-<div class="cv-section">
+<div class="cv-section research-experience">
 
-<h2>Research Experience</h2>
+  <h2>Research Experience</h2>
 
-<!-- ======================================= -->
-<!-- 1. NORTH CAROLINA STATE UNIVERSITY      -->
-<!-- ======================================= -->
+  <div class="re-timeline">
 
-<div class="cv-card" style="margin-bottom:1.5rem;">
+    <!-- NORTH CAROLINA STATE UNIVERSITY -->
+    <article class="re-card">
 
-  <div class="cv-entry-title">
-    Graduate Research / Teaching Assistant
+      <div class="re-header">
+        <div>
+          <h3 class="re-institution">
+            <a href="https://www.ncsu.edu/"
+               target="_blank"
+               rel="noopener noreferrer">
+              North Carolina State University
+            </a>
+          </h3>
+
+          <div class="re-role">
+            Graduate Research / Teaching Assistant
+          </div>
+        </div>
+
+        <div class="re-date">
+          Aug 2023–Present
+          <span class="re-location">Raleigh, NC</span>
+        </div>
+      </div>
+
+      <p class="re-person">
+        Ph.D. Advisor:
+        <a href="https://amitra2.wordpress.ncsu.edu/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Dr. Aritra Mitra
+        </a>
+
+        <span class="re-department">
+          Department of Electrical and Computer Engineering
+        </span>
+      </p>
+
+      <div class="re-work">
+        <h4 class="re-topic">
+          Robust optimal policy learning from corrupted
+          and correlated observations
+        </h4>
+
+        <p class="re-description">
+          Showed that vanilla Q-learning is provably fragile
+          under reward corruption, designed robust
+          Bellman-update methods, and established finite-time
+          convergence with matching minimax lower bounds.
+        </p>
+
+        <div class="re-tags">
+          <a class="re-tag"
+             href="https://proceedings.mlr.press/v306/maity26a.html"
+             target="_blank"
+             rel="noopener noreferrer">
+            ICML 2026 ↗
+          </a>
+
+          <a class="re-tag"
+             href="https://arxiv.org/abs/2409.03237"
+             target="_blank"
+             rel="noopener noreferrer">
+            IEEE CDC 2024 ↗
+          </a>
+
+          <a class="re-tag"
+             href="https://arxiv.org/pdf/2607.20822"
+             target="_blank"
+             rel="noopener noreferrer">
+            IEEE CDC 2026 · Accepted ↗
+          </a>
+
+          <span class="re-tag">
+            NeurIPS 2025 Reliable ML Workshop
+          </span>
+
+          <span class="re-tag re-tag-review">
+            Automatica · Under review
+          </span>
+        </div>
+      </div>
+
+      <div class="re-work">
+        <h4 class="re-topic">
+          Robust policy evaluation under adversarial
+          influences and Markovian data
+        </h4>
+
+        <p class="re-description">
+          Developed finite-time theory for robust
+          temporal-difference learning with Markovian noise
+          and function approximation, including upper bounds
+          and near-tight lower bounds.
+        </p>
+
+        <p class="re-description">
+          We also investigated communication-efficient policy
+          evaluation under finite-bit communication constraints,
+          developing adaptive quantization methods with provable
+          finite-time convergence guarantees.
+        </p>
+
+        <div class="re-tags">
+          <a class="re-tag"
+             href="https://proceedings.mlr.press/v258/maity25a.html"
+             target="_blank"
+             rel="noopener noreferrer">
+            AISTATS 2025 ↗
+          </a>
+
+          <span class="re-tag re-tag-review">
+            L4DC 2027 · Under review
+          </span>
+
+          <span class="re-tag re-tag-review">
+            ECC 2027 · Under review
+          </span>
+        </div>
+      </div>
+
+      <div class="re-work">
+        <h4 class="re-topic">
+          Robust federated and multi-agent reinforcement learning
+        </h4>
+
+        <p class="re-description">
+          Developed adversarially robust and communication-efficient
+          reinforcement learning algorithms for federated multi-agent
+          settings, including Byzantine-resilient methods with
+          collaborative speedups.
+        </p>
+
+        <div class="re-tags">
+          <a class="re-tag"
+             href="https://sreejeetm1729.github.io/Publications/"
+             target="_blank"
+             rel="noopener noreferrer">
+            ACC 2026 · Two papers ↗
+          </a>
+
+          <a class="re-tag re-tag-review"
+             href="https://arxiv.org/pdf/2610.06918"
+             target="_blank"
+             rel="noopener noreferrer">
+            JMLR · Under review ↗
+          </a>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- UNIVERSITY OF CALIFORNIA, SAN DIEGO -->
+    <article class="re-card">
+
+      <div class="re-header">
+        <div>
+          <h3 class="re-institution">
+            <a href="https://ucsd.edu/"
+               target="_blank"
+               rel="noopener noreferrer">
+              University of California, San Diego
+            </a>
+          </h3>
+
+          <div class="re-role">
+            Research Collaboration · Decentralized Reinforcement Learning
+          </div>
+        </div>
+
+        <div class="re-date">
+          September 2025–Present
+          <span class="re-location">San Diego, CA</span>
+        </div>
+      </div>
+
+      <p class="re-person">
+        Research Collaborator:
+        <a href="https://profheath.org/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Prof. Robert W. Heath Jr.
+        </a>
+
+        <span class="re-department">
+          Department of Electrical and Computer Engineering
+        </span>
+      </p>
+
+      <div class="re-work">
+        <h4 class="re-topic">
+          Decentralized Q-learning with asynchronous sampling
+          and partial state-action coverage
+        </h4>
+
+        <p class="re-description">
+          Developing decentralized Q-learning algorithms that
+          enable agents with partial state-action coverage to
+          learn collaboratively from asynchronous observations.
+          Establishing finite-time convergence guarantees and
+          quantifying the benefits of variance reduction over
+          static and time-varying communication networks.
+        </p>
+
+        <div class="re-tags">
+          <a class="re-tag"
+             href="https://arxiv.org/pdf/2607.21876"
+             target="_blank"
+             rel="noopener noreferrer">
+            ACC 2026 ↗
+          </a>
+
+          <span class="re-tag re-tag-review">
+            IEEE TSP · In preparation
+          </span>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- COLUMBIA UNIVERSITY -->
+    <article class="re-card">
+
+      <div class="re-header">
+        <div>
+          <h3 class="re-institution">
+            <a href="https://www.columbia.edu/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Columbia University
+            </a>
+          </h3>
+
+          <div class="re-role">
+            Research Collaboration · Byzantine-Robust Representation Learning
+          </div>
+        </div>
+
+        <div class="re-date">
+          May 2026–Present
+          <span class="re-location">New York, NY</span>
+        </div>
+      </div>
+
+      <p class="re-person">
+        Research Collaborator:
+        <a href="https://www.columbia.edu/~ja3451/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Prof. James Anderson
+        </a>
+
+        <span class="re-department">
+          Department of Electrical Engineering
+        </span>
+      </p>
+
+      <div class="re-work">
+        <h4 class="re-topic">
+          Byzantine-robust personalized federated policy
+          evaluation with shared representations
+        </h4>
+
+        <p class="re-description">
+          Developing Byzantine-robust representation learning
+          methods for heterogeneous reinforcement learning
+          agents operating in distinct MDPs with temporally
+          dependent data. The approach decomposes each agent's
+          value function into a shared low-dimensional
+          representation and a personalized local parameter,
+          enabling collaborative learning of common structure
+          while accommodating differences in transitions,
+          rewards, policies, and value functions without
+          persistent heterogeneity bias.
+        </p>
+
+        <div class="re-tags">
+          <span class="re-tag re-tag-review">
+            TMLR · Under review
+          </span>
+        </div>
+      </div>
+
+    </article>
+
   </div>
-
-  <div class="cv-entry-meta">
-    <a href="https://www.ncsu.edu/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:inherit; font-weight:700; text-decoration:none;">
-      North Carolina State University
-    </a>
-    · Aug 2023–Present · Raleigh, NC
-  </div>
-
-  <div class="cv-card"
-       style="margin-top:0.85rem;
-              margin-bottom:1rem;
-              padding:0.7rem 0.9rem;
-              border-left:3px solid #208894;">
-
-  <strong>Ph.D. Advisor:</strong>
-    <a href="https://amitra2.wordpress.ncsu.edu/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
-      <em>Dr. Aritra Mitra</em>
-    </a>
-
-  <div class="cv-entry-desc" style="margin-top:0.15rem;">
-      Department of Electrical and Computer Engineering,
-      North Carolina State University
-    </div>
-
-  </div>
-
-  <ul class="cv-list">
-
-    <li>
-      <span class="cv-highlight">
-        Robust optimal policy learning from corrupted
-        and correlated observations.
-      </span>
-      Showed that vanilla Q-learning is provably fragile
-      under reward corruption, designed robust
-      Bellman-update methods, and established finite-time
-      convergence with matching minimax lower bounds.
-      Results published at
-<strong>ICML 2026</strong>,
-<strong>IEEE CDC 2024</strong>, and
-<strong>IEEE CDC 2026</strong>,
-with related work presented at the
-<strong>NeurIPS 2025 Reliable ML Workshop</strong>
-and an extended theoretical investigation
-<strong>under review at Automatica</strong>.
-    </li>
-
-    <li>
-      <span class="cv-highlight">
-        Robust policy evaluation under adversarial
-        influences and Markovian data.
-      </span>
-      Developed finite-time theory for robust
-      temporal-difference learning with Markovian noise
-      and function approximation, including upper bounds
-      and near-tight lower bounds.
-      Results published at <strong>AISTATS 2025</strong>,
-with further developments on near-optimal finite-time
-guarantees and fundamental statistical limits
-<strong>under review at L4DC 2027</strong>. We also investigated communication-efficient policy evaluation under finite-bit communication constraints,
-developing adaptive quantization methods with provable
-finite-time convergence guarantees. This work is
-<strong>under review at ECC 2027</strong>.
-    </li>
-
-  <li>
-      <span class="cv-highlight">
-        Robust federated and multi-agent
-        reinforcement learning.
-      </span>
-      Developed adversarially robust and communication-efficient reinforcement learning
-      algorithms for federated multi-agent settings, including Byzantine-resilient methods with collaborative speedups. Two papers published at <strong>ACC 2026</strong>, with further work on adversarially robust federated reinforcement learning <strong>under review at JMLR</strong>.
-
-    </li>
-
-  </ul>
-
-</div>
-
-
-<!-- ======================================= -->
-<!-- 2. UNIVERSITY OF CALIFORNIA, SAN DIEGO  -->
-<!-- ======================================= -->
-
-<div class="cv-card" style="margin-bottom:1.5rem;">
-
-  <div class="cv-entry-title">
-    Research Collaboration · Decentralized Reinforcement Learning
-  </div>
-
-  <div class="cv-entry-meta">
-    <a href="https://ucsd.edu/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:inherit; font-weight:700; text-decoration:none;">
-      University of California, San Diego
-    </a>
-    · September 2025–Present · San Diego, CA
-  </div>
-
-  <div class="cv-card"
-       style="margin-top:0.85rem;
-              margin-bottom:1rem;
-              padding:0.7rem 0.9rem;
-              border-left:3px solid #208894;">
-
-  <strong>Research Collaborator:</strong>
-    <a href="https://profheath.org/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
-      <em>Prof. Robert W. Heath Jr</em>.
-    </a>
-
-  <div class="cv-entry-desc" style="margin-top:0.15rem;">
-      Department of Electrical and Computer Engineering,
-      University of California, San Diego
-    </div>
-
-  </div>
-
-  <div class="cv-entry-desc">
-    <span class="cv-highlight">
-      Decentralized Q-learning with asynchronous sampling
-      and partial state-action coverage.
-    </span>
-    Developing decentralized Q-learning algorithms
-    that enable agents with partial state-action
-    coverage to learn collaboratively from asynchronous
-    observations. Establishing finite-time convergence
-    guarantees and quantifying the benefits of variance
-    reduction over static and time-varying
-    communication networks. Result published at <strong>ACC 2026</strong>,
-  with further developments on decentralized learning
-  under asynchronous sampling and partial coverage
-  <strong>under preparation for IEEE Transactions on
-  Signal Processing (TSP)</strong>.
-  </div>
-
-</div>
-
-
-<!-- ======================================= -->
-<!-- 3. COLUMBIA UNIVERSITY                  -->
-<!-- ======================================= -->
-
-<div class="cv-card" style="margin-bottom:1.5rem;">
-
-  <div class="cv-entry-title">
-    Research Collaboration · Byzantine-Robust Representation Learning
-  </div>
-
-  <div class="cv-entry-meta">
-    <a href="https://www.columbia.edu/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:inherit; font-weight:700; text-decoration:none;">
-      Columbia University
-    </a>
-    · May 2026–Present · New York, NY
-  </div>
-
-  <div class="cv-card"
-       style="margin-top:0.85rem;
-              margin-bottom:1rem;
-              padding:0.7rem 0.9rem;
-              border-left:3px solid #208894;">
-
-  <strong>Research Collaborator:</strong>
-    <a href="https://www.columbia.edu/~ja3451/"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:#d8a7a7; font-weight:100; text-decoration:none;">
-      <em>Prof. James Anderson</em>
-    </a>
-
-  <div class="cv-entry-desc" style="margin-top:0.15rem;">
-      Department of Electrical Engineering,
-      Columbia University, New York
-    </div>
-
-  </div>
-
-  <div class="cv-entry-desc">
-    <span class="cv-highlight">
-      Byzantine-robust personalized federated policy
-      evaluation with shared representations.
-    </span>
-    Developing Byzantine-robust representation learning
-    methods for heterogeneous reinforcement learning
-    agents operating in distinct MDPs with temporally
-    dependent data. The approach decomposes each
-    agent's value function into a shared low-dimensional
-    representation and a personalized local parameter,
-    enabling collaborative learning of common structure
-    while accommodating differences in transitions,
-    rewards, policies, and value functions without
-    persistent heterogeneity bias. This research is under review at
-  <strong>Transactions on Machine Learning Research (TMLR)</strong>.
-  </div>
-
-</div>
 
 </div>
 

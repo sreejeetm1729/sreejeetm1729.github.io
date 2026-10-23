@@ -586,26 +586,23 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
              href="https://proceedings.mlr.press/v306/maity26a.html"
              target="_blank"
              rel="noopener noreferrer">
-            ICML 2026 ↗
+            ICML 2026
           </a>
 
           <a class="re-tag"
              href="https://arxiv.org/abs/2409.03237"
              target="_blank"
              rel="noopener noreferrer">
-            IEEE CDC 2024 ↗
+            IEEE CDC 2024
           </a>
 
           <a class="re-tag"
              href="https://arxiv.org/pdf/2607.20822"
              target="_blank"
              rel="noopener noreferrer">
-            IEEE CDC 2026 ↗
+            IEEE CDC 2026
           </a>
 
-          <span class="re-tag">
-            NeurIPS 2025 Reliable ML Workshop
-          </span>
 
           <span class="re-tag re-tag-review">
             Automatica · Under review
@@ -638,7 +635,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
              href="https://proceedings.mlr.press/v258/maity25a.html"
              target="_blank"
              rel="noopener noreferrer">
-            AISTATS 2025 ↗
+            AISTATS 2025 
           </a>
 
           <span class="re-tag re-tag-review">
@@ -665,17 +662,17 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
         <div class="re-tags">
           <a class="re-tag"
-             href="https://sreejeetm1729.github.io/Publications/"
+             href="https://arxiv.org/pdf/2609.20174"
              target="_blank"
              rel="noopener noreferrer">
-            ACC 2026 · Two papers ↗
+            ACC 2026 
           </a>
 
           <a class="re-tag re-tag-review"
              href="https://arxiv.org/pdf/2610.06918"
              target="_blank"
              rel="noopener noreferrer">
-            JMLR · Under review ↗
+            JMLR · Under review 
           </a>
         </div>
       </div>
@@ -739,7 +736,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
              href="https://arxiv.org/pdf/2607.21876"
              target="_blank"
              rel="noopener noreferrer">
-            ACC 2026 ↗
+            ACC 2026 
           </a>
 
           <span class="re-tag re-tag-review">

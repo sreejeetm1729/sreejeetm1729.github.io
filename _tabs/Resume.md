@@ -457,7 +457,7 @@ order: 7
 
   .education-refined .edu-thesis-title {
     margin: 0.3rem 0 0;
-    color: var(--edu-text);
+    color: #e6c98f;
     font-size: 0.9rem;
     line-height: 1.65;
   }

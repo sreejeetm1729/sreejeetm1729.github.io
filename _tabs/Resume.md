@@ -313,12 +313,12 @@ order: 7
 .research-experience .re-topic {
   margin: 0 0 0.5rem;
   padding: 0;
-  color: var(--re-accent);
+  color: #0891b2; 
   font-size: 0.98rem;
   font-weight: 650;
   line-height: 1.5;
 }
-
+/*var(--re-accent);*/
 .research-experience .re-description {
   margin: 0;
   color: #c9cccb;

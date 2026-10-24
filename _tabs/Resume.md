@@ -587,8 +587,8 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
    target="_blank"
    title="LinkedIn"
    style="color:#0891b2; font-size:1.25rem; text-decoration:none; margin-left:4px;">
-  <i class="fab fa-linkedin"></i>
-</a>.
+  <i class="fab fa-linkedin"></i>.
+</a>
 </div>
 <div style="margin-top:0.8rem; padding:1rem 1.2rem; border:1px solid rgba(165,243,252,0.28); border-radius:0px; background:rgba(165,243,252,0.04); font-size:16px; line-height:1.7; text-align:justify;">
 

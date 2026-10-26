@@ -178,7 +178,7 @@ term reflects the sensitivity of long-term returns to transition errors. <strong
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#0891b2;">Figure</strong>: Robust \(Q\)-Learning remains reliable under adversarial corruption, Markovian data, and statistical agnosticism (<strong style="color:#bfdbfe;">ICML 2026</strong>).
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust \(Q\)-Learning remains reliable under adversarial corruption, Markovian data, and statistical agnosticism (<strong style="color:#bfdbfe;">ICML 2026</strong>).
 </div>
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
@@ -219,7 +219,7 @@ term reflects the sensitivity of long-term returns to transition errors. <strong
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#0891b2;">Figure</strong>: Vanilla vs Robust \(Q\)-Learning under adversarial corruption in both states and rewards via Batching (<strong style="color:#bfdbfe;">CDC 2026</strong>).
+  <strong style="color:#bfdbfe;">Figure</strong>: Vanilla vs Robust \(Q\)-Learning under adversarial corruption in both states and rewards via Batching (<strong style="color:#bfdbfe;">CDC 2026</strong>).
 </div>
 
 The sequence of results gradually moves from idealized sampling models toward realistic trajectory-based learning. The <span class="research-tag">CDC 24</span> work studies robust Q-Learning in the synchronous generative-model setting, where each state-action pair can be sampled directly, and shows both the fragility of vanilla Q-Learning under reward corruption and the effectiveness of robust empirical Bellman updates. The <span class="research-tag">ICML 2026</span> work completes this line for reward corruption by developing an agnostic and asynchronous theory under Markovian, strongly correlated observations, proving near-optimal finite-time upper bounds together with matching lower bounds that certify the unavoidable statistical price of adversarial corruption. Finally, the <span class="research-tag">CDC 2026</span> work then extends the framework to simultaneous reward and state corruption, introducing an epoch-based algorithm that uses batched online data to construct robust, low-variance estimates of the Bellman optimality operator. It establishes the first robustness guarantee for asynchronous Q-Learning under joint reward and state corruption, while achieving a minimax-optimal dependence on the corruption fraction in the reward-only setting.
@@ -349,7 +349,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#0891b2;">Figure</strong>: Robust policy evaluation remains reliable under adversarial corruption with Markovian data and function approximation.
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust policy evaluation remains reliable under adversarial corruption with Markovian data and function approximation.
 </div> 
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
@@ -436,7 +436,7 @@ The third direction of my research focuses on robust federated reinforcement lea
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#0891b2;">Figure</strong>: Robust learning under adversaries, with vanishing corruption effects and collaborative gains from more agents.
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust learning under adversaries, with vanishing corruption effects and collaborative gains from more agents.
 </div>
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
@@ -493,7 +493,7 @@ statistical benefits of collaboration with substantially reduced communication.
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#0891b2;">Figure</strong>: Distributed learning under clean, adversarial, and robust settings.
+  <strong style="color:#bfdbfe;">Figure</strong>: Distributed learning under clean, adversarial, and robust settings.
 </div>
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 

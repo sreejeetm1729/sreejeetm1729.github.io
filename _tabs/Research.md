@@ -153,7 +153,7 @@ where \(a \vee b = \max\{a,b\}\). The two terms capture distinct sources of
 statistical indistinguishability: reward corruption can conceal differences
 in mean rewards, while next-state corruption can conceal differences in
 transition dynamics. The additional horizon factor in the state-corruption
-term reflects the sensitivity of long-term returns to transition errors. <strong  style="color: #0bb9c5;">Consequently, neither corruption contribution can generally be eliminated by collecting more samples.</strong>
+term reflects the sensitivity of long-term returns to transition errors. <strong  style="color: #0891b2;">Consequently, neither corruption contribution can generally be eliminated by collecting more samples.</strong>
 
 </p>
 

@@ -353,7 +353,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 </div> 
 
 <h2>
-  <span style="color:#208894;">[Theme 2-a]</span>
+  [<strong style="color:#208894;">Theme 2-a</strong>]
   Reinforcement Learning under Communication Constraints
 </h2>
 

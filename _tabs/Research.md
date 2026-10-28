@@ -379,6 +379,14 @@ The sequence of results gradually moves from idealized sampling models toward re
       (Under Review, ECC 2027)
     </span>
   </p>
+
+  <p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_7\)]</span>
+    <strong>Adaptive Memory for Online Reinforcement Learning under Sparse Model Changes</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, ECC 2027)
+    </span>
+  </p>
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 
 <h2>[<strong style="color:#208894;">Theme 3</strong>] Robust Federated Multi-Agent Reinforcement Learning</h2>

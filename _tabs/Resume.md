@@ -1356,22 +1356,22 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <div class="cv-card">
   <div class="cv-entry-title">Mathematics</div>
-  <div class="cv-entry-desc">Linear Algebra and Matrix Theory, Probability Theory, Random Process, Randomized Algorithms, Graph Theory, Analysis, Bayesian Analysis, High-Dimensional Robust Statistics, Stochastic Optimization.</div>
+  <div class="cv-entry-desc">Linear Algebra and Matrix Theory, Probability Theory, Random Process, Randomized Algorithms, Graph Theory, Analysis, Bayesian Analysis, High-Dimensional Statistics, Stochastic Optimization.</div>
 </div>
 
 <div class="cv-card">
   <div class="cv-entry-title">Research</div>
-  <div class="cv-entry-desc">Reinforcement Learning, Statistical Learning Theory, Bandit Algorithms, Optimization, Information Theory, Control Theory, Stochastic Approximation, Robust Statistics, Distributed Networks.</div>
+  <div class="cv-entry-desc">Reinforcement Learning, Statistical Learning Theory, Bandit Algorithms, Optimization, Control Theory, Stochastic Approximation, Robust Statistics, Distributed Networks.</div>
 </div>
 
 <div class="cv-card">
   <div class="cv-entry-title">Programming</div>
-  <div class="cv-entry-desc">Python, MATLAB, Simulink, C/C++.</div>
+  <div class="cv-entry-desc">Python, MATLAB, Simulink, C, C++, R.</div>
 </div>
 
 <div class="cv-card">
   <div class="cv-entry-title">Software and Libraries</div>
-  <div class="cv-entry-desc">PyTorch, TensorFlow, NumPy, Pandas, scikit-learn, Stable-Baselines3, CVXPY, CasADi, CleanRL, Gymnasium,  MuJoCo.</div>
+  <div class="cv-entry-desc">PyTorch, TensorFlow, JAX, NumPy, Pandas, scikit-learn, Stable-Baselines3, CVXPY, CasADi, CleanRL, Gymnasium,  MuJoCo.</div>
 </div>
 
 </div>

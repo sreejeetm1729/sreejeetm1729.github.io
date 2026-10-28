@@ -32,6 +32,49 @@ order: 7
   margin-bottom: 0.8rem;
 }
 
+.cv-awards .cv-awards-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-awards .cv-awards-list > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin: 0 0 1.2rem;
+}
+
+.cv-awards .cv-awards-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.cv-awards .cv-award-title {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.cv-awards .cv-award-date {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.cv-awards .cv-award-reason {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--text-color, #c9cccb);
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
 .cv-short {
   max-width: 900px;
   text-align: justify;
@@ -1235,19 +1278,74 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 </div>
 
-<div class="cv-section">
+<div class="cv-section cv-awards">
+  <h2>Selected Honours and Awards</h2>
 
-<h2>Awards</h2>
+  <ul class="cv-list cv-awards-list">
 
-<ul class="cv-list">
-  <li><span class="cv-highlight">ACC 2026 Travel Award</span> <span class="cv-award-date">May 2026</span></li>
-  <li><span class="cv-highlight">L4DC Student Support Grant</span> <span class="cv-award-date">May 2025</span></li>
-  <li><span class="cv-highlight">NESCW 2025 Student Support Grant</span> <span class="cv-award-date">May 2025</span></li>
-  <li><span class="cv-highlight">IEEE CDC 2024 Student Support Award</span> <span class="cv-award-date">August 2024</span></li>
-  <li><span class="cv-highlight">NC State ECE Student Research Support Award</span> <span class="cv-award-date">August 2024</span></li>
-  <li><span class="cv-highlight">College of Engineering Graduate Merit Award</span> <span class="cv-award-date">2023--24, 2024--25</span></li>
-</ul>
+    <li>
+      <span class="cv-highlight cv-award-title">
+        ACC 2026 Travel Award
+      </span>
+      <span class="cv-award-date">May 2026</span>
+      <p class="cv-award-reason">
+        For being the lead author of two publications at ACC 2026.
+      </p>
+    </li>
 
+    <li>
+      <span class="cv-highlight cv-award-title">
+        L4DC Student Support Grant
+      </span>
+      <span class="cv-award-date">May 2025</span>
+      <p class="cv-award-reason">
+        Awarded to selected candidates to enable participation in L4DC.
+      </p>
+    </li>
+
+    <li>
+      <span class="cv-highlight cv-award-title">
+        NESCW 2025 Student Support Grant
+      </span>
+      <span class="cv-award-date">May 2025</span>
+      <p class="cv-award-reason">
+        For presenting a poster on “Towards Finite-Time Theory for
+        Adversarially-Robust RL”.
+      </p>
+    </li>
+
+    <li>
+      <span class="cv-highlight cv-award-title">
+        IEEE CDC 2024 Student Support Award
+      </span>
+      <span class="cv-award-date">August 2024</span>
+      <p class="cv-award-reason">
+        For being the lead author of a paper at IEEE CDC 2024.
+      </p>
+    </li>
+
+    <li>
+      <span class="cv-highlight cv-award-title">
+        NC State ECE Student Research Support Award
+      </span>
+      <span class="cv-award-date">August 2024</span>
+      <p class="cv-award-reason">
+        To enable participation in top conferences during 2024-2025.
+      </p>
+    </li>
+
+    <li>
+      <span class="cv-highlight cv-award-title">
+        College of Engineering Graduate Merit Award
+      </span>
+      <span class="cv-award-date">2023–2025</span>
+      <p class="cv-award-reason">
+        Awarded to exceptional incoming graduate Ph.D. students in the College of
+        Engineering, NCSU to support their initial years of research.
+      </p>
+    </li>
+
+  </ul>
 </div>
 
 <div class="cv-section">

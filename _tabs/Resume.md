@@ -597,8 +597,8 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 </div> 
 </div>
 
-<!--<div class="cv-section education-refined">-->
-<div class="cv-section research-experience">
+<div class="cv-section education-refined">
+
   <h2>Education</h2>
 
   <!-- North Carolina State University -->

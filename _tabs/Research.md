@@ -623,6 +623,7 @@ The key idea is to separate what is shared from what is personalized. The value 
     </span>
   </p>
 
+<hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <h2>
   [<strong style="color:#208894;">Theme 5</strong>]
   Reinforcement Learning under Sparse Model Changes
@@ -698,12 +699,7 @@ The key idea is to separate what is shared from what is personalized. The value 
   spaces, discount factor, sampling coverage, and occupancy parameters.
   The full bounds also account for the affected transition-row fraction
   \(\vartheta=\min\{1,|\mathcal S|\epsilon/2\}\) induced by the
-  entry-change budget.
-</p>
-
-<p>
-  These results quantify how sparse changes and longer deployments improve
-  the statistical benefit of selective data reuse. The number of retained
+  entry-change budget. These results quantify how sparse changes and longer deployments improve the statistical benefit of selective data reuse. The number of retained
   deployment summaries remains independent of the total number of
   deployments, allowing
   <strong style="color:#0bb9c5;">

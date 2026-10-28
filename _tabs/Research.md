@@ -621,19 +621,7 @@ statistical benefits of collaboration with substantially reduced communication.
 
 <p>
   We model the honest clients’ value functions through a common
-  low-dimensional representation and client-specific heads:
-</p>
-
-<div style="overflow-x:auto; margin:1.2rem 0;">
-  \[
-    V_i^\star=\Phi_\star\theta_i^\star,
-    \qquad i\in\mathcal H,
-  \]
-</div>
-
-<p>
-  where \(\mathcal H\) denotes the set of honest clients.
-  The shared representation \(\Phi_\star\) captures common structure,
+  low-dimensional representation and client-specific heads: \(V_i^\star=\Phi_\star\theta_i^\star,i\in\mathcal H,\) where \(\mathcal H\) denotes the set of honest clients. The shared representation \(\Phi_\star\) captures common structure,
   while each local head \(\theta_i^\star\) selects a distinct value
   function within that shared subspace. This allows clients to collaborate
   without forcing their different evaluation problems into a single

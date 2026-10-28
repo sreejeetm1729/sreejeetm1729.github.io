@@ -1285,9 +1285,9 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 <h2>Relevant Coursework</h2>
 
 <ul class="cv-list">
-  <li><span class="cv-highlight">Learning Theory:</span> Theoretical Foundations of Large-Scale Machine Learning, Reinforcement Learning, Machine Learning for Signal Processing, Bayesian Learning, Physics Modelling with Neural Networks, Deep Learning and Neural Networks.</li>
+  <li><span class="cv-highlight">Learning Theory:</span> Theoretical Foundations of Large-Scale Machine Learning, Reinforcement Learning, Machine Learning for Signal Processing, Bayesian Learning, Physics Modelling with Neural Networks, Deep Learning.</li>
   <li><span class="cv-highlight">Mathematics:</span> Analysis I, Probability and Stochastic Processes, Stochastic Models and Applications, Convex Optimization for Data Science, Detection and Estimation Theory.</li>
-  <li><span class="cv-highlight">Control Theory:</span> Dynamics of Linear Systems, Networked and Distributed Control, Safety-Critical Control for Robotic Systems, Non-Linear Control Theory, Formal Analysis for Control Theory.</li>
+  <li><span class="cv-highlight">Control Theory:</span> Dynamics of Linear Systems, Networked and Distributed Control, Safety-Critical Control for Robotic Systems, Non-Linear Dynamics and Control, Formal Analysis for Control Theory.</li>
 </ul>
 
 </div>

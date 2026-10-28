@@ -637,11 +637,7 @@ statistical benefits of collaboration with substantially reduced communication.
   while each local head \(\theta_i^\star\) selects a distinct value
   function within that shared subspace. This allows clients to collaborate
   without forcing their different evaluation problems into a single
-  common value-function parameter.
-</p>
-
-<p>
-  Our method alternates local head optimization with robust updates of
+  common value-function parameter. Our method alternates local head optimization with robust updates of
   the shared representation. Each honest client forms a stochastic
   TD-based representation direction and maintains a local momentum update.
   The server robustly aggregates the transmitted updates, updates the
@@ -673,9 +669,6 @@ statistical benefits of collaboration with substantially reduced communication.
   This relation allows the analysis to control the effect of robust
   aggregation through the representation error itself, avoiding
   a persistent error floor caused solely by client heterogeneity.
-</p>
-
-<p>
   We establish
   <strong style="color:#0bb9c5;">
     high-probability finite-time guarantees for both shared-subspace

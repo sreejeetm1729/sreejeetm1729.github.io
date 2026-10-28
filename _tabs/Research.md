@@ -354,7 +354,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 
 <h2>
   [<strong style="color:#208894;">Theme 2-a</strong>]
-  Reinforcement Learning under Communication Constraints
+  Policy Evaluation under Communication Constraints
 </h2>
 
 <p>

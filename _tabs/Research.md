@@ -514,8 +514,6 @@ server-based federated learning, here agents collaborate only through local mess
 rich set of questions at the interface of reinforcement learning, distributed optimization, and networked systems: how does the network
 topology affect learning speed? How many rounds of consensus are needed to realize collaborative gains? How do local sampling noise and
 network-induced mixing errors interact? My goal is to develop algorithms and finite-time analyses that make these tradeoffs explicit.
-<div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
-
   <figure style="margin:1.4rem 0;">
   <img
     src="/assets/research/vrdq-parallel-wide.png"
@@ -524,7 +522,7 @@ network-induced mixing errors interact? My goal is to develop algorithms and fin
     loading="lazy">
 </figure>
 
-  <p>
+<p>
 We consider a networked reinforcement learning setting in which multiple agents interact with a common Markov Decision Process and exchange information over a communication graph to collaboratively learn the optimal state-action value function. The central question is whether agents can achieve collaborative sample-complexity gains while incurring only limited communication overhead. To address this 
    </p>
   </div>

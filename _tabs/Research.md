@@ -613,7 +613,7 @@ statistical benefits of collaboration with substantially reduced communication.
 
 <figure style="margin:1.4rem 0;">
   <img
-    src="/assets/research/repTD-arch-new.png"
+    src="/assets/research/Transparent Client-Server Diagram with Byzantine Node.png"
     alt="Federated TD representation learning with local personalized heads, momentum messages, and robust server updates"
     style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
     loading="lazy">

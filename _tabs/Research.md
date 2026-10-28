@@ -594,33 +594,135 @@ statistical benefits of collaboration with substantially reduced communication.
   </p>
 
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
-<h2>[<strong style="color:#208894;">Theme 4</strong>] Byzantine-Robust Federated Representation Learning</h2>
-This project studies how a collection of heterogeneous reinforcement learning agents can collaboratively learn a shared value-function representation when some participating clients are adversarial. Each honest agent interacts with its own Markov decision process under a fixed policy, generating temporally dependent data through a local Markov chain. The agents may have different transition kernels, reward functions, policies, and value functions, so forcing all clients to learn a single common value parameter can introduce a persistent heterogeneity bias.
+<h2>
+  [<strong style="color:#208894;">Theme 4</strong>]
+  Byzantine-Robust Federated Representation Learning
+</h2>
+
+<p>
+  This direction studies federated policy evaluation when heterogeneous
+  clients learn from different environments and an unknown subset of
+  participating clients may transmit arbitrary updates. The honest clients
+  can have different transition dynamics, reward functions, fixed policies,
+  and target value functions. Our goal is to
+  <strong style="color:#0bb9c5;">
+    learn shared value-function structure while preserving personalization
+    and remaining robust to adversarial clients.
+  </strong>
+</p>
 
 <figure style="margin:1.4rem 0;">
   <img
     src="/assets/research/repTD-arch-new.png"
-    alt="Successive MDP deployments with sparse changes in reward and transition entries"
+    alt="Federated TD representation learning with local personalized heads, momentum messages, and robust server updates"
     style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
     loading="lazy">
 </figure>
 
+<p>
+  We model the honest clients’ value functions through a common
+  low-dimensional representation and client-specific heads:
+</p>
+
+<div style="overflow-x:auto; margin:1.2rem 0;">
+  \[
+    V_i^\star=\Phi_\star\theta_i^\star,
+    \qquad i\in\mathcal H,
+  \]
+</div>
 
 <p>
-The key idea is to separate what is shared from what is personalized. The value functions of the honest agents are modeled through a common low-dimensional representation, while each agent has its own local parameter vector. Thus, the shared representation captures common structure across agents, while the personalized heads absorb agent-specific MDP heterogeneity.
+  where \(\mathcal H\) denotes the set of honest clients.
+  The shared representation \(\Phi_\star\) captures common structure,
+  while each local head \(\theta_i^\star\) selects a distinct value
+  function within that shared subspace. This allows clients to collaborate
+  without forcing their different evaluation problems into a single
+  common value-function parameter.
 </p>
-</div>
+
+<p>
+  Our method alternates local head optimization with robust updates of
+  the shared representation. Each honest client forms a stochastic
+  TD-based representation direction and maintains a local momentum update.
+  The server robustly aggregates the transmitted updates, updates the
+  shared representation, and orthonormalizes it using QR decomposition.
+  The personalized heads remain local, while the updated representation
+  is shared across clients.
+</p>
+
+<p>
+  The central theoretical insight is that
+  <strong style="color:#0bb9c5;">
+    honest-client update heterogeneity decreases as the shared
+    representation becomes more accurate.
+  </strong>
+  After exact local head optimization, the dispersion of honest clients’
+  expected representation directions satisfies
+</p>
+
+<div style="overflow-x:auto; margin:1.2rem 0;">
+  \[
+    G^{(t)}\leq \rho_g d_t,
+  \]
 </div>
 
-<h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
+<p>
+  where \(G^{(t)}\) measures this dispersion, \(d_t\) is the squared
+  distance between the learned and target representation subspaces,
+  and \(\rho_g\) is a problem-dependent constant.
+  This relation allows the analysis to control the effect of robust
+  aggregation through the representation error itself, avoiding
+  a persistent error floor caused solely by client heterogeneity.
+</p>
+
+<p>
+  We establish
+  <strong style="color:#0bb9c5;">
+    high-probability finite-time guarantees for both shared-subspace
+    recovery and personalized value-function recovery.
+  </strong>
+  The analysis uses fresh stationary samples and exact local head
+  optimization, and applies under local initialization and the stated
+  structural, noise, and robustness conditions.
+  With a step size of order \(T^{-1/2}\), both the time-averaged squared
+  subspace error and every honest client’s time-averaged squared
+  prediction error decrease at rate
+  \(\widetilde{\mathcal O}(T^{-1/2})\), for fixed remaining problem parameters.
+  In particular,
+</p>
+
+<div style="overflow-x:auto; margin:1.2rem 0;">
+  \[
+    \frac{1}{T}\sum_{t=0}^{T-1}
+    \left\|\Phi_t\theta_{i,t+1}-V_i^\star\right\|_2^2
+    \leq
+    \widetilde{\mathcal O}\!\left(\frac{1}{\sqrt T}\right),
+    \qquad i\in\mathcal H.
+  \]
+</div>
+
+<p>
+  The full bound separates initialization, stochastic estimation,
+  and the additional cost of robust aggregation. When no clients are
+  adversarial, its stochastic contribution scales as
+  \(\widetilde{\mathcal O}(\sigma_g^2/(|\mathcal H|\sqrt T))\),
+  recovering a linear collaboration speedup in the number of honest
+  clients. Together, these results explain how personalization and
+  robust collaboration can support accurate policy evaluation across
+  heterogeneous environments.
+</p>
+
+<h3 style="margin-bottom:0.7rem; color:#d8a7a7;">
+  <strong>Representative Publications</strong>
+</h3>
 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(J_4\)]</span>
-    <strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>
-    <span style="color:#d8a7a7;">
-      (Under Review, TMLR)
-    </span>
-  </p>
+  <span style="color:#a5f3fc;">[\(J_4\)]</span>
+  <strong>
+    Value Function Representation for Adversarially Robust Federated TD Learning
+  </strong>
+  <span style="color:#d8a7a7;">(Under Review, TMLR)</span>
+</p>
 
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <h2>

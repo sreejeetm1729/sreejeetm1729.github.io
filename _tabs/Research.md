@@ -413,6 +413,7 @@ The sequence of results gradually moves from idealized sampling models toward re
   communication and estimation error.
 </p>
 
+
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
   <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
@@ -442,13 +443,6 @@ The sequence of results gradually moves from idealized sampling models toward re
     </span>
   </p>
 
-  <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_7\)]</span>
-    <strong>Adaptive Memory for Online Reinforcement Learning under Sparse Model Changes</strong>
-    <span style="color:#d8a7a7;">
-      (Under Review, ECC 2027)
-    </span>
-  </p>
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 
 <h2>[<strong style="color:#208894;">Theme 3</strong>] Robust Federated Multi-Agent Reinforcement Learning</h2>
@@ -568,7 +562,7 @@ statistical benefits of collaboration with substantially reduced communication.
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_8\)]</span>
+    <span style="color:#a5f3fc;">[\(C_7\)]</span>
     <strong>Robust Federated Q-Learning with Almost No Communication</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)
@@ -576,7 +570,7 @@ statistical benefits of collaboration with substantially reduced communication.
     <a href="https://arxiv.org/pdf/2609.20174" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_9\)]</span>
+    <span style="color:#a5f3fc;">[\(C_8\)]</span>
     <strong>Variance-Reduced Q-Learning under Static and Time-Varying Networks</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)
@@ -626,5 +620,103 @@ The key idea is to separate what is shared from what is personalized. The value 
     <strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>
     <span style="color:#d8a7a7;">
       (Under Review, TMLR)
+    </span>
+  </p>
+
+<h2>
+  [<strong style="color:#208894;">Theme 5</strong>]
+  Reinforcement Learning under Sparse Model Changes
+</h2>
+
+<p>
+  Learning systems deployed repeatedly often encounter environments that
+  change only in a few locations. A navigation system, for example, may
+  face a newly blocked route while most of its surroundings remain unchanged.
+  This direction studies
+  <strong style="color:#0bb9c5;">
+    how to selectively reuse past observations when the environment
+    undergoes sparse changes across successive deployments.
+  </strong>
+  Historical data remain informative for unchanged components, but can
+  bias estimates of components that have changed.
+</p>
+
+<figure style="margin:1.4rem 0;">
+  <img
+    src="/assets/research/td-new-2.png"
+    alt="Successive MDP deployments with sparse changes in reward and transition entries"
+    style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
+    loading="lazy">
+</figure>
+
+<p>
+  We consider discounted reinforcement learning across deployments containing
+  \(H\) observations each. The environment remains fixed within each
+  deployment, while at most an \(\epsilon\) fraction of reward entries
+  and an \(\epsilon\) fraction of transition-probability entries may change
+  between consecutive deployments. The learner knows the deployment
+  boundaries and change budget, but does not observe which entries change
+  or the magnitudes of those changes.
+</p>
+
+<p>
+  We develop an <strong>adaptive history model-learning algorithm</strong>
+  that selects separate histories for every reward entry and transition row.
+  The algorithm constructs confidence sets from successively longer
+  candidate histories and retains the longest prefix whose confidence
+  intersection remains nonempty. It then estimates a valid MDP within
+  the selected intersections and computes a policy by planning in that model.
+  Consequently, different components can use different amounts of historical
+  data, without requiring
+  <strong style="color:#0bb9c5;">
+    exact change detection or a minimum nonzero change magnitude.
+  </strong> Under independent sampling, uniform state–action coverage, and a bound
+  on discounted policy occupancies, we establish finite-deployment
+  guarantees for average discounted policy loss. These guarantees include
+  the policies available at deployment boundaries and throughout adaptation.
+  For \(0&lt;\epsilon\le1\), retaining
+  \(B=\lceil\epsilon^{-1}\rceil\) completed deployment summaries yields
+  the simplified long-run guarantee
+</p>
+
+<div style="overflow-x:auto; margin:1.2rem 0;">
+  \[
+    J_H^\rho
+    :=\limsup_{K\to\infty}\mathcal R_{K,H}^\rho
+    \leq
+    \widetilde{\mathcal O}\!\left(
+      \sqrt{\frac{\epsilon}{H}}
+    \right).
+  \]
+</div>
+
+<p>
+  Here, \(\mathcal R_{K,H}^\rho\) is the expected policy loss averaged
+  over all observation times in the first \(K\) deployments, measured
+  relative to each deployment’s optimal policy from a common initial-state
+  distribution \(\rho\). The simplified rate fixes the state and action
+  spaces, discount factor, sampling coverage, and occupancy parameters.
+  The full bounds also account for the affected transition-row fraction
+  \(\vartheta=\min\{1,|\mathcal S|\epsilon/2\}\) induced by the
+  entry-change budget.
+</p>
+
+<p>
+  These results quantify how sparse changes and longer deployments improve
+  the statistical benefit of selective data reuse. The number of retained
+  deployment summaries remains independent of the total number of
+  deployments, allowing
+  <strong style="color:#0bb9c5;">
+    the same learner to continue adapting with a fixed history cap.
+  </strong>
+</p>
+
+<h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
+
+<p style="margin-bottom:0.65rem;">
+    <span style="color:#a5f3fc;">[\(C_9\)]</span>
+    <strong>Adaptive Memory for Online Reinforcement Learning under Sparse Model Changes</strong>
+    <span style="color:#d8a7a7;">
+      (Under Review, ECC 2027)
     </span>
   </p>

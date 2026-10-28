@@ -523,14 +523,7 @@ network-induced mixing errors interact? My goal is to develop algorithms and fin
 </figure>
 
 <p>
-We consider a networked reinforcement learning setting in which multiple agents interact with a common Markov Decision Process and exchange information over a communication graph to collaboratively learn the optimal state-action value function. The central question is whether agents can achieve collaborative sample-complexity gains while incurring only limited communication overhead. To address this 
-   </p>
-  </div>
-  </div>
-  <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
- question, we propose a novel epoch-based distributed \(Q\)-Learning algorithm that combines local Bellman operator estimation with consensus-based information
-diffusion. This design blends model-based variance reduction with model-free \(Q\)-function updates, enabling agents to attain the
-statistical benefits of collaboration with substantially reduced communication.
+We consider a networked reinforcement learning setting in which multiple agents interact with a common Markov Decision Process and exchange information over a communication graph to collaboratively learn the optimal state-action value function. The central question is whether agents can achieve collaborative sample-complexity gains while incurring only limited communication overhead. To address this question, we propose a novel epoch-based distributed \(Q\)-Learning algorithm that combines local Bellman operator estimation with consensus-based information diffusion. This design blends model-based variance reduction with model-free \(Q\)-function updates, enabling agents to attain the statistical benefits of collaboration with substantially reduced communication.
 </p>
 
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">

@@ -104,7 +104,7 @@ order: 7
 }
 
 .cv-highlight {
-  color: #208894;
+  color: #0891b2;
   font-weight: 800;
 }
 

@@ -1255,7 +1255,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
 <div class="cv-section">
 
-<h2>Projects</h2>
+<h2>Softwares</h2>
 
 <div class="cv-entry">
   <div class="cv-entry-title">Federated MARL-GYM <a href="https://github.com/sreejeetm1729/Federated-MARL-Gym-Environment" target="_blank">

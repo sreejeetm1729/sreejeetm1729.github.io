@@ -516,7 +516,7 @@ topology affect learning speed? How many rounds of consensus are needed to reali
 network-induced mixing errors interact? My goal is to develop algorithms and finite-time analyses that make these tradeoffs explicit.
   <figure style="margin:1.4rem 0;">
   <img
-    src="/assets/research/vrdq-parallel-wide.png"
+    src="/assets/research/vrdq-flat-ppt.png"
     alt="Federated TD representation learning with local personalized heads, momentum messages, and robust server updates"
     style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
     loading="lazy">

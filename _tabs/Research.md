@@ -649,17 +649,7 @@ statistical benefits of collaboration with substantially reduced communication.
     representation becomes more accurate.
   </strong>
   After exact local head optimization, the dispersion of honest clients’
-  expected representation directions satisfies
-</p>
-
-<div style="overflow-x:auto; margin:1.2rem 0;">
-  \[
-    G^{(t)}\leq \rho_g d_t,
-  \]
-</div>
-
-<p>
-  where \(G^{(t)}\) measures this dispersion, \(d_t\) is the squared
+  expected representation directions satisfies \(G^{(t)}\leq \rho_g d_t,\) where \(G^{(t)}\) measures this dispersion, \(d_t\) is the squared
   distance between the learned and target representation subspaces,
   and \(\rho_g\) is a problem-dependent constant.
   This relation allows the analysis to control the effect of robust

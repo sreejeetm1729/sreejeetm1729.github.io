@@ -1241,7 +1241,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
     <div class="cv-entry">
       <span class="publication-label">(P13)</span>
       <div>
-        <em>Sreejeet Maity</em>, Leonardo Felipe Toso.
+        <em>Sreejeet Maity</em>, Sukanya Modak, Leonardo Felipe Toso.
         <strong>Adaptive History Selection for Reinforcement
           Learning under Sparse Model Changes.</strong>
         <span class="cv-entry-meta">

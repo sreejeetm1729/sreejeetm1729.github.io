@@ -351,6 +351,68 @@ The sequence of results gradually moves from idealized sampling models toward re
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
   <strong style="color:#bfdbfe;">Figure</strong>: Robust policy evaluation remains reliable under adversarial corruption with Markovian data and function approximation.
 </div> 
+
+<h2>
+  <span style="color:#208894;">[Theme 2-a]</span>
+  Reinforcement Learning under Communication Constraints
+</h2>
+
+<p>
+  This direction studies policy evaluation with linear function approximation
+  when an agent communicates with a remote server over a rate-limited channel.
+  The agent collects observations from an unknown environment, while the server
+  maintains the value-function parameter. Our goal is to understand whether
+  <strong style="color:#0bb9c5;">
+    fixed-length, finite-bit messages can preserve the statistical accuracy
+    of unquantized temporal-difference (TD) learning.
+  </strong>
+</p>
+
+<figure style="margin:1.4rem 0;">
+  <img
+    src="/assets/research/td-new-1.png"
+    alt="Agent-server architecture for Batched Adaptively Quantized TD learning"
+    style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
+    loading="lazy">
+</figure>
+
+<p>
+  We propose <strong>Batched Adaptively Quantized TD (BAQ-TD)</strong>,
+  which combines batching with adaptive innovation quantization.
+  During each epoch, the agent averages TD update directions over a batch
+  of observations and encodes the difference between this estimate and
+  a shared previous reconstruction. The server decodes the innovation,
+  reconstructs the update direction, and updates its parameter.
+  The quantization range adapts to sampling fluctuations, reconstruction
+  error, and parameter drift. Under independent sampling and sufficiently many bits per coordinate, we establish a high-probability finite-time guarantee showing that
+  <strong style="color:#0bb9c5;">
+    BAQ-TD preserves the convergence rate of unquantized TD up to
+    logarithmic factors, using only logarithmically many transmissions.
+  </strong>
+  For fixed problem parameters and confidence level, the simplified
+  guarantee after \(T\) observations is
+</p>
+
+<div style="overflow-x:auto; margin:1.2rem 0;">
+  \[
+    \|\theta_K-\theta^\star\|_2^2
+    \leq \widetilde{\mathcal O}\!\left(\frac{1}{T}\right),
+    \qquad
+    K=\mathcal O(\log T).
+  \]
+</div>
+
+<p>
+  Here, \(\theta^\star\) is the target TD solution and \(K\) is the number
+  of transmissions from the agent to the server. Each encoded message
+  contains exactly \(dm\) bits, where \(d\) is the feature dimension and
+  \(m\) is the number of bits per coordinate. The resulting encoded
+  communication cost is \(\mathcal O(dm\log T)\) bits.
+  Thus, the message precision can remain fixed as the sample budget grows,
+  while batching and adaptive innovation encoding jointly control
+  communication and estimation error.
+</p>
+
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
   <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>

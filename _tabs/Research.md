@@ -597,17 +597,16 @@ statistical benefits of collaboration with substantially reduced communication.
 <h2>[<strong style="color:#208894;">Theme 4</strong>] Byzantine-Robust Federated Representation Learning</h2>
 This project studies how a collection of heterogeneous reinforcement learning agents can collaboratively learn a shared value-function representation when some participating clients are adversarial. Each honest agent interacts with its own Markov decision process under a fixed policy, generating temporally dependent data through a local Markov chain. The agents may have different transition kernels, reward functions, policies, and value functions, so forcing all clients to learn a single common value parameter can introduce a persistent heterogeneity bias.
 
-<div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
+<figure style="margin:1.4rem 0;">
+  <img
+    src="/assets/research/repTD-arch-new.png"
+    alt="Successive MDP deployments with sparse changes in reward and transition entries"
+    style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
+    loading="lazy">
+</figure>
 
-  <div style="flex:0 0 280px;">
-    <img src="{{ '/assets/research/rep_2.png' | relative_url }}"
-         alt="Robust Federated Q-Learning"
-         style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
-  </div>
 
-  <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
-
-  <p>
+<p>
 The key idea is to separate what is shared from what is personalized. The value functions of the honest agents are modeled through a common low-dimensional representation, while each agent has its own local parameter vector. Thus, the shared representation captures common structure across agents, while the personalized heads absorb agent-specific MDP heterogeneity.
 </p>
 </div>

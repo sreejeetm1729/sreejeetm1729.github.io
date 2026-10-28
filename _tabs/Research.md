@@ -643,7 +643,9 @@ statistical benefits of collaboration with substantially reduced communication.
   The server robustly aggregates the transmitted updates, updates the
   shared representation, and orthonormalizes it using QR decomposition.
   The personalized heads remain local, while the updated representation
-  is shared across clients. The central theoretical insight is that
+  is shared across clients. 
+  </p>
+  <p>The central theoretical insight is that
   <strong style="color:#0bb9c5;">
     honest-client update heterogeneity decreases as the shared
     representation becomes more accurate.

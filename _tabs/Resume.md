@@ -62,6 +62,7 @@ order: 7
   justify-self: end;
   text-align: right;
   white-space: nowrap;
+  color: var(--text-color, #c9cccb);
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 }
@@ -1330,7 +1331,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       </span>
       <span class="cv-award-date">August 2024</span>
       <p class="cv-award-reason">
-        To enable participation in top conferences during 2024-2025.
+        To support presentations at top conferences (CDC, AISTATS, ICML) during 2024–2026.
       </p>
     </li>
 
@@ -1340,8 +1341,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       </span>
       <span class="cv-award-date">2023–2025</span>
       <p class="cv-award-reason">
-        Awarded to exceptional incoming graduate Ph.D. students in the College of
-        Engineering, NCSU to support their initial years of research.
+        Awarded to exceptional incoming students in NCSU’s College of Engineering to support their early research.
       </p>
     </li>
 

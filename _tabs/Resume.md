@@ -535,6 +535,32 @@ order: 7
     font-size: 1.8rem;
   }
 }
+.education-refined .edu-entry {
+  position: relative;
+  margin-left: 0.35rem;
+  padding-left: 1.75rem;
+  border-left: 1px solid rgba(216, 167, 167, 0.3);
+}
+
+.education-refined .edu-entry::before {
+  content: "";
+  position: absolute;
+  top: 1.9rem;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--edu-accent, #d8a7a7);
+  border-radius: 0;
+  background: var(--main-bg, #1b1b1e);
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .education-refined .edu-entry {
+    margin-left: 0.2rem;
+    padding-left: 1.15rem;
+  }
+}
 </style>
 
 <div class="cv-page">

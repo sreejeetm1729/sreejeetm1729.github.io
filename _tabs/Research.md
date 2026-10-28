@@ -751,7 +751,11 @@ statistical benefits of collaboration with substantially reduced communication.
   and an \(\epsilon\) fraction of transition-probability entries may change
   between consecutive deployments. The learner knows the deployment
   boundaries and change budget, but does not observe which entries change
-  or the magnitudes of those changes. We develop an <strong>adaptive history model-learning algorithm</strong>
+  or the magnitudes of those changes.
+ </p>
+
+ <p> 
+   We develop an <strong>adaptive history model-learning algorithm</strong>
   that selects separate histories for every reward entry and transition row.
   The algorithm constructs confidence sets from successively longer
   candidate histories and retains the longest prefix whose confidence

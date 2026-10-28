@@ -516,18 +516,16 @@ topology affect learning speed? How many rounds of consensus are needed to reali
 network-induced mixing errors interact? My goal is to develop algorithms and finite-time analyses that make these tradeoffs explicit.
 <div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
 
-  <div style="flex:0 0 280px;">
-    <img src="{{ '/assets/research/dis_Q.png' | relative_url }}"
-         alt="Robust Federated Q-Learning"
-         style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
-  </div>
-
-  <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
+  <figure style="margin:1.4rem 0;">
+  <img
+    src="/assets/research/vrdq-parallel-wide.png"
+    alt="Federated TD representation learning with local personalized heads, momentum messages, and robust server updates"
+    style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
+    loading="lazy">
+</figure>
 
   <p>
-      We consider a networked reinforcement learning setting in which multiple agents interact with a common Markov Decision Process and exchange
-information over a communication graph to collaboratively learn the optimal state-action value function. The central question is whether
-agents can achieve collaborative sample-complexity gains while incurring only limited communication overhead. To address this 
+We consider a networked reinforcement learning setting in which multiple agents interact with a common Markov Decision Process and exchange information over a communication graph to collaboratively learn the optimal state-action value function. The central question is whether agents can achieve collaborative sample-complexity gains while incurring only limited communication overhead. To address this 
    </p>
   </div>
   </div>

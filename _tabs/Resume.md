@@ -1341,7 +1341,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       </span>
       <span class="cv-award-date">2023–2025</span>
       <p class="cv-award-reason">
-        Awarded to exceptional incoming students in NCSU’s College of Engineering to support their early research.
+        Awarded to exceptional incoming Ph.D. students in NCSU’s College of Engineering.
       </p>
     </li>
 

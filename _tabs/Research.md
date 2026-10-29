@@ -434,7 +434,7 @@ The third direction of my research focuses on robust federated reinforcement lea
 
   <figure style="margin:1.4rem 0;">
   <img
-    src="/assets/research/frl-ppt-refined-transparent.png"
+    src="/assets/research/frl-exact-reference-annotated.png"
     alt="Federated TD representation learning with local personalized heads, momentum messages, and robust server updates"
     style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
     loading="lazy">

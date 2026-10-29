@@ -410,15 +410,15 @@ The sequence of results gradually moves from idealized sampling models toward re
   </p>
 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_5\)]</span>
+    <span style="color:#a5f3fc;">[\(J_2\)]</span>
     <strong>Batched Temporal-Difference Learning under Joint State and Reward Corruption</strong>
     <span style="color:#d8a7a7;">
-      (Under Review, L4DC 2027)
+      (Under Review, TMLR)
     </span>
   </p>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_6\)]</span>
+    <span style="color:#a5f3fc;">[\(C_5\)]</span>
     <strong>Adaptive Quantization Preserves Fast Convergence in Rate-Limited TD Learning</strong>
     <span style="color:#d8a7a7;">
       (Under Review, ECC 2027)
@@ -537,7 +537,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_7\)]</span>
+    <span style="color:#a5f3fc;">[\(C_6\)]</span>
     <strong>Robust Federated Q-Learning with Almost No Communication</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)
@@ -545,7 +545,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
     <a href="https://arxiv.org/pdf/2609.20174" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_8\)]</span>
+    <span style="color:#a5f3fc;">[\(C_7\)]</span>
     <strong>Variance-Reduced Q-Learning under Static and Time-Varying Networks</strong>
     <span style="color:#d8a7a7;">
       (ACC 2026)
@@ -553,7 +553,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
     <a href="https://arxiv.org/pdf/2607.21876" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p> 
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(J_2\)]</span>
+    <span style="color:#a5f3fc;">[\(J_3\)]</span>
     <strong>Learning from Unreliable Trajectories: Adversarially-Robust Fed. Q-Learning</strong>
     <span style="color:#d8a7a7;">
       (Under Review, JMLR)
@@ -561,7 +561,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
     <a href="https://arxiv.org/pdf/2610.06918" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
   <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(J_3\)]</span>
+    <span style="color:#a5f3fc;">[\(J_4\)]</span>
     <strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>
     <span style="color:#d8a7a7;">
       (In preparation, TSP)
@@ -661,7 +661,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
 </h3>
 
 <p style="margin-bottom:0.65rem;">
-  <span style="color:#a5f3fc;">[\(J_4\)]</span>
+  <span style="color:#a5f3fc;">[\(J_5\)]</span>
   <strong>
     Value Function Representation for Adversarially Robust Federated TD Learning
   </strong>
@@ -755,7 +755,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
 <p style="margin-bottom:0.65rem;">
-    <span style="color:#a5f3fc;">[\(C_9\)]</span>
+    <span style="color:#a5f3fc;">[\(C_8\)]</span>
     <strong>Adaptive Memory for Online Reinforcement Learning under Sparse Model Changes</strong>
     <span style="color:#d8a7a7;">
       (Under Review, ECC 2027)

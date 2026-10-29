@@ -394,7 +394,21 @@ The sequence of results gradually moves from idealized sampling models toward re
   while batching and adaptive innovation encoding jointly control
   communication and estimation error.
 </p>
+<div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
+  <img src="{{ '/assets/research/ECC-1 (1).png' | relative_url }}"
+       alt="Plot 1"
+       style="display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/ECC-2 (2).png' | relative_url }}"
+       alt="Plot 2"
+       style="display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+</div>
+
+<div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; margin-top:0.3rem; margin-bottom:1.5rem;">
+  <strong style="color:#bfdbfe;">Figure</strong>: BAQ-TD combines batching and adaptive quantization to enable accurate policy evaluation with limited communication.
+</div>
 
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 

@@ -765,7 +765,21 @@ We consider a networked reinforcement learning setting in which multiple agents 
     the same learner to continue adapting with a fixed history cap.
   </strong>
 </p>
+<div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
+  <img src="{{ '/assets/research/Plot-1.png' | relative_url }}"
+       alt="Plot 1"
+       style="display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+  <img src="{{ '/assets/research/Plot-1.png' | relative_url }}"
+       alt="Plot 2"
+       style="display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
+
+</div>
+
+<div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; margin-top:0.3rem; margin-bottom:1.5rem;">
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust learning under adversaries, with vanishing corruption effects and collaborative gains from more agents.
+</div>
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 
 <p style="margin-bottom:0.65rem;">

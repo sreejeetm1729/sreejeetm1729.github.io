@@ -412,7 +412,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_6\)]</span>
+    <span style="color:#e8c4bd;">[\(C_7\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
@@ -437,7 +437,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_5\)]</span>
+    <span style="color:#e8c4bd;">[\(C_6\)]</span>
     <strong>Sreejeet Maity</strong>, Sukanya Modak, Leonardo F. Toso,
     “<strong>Adaptive Memory for Online Reinforcement Learning
 under Sparse Model Changes</strong>”,
@@ -466,7 +466,7 @@ under Sparse Model Changes</strong>”,
 <h2><span style="font-size: 1rem;">♦️</span>Selected Journals</h2>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_4\)]</span>
+  <span style="color:#e8c4bd;">[\(J_5\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”,
   <span class="pub-venue" style="display: inline;">
@@ -493,7 +493,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 </div>
 
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_3\)]</span>
+  <span style="color:#e8c4bd;">[\(J_4\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
   “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”,
   <span class="pub-venue" style="display: inline;">
@@ -519,7 +519,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(J_2\)]</span>
+    <span style="color:#e8c4bd;">[\(J_3\)]</span>
     <strong>Sreejeet Maity</strong>, Leonardo Felipe Toso, James Anderson, Aritra Mitra,
     “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
@@ -546,7 +546,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(J_1\)]</span>
+    <span style="color:#e8c4bd;">[\(J_2\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data</strong>”,
     <span class="pub-venue" style="display: inline;">
@@ -571,6 +571,31 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   </div>
 </div>
 
+<div class="pub-entry">
+  <div class="pub-title" style="font-weight: normal;">
+    <span style="color:#e8c4bd;">[\(J_1\)]</span>
+    <strong>Sreejeet Maity</strong>, Aritra Mitra,
+    “<strong>Towards Finite-Time Robust Policy Evaluation under Complete Feedback Corruption: Near-Optimality via Batching</strong>”,
+    <span class="pub-venue" style="display: inline;">
+      <em>Under Review at Transactions on Machine Learning Research (TMLR).</em>
+    </span>
+  </div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tmlr1a-summary')">Summary</a>]
+    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+  </div>
+</div>
+<div id="tmlr1a-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color:#f5e6b8;">Summary</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('tmlr1a-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      <!-- Add summary here. -->
+    </div>
+  </div>
+</div>
 
 <div class="pub-section">
 

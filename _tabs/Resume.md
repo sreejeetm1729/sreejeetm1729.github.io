@@ -1121,7 +1121,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
           Robust Policy Evaluation under Corruption.</strong>
         <span class="cv-entry-meta">
           Under review at
-          <em>Learning for Dynamics and Control (L4DC)</em>, 2027.
+          <em>Transactions on Machine Learning Research (TMLR)</em>, 2027.
         </span>
       </div>
     </div>

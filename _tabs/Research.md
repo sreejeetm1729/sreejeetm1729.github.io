@@ -514,19 +514,19 @@ We consider a networked reinforcement learning setting in which multiple agents 
 
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
-  <img src="{{ '/assets/research/dis_1.png' | relative_url }}"
+  <img src="{{ '/assets/research/Fig_1 (2).png' | relative_url }}"
        alt="Plot 1"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/dis_2.png' | relative_url }}"
+  <img src="{{ '/assets/research/Fig_2 (7).png' | relative_url }}"
        alt="Plot 2"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/dis_4.png' | relative_url }}"
+  <img src="{{ 'assets/research/Fig_4 (4).png' | relative_url }}"
        alt="Plot 3"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/dis_3.png' | relative_url }}"
+  <img src="{{ '/assets/research/Fig_8 (1).png' | relative_url }}"
        alt="Plot 4"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 

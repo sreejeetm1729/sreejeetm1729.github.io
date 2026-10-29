@@ -448,23 +448,18 @@ The sequence of results gradually moves from idealized sampling models toward re
 <h2>[<strong style="color:#208894;">Theme 3</strong>] Robust Federated Multi-Agent Reinforcement Learning</h2>
 
 The third direction of my research focuses on robust federated reinforcement learning with Byzantine agents and minimal communication. In this setting, multiple agents interact with a common environment and send information to a central learner, but a fraction of the agents may be adversarial and can transmit arbitrary, corrupted messages. This creates a challenging tension between <strong>collaboration</strong>, <strong>robustness</strong>, and <strong>communication efficiency</strong>: the learner should benefit from distributed data collection while remaining resilient to malicious agents and avoiding excessive communication. In this line of work, which appeared at <span class="research-tag">ACC 2026</span>, we develop robust federated Q-Learning algorithms that achieve near-optimal finite-time guarantees with Byzantine tolerance and almost no communication, showing that collaborative speedups are still possible even when some agents are unreliable.
-<div style="display:flex; align-items:flex-start; gap:28px; margin-top:1.5rem; margin-bottom:0.4rem;">
 
-  <div style="flex:0 0 280px;">
-    <img src="{{ '/assets/research/fed_Q.png' | relative_url }}" 
-         alt="Robust Federated Q-Learning"
-         style="width:320px; height:auto; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
-  </div>
 
-  <div style="flex:1; font-size:16px; line-height:1.75; text-align:justify;">
+  <figure style="margin:1.4rem 0;">
+  <img
+    src="/assets/research/frl-ppt-refined-transparent.png"
+    alt="Federated TD representation learning with local personalized heads, momentum messages, and robust server updates"
+    style="display:block; width:100%; height:auto; border:0; box-shadow:none;"
+    loading="lazy">
+</figure>
 
   <p>
-      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated \(Q\)-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics.
-   </p>
-  </div>
-  </div>
-  <p style="font-size:16px; line-height:1.75; text-align:justify; margin-top:1rem;">
-  We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. More precisely, our finite-time bound takes the simplified form
+      We consider a federated reinforcement learning setting with multiple agents interacting with a common Markov Decision Process, while communicating through a central server to learn the optimal value function. The central question is whether one can still obtain collaborative sample-complexity gains when a small fraction of agents are Byzantine and may send arbitrary, corrupted messages. To address this, we propose a novel federated \(Q\)-Learning algorithm that blends model-based and model-free reinforcement learning with median-of-means aggregation from robust statistics. We prove that, with high probability, our proposed algorithm converges exactly to the optimal value function in the infinite-sample limit despite adversarial agents, and achieves near-optimal finite-time rates that retain the benefits of collaboration. More precisely, our finite-time bound takes the simplified form
 </p>
 <p style="font-size:16px; line-height:1.75; text-align:justify;">
   More precisely, our finite-time bound takes the simplified form

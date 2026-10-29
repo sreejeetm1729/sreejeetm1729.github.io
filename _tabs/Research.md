@@ -532,7 +532,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: Distributed learning under clean, adversarial, and robust settings.
+  <strong style="color:#bfdbfe;">Figure</strong>: Distributed learning with collaborative speedup and logarithmic communication overload.
 </div>
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 

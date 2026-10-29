@@ -468,19 +468,19 @@ The third direction of my research focuses on robust federated reinforcement lea
 
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 
-  <img src="{{ '/assets/research/fed_1.png' | relative_url }}"
+  <img src="{{ '/assets/research/F2-2 (2).png' | relative_url }}"
        alt="Plot 1"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/fed_2.png' | relative_url }}"
+  <img src="{{ '/assets/research/F3-2 (2).png' | relative_url }}"
        alt="Plot 2"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ 'assets/research/F3 (2).png' | relative_url }}"
+  <img src="{{ '/assets/research/F4-2 (2).png' | relative_url }}"
        alt="Plot 3"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/fed_4.png' | relative_url }}"
+  <img src="{{ '/assets/research/F6-2 (2).png' | relative_url }}"
        alt="Plot 4"
        style="width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 

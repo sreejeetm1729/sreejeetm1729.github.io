@@ -331,7 +331,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: Robust policy evaluation remains reliable under corrupted Markovian data and function approximation (<strong style="color:#bfdbfe;">AISTATS 25</strong>)..
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust policy evaluation remains reliable under corrupted Markovian data and function approximation (<strong style="color:#bfdbfe;">AISTATS 25</strong>).
 </div> 
 
 <h2>
@@ -407,7 +407,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 </div>
 
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: BAQ-TD combines batching and adaptive quantization to enable accurate policy evaluation with limited communication.
+  <strong style="color:#bfdbfe;">Figure</strong>: BAQ-TD combines batching and adaptive quantization to enable accurate policy evaluation with limited communication (<strong style="color:#bfdbfe;">ECC 27</strong>).
 </div>
 
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
@@ -500,7 +500,7 @@ The third direction of my research focuses on robust federated reinforcement lea
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: Robust learning under adversaries, with vanishing corruption effects and collaborative gains from more agents.
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust learning under adversaries, with vanishing corruption effects and collaborative gains from more agents(<strong style="color:#bfdbfe;">ACC 2026</strong>).
 </div>
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 
@@ -546,7 +546,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: Distributed learning with collaborative speedup and logarithmic communication overload.
+  <strong style="color:#bfdbfe;">Figure</strong>: Distributed learning with collaborative speedup and logarithmic communication overload (<strong style="color:#bfdbfe;">ACC 2026</strong>).
 </div>
 <h3 style="margin-bottom:0.7rem; color:#d8a7a7;"><strong>Representative Publications</strong></h3>
 

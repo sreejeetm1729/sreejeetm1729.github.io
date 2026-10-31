@@ -331,7 +331,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: Robust policy evaluation remains reliable under adversarial corruption with Markovian data and function approximation.
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust policy evaluation remains reliable under corrupted Markovian data and function approximation (<strong style="color:#bfdbfe;">AISTATS 25</strong>)..
 </div> 
 
 <h2>

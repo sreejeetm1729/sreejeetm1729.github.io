@@ -500,7 +500,7 @@ The third direction of my research focuses on robust federated reinforcement lea
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: Robust learning under adversaries, with vanishing corruption effects and collaborative gains from more agents(<strong style="color:#bfdbfe;">ACC 2026</strong>).
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust learning under adversaries, with vanishing corruption effects and collaborative gains (<strong style="color:#bfdbfe;">ACC 2026</strong>).
 </div>
 <div style="margin-top:1.2rem; margin-bottom:2rem; font-size:16px; line-height:1.75;">
 

@@ -178,7 +178,7 @@ term reflects the sensitivity of long-term returns to transition errors. <strong
 
 </div>
 <div style="font-size:15px; line-height:1.5; color:#a5f3fc; text-align:center; font-style:bold; margin-top:0.3rem; margin-bottom:1.5rem;">
-  <strong style="color:#bfdbfe;">Figure</strong>: Robust \(Q\)-Learning remains reliable under adversarial corruption, Markovian data, and statistical agnosticism (<strong style="color:#bfdbfe;">ICML 2026</strong>).
+  <strong style="color:#bfdbfe;">Figure</strong>: Robust \(Q\)-Learning remains reliable under corrupted Markovian data, and statistical agnosticism (<strong style="color:#bfdbfe;">ICML 2026</strong>).
 </div>
 <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-top:1rem; margin-bottom:1.5rem;">
 

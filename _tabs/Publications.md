@@ -177,7 +177,7 @@ math: true
 }
 
 .link-workshop {
-  color: #047581;
+  color: #0891b2;
   text-decoration: none;
   font-weight: 500;
   background-color: transparent;
@@ -666,7 +666,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
     <div style="margin-left: 2.5rem;">
       <strong>Host:</strong> <a href="https://csc.ncsu.edu/people/mchi/"
      target="_blank" rel="noopener noreferrer"
-     style="color:#e6c98f; text-decoration:none;">
+     style="color:#0891b2; text-decoration:none;">
     Prof. Min Chi
   </a>, Department of Computer Science, North Carolina State University.
     </div>
@@ -686,7 +686,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
     <div style="margin-left: 2.5rem;">
       <strong>Host:</strong><a href="https://www.columbia.edu/~ja3451/"
      target="_blank" rel="noopener noreferrer"
-     style="color:#e6c98f; text-decoration:none;">
+     style="color:#0891b2; text-decoration:none;">
     Prof. James Anderson
   </a>, Department of Electrical Engineering, Columbia University.
     </div>
@@ -701,7 +701,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
     <span style="color:#e8c4bd;">[\(T\)]</span>
       <strong>Towards a Finite-Time Theory of Adversarially Robust Reinforcement Learning: Algorithms, Guarantees, and Fundamental Limits</strong>,
       <span class="pub-venue" style="display: inline;">
-        <em>(Ongoing; Expected Completion: December 2027)</em>
+        <em>(Ongoing; Expected Completion: December 2027).</em>
       </span>
     </div>
   </div>

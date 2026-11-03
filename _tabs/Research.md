@@ -771,7 +771,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
        alt="Plot 1"
        style="display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 
-  <img src="{{ '/assets/research/Plot-1.png' | relative_url }}"
+  <img src="{{ '/assets/research/Plot-2.png' | relative_url }}"
        alt="Plot 2"
        style="display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.18);" />
 

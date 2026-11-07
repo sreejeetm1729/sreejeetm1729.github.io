@@ -788,4 +788,5 @@ We consider a networked reinforcement learning setting in which multiple agents 
     <span style="color:#d8a7a7;">
       (Under Review, ECC 2027)
     </span>
+    <a href="https://www.researchgate.net/publication/417597036_Adaptive_Memory_for_Online_Reinforcement_Learning_under_Sparse_Model_Changes" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>

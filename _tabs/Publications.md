@@ -423,7 +423,7 @@ under Sparse Model Changes</strong>”,
   </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc272-summary')">Summary</a>]
-    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+    [<a class="link-paper" href="https://www.researchgate.net/publication/417597036_Adaptive_Memory_for_Online_Reinforcement_Learning_under_Sparse_Model_Changes">Paper</a>]
   </div>
 </div>
 <div id="ecc272-summary" class="pub-summary-card">
@@ -433,7 +433,7 @@ under Sparse Model Changes</strong>”,
       <button class="pub-summary-close" onclick="togglePubSummary('ecc272-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-      <!-- Add summary here. -->
+      We study the discounted reinforcement learning (RL) problem in a setting where the underlying environment changes between deployments. Each deployment provides H observations from a fixed MDP. The reward function and transition kernel are fixed within each deployment. Across deployments, at most an ϵ > 0 fraction of the reward and transition kernel entries may change. In this setting, learning each model to deploy from scratch may discard useful observations from past deployments, whereas pooling all past observations can bias the estimates of entries that have already changed. We then propose an algorithm that for each state and action pair, selects how much history to reuse to estimate the reward and probabilities of the next state. We start with observations from the current deployment and add earlier deployment observations one at a time, the most recent first. After each addition, we check whether a single average reward agrees with the estimates from all histories considered until that point. We apply the same check to the distribution of next states. For each estimate, we leverage the last history that passes these aforementioned checks. The optimal control policy is then computed on top of the fitted MDP. We characterize the average gap between the optimal return and the return of the learner's policies over a finite number of deployments. 
     </div>
   </div>
 </div>

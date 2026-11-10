@@ -398,6 +398,9 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc27-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2611.12878">Paper</a>]
+    [<a class="link-poster" href=" https://example.com">Poster</a>]
+    [<a class="link-slides" href=" https://example.com">Slides</a>]
+    [<a class="link-code" href=" https://example.com">Code</a>]
   </div>
 </div>
 <div id="ecc27-summary" class="pub-summary-card">
@@ -424,6 +427,9 @@ under Sparse Model Changes</strong>”,
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc272-summary')">Summary</a>]
     [<a class="link-paper" href="https://www.researchgate.net/publication/417597036_Adaptive_Memory_for_Online_Reinforcement_Learning_under_Sparse_Model_Changes">Paper</a>]
+    [<a class="link-poster" href="https://example.com">Poster</a>]
+    [<a class="link-slides" href="https://example.com">Slides</a>]
+    [<a class="link-code" href="https://example.com">Code</a>]
   </div>
 </div>
 <div id="ecc272-summary" class="pub-summary-card">

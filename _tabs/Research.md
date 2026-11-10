@@ -433,10 +433,11 @@ The sequence of results gradually moves from idealized sampling models toward re
 
   <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(C_5\)]</span>
-    <strong>Adaptive Quantization Preserves Fast Convergence in Rate-Limited TD Learning</strong>
+    <strong>Adaptive Quantization Preserves Fast Rates in Rate-Limited TD Learning</strong>
     <span style="color:#d8a7a7;">
       (Under Review, ECC 2027)
     </span>
+    <a href="https://arxiv.org/pdf/2611.12878" style="color:#bfdbfe; text-decoration:none; font-weight:700;">[Paper]</a>
   </p>
 
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">

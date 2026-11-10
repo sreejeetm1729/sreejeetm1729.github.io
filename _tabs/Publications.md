@@ -397,7 +397,7 @@ math: true
   </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc27-summary')">Summary</a>]
-    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2611.12878">Paper</a>]
   </div>
 </div>
 <div id="ecc27-summary" class="pub-summary-card">
@@ -407,7 +407,7 @@ math: true
       <button class="pub-summary-close" onclick="togglePubSummary('ecc27-summary')">×</button>
     </div>
     <div class="pub-summary-text">
-      <!-- Add summary here. -->
+      Motivated by reinforcement learning subject to communication constraints, we study a policy evaluation problem with linear function approximation over a rate-limited channel. In our setup, an agent interacting with an unknown environment (modeled as a Markov Decision Process) transmits quantized estimates of a temporal-difference (TD) learning update direction to a server over a finite-capacity channel. Our goal is to investigate to what extent one can preserve the statistical convergence rates achievable when the channel has infinite capacity. To that end, we propose a new algorithm called Batched Adaptively Quantized TD (BAQ-TD), which uses batching to reduce the variance of the transmitted information, and adaptive quantization to encode innovations. We prove a high-probability finite-time error bound for BAQ-TD, and show that, above a certain finite channel capacity, BAQ-TD preserves the convergence rate of unquantized TD up to logarithmic factors. Specifically, for a d-dimensional value function parameter, we establish that transmitting a total of O(dlog(T)) bits over a horizon of length T suffices to achieve the order-optimal rate, marking an exponential improvement in communication-complexity over prior work.
     </div>
   </div>
 </div>

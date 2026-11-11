@@ -785,7 +785,7 @@ We consider a networked reinforcement learning setting in which multiple agents 
 
 <p style="margin-bottom:0.65rem;">
     <span style="color:#a5f3fc;">[\(C_8\)]</span>
-    <strong>Adaptive Memory for Online Reinforcement Learning under Sparse Model Changes</strong>
+    <strong>Adaptive Memory for Online RL under Sparse Model Changes</strong>
     <span style="color:#d8a7a7;">
       (Under Review, ECC 2027)
     </span>

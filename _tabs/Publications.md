@@ -369,9 +369,9 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-2-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2607.21876">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/Summary_VRDQ.pdf">Poster</a>]
-    [<a class="link-slides" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf">Slides</a>]
-    [<a class="link-code" href="https://github.com/sreejeetm1729/Q-Learning-over-Static-and-Time-Varying-Networks">Code</a>]
+    [<a class="link-poster" href="https://github.com/sreejeetm1729/Variance-Reduced-Decentralized-Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/Summary_VRDQ.pdf">Poster</a>]
+    [<a class="link-slides" href="https://github.com/sreejeetm1729/Variance-Reduced-Decentralized-Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf">Slides</a>]
+    [<a class="link-code" href="https://github.com/sreejeetm1729/Variance-Reduced-Decentralized-Q-Learning-over-Static-and-Time-Varying-Networks">Code</a>]
   </div>
 </div>
 <div id="acc2026-2-summary" class="pub-summary-card">

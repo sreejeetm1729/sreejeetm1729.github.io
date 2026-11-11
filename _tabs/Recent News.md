@@ -17,7 +17,7 @@ order: 6
     <li style="margin-bottom:6px;">
       "<strong>Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels</strong>"
       shows that batching and adaptive quantization preserve the convergence rate of unquantized TD learning up to logarithmic factors, while requiring only logarithmically many transmissions.
-      Read the paper <a href="https://arxiv.org/pdf/2611.12878" style="color:#ec4d38;">here</a>.
+      Check out the work <a href="https://arxiv.org/pdf/2611.12878" style="color:#ec4d38;">here</a>.
     </li>
     <li style="margin-bottom:0;">
       "<strong>Adaptive Memory for Online Reinforcement Learning under Sparse Model Changes</strong>"

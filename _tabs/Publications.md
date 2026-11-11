@@ -398,7 +398,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc27-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2611.12878">Paper</a>]
-    [<a class="link-poster" href=" https://example.com">Poster</a>]
+    [<a class="link-poster" href="https://github.com/sreejeetm1729/Adaptive-Quantization-Preserves-Fast-Rates-for-TD-Learning-over-Rate-Limited-Channels/blob/main/QuantizedTD_1page-poster.pdf">Poster</a>]
     [<a class="link-slides" href=" https://example.com">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Adaptive-Quantization-Preserves-Fast-Rates-for-TD-Learning-over-Rate-Limited-Channels">Code</a>]
   </div>

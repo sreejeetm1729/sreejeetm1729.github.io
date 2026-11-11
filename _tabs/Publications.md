@@ -400,7 +400,7 @@ math: true
     [<a class="link-paper" href="https://arxiv.org/pdf/2611.12878">Paper</a>]
     [<a class="link-poster" href=" https://example.com">Poster</a>]
     [<a class="link-slides" href=" https://example.com">Slides</a>]
-    [<a class="link-code" href=" https://example.com">Code</a>]
+    [<a class="link-code" href="https://github.com/sreejeetm1729/Adaptive-Quantization-Preserves-Fast-Rates-for-TD-Learning-over-Rate-Limited-Channels">Code</a>]
   </div>
 </div>
 <div id="ecc27-summary" class="pub-summary-card">

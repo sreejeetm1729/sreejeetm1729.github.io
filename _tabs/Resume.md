@@ -851,8 +851,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
       <div class="re-work">
         <h4 class="re-topic">
-          Robust policy evaluation under adversarial
-          influences and Markovian data
+          Robust Policy Evaluation under Adversarial Influences and Imperfect Data
         </h4>
 
         <p class="re-description">
@@ -878,12 +877,15 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
           </a>
 
           <span class="re-tag re-tag-review">
-            L4DC 2027 · Under review
+            TMLR · Under review
           </span>
 
-          <span class="re-tag re-tag-review">
-            ECC 2027 · Under review
-          </span>
+          <a class="re-tags"
+             href="https://arxiv.org/pdf/2611.12878"
+             target="_blank"
+             rel="noopener noreferrer">
+            ECC 2027 · Under review 
+          </a>
         </div>
       </div>
 
@@ -907,7 +909,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
             ACC 2026 
           </a>
 
-          <a class="re-tag re-tag-review"
+          <a class="re-tags"
              href="https://arxiv.org/pdf/2610.06918"
              target="_blank"
              rel="noopener noreferrer">

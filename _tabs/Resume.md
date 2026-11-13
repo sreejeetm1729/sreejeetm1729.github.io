@@ -946,7 +946,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       </div>
 
       <p class="re-person">
-        Research Collaborator:
+        Collaborator:
         <a href="https://profheath.org/"
            target="_blank"
            rel="noopener noreferrer">
@@ -1014,7 +1014,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       </div>
 
       <p class="re-person">
-        Research Collaborator:
+        Collaborator:
         <a href="https://www.columbia.edu/~ja3451/"
            target="_blank"
            rel="noopener noreferrer">

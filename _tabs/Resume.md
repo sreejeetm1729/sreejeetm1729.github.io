@@ -1303,7 +1303,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       </span>
       <span class="cv-award-date">May 2025</span>
       <p class="cv-award-reason">
-        Awarded to selected candidates to enable participation in L4DC.
+        Awarded to selected candidates to enable participation in L4DC, 2025.
       </p>
     </li>
 
@@ -1313,7 +1313,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
       </span>
       <span class="cv-award-date">May 2025</span>
       <p class="cv-award-reason">
-        For presenting a poster on “Towards Finite-Time Theory for
+        For presenting a poster “Towards Finite-Time Theory for
         Adversarially-Robust RL”.
       </p>
     </li>

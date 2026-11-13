@@ -851,7 +851,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
       <div class="re-work">
         <h4 class="re-topic">
-          Robust Policy Evaluation under Adversarial Influences and Imperfect Data
+          Robust Policy Evaluation under adversarial influences and imperfect Data
         </h4>
 
         <p class="re-description">

@@ -910,7 +910,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
             ACC 2026 
           </a>
 
-          <a class="re-tag re-tag-review"
+          <a class="re-tag"
              href="https://arxiv.org/pdf/2610.06918"
              target="_blank"
              rel="noopener noreferrer">

@@ -880,14 +880,12 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
             TMLR · Under review
           </span>
 
-          <div class="re-tags">
-          <a class="re-tag"
-             href="https://arxiv.org/pdf/2611.12878"
-             target="_blank"
-             rel="noopener noreferrer">
-            ECC 2027 · Under review 
-          </a>
+          <span class="re-tag re-tag-review">
+            ECC 2027 · Under review
+          </span>
+
         </div>
+      </div>
 
       <div class="re-work">
         <h4 class="re-topic">
@@ -908,9 +906,8 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
              rel="noopener noreferrer">
             ACC 2026 
           </a>
-          
-          <div class="re-tags">
-          <a class="re-tag"
+
+          <a class="re-tag re-tag-review"
              href="https://arxiv.org/pdf/2610.06918"
              target="_blank"
              rel="noopener noreferrer">

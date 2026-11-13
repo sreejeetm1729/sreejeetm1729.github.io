@@ -879,7 +879,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
           <span class="re-tag re-tag-review">
             TMLR · Under review
           </span>
-          
+
           <div class="re-tags">
           <a class="re-tag"
              href="https://arxiv.org/pdf/2611.12878"
@@ -888,7 +888,6 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
             ECC 2027 · Under review 
           </a>
         </div>
-      </div>
 
       <div class="re-work">
         <h4 class="re-topic">

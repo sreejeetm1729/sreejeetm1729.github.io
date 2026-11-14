@@ -255,7 +255,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('aistats2025-summary')">Abstract</a>]
     [<a class="link-paper" href="https://proceedings.mlr.press/v258/maity25a.html">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data/blob/main/AISTATS_Robust_TD_One_Page.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/AISTATS2025-RobustTD-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data/blob/main/AISTATS%20Slides.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data">Code</a>]
   </div>

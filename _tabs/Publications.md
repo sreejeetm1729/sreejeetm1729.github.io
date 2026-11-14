@@ -224,7 +224,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('icml2026-summary')">Abstract</a>]
     [<a class="link-paper" href="https://proceedings.mlr.press/v306/maity26a.html">Paper</a>]
-    [<a class="link-poster" href="https://icml.cc/media/PosterPDFs/ICML%202026/64666.png?t=1779063413.0709436">Summary</a>]
+    [<a class="link-poster" href="https://github.com/sreejeetm1729/Corruption-Tolerant-Asynchronous-Q-Learning-with-Near-Optimal-Rates/blob/main/ICML_Robust_Async_Q_One_Page.pdf">Summary</a>]
     [<a class="link-slides" href="https://icml.cc/media/icml-2026/Slides/64666.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-with-Markovian-Data">Code</a>]
   </div>

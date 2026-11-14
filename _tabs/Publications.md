@@ -283,7 +283,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2026-summary')">Abstract</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2607.20822">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-under-Reward-and-State-Corruption-via-Batching/blob/main/CDC_Batched_Robust_Q_One_Page.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/CDC2026-BatchedRobustQ-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="www.example.com">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-under-Reward-and-State-Corruption-via-Batching">Code</a>]
   </div>
@@ -313,7 +313,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2024-summary')">Abstract</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2409.03237">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/CDC_2024_Robust_Q_One_Page-v1.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/CDC2024-RobustQ-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/CDC_Presentation_Slides.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards">Code</a>]
   </div>
@@ -341,7 +341,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-1-summary')">Abstract</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2609.20174">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC_26_DistRobustQ.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/ACC26-DistRobustQ-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication/blob/main/ACC%202026%20DisRobQ-ppt.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Federated-Q-Learning-with-Almost-No-communication">Code</a>]
   </div>
@@ -369,7 +369,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('acc2026-2-summary')">Abstract</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2607.21876">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Variance-Reduced-Decentralized-Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/VRDQ_One_Page_Summary.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/VRDQ-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Variance-Reduced-Decentralized-Q-Learning-over-Static-and-Time-Varying-Networks/blob/main/ACC-VRDQ.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Variance-Reduced-Decentralized-Q-Learning-over-Static-and-Time-Varying-Networks">Code</a>]
   </div>
@@ -398,7 +398,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc27-summary')">Abstract</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2611.12878">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Adaptive-Quantization-Preserves-Fast-Rates-for-TD-Learning-over-Rate-Limited-Channels/blob/main/QuantizedTD_1page-poster.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/QuantizedTD-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href=" https://example.com">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Adaptive-Quantization-Preserves-Fast-Rates-for-TD-Learning-over-Rate-Limited-Channels">Code</a>]
   </div>
@@ -427,7 +427,7 @@ under Sparse Model Changes</strong>”,
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc272-summary')">Abstract</a>]
     [<a class="link-paper" href="https://www.researchgate.net/publication/417597036_Adaptive_Memory_for_Online_Reinforcement_Learning_under_Sparse_Model_Changes">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Adaptive-Memory-for-Online-RL-under-Sparse-Model-Changes/blob/main/DeployQ-1page-poster.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/DeployQ-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="https://example.com">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Adaptive-Memory-for-Online-RL-under-Sparse-Model-Changes">Code</a>]
   </div>

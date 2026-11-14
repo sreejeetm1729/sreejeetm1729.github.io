@@ -457,6 +457,7 @@ under Sparse Model Changes</strong>”,
 </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('jmlr-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2610.06918">Paper</a>]
   </div>
 </div>
@@ -484,6 +485,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tsp-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
     [<a class="link-paper" href="https://www.example.com">Paper</a>]
   </div>
 </div>
@@ -510,6 +512,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tmlr-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
     [<a class="link-paper" href="https://www.example.com">Paper</a>]
   </div>
 </div>
@@ -537,6 +540,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('automatica-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
     [<a class="link-paper" href="https://www.example.com">Paper</a>]
   </div>
 </div>
@@ -564,6 +568,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tmlr1a-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
     [<a class="link-paper" href="https://www.example.com">Paper</a>]
   </div>
 </div>

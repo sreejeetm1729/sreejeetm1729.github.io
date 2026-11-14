@@ -829,7 +829,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
           </a>
 
           <a class="re-tag"
-             href="https://arxiv.org/abs/2409.03237"
+             href="https://arxiv.org/pdf/2409.03237"
              target="_blank"
              rel="noopener noreferrer">
             IEEE CDC 2024

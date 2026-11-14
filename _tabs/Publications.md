@@ -223,7 +223,7 @@ math: true
 </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('icml2026-summary')">Summary</a>]
-    [<a class="link-paper" href="https://arxiv.org/pdf/2509.08933">Paper</a>]
+    [<a class="link-paper" href="https://proceedings.mlr.press/v306/maity26a.html">Paper</a>]
     [<a class="link-poster" href="https://icml.cc/media/PosterPDFs/ICML%202026/64666.png?t=1779063413.0709436">Poster</a>]
     [<a class="link-slides" href="https://icml.cc/media/icml-2026/Slides/64666.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-with-Markovian-Data">Code</a>]
@@ -254,7 +254,7 @@ math: true
 </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('aistats2025-summary')">Summary</a>]
-    [<a class="link-paper" href="https://arxiv.org/pdf/2502.04662">Paper</a>]
+    [<a class="link-paper" href="https://proceedings.mlr.press/v258/maity25a.html">Paper</a>]
     [<a class="link-poster" href="https://virtual.aistats.org/media/PosterPDFs/AISTATS%202025/9390.png?t=1745618638.4746892">Poster</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data/blob/main/AISTATS%20Slides.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Adversarially-Robust-TD-Learning-with-Markovian-Data">Code</a>]
@@ -293,7 +293,7 @@ math: true
   <div class="pub-summary-inner">
     <div class="pub-summary-header">
       <span style="color: #f5e6b8;">Summary</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('cdc2024-summary')">×</button>
+      <button class="pub-summary-close" onclick="togglePubSummary('cdc2026-summary')">×</button>
     </div>
     <div class="pub-summary-text">
        Motivated by reinforcement learning in harsh environments, we consider the problem of learning an optimal policy subject to adversarially corrupted feedback. Specifically, at each time-step, an adversary can perturb both the reward and state observations of the learner following the Huber contamination model. To defend against such data corruption, we propose BR-Async-Q: a novel, epoch-based, robust Q-learning algorithm built upon two key ideas: (i) partitioning the online data stream into batches to reduce variance, and (ii) constructing robust estimates of the Bellman optimality operator using such batched data. We prove a high-probability error bound for BR-Async-Q that matches that for vanilla Q-learning, up to a small additive term that scales with the fraction of corrupted samples. To our knowledge, this provides the first robustness guarantee for asynchronous Q-learning subject to both reward and state corruption. Furthermore, when only rewards are corrupted, the dependence of our algorithm’s bound on the corruption fraction is minimax optimal.
@@ -313,7 +313,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2024-summary')">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2409.03237">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/Sreejeet_Maity_AI_Symposium.pdf">Poster</a>]
+    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/CDC_2024_Robust_Q_One_Page-v1.pdf">Poster</a>]
     [<a class="link-slides" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards/blob/main/CDC_Presentation_Slides.pdf">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Q-Learning-under-Corrupted-Rewards">Code</a>]
   </div>

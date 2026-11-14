@@ -8,7 +8,7 @@ order: 6
 
  <li style="font-size:15px">
   <em><strong>November 2026</strong></em>: Our recent preprints are now available!
-  <ol type="1" style="margin:6px 0 0 12px; padding-left:16px; list-style-type:decimal;">
+  <ol type="1" style="margin:6px 0 0 12px; padding-left:8px; list-style-type:decimal;">
     <li style="margin-bottom:6px;">
       "<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>"
       develops robust federated Q-learning algorithms that preserve the statistical benefits of collaboration despite adversarial agents, with nearly matching finite-time upper and lower bounds. Further, it achieves these guarantees with logarithmic communication complexity.

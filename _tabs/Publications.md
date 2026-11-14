@@ -283,7 +283,7 @@ math: true
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('cdc2026-summary')">Abstract</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2607.20822">Paper</a>]
-    [<a class="link-poster" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-under-Reward-and-State-Corruption-via-Batching/blob/main/CDC_Batched_Robust_Q_One_Page.pdf">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/ICML2026-RobustAsyncQ-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="www.example.com">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Robust-Asynchronous-Q-Learning-under-Reward-and-State-Corruption-via-Batching">Code</a>]
   </div>

@@ -1224,8 +1224,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
   <section aria-labelledby="publication-theme-4">
     <h3 id="publication-theme-4" class="publication-theme">
-      Theme 4. Communication Constraints and Sparse Model Changes
-      in Reinforcement Learning
+      Theme 4. Adaptive Reinforcement Learning: Foundations for Resource-Constrained Settings
     </h3>
 
     <div class="cv-entry">
@@ -1250,6 +1249,18 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
         <span class="cv-entry-meta">
           Under review at
           <em>European Control Conference (ECC)</em>, 2027.
+        </span>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <span class="publication-label">(P14)</span>
+      <div>
+        <em>Sreejeet Maity</em>, Leonardo Felipe Toso.
+        <strong>Geometric Limits and Finite-Sample Guarantees for\\ Certifying Safe Control from Corrupted Calibration Data.</strong>
+        <span class="cv-entry-meta">
+          Under review at
+          <em>IEEE Control Systems Letters (L-CSS)</em>.
         </span>
       </div>
     </div>

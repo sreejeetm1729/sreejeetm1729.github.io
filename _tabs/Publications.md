@@ -505,7 +505,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
     <span style="color:#e8c4bd;">[\(J_4\)]</span>
-    <strong>Sreejeet Maity</strong>, Leonardo Felipe Toso, James Anderson, Aritra Mitra,
+    Leonardo Felipe Toso, <strong>Sreejeet Maity</strong>, James Anderson, Aritra Mitra,
     “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
       <em>Under Review at Transactions on Machine Learning Research (TMLR).</em>
@@ -559,7 +559,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
 </div>
 <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_2\)]</span>
-  <strong>Sreejeet Maity</strong><sup>†</sup>, Leonardo Felipe Toso,
+  <strong>Sreejeet Maity</strong>, Leonardo Felipe Toso,
   “<strong>Geometric Limits and Finite-Sample Guarantees for Certifying Safe Control from Corrupted Calibration Data</strong>”,
   <span class="pub-venue" style="display: inline;">
     <em>Under Review at IEEE Control Systems Letters (L-CSS).</em>

@@ -481,7 +481,7 @@ limit. We complement these guarantees with information-theoretic lower bounds th
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
   “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”,
   <span class="pub-venue" style="display: inline;">
-    <em>Manuscript in preparation for IEEE Transactions in Signal Processing (TSP).</em>
+    <em>Under Review at IEEE Transactions in Signal Processing (TSP).</em>
   </span>
 </div>
   <div class="pub-links">

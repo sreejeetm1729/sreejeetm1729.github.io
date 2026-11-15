@@ -1224,7 +1224,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
 
   <section aria-labelledby="publication-theme-4">
     <h3 id="publication-theme-4" class="publication-theme">
-      Theme 4. Adaptive Reinforcement Learning and Safe Control: Foundations for Resource-Constrained Settings
+      Theme 4. Adaptive Reinforcement Learning and Control: Towards Resource-Constrained Settings
     </h3>
 
     <div class="cv-entry">

@@ -214,7 +214,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_{13}^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{14}^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Corruption-Tolerant Optimal Asynchronous Q-Learning</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -245,7 +245,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_{12}^{*}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{13}^{*}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Adversarially-Robust TD Learning with Markovian Data: Finite-Time Rates and Fundamental Limits</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -273,7 +273,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_{11}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{12}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Asynchronous Q-Learning under Reward and State Corruption via Batching</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -303,7 +303,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_{10}\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{11}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Q-Learning under Corrupted Rewards</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -331,7 +331,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_9\)]</span>
+  <span style="color:#e8c4bd;">[\(C_{10}\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,
   “<strong>Robust Federated Q-Learning with Almost No Communication</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -359,7 +359,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(C_8\)]</span>
+  <span style="color:#e8c4bd;">[\(C_9\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, and Aritra Mitra,
   “<strong>Variance-Reduced Q-Learning over Static and Time-Varying Networks</strong>”, in
   <span class="pub-venue" style="display: inline;">
@@ -388,7 +388,7 @@ math: true
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_7\)]</span>
+    <span style="color:#e8c4bd;">[\(C_8\)]</span>
     <strong>Sreejeet Maity</strong>, Aritra Mitra,
     “<strong>Adaptive Quantization Preserves Fast Convergence in Temporal-Difference Learning</strong>”,
     <span class="pub-venue" style="display: inline;">
@@ -416,7 +416,7 @@ math: true
 </div>
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(C_6\)]</span>
+    <span style="color:#e8c4bd;">[\(C_7\)]</span>
     <strong>Sreejeet Maity</strong>, Sukanya Modak, Leonardo F. Toso,
     “<strong>Adaptive Memory for Online Reinforcement Learning
 under Sparse Model Changes</strong>”,
@@ -447,6 +447,56 @@ under Sparse Model Changes</strong>”,
 <div class="pub-section">
 <h2><span style="font-size: 1rem;">♦️</span>Selected Journals</h2>
 <div class="pub-entry">
+
+<div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(J_6\)]</span>
+  <strong>Sreejeet Maity</strong><sup>†</sup>, Leonardo Felipe Toso,
+  “<strong>Geometric Limits and Finite-Sample Guarantees for Certifying Safe Control from Corrupted Calibration Data</strong>”,
+  <span class="pub-venue" style="display: inline;">
+    <em>Under Review at IEEE Control Systems Letters (L-CSS).</em>
+  </span>
+</div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('lcss-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
+    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+  </div>
+</div>
+<div id="lcss-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Abstract</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('lcss-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      Corrupted calibration data can prevent safety certification
+even when every candidate plant admits a safe controller.
+We study this problem for continuous-time affine systems
+with an unknown constant drift, a prescribed polytopic
+safe set, and bounded inputs. Calibration measurements
+take one of $L$ known values, and their clean mean
+determines the drift. Reports follow an \(\epsilon\)-Huber
+contamination model whose contaminating distribution may
+depend on past observations. We characterize a critical
+contamination level \(\epsilon_\star\) through statistical
+indistinguishability and compatibility of admissible
+boundary inputs. At and above this level, no learner can
+uniformly return a safe controller with arbitrarily high
+probability, regardless of sample size. Below it, we
+construct a confidence polytope and solve vertex linear
+programs to synthesize a safe feedback. The procedure
+returns a safe controller with probability at least
+\(1-\delta\) using
+\(\mathcal{O}\!\left(L\log(L/\delta)/
+(\epsilon_\star-\epsilon)^2\right)\) reports,
+without requiring knowledge of \(\epsilon_\star\).
+A general sample-complexity lower bound establishes
+matching gap and confidence dependence for fixed
+instances near a threshold \(\epsilon_\star\).
+  </div>
+  </div>
+</div>
+
   <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_5\)]</span>
   <strong>Sreejeet Maity</strong> and Aritra Mitra,

@@ -448,8 +448,117 @@ under Sparse Model Changes</strong>”,
 <h2><span style="font-size: 1rem;">♦️</span>Selected Journals</h2>
 <div class="pub-entry">
 
-<div class="pub-title" style="font-weight: normal;">
+  <div class="pub-title" style="font-weight: normal;">
   <span style="color:#e8c4bd;">[\(J_6\)]</span>
+  <strong>Sreejeet Maity</strong> and Aritra Mitra,
+  “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”,
+  <span class="pub-venue" style="display: inline;">
+    <em>Under Review at Journal of Machine Learning Research (JMLR).</em>
+  </span>
+</div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('jmlr-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2610.06918">Paper</a>]
+  </div>
+</div>
+<div id="jmlr-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Abstract</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('jmlr-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      We study federated reinforcement learning in which multiple agents interact with a common Markov decision process and communicate through a central server to collaboratively learn the optimal state-action value function. Our goal is to understand whether the sample-efficiency benefits of collaboration can be retained when a fraction of the agents behave adversarially and transmit arbitrarily corrupted
+information. To address this problem, we introduce Robust Async-Fed-Q, an epoch-based federated learning algorithm that combines variance-reduced estimation of the Bellman optimality operator at the agents with robust aggregation at the server. We establish high-probability finite-time guarantees showing that the proposed method preserves the statistical gains of collaboration among the honest agents while tolerating adversarial corruption. In particular, the effect of the adversarial agents decreases as the amount of data collected by each honest agent grows and eventually vanishes in the infinite-sample
+limit. We complement these guarantees with information-theoretic lower bounds that characterize the unavoidable statistical cost of adversarial corruption, leading to the first nearly matching upper and lower bounds for adversarially robust federated reinforcement learning. We further extend our framework to accommodate single-trajectory Markovian sampling and heterogeneous partial coverage, where different agents may explore different regions of the state-action space and learning relies on their collective coverage. Finally, our epoch-based design substantially improves the best known communication complexity for federated Q-learning under asynchronous sampling.
+    </div>
+  </div>
+</div>
+
+  <div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(J_5\)]</span>
+  <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
+  “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”,
+  <span class="pub-venue" style="display: inline;">
+    <em>Manuscript in preparation for IEEE Transactions in Signal Processing (TSP).</em>
+  </span>
+</div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tsp-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
+    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+  </div>
+</div>
+<div id="tsp-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color: #f5e6b8;">Abstract</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('tsp-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      We investigate a decentralized reinforcement learning problem where multiple agents interact with the same Markov decision process (MDP). The goal is to collectively learn the optimal state-action value function by exchanging information over a network. Motivated by practical considerations, we consider an asynchronous sampling model, where each agent observes only a single state-action pair at every time-step. For this setting, we introduce a novel epoch-based decentralized Q-learning algorithm named AVRDQ, in which agents locally estimate the Bellman optimality operator and diffuse information using a consensus-based protocol. We further extend our framework to partial state-action coverage, where different agents may observe different subsets of the stateaction space. In both settings, we establish high-probability finite-time convergence guarantees for AVRDQ that exhibit linear collaborative speedups. To the best of our knowledge, this is the first work to simultaneously achieve linear collaborative speedups and poly-logarithmic communication complexity for decentralized Q-learning under asynchronous sampling, with guarantees further extending to partial state-action coverage.
+    </div>
+  </div>
+</div>
+
+<div class="pub-entry">
+  <div class="pub-title" style="font-weight: normal;">
+    <span style="color:#e8c4bd;">[\(J_4\)]</span>
+    <strong>Sreejeet Maity</strong>, Leonardo Felipe Toso, James Anderson, Aritra Mitra,
+    “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,
+    <span class="pub-venue" style="display: inline;">
+      <em>Under Review at Transactions on Machine Learning Research (TMLR).</em>
+    </span>
+  </div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tmlr-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
+    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+  </div>
+</div>
+<div id="tmlr-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color:#f5e6b8;">Abstract</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('tmlr-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      <!-- Add summary here. -->
+    </div>
+  </div>
+</div>
+
+
+<div class="pub-entry">
+  <div class="pub-title" style="font-weight: normal;">
+    <span style="color:#e8c4bd;">[\(J_3\)]</span>
+    <strong>Sreejeet Maity</strong>, Aritra Mitra,
+    “<strong>Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data</strong>”,
+    <span class="pub-venue" style="display: inline;">
+      <em>Under Review at Automatica.</em>
+    </span>
+  </div>
+  <div class="pub-links">
+    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('automatica-summary')">Abstract</a>]
+    [<a class="link-poster" href="https://example.com">Summary</a>]
+    [<a class="link-paper" href="https://www.example.com">Paper</a>]
+  </div>
+</div>
+
+<div id="automatica-summary" class="pub-summary-card">
+  <div class="pub-summary-inner">
+    <div class="pub-summary-header">
+      <span style="color:#f5e6b8;">Abstract</span>
+      <button class="pub-summary-close" onclick="togglePubSummary('automatica-summary')">×</button>
+    </div>
+    <div class="pub-summary-text">
+      <!-- Add summary here. -->
+    </div>
+  </div>
+</div>
+<div class="pub-title" style="font-weight: normal;">
+  <span style="color:#e8c4bd;">[\(J_2\)]</span>
   <strong>Sreejeet Maity</strong><sup>†</sup>, Leonardo Felipe Toso,
   “<strong>Geometric Limits and Finite-Sample Guarantees for Certifying Safe Control from Corrupted Calibration Data</strong>”,
   <span class="pub-venue" style="display: inline;">
@@ -494,116 +603,6 @@ A general sample-complexity lower bound establishes
 matching gap and confidence dependence for fixed
 instances near a threshold \(\epsilon_\star\).
   </div>
-  </div>
-</div>
-
-  <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_5\)]</span>
-  <strong>Sreejeet Maity</strong> and Aritra Mitra,
-  “<strong>Learning from Unreliable Trajectories: Adversarially-Robust Federated Q-Learning</strong>”,
-  <span class="pub-venue" style="display: inline;">
-    <em>Under Review at Journal of Machine Learning Research (JMLR).</em>
-  </span>
-</div>
-  <div class="pub-links">
-    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('jmlr-summary')">Abstract</a>]
-    [<a class="link-poster" href="https://example.com">Summary</a>]
-    [<a class="link-paper" href="https://arxiv.org/pdf/2610.06918">Paper</a>]
-  </div>
-</div>
-<div id="jmlr-summary" class="pub-summary-card">
-  <div class="pub-summary-inner">
-    <div class="pub-summary-header">
-      <span style="color: #f5e6b8;">Abstract</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('jmlr-summary')">×</button>
-    </div>
-    <div class="pub-summary-text">
-      We study federated reinforcement learning in which multiple agents interact with a common Markov decision process and communicate through a central server to collaboratively learn the optimal state-action value function. Our goal is to understand whether the sample-efficiency benefits of collaboration can be retained when a fraction of the agents behave adversarially and transmit arbitrarily corrupted
-information. To address this problem, we introduce Robust Async-Fed-Q, an epoch-based federated learning algorithm that combines variance-reduced estimation of the Bellman optimality operator at the agents with robust aggregation at the server. We establish high-probability finite-time guarantees showing that the proposed method preserves the statistical gains of collaboration among the honest agents while tolerating adversarial corruption. In particular, the effect of the adversarial agents decreases as the amount of data collected by each honest agent grows and eventually vanishes in the infinite-sample
-limit. We complement these guarantees with information-theoretic lower bounds that characterize the unavoidable statistical cost of adversarial corruption, leading to the first nearly matching upper and lower bounds for adversarially robust federated reinforcement learning. We further extend our framework to accommodate single-trajectory Markovian sampling and heterogeneous partial coverage, where different agents may explore different regions of the state-action space and learning relies on their collective coverage. Finally, our epoch-based design substantially improves the best known communication complexity for federated Q-learning under asynchronous sampling.
-    </div>
-  </div>
-</div>
-
-  <div class="pub-title" style="font-weight: normal;">
-  <span style="color:#e8c4bd;">[\(J_4\)]</span>
-  <strong>Sreejeet Maity</strong><sup>†</sup>, Feng Zhu, Robert Heath, Aritra Mitra,
-  “<strong>Decentralized Q-learning with Asynchronous Sampling and Partial Coverage</strong>”,
-  <span class="pub-venue" style="display: inline;">
-    <em>Manuscript in preparation for IEEE Transactions in Signal Processing (TSP).</em>
-  </span>
-</div>
-  <div class="pub-links">
-    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tsp-summary')">Abstract</a>]
-    [<a class="link-poster" href="https://example.com">Summary</a>]
-    [<a class="link-paper" href="https://www.example.com">Paper</a>]
-  </div>
-</div>
-<div id="tsp-summary" class="pub-summary-card">
-  <div class="pub-summary-inner">
-    <div class="pub-summary-header">
-      <span style="color: #f5e6b8;">Abstract</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('tsp-summary')">×</button>
-    </div>
-    <div class="pub-summary-text">
-      We investigate a decentralized reinforcement learning problem where multiple agents interact with the same Markov decision process (MDP). The goal is to collectively learn the optimal state-action value function by exchanging information over a network. Motivated by practical considerations, we consider an asynchronous sampling model, where each agent observes only a single state-action pair at every time-step. For this setting, we introduce a novel epoch-based decentralized Q-learning algorithm named AVRDQ, in which agents locally estimate the Bellman optimality operator and diffuse information using a consensus-based protocol. We further extend our framework to partial state-action coverage, where different agents may observe different subsets of the stateaction space. In both settings, we establish high-probability finite-time convergence guarantees for AVRDQ that exhibit linear collaborative speedups. To the best of our knowledge, this is the first work to simultaneously achieve linear collaborative speedups and poly-logarithmic communication complexity for decentralized Q-learning under asynchronous sampling, with guarantees further extending to partial state-action coverage.
-    </div>
-  </div>
-</div>
-
-<div class="pub-entry">
-  <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(J_3\)]</span>
-    <strong>Sreejeet Maity</strong>, Leonardo Felipe Toso, James Anderson, Aritra Mitra,
-    “<strong>Value Function Representation for Adversarially Robust Federated TD Learning</strong>”,
-    <span class="pub-venue" style="display: inline;">
-      <em>Under Review at Transactions on Machine Learning Research (TMLR).</em>
-    </span>
-  </div>
-  <div class="pub-links">
-    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('tmlr-summary')">Abstract</a>]
-    [<a class="link-poster" href="https://example.com">Summary</a>]
-    [<a class="link-paper" href="https://www.example.com">Paper</a>]
-  </div>
-</div>
-<div id="tmlr-summary" class="pub-summary-card">
-  <div class="pub-summary-inner">
-    <div class="pub-summary-header">
-      <span style="color:#f5e6b8;">Abstract</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('tmlr-summary')">×</button>
-    </div>
-    <div class="pub-summary-text">
-      <!-- Add summary here. -->
-    </div>
-  </div>
-</div>
-
-
-<div class="pub-entry">
-  <div class="pub-title" style="font-weight: normal;">
-    <span style="color:#e8c4bd;">[\(J_2\)]</span>
-    <strong>Sreejeet Maity</strong>, Aritra Mitra,
-    “<strong>Towards Minimax-Optimal Asynchronous Q-Learning from Corrupted Markovian Data</strong>”,
-    <span class="pub-venue" style="display: inline;">
-      <em>Under Review at Automatica.</em>
-    </span>
-  </div>
-  <div class="pub-links">
-    [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('automatica-summary')">Abstract</a>]
-    [<a class="link-poster" href="https://example.com">Summary</a>]
-    [<a class="link-paper" href="https://www.example.com">Paper</a>]
-  </div>
-</div>
-
-<div id="automatica-summary" class="pub-summary-card">
-  <div class="pub-summary-inner">
-    <div class="pub-summary-header">
-      <span style="color:#f5e6b8;">Abstract</span>
-      <button class="pub-summary-close" onclick="togglePubSummary('automatica-summary')">×</button>
-    </div>
-    <div class="pub-summary-text">
-      <!-- Add summary here. -->
-    </div>
   </div>
 </div>
 

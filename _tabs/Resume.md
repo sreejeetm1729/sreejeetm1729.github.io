@@ -1176,7 +1176,7 @@ I develop provably robust finite-sample guarantees for reinforcement learning (R
     <div class="cv-entry">
       <span class="publication-label">(P9)</span>
       <div>
-        <em>Sreejeet Maity</em>, Leonardo Felipe Toso,
+        Leonardo Felipe Toso, <em>Sreejeet Maity</em>, 
         James Anderson, Aritra Mitra.
         <strong>Value Function Representation for Adversarially
           Robust Federated TD Learning.</strong>

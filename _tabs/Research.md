@@ -46,7 +46,7 @@ A central goal of my work is to develop <strong  style="color: #0891b2;">provabl
 
 <div class="research-card">
 
-<h2>[<strong style="color:#208894;">Theme 1</strong>] Learning Robust Optimal Policy from Strongly Correlated and Corrupted Observations</h2>
+<h2>[<strong style="color:#208894;">Theme 1</strong>] Learning Robust Optimal Policy from Strongly Correlated and Corrupted Observations: Guarantees and Fundamental Limits</h2>
 
 <p>
 Can reinforcement learning still discover an optimal policy when the feedback it receives is both statistically dependent and adversarially corrupted? This line of work answers this question by developing a finite-time theory for robust optimal policy learning from unreliable trajectories, where rewards, transitions, observations, or Bellman targets may be strategically distorted. We show that standard algorithms such as vanilla Q-Learning can be fundamentally brittle under even small corruptions, and then design robust Bellman-update schemes that recover near-clean statistical performance up to an explicit and unavoidable corruption penalty. Together, this series of work, appearing across major venues including <span class="research-tag">ICML 2026</span>, <span class="research-tag">IEEE CDC 24, CDC 26</span>, and the <span class="research-tag">NeuRIPS 2025-Reliable ML Workshop</span>, establishes some of the first fundamental guarantees for learning optimal policies from strongly correlated and corrupted observations, combining robust statistics, stochastic approximation, and Bellman fixed-point theory to identify both what is algorithmically achievable and what is information-theoretically impossible.
@@ -275,7 +275,7 @@ The sequence of results gradually moves from idealized sampling models toward re
 <hr style="border:0; height:2px; background:rgba(216,167,167,0.60); margin:2.4rem 0;">
 <div class="research-card">
 
-<h2>[<strong style="color:#208894;">Theme 2</strong>] Robust Policy Evaluation and Temporal-Difference (TD) Learning</h2>
+<h2>[<strong style="color:#208894;">Theme 2</strong>] Adversarially-Robust Policy Evaluation with Markovian Data and Function Approximation</h2>
   The second direction of my research focuses on robust policy evaluation with <strong>Markovian data</strong> and <strong>linear function approximation</strong>: estimating the long-term return of a fixed policy from a single trajectory when reward observations may be adversarially corrupted. Unlike idealized i.i.d. sampling models, consecutive observations are temporally dependent, making it harder to distinguish statistical fluctuations from adversarial perturbations. In this work, which appeared at <span class="research-tag">AISTATS 2025</span>, we develop a robust temporal-difference (TD) learning method whose finite-time guarantees match those of Vanilla-TD up to an \(O(\varepsilon)\) term capturing the effect of corruption. We also establish fundamental limits that clarify what is achievable under adversarial corruption and Markovian sampling.
  <div style="display:flex; align-items:center; gap:12px; margin-top:1.2rem; margin-bottom:1.2rem;">
 

@@ -458,10 +458,11 @@ under Sparse Model Changes</strong>”,
 </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('jmlr-summary')">Abstract</a>]
-    [<a class="link-poster" href="https://example.com">Summary</a>]
+    [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/RobustAsyncFedQ-Summary.pdf' | relative_url }}">Summary</a>]
     [<a class="link-paper" href="https://arxiv.org/pdf/2610.06918">Paper</a>]
   </div>
 </div>
+
 <div id="jmlr-summary" class="pub-summary-card">
   <div class="pub-summary-inner">
     <div class="pub-summary-header">

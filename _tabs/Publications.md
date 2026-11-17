@@ -210,7 +210,7 @@ math: true
 
 <div class="pub-section">
 
-<h2><span style="font-size: 1rem;">♦️</span>Peer-Reviewed Conference Publications</h2>
+<h2><span style="font-size: 1rem;">♦️</span>Peer-Reviewed Conferences</h2>
 
 <div class="pub-entry">
   <div class="pub-title" style="font-weight: normal;">

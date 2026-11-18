@@ -22,7 +22,7 @@ order: 6
     <li style="margin-bottom:0;">
       "<strong>Adaptive Memory for Online Reinforcement Learning under Sparse Model Changes</strong>"
       introduces an algorithm that selectively reuses past observations across changing deployments, with finite-time policy-loss guarantees that quantify the benefits of sparse model changes.
-      Learn more about the work <a href="https://www.researchgate.net/publication/417597036_Adaptive_Memory_for_Online_Reinforcement_Learning_under_Sparse_Model_Changes" style="color:#ec4d38;">here</a>!
+      Learn more about the work <a href="https://arxiv.org/pdf/2611.21879" style="color:#ec4d38;">here</a>!
     </li>
   </ol>
 </li>

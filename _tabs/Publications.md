@@ -426,7 +426,7 @@ under Sparse Model Changes</strong>”,
   </div>
   <div class="pub-links">
     [<a class="link-summary" href="javascript:void(0);" onclick="togglePubSummary('ecc272-summary')">Abstract</a>]
-    [<a class="link-paper" href="https://www.researchgate.net/profile/Sreejeet-Maity-2/publication/417597036_Adaptive_Memory_for_Online_Reinforcement_Learning_under_Sparse_Model_Changes/links/6aeec416dc41aa6ac310bab1/Adaptive-Memory-for-Online-Reinforcement-Learning-under-Sparse-Model-Changes.pdf">Paper</a>]
+    [<a class="link-paper" href="https://arxiv.org/pdf/2611.21879">Paper</a>]
     [<a class="link-poster" href="{{ '/assets/research/one-page-abstracts/DeployQ-1page-finalv.pdf' | relative_url }}">Summary</a>]
     [<a class="link-slides" href="https://example.com">Slides</a>]
     [<a class="link-code" href="https://github.com/sreejeetm1729/Adaptive-Memory-for-Online-RL-under-Sparse-Model-Changes">Code</a>]
